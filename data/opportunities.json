@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-12T12:46:19+00:00",
- "count": 70,
+ "updated": "2026-11-12T22:55:12+00:00",
+ "count": 71,
  "sources": [
   {
    "name": "Univ. of Nottingham — studentships",
@@ -267,7 +267,7 @@
   },
   {
    "name": "Univ. of Bradford · Professional Services",
-   "count": 2,
+   "count": 3,
    "ok": true
   },
   {
@@ -1652,6 +1652,20 @@
    "location": "London",
    "first_seen": "2026-11-12",
    "salary": "£40,784 - £46,643 per annum"
+  },
+  {
+   "id": "rd9a7b04d6401",
+   "title": "Lay Member of University Council (HRLG001)",
+   "link": "https://jobs.bradford.ac.uk/rss/click.aspx?ref=HRLG001",
+   "org": "University of Bradford",
+   "source": "Univ. of Bradford · Professional Services",
+   "type": "job",
+   "summary": "Independent Lay Members of Council University of Bradford Voluntary, with expenses paid Time commitment: 12-15 days per year Term: Initial three year term For people with purpose. It starts in Bradford. The University of Bradford is driven by purpose. We turn aspirations into opportunity, ambition into careers and ideas into impact. Through career-focused teaching, student-centred support and life-changing research, we help people go further. We’re looking for two Independent Lay Members to join Council, our governing body, and help us build on these strengths. This is an opportunity to put your experience to work for a university that sees potential in everybody and makes a difference in Bradford and beyond. For these appointments, we are seeking significant senior-level expertise in one of two areas: Legal and regulatory: a senior legal background, with experience of advising on legal,",
+   "published": "2026-11-12",
+   "deadline": "2026-12-13",
+   "intl": null,
+   "location": "",
+   "first_seen": "2026-11-12"
   }
  ]
 }
