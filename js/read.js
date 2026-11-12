@@ -363,6 +363,7 @@ function pdfTab(el) {
   el.innerHTML = `<div class="card">
     <label class="dropzone" id="dz"><input type="file" accept="application/pdf" id="pf" hidden>
       <div style="font-size:34px">📄</div><b>Drop a journal PDF here or tap to choose</b><br><small class="muted">It's read inside your browser and never uploaded anywhere.</small></label>
+    <p class="muted" style="margin:10px 0 0">Want it kept (and readable on your phone as an easy Markdown page)? Add it to <a href="#/files">My files</a> instead: it is filed in your Drive automatically.</p>
     <p id="pmsg" class="muted" style="margin-top:10px"></p></div><div id="pout"></div>`;
   const dz = $('#dz', el), inp = $('#pf', el);
   const handle = async f => {

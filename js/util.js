@@ -22,6 +22,8 @@ const DEFAULT_STATE = {
   tracker: [],                 // tracked opportunities with plan
   papers: [],                  // saved papers
   customOpps: [],              // added manually
+  flags: {},                   // opportunity id -> {reason, note, at}  (marked not relevant)
+  updatedAt: 0,                // last change (for syncing between devices)
 };
 
 let state = load();
@@ -45,7 +47,8 @@ function deepMerge(base, add) {
 }
 export const S = () => state;
 export function save() {
-  try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { toast('Could not save — browser storage is full or blocked'); }
+  state.updatedAt = Date.now();
+  try { localStorage.setItem(KEY, JSON.stringify(state)); window.dispatchEvent(new Event('cornelieur:saved')); } catch (e) { toast('Could not save — browser storage is full or blocked'); }
 }
 export function replaceState(obj) { state = deepMerge(structuredClone(DEFAULT_STATE), obj); save(); }
 export function resetState() { state = structuredClone(DEFAULT_STATE); save(); }

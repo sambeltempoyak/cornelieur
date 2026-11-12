@@ -1,4 +1,7 @@
 import { S, save, esc, $, $$, toast, fmtDate, daysLeft, uid, getJSON, modal, copyText, addXP, today } from './util.js';
+import { analyse, toMarkdown, VERDICT } from './analyze.js';
+import { connected, fetchPage, putText, del, list as driveList, getJSONFile, putJSONFile, safeName, DIR } from './drive.js';
+import { openReader } from './reader.js';
 
 /* ---------------- data loading & scoring ---------------- */
 let cache = null;
@@ -16,7 +19,9 @@ async function loadOpps() {
     items.push({ ...it, id });
   }
   items.forEach(scoreItem);
-  items.sort((a, b) => b.score - a.score);
+  items.forEach(applyAnalysis);
+  items.sort((a, b) => b.priority - a.priority);
+  pruneFlags(items);
   cache = { items, robot, agent };
   return cache;
 }
@@ -57,7 +62,7 @@ function scoreItem(o) {
 
 export async function topOpportunities(n = 3) {
   const { items } = await loadOpps();
-  return items.filter(o => !S().seen[o.id] && (daysLeft(o.deadline) ?? 1) >= 0).slice(0, n);
+  return items.filter(o => !S().seen[o.id] && !isFlagged(o) && o.an.verdict !== 'skip' && (daysLeft(o.an.deadline || o.deadline) ?? 1) >= 0).slice(0, n);
 }
 
 export function nextTrackerSteps(n = 3) {
@@ -79,27 +84,144 @@ export function renderRadar(el, sub) {
   el.innerHTML = `
     <div class="eyebrow">Opportunity radar</div>
     <h1>PhD funding &amp; sponsored jobs</h1>
-    <p class="lede">A robot checks public feeds every morning and the Home Office sponsor register every week. Cornelieur scores what it finds against your profile, so you only look at the few that matter.</p>
+    <p class="lede">A robot checks public feeds every morning and the Home Office sponsor register every week. Cornelieur reads each advert, pulls out the deadline and requirements, flags anything that rules you out, and ranks what is left. Tap a card for the breakdown.</p>
     <div class="tabs">${TABS.map(([k, l]) => `<a href="#/radar${k ? '/' + k : ''}" class="${k === tab ? 'on' : ''}">${l}</a>`).join('')}</div>
     <div id="radarBody"></div>`;
   const body = $('#radarBody', el);
+  if (tab === 'item') return detail(body, sub[1]);
   (({ '': feed, digest, search, sponsors, routes, tracker })[tab] || feed)(body, sub.slice(1));
 }
 
+/* ---------------- Reading the adverts (analysis + cache) ---------------- */
+const AK = 'cornelieur.analysis';
+let AN = (() => { try { return JSON.parse(localStorage.getItem(AK) || '{}'); } catch (_) { return {}; } })();
+const saveAN = () => { try { localStorage.setItem(AK, JSON.stringify(AN)); } catch (_) {} };
+const INDEX_PATH = DIR.cache + '/_index.json';
+const tried = new Set();            // adverts we already tried to read this session (so a failure does not loop)
+let indexSynced = false, pushTimer = null;
+
+function applyAnalysis(o) {
+  const a = AN[o.id];
+  o.an = a && a.source === 'page' ? { ...a, hits: a.hits } : analyse(o, { profile: S().profile });
+  if (o.an.source !== 'page') o.an.source = 'feed';
+  o.priority = o.an.priority;
+  return o;
+}
+export const isFlagged = o => !!(S().flags[o.id] || S().seen[o.id] === 'skip');
+function pruneFlags(items) {
+  if (!items.length) return;                       // feed failed to load: never prune on an empty list
+  const ids = new Set(items.map(o => o.id)); let changed = false;
+  for (const id of Object.keys(S().flags)) if (!ids.has(id)) { delete S().flags[id]; changed = true; }
+  for (const id of Object.keys(S().seen)) if (!ids.has(id) && !S().tracker.some(t => t.oppId === id)) { delete S().seen[id]; changed = true; }
+  if (changed) save();
+}
+function schedulePush() {
+  if (!connected()) return; clearTimeout(pushTimer);
+  pushTimer = setTimeout(() => putJSONFile(INDEX_PATH, { updated: Date.now(), byId: AN }).catch(() => {}), 4000);
+}
+async function syncIndexFromDrive() {
+  if (indexSynced || !connected()) return; indexSynced = true;
+  try {
+    const j = await getJSONFile(INDEX_PATH, null);
+    if (j && j.byId) { for (const [id, a] of Object.entries(j.byId)) if (!AN[id] || (a.analysedAt || '') > (AN[id].analysedAt || '')) AN[id] = a; saveAN(); }
+  } catch (_) {}
+}
+/** Delete cached analyses (and their .md files in Drive) for adverts that left the feed or are past their date. Once a day. */
+async function pruneCache(items) {
+  if (!connected() || !items.length) return;
+  const k = 'cornelieur.prune'; if (localStorage.getItem(k) === today()) return; localStorage.setItem(k, today());
+  const ids = new Set(items.map(o => o.id)); const tracked = new Set(S().tracker.map(t => t.oppId));
+  const dead = id => !ids.has(id) || (AN[id] && AN[id].expires < today() && !tracked.has(id));
+  let removed = 0;
+  try {
+    const files = await driveList(DIR.cache);
+    for (const f of files) { const m = /^(.+)\.md$/.exec(f.name); if (m && dead(m[1])) { await del(f.path); removed++; } }
+  } catch (_) {}
+  for (const id of Object.keys(AN)) if (dead(id)) { delete AN[id]; removed++; }
+  saveAN(); if (removed) { schedulePush(); }
+}
+async function deepRead(o) {
+  const r = await fetchPage(o.link);
+  if (r.status >= 400 || !r.text || r.text.length < 400) throw new Error(`The advert page could not be read (status ${r.status || '?'}).`);
+  const a = analyse(o, { html: r.text, profile: S().profile });
+  if (a.source !== 'page') throw new Error('The page had too little text to analyse (it may need JavaScript).');
+  AN[o.id] = a; saveAN(); o.an = a; o.priority = a.priority;
+  putText(`${DIR.cache}/${o.id}.md`, toMarkdown(a), 'text/markdown').catch(() => {});
+  schedulePush();
+  return a;
+}
+let queueRunning = false;
+async function readTopAdverts(items, onProgress, limit = 12) {
+  if (!connected() || queueRunning) return 0;
+  const todo = items.filter(o => o.an.source !== 'page' && !isFlagged(o) && /^https?:/.test(o.link || '') && !/\.pdf($|\?)/i.test(o.link) && o.an.verdict !== 'skip' && (o.an.daysLeft ?? 1) >= 0 && !tried.has(o.id)).slice(0, limit);
+  if (!todo.length) return 0;
+  queueRunning = true; let done = 0;
+  try {
+    for (const o of todo) {
+      tried.add(o.id); onProgress(done, todo.length);
+      try { await deepRead(o); } catch (_) { /* leave the quick read in place */ }
+      done++;
+    }
+    onProgress(done, todo.length);
+  } finally { queueRunning = false; }
+  return done;
+}
+function rankList(items) { return items.filter(o => !isFlagged(o) && o.an.verdict !== 'skip' && (o.an.daysLeft ?? 1) >= 0); }
+
+/* ---------------- Flag as not relevant ---------------- */
+const FLAG_REASONS = [['own-students', "Only for that university's own students/staff"], ['home-only', 'UK / home students only'], ['no-sponsor', "Can't sponsor a visa"], ['field', 'Wrong field'], ['level', 'Wrong level (too senior / needs a PhD)'], ['registration', "Needs registration or experience I don't have"], ['closed', 'Already closed'], ['other', 'Something else']];
+function flagModal(o, done) {
+  const sug = (o.an.blockers.find(b => b.sev === 'high') || {}).id;
+  const pre = FLAG_REASONS.some(([k]) => k === sug) ? sug : 'field';
+  modal(`<h2 style="font-size:19px">Not relevant? Tell me why.</h2>
+    <p class="muted" style="margin-top:0;font-size:13.5px">${esc(o.title)}</p>
+    <div class="stack" style="gap:6px">${FLAG_REASONS.map(([k, l]) => `<label class="radio"><input type="radio" name="fr" value="${k}" ${k === pre ? 'checked' : ''}> ${esc(l)}</label>`).join('')}</div>
+    <input type="text" id="frNote" placeholder="Optional note" style="margin-top:10px">
+    <div class="row" style="margin-top:14px"><button class="btn" id="frGo">🚩 Flag and hide it</button><button class="btn ghost" data-close>Cancel</button></div>`, (m, close) => {
+    $('#frGo', m).onclick = () => {
+      const reason = (m.querySelector('input[name=fr]:checked') || {}).value || 'other';
+      S().flags[o.id] = { reason, note: $('#frNote', m).value.trim(), at: today(), title: o.title };
+      save(); close(); toast('Flagged. It is hidden from your list.'); done && done();
+    };
+  });
+}
+function unflag(o) { delete S().flags[o.id]; if (S().seen[o.id] === 'skip') delete S().seen[o.id]; save(); }
+
 /* ---------------- Feed ---------------- */
+const chipHtml = (t) => `<span class="chip ${t.cls || ''}">${esc(t.label)}</span>`;
+function oppChips(o) {
+  const a = o.an, V = VERDICT[a.verdict], out = [{ label: `${V.icon} ${V.label}`, cls: 'v ' + V.cls }];
+  out.push({ label: o.type === 'phd' || /PhD/.test(a.level) ? '🎓 PhD' : o.type === 'job' ? '💼 Job' : '✦ ' + (o.type || 'Opportunity') });
+  if (a.daysLeft != null) out.push(a.daysLeft < 0 ? { label: 'Closed', cls: 'bad' } : { label: a.daysLeft <= 14 ? `⏳ ${a.daysLeft}d left` : `Closes ${fmtDate(a.deadline)}`, cls: a.daysLeft <= 14 ? 'warn' : '' });
+  const hi = a.blockers.find(b => b.sev === 'high'); const me = a.blockers.find(b => b.sev === 'med');
+  if (hi) out.push({ label: '🚩 ' + shorten(hi.text, 46), cls: 'bad' }); else if (me) out.push({ label: '⚠ ' + shorten(me.text, 46), cls: 'warn' });
+  if (a.positives.some(p => p.id === 'intl' || p.id === 'sponsor')) out.push({ label: '🌍 International OK', cls: 'good' });
+  if (a.funded === 'full') out.push({ label: 'Funded', cls: 'water' });
+  if (o.curated) out.push({ label: '✦ AI-curated', cls: 'water' });
+  return out;
+}
+const pri = n => n >= 68 ? 'p-top' : n >= 50 ? 'p-good' : n >= 34 ? 'p-maybe' : 'p-low';
+
 async function feed(el) {
   el.innerHTML = '<p class="muted">Loading compiled opportunities…</p>';
-  const { items, robot, agent } = await loadOpps();
-  let filter = { type: 'all', intl: false, q: '', hideSeen: true };
+  await loadOpps(); await syncIndexFromDrive();
+  let { items, robot, agent } = await loadOpps();
+  items.forEach(applyAnalysis); items.sort((a, b) => b.priority - a.priority);
+  const filter = { type: 'all', intl: false, q: '', showFlagged: false };
   const draw = () => {
-    const list = items.filter(o =>
-      (filter.type === 'all' || o.type === filter.type) &&
-      (!filter.intl || o.tags.some(t => t.cls === 'good')) &&
-      (!filter.hideSeen || S().seen[o.id] !== 'skip') &&
+    const ranked = rankList(items); const rankOf = new Map(ranked.map((o, i) => [o.id, i + 1]));
+    const flaggedN = items.filter(isFlagged).length;
+    const list = items.filter(o => (filter.showFlagged ? isFlagged(o) : !isFlagged(o)) &&
+      (filter.type === 'all' || o.type === filter.type) && (!filter.intl || o.an.positives.some(p => p.id === 'intl' || p.id === 'sponsor')) &&
       (!filter.q || (o.title + ' ' + (o.summary || '') + ' ' + (o.org || '')).toLowerCase().includes(filter.q.toLowerCase())));
-    $('#feedList', el).innerHTML = list.length ? list.slice(0, 80).map(oppRow).join('') :
-      `<div class="empty">${items.length ? 'Nothing matches these filters.' : 'No compiled opportunities yet — the GitHub robot fills this list after its first run. Until then, try <a href="#/radar/search">one-tap searches</a>.'}</div>`;
-    bindOppActions(el, draw);
+    const top = !filter.showFlagged && !filter.q && filter.type === 'all' ? ranked.filter(o => o.an.verdict === 'top' || o.an.verdict === 'good').slice(0, 3) : [];
+    $('#startHere', el).innerHTML = top.length ? `<section class="card starthere"><div class="eyebrow">Start here: your top ${top.length}</div>${top.map((o, i) => `
+      <a class="sh-item" href="#/radar/item/${encodeURIComponent(o.id)}"><span class="sh-n">${i + 1}</span><div><b>${esc(o.title)}</b><div class="muted" style="font-size:13px">${esc(o.org || o.source || '')}${o.an.deadline ? ' · closes ' + fmtDate(o.an.deadline) : ''}</div><div style="font-size:13.5px;margin-top:2px">${esc(shorten(o.an.verdictText, 140))}</div></div><span class="pri ${pri(o.priority)}">${o.priority}</span></a>`).join('')}</section>` : '';
+    $('#feedList', el).innerHTML = list.length ? list.slice(0, 80).map(o => oppRow(o, rankOf.get(o.id), filter.showFlagged)).join('') :
+      `<div class="empty">${filter.showFlagged ? 'Nothing flagged.' : items.length ? 'Nothing matches these filters.' : 'No compiled opportunities yet. The GitHub robot fills this list after its first run. Until then, try <a href="#/radar/search">one-tap searches</a>.'}</div>`;
+    $('#fFlag', el).textContent = `🚩 Flagged (${flaggedN})`; $('#fFlag', el).classList.toggle('on', filter.showFlagged);
+    $('#fFlag', el).style.display = flaggedN || filter.showFlagged ? '' : 'none';
+    bindOppActions(el, draw, items);
   };
   const srcInfo = (robot.sources || []).map(s => `${esc(s.name)} (${s.count})`).join(' · ');
   el.innerHTML = `
@@ -107,70 +229,137 @@ async function feed(el) {
       <div class="row">
         ${['all', 'phd', 'job'].map(t => `<button class="chip ${t === 'all' ? 'on' : ''}" data-type="${t}">${{ all: 'Everything', phd: '🎓 PhDs', job: '💼 Jobs' }[t]}</button>`).join('')}
         <button class="chip" id="fIntl">🌍 International-friendly only</button>
-        <button class="chip on" id="fSeen">Hide skipped</button>
+        <button class="chip" id="fFlag" style="display:none"></button>
       </div>
       <button class="btn sm ghost" id="addOpp">+ Add one I found</button>
     </div>
     <div class="searchbar" style="margin-bottom:6px"><input type="search" id="fq" placeholder="Filter by word, e.g. formulation, KCL, Imperial…"></div>
-    <p class="muted" style="font-size:12.5px">${robot.updated ? `Robot last ran ${fmtDate(robot.updated)}${srcInfo ? ' · ' + srcInfo : ''}` : 'Robot has not run yet.'}${agent.updated ? ` · AI scout ran ${fmtDate(agent.updated)}` : ''} · ${items.length} items</p>
+    <p class="muted" style="font-size:12.5px">${robot.updated ? `Robot last ran ${fmtDate(robot.updated)}${srcInfo ? ' · ' + srcInfo : ''}` : 'Robot has not run yet.'}${agent.updated ? ` · AI scout ran ${fmtDate(agent.updated)}` : ''} · ${items.length} item${items.length === 1 ? '' : 's'}</p>
+    <div id="readStatus"></div>
+    <div id="startHere"></div>
     <div class="card"><div id="feedList"></div></div>`;
   $$('[data-type]', el).forEach(b => b.onclick = () => { $$('[data-type]', el).forEach(x => x.classList.remove('on')); b.classList.add('on'); filter.type = b.dataset.type; draw(); });
   $('#fIntl', el).onclick = e => { filter.intl = !filter.intl; e.target.classList.toggle('on', filter.intl); draw(); };
-  $('#fSeen', el).onclick = e => { filter.hideSeen = !filter.hideSeen; e.target.classList.toggle('on', filter.hideSeen); draw(); };
+  $('#fFlag', el).onclick = () => { filter.showFlagged = !filter.showFlagged; draw(); };
   $('#fq', el).oninput = e => { filter.q = e.target.value; draw(); };
   $('#addOpp', el).onclick = () => addOppModal(() => { cache = null; feed(el); });
   draw();
+  const rs = $('#readStatus', el);
+  if (!connected()) rs.innerHTML = `<div class="notice" style="margin:8px 0">These are <b>quick reads</b> from each advert's short summary. <a href="#/settings">Connect Google Drive</a> and Cornelieur will open each top advert, pull out the deadline and requirements, and re-rank them.</div>`;
+  else {
+    pruneCache(items);
+    const n = await readTopAdverts(items, (d, tot) => { if (document.body.contains(rs)) rs.innerHTML = `<div class="notice" style="margin:8px 0">📖 Reading the full adverts… ${d} of ${tot}</div>`; });
+    if (document.body.contains(rs)) { rs.innerHTML = n ? `<p class="muted" style="font-size:12.5px">📖 Read ${n} advert${n === 1 ? '' : 's'} in full and re-ranked the list.</p>` : ''; if (n) { items.sort((a, b) => b.priority - a.priority); draw(); } }
+  }
 }
 
-function oppRow(o) {
-  const st = S().seen[o.id];
-  return `<div class="opp" data-id="${esc(o.id)}">
-    <div><h3><a href="${esc(o.link)}" target="_blank" rel="noopener">${esc(o.title)}</a></h3>
-      <div class="meta">${esc(o.org || '')}${o.org && o.source ? ' · ' : ''}${esc(o.source || '')}${o.salary ? ' · ' + esc(o.salary) : ''}</div>
-      <div class="why row" style="gap:5px;margin-top:6px">${o.tags.map(t => `<span class="chip ${t.cls || ''}">${esc(t.label)}</span>`).join('')}</div>
-      ${o.why ? `<div class="why"><b>Why:</b> ${esc(o.why)}</div>` : o.hits?.length ? `<div class="why muted">Matches: ${o.hits.map(esc).join(', ')}</div>` : ''}
+function oppRow(o, rank, flaggedView) {
+  const fl = S().flags[o.id];
+  return `<div class="opp ${flaggedView ? 'is-flagged' : ''}" data-id="${esc(o.id)}" tabindex="0" role="link" aria-label="Open details: ${esc(o.title)}">
+    <div class="opp-main"><div class="row" style="gap:8px;align-items:flex-start">${rank && !flaggedView ? `<span class="rank">#${rank}</span>` : ''}<h3>${esc(o.title)}</h3></div>
+      <div class="meta">${esc(o.org || '')}${o.org && o.source ? ' · ' : ''}${esc(o.source || '')}${o.an.pay ? ' · ' + esc(shorten(o.an.pay, 40)) : o.salary ? ' · ' + esc(o.salary) : ''}</div>
+      <div class="why row" style="gap:5px;margin-top:6px">${oppChips(o).map(chipHtml).join('')}</div>
+      ${flaggedView && fl ? `<div class="why muted">Flagged: ${esc((FLAG_REASONS.find(r => r[0] === fl.reason) || [, fl.reason])[1])}${fl.note ? ' · ' + esc(fl.note) : ''}</div>` : `<div class="why">${esc(shorten(o.why || o.an.verdictText, 150))}</div>`}
     </div>
-    <div class="acts"><span class="score" title="Match score out of 99">${o.score}</span>
-      <button class="btn sm" data-act="track">${S().tracker.some(t => t.oppId === o.id) ? '✓ Tracking' : 'Track + plan'}</button>
-      <button class="btn sm ghost" data-act="skip">${st === 'skip' ? 'Skipped' : 'Not for me'}</button>
+    <div class="acts"><span class="pri ${pri(o.priority)}" title="Priority for you, out of 99">${o.priority}</span>
+      ${flaggedView ? `<button class="btn sm" data-act="restore">Restore</button>` : `<button class="btn sm" data-act="track">${S().tracker.some(t => t.oppId === o.id) ? '✓ Tracking' : 'Track + plan'}</button>
+      <button class="btn sm ghost" data-act="flag">🚩 Not relevant</button>`}
     </div></div>`;
 }
-function bindOppActions(el, redraw) {
-  $$('.opp [data-act]', el).forEach(b => b.onclick = async () => {
-    const id = b.closest('.opp').dataset.id;
-    const { items } = await loadOpps();
-    const o = items.find(x => x.id === id);
-    if (b.dataset.act === 'skip') { S().seen[id] = 'skip'; save(); toast('Hidden from your feed'); }
-    if (b.dataset.act === 'track') { trackOpp(o); }
+function bindOppActions(el, redraw, items) {
+  $$('.opp', el).forEach(card => {
+    const id = card.dataset.id; const go = () => { location.hash = '#/radar/item/' + encodeURIComponent(id); };
+    card.onclick = e => { if (e.target.closest('[data-act]') || e.target.closest('a')) return; go(); };
+    card.onkeydown = e => { if (e.key === 'Enter' && e.target === card) go(); };
+  });
+  $$('.opp [data-act]', el).forEach(b => b.onclick = e => {
+    e.stopPropagation();
+    const o = items.find(x => x.id === b.closest('.opp').dataset.id);
+    if (b.dataset.act === 'flag') return flagModal(o, redraw);
+    if (b.dataset.act === 'restore') { unflag(o); toast('Restored'); }
+    if (b.dataset.act === 'track') trackOpp(o);
     redraw();
   });
+}
+
+/* ---------------- Detail view: what the advert actually says ---------------- */
+async function detail(el, id) {
+  const { items } = await loadOpps();
+  const o = items.find(x => x.id === id);
+  if (!o) { el.innerHTML = `<div class="card"><h2>That advert is no longer in the list</h2><p class="muted">It probably closed and was cleared away.</p><a class="btn" href="#/radar">Back to the list</a></div>`; return; }
+  let note = '';
+  const draw = () => {
+    const a = o.an, V = VERDICT[a.verdict]; const ranked = rankList(items); const rk = ranked.findIndex(x => x.id === o.id) + 1;
+    const fl = S().flags[o.id]; const R = a.requirements;
+    const reqBlocks = [['Degree & qualifications', R.degree], ['Skills & experience', R.skills], ['English', R.english], ['Eligibility', R.eligibility]].filter(([, v]) => v && v.length);
+    const fact = (k, v) => v ? `<dt>${k}</dt><dd>${v}</dd>` : '';
+    el.innerHTML = `
+      <a href="#/radar" class="back">← Back to the list</a>
+      <div class="verdict ${V.cls}"><div class="v-ico">${V.icon}</div><div><div class="v-label">${V.label} · priority ${a.priority}/99${rk ? ` · #${rk} of ${ranked.length} for you` : ''}</div><div class="v-text">${esc(a.verdictText)}</div></div></div>
+      <h1 class="d-title">${esc(o.title)}</h1>
+      <div class="muted" style="margin-bottom:12px">${esc(o.org || '')}${o.org && o.source ? ' · ' : ''}${esc(o.source || '')}</div>
+      ${fl ? `<div class="notice dew" style="margin-bottom:12px">🚩 You flagged this as not relevant (${esc((FLAG_REASONS.find(r => r[0] === fl.reason) || [, fl.reason])[1])}). <button class="btn sm" id="dRestore">Restore</button></div>` : ''}
+      ${a.blockers.length ? `<section class="card warn-card"><h2>Check before you apply</h2>${a.blockers.map(b => `<div class="flagrow ${b.sev}"><span>${b.sev === 'high' ? '🚩' : '⚠️'}</span><div><b>${esc(b.text)}</b>${b.quote ? `<div class="muted quote">“${esc(b.quote)}”</div>` : ''}</div></div>`).join('')}</section>` : ''}
+      <section class="card"><h2>Key facts</h2><dl class="facts">
+        ${fact('Deadline', a.deadline ? `<b>${fmtDate(a.deadline)}</b>${a.daysLeft != null ? ` <span class="chip ${a.daysLeft < 0 ? 'bad' : a.daysLeft <= 14 ? 'warn' : ''}">${a.daysLeft < 0 ? 'passed' : a.daysLeft + ' days left'}</span>` : ''}` : '<span class="muted">Not found: check the advert</span>')}
+        ${fact('Starts', esc(a.start))}${fact('Type', esc(a.level))}${fact('Pay / stipend', esc(a.pay))}${fact('Fees', esc(a.fees))}
+        ${fact('Funding', { full: 'Funded', none: 'Not funded', unknown: '' }[a.funded])}${fact('Location', esc(a.location))}
+        ${fact('Contact', a.contacts.map(c => `<a href="mailto:${esc(c)}">${esc(c)}</a>`).join(', '))}
+      </dl></section>
+      ${a.positives.length ? `<section class="card"><h2>In your favour</h2>${a.positives.map(p => `<div class="flagrow good"><span>✅</span><div>${esc(p.text)}</div></div>`).join('')}</section>` : ''}
+      ${reqBlocks.length ? `<section class="card"><h2>What they ask for</h2>${reqBlocks.map(([k, v]) => `<h3 style="margin-top:10px">${k}</h3><ul class="plain">${v.map(x => `<li>${esc(x)}</li>`).join('')}</ul>`).join('')}${a.notes.map(n => `<p class="muted" style="margin:6px 0 0">• ${esc(n)}</p>`).join('')}</section>` : ''}
+      ${a.howToApply.length ? `<section class="card"><h2>How to apply</h2><ul class="plain">${a.howToApply.map(x => `<li>${esc(x)}</li>`).join('')}</ul></section>` : ''}
+      <section class="card"><p style="margin-top:0"><b>Next step:</b> ${esc(a.nextStep)}</p>
+        <div class="row">
+          <button class="btn" id="dTrack">${S().tracker.some(t => t.oppId === o.id) ? '✓ In your tracker' : 'Track + step-by-step plan'}</button>
+          ${fl ? '' : '<button class="btn ghost" id="dFlag">🚩 Not relevant</button>'}
+          <button class="btn ghost" id="dMd">📖 Read as Markdown</button>
+          <a class="btn ghost" href="${esc(o.link)}" target="_blank" rel="noopener">Open the original advert ↗</a>
+        </div>
+        <p class="muted" style="font-size:12.5px;margin:10px 0 0" id="dNote">${note || (a.source === 'page' ? `Read from the full advert on ${fmtDate(a.analysedAt)}.` : 'Quick read from the short feed summary only.')} Always confirm dates and eligibility on the advert itself.</p>
+      </section>`;
+    $('#dTrack', el).onclick = () => { trackOpp(o); draw(); };
+    $('#dMd', el).onclick = () => openReader({ title: o.title, md: toMarkdown(a), key: 'an:' + o.id, subtitle: 'Advert summary', filename: safeName(o.title) + ' (summary).md' });
+    const f = $('#dFlag', el); if (f) f.onclick = () => flagModal(o, () => { draw(); });
+    const r = $('#dRestore', el); if (r) r.onclick = () => { unflag(o); draw(); };
+  };
+  draw();
+  if (o.an.source !== 'page') {
+    if (!connected()) { note = 'Quick read only. Connect Google Drive (Settings) so Cornelieur can open the full advert.'; draw(); }
+    else {
+      const n = $('#dNote', el); if (n) n.textContent = '📖 Opening the full advert to read it properly…';
+      try { await deepRead(o); note = ''; items.sort((a, b) => b.priority - a.priority); }
+      catch (e) { note = e.message + ' Showing the quick read instead.'; }
+      if (document.body.contains(el)) draw();
+    }
+  }
 }
 
 /* ---------------- Digest (low-load triage) ---------------- */
 async function digest(el) {
   const { items } = await loadOpps();
-  const queue = items.filter(o => !S().seen[o.id] && (daysLeft(o.deadline) ?? 1) >= 0).slice(0, 5);
+  const queue = rankList(items).filter(o => !S().seen[o.id]).slice(0, 5);
   let i = 0;
   const show = () => {
     if (i >= queue.length) {
-      el.innerHTML = `<div class="card celebrate"><div class="big">🌿</div><h2>Digest done</h2><p class="muted">${queue.length ? `You triaged ${queue.length} opportunities. That's the job-hunting for today — well done.` : 'Nothing new to triage. Check back tomorrow, or run a one-tap search.'}</p><div class="row" style="justify-content:center"><a class="btn" href="#/radar/tracker">See tracker</a><a class="btn ghost" href="#/home">Back to Today</a></div></div>`;
+      el.innerHTML = `<div class="card celebrate"><div class="big">🌿</div><h2>Digest done</h2><p class="muted">${queue.length ? `You triaged ${queue.length} opportunities. That's the job-hunting for today. Well done.` : 'Nothing new to triage right now. Check back after the next robot run.'}</p><a class="btn" href="#/radar/tracker">See my tracker</a></div>`;
       if (queue.length) addXP(5);
       return;
     }
-    const o = queue[i];
+    const o = queue[i], a = o.an;
     el.innerHTML = `<div class="digest-card">
-      <div class="row between"><span class="muted">${i + 1} of ${queue.length}</span><span class="score">${o.score}</span></div>
+      <div class="row between"><span class="muted">${i + 1} of ${queue.length}</span><span class="pri ${pri(o.priority)}">${o.priority}</span></div>
       <div class="progress" style="margin:8px 0 16px"><i style="width:${(i / queue.length) * 100}%"></i></div>
       <div class="card">
-        <div class="row" style="gap:5px">${o.tags.map(t => `<span class="chip ${t.cls || ''}">${esc(t.label)}</span>`).join('')}</div>
+        <div class="row" style="gap:5px">${oppChips(o).map(chipHtml).join('')}</div>
         <div class="big-title">${esc(o.title)}</div>
-        <div class="muted">${esc(o.org || o.source || '')}</div>
+        <div class="muted">${esc(o.org || o.source || '')}${a.deadline ? ' · closes ' + fmtDate(a.deadline) : ''}${a.pay ? ' · ' + esc(shorten(a.pay, 40)) : ''}</div>
+        <p style="margin:10px 0 4px"><b>${esc(a.verdictText)}</b></p>
         ${o.why ? `<p><b>Why it fits:</b> ${esc(o.why)}</p>` : ''}
-        <p style="font-size:14.5px">${esc(shorten(o.summary || '', 420))}</p>
-        <a href="${esc(o.link)}" target="_blank" rel="noopener">Open the advert ↗</a>
+        <a href="#/radar/item/${encodeURIComponent(o.id)}">See the full breakdown →</a>
       </div>
       <div class="triage">
-        <button class="btn ghost" data-t="skip">👎 Not for me</button>
+        <button class="btn ghost" data-t="skip">🚩 Not for me</button>
         <button class="btn soft" data-t="later">🕓 Later</button>
         <button class="btn" data-t="saved">⭐ Track it</button>
       </div>
@@ -179,7 +368,9 @@ async function digest(el) {
     $$('[data-t]', el).forEach(b => b.onclick = () => decide(b.dataset.t));
   };
   const decide = t => {
-    const o = queue[i]; S().seen[o.id] = t; save();
+    const o = queue[i];
+    if (t === 'skip') S().flags[o.id] = { reason: 'other', note: 'skipped in digest', at: today(), title: o.title }; else S().seen[o.id] = t;
+    save();
     if (t === 'saved') trackOpp(o, true);
     i++; show();
   };
@@ -191,7 +382,7 @@ async function digest(el) {
   document.addEventListener('keydown', onKey);
   show();
 }
-const shorten = (s, n) => s.length > n ? s.slice(0, n).replace(/\s+\S*$/, '') + '…' : s;
+const shorten = (s, n) => (s || '').length > n ? s.slice(0, n).replace(/\s+\S*$/, '') + '…' : (s || '');
 
 /* ---------------- One-tap searches ---------------- */
 const SITES = [
@@ -392,6 +583,7 @@ export function trackOpp(o, quiet) {
   const steps = (o.steps && o.steps.length ? o.steps : r.steps).map(t => ({ t, done: false }));
   S().tracker.unshift({ id: uid(), oppId: o.id, title: o.title, org: o.org || '', link: o.link, type: o.type, route: r.id, deadline: o.deadline || '', stage: 'Saved', notes: '', steps, added: today() });
   S().seen[o.id] = 'saved'; save();
+  if (connected() && o.an) putText(`${DIR.apps}/${safeName((o.org ? o.org + ' - ' : '') + o.title)}/Advert summary.md`, toMarkdown(o.an), 'text/markdown').catch(() => {});
   if (!quiet) toast('Added to tracker with a step-by-step plan');
 }
 
