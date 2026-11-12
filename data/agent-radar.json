@@ -1,0 +1,5 @@
+{
+  "_help": "Optional. Written by an AI scout (e.g. a weekly Claude scheduled task) with hand-picked opportunities. Same item format as opportunities.json, plus optional 'why' (one line) and 'steps' (list of strings).",
+  "updated": null,
+  "items": []
+}

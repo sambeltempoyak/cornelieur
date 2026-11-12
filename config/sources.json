@@ -1,0 +1,21 @@
+{
+  "_help": "Feeds the daily robot reads. 'feeds' are RSS/Atom URLs read directly. 'discover' pages are web pages that LIST rss feeds: the robot picks the feeds whose row/link text contains one of 'match'. Add or remove freely; one broken source never stops the others.",
+  "relevance": ["pharm", "drug", "medicin", "biotech", "bioprocess", "biolog", "formulation", "clinical", "microbio", "antimicrob", "vaccine", "therapeut", "toxicol", "pharmacokinetic", "nanomed", "nanoparticle", "biomedical", "life science", "molecular", "cell", "protein", "peptide", "antibod", "regulatory", "quality control", "analytical", "chromatograph", "hplc", "mass spectrometry", "bioinformatic", "health data", "epidemiolog"],
+  "feeds": [
+    {"name": "Univ. of Nottingham — studentships", "url": "https://jobs.nottingham.ac.uk/rss/rss.aspx?cat=213", "type": "phd", "org": "University of Nottingham"},
+    {"name": "Aston University — Pharmacy", "url": "https://jobs.aston.ac.uk/rss/rss.aspx?cat=1932", "org": "Aston University", "all": true},
+    {"name": "Univ. of West London — School of Pharmacy", "url": "https://jobs.uwl.ac.uk/rss/rss.aspx?cat=809", "org": "University of West London", "all": true},
+    {"name": "Cambridge — Pharmacology", "url": "https://www.jobs.cam.ac.uk/job/?unit=u00203&format=rss", "org": "University of Cambridge", "all": true}
+  ],
+  "discover": [
+    {"name": "jobs.ac.uk — Health & Medical", "url": "https://www.jobs.ac.uk/feeds/subject-areas/health-and-medical", "match": ["pharm", "toxicol", "biomedical", "clinical"], "org_from_item": true},
+    {"name": "jobs.ac.uk — Biological Sciences", "url": "https://www.jobs.ac.uk/feeds/subject-areas/biological-sciences", "match": ["biotech", "molecular", "microbio", "biochem", "biology"], "org_from_item": true},
+    {"name": "jobs.ac.uk — job types", "url": "https://www.jobs.ac.uk/feeds/job-types", "match": ["phd", "studentship", "research"], "org_from_item": true},
+    {"name": "Univ. of Bath", "url": "https://www.bath.ac.uk/jobs/RSS/", "match": ["research", "studentship", "pharmacy", "life sciences"], "org": "University of Bath"},
+    {"name": "Univ. of Bradford", "url": "https://jobs.bradford.ac.uk/RSS/", "match": ["research", "pharmacy", "life sciences", "studentship"], "org": "University of Bradford"},
+    {"name": "Royal Holloway", "url": "https://jobs.royalholloway.ac.uk/RSS/", "match": ["research"], "org": "Royal Holloway"},
+    {"name": "LSHTM", "url": "https://jobs.lshtm.ac.uk/RSS", "match": ["research", "academic"], "org": "LSHTM"}
+  ],
+  "keep_days": 75,
+  "max_items": 400
+}

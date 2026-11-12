@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cornelieur — less lieur, one small step at a time</title>
+<meta name="description" content="A personal studio for finding PhD and job sponsorship, learning R, Python and machine learning for pharma, and reading journal papers.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><ellipse cx='32' cy='43' rx='22' ry='12' fill='%2393B5C8'/><rect x='10' y='29' width='44' height='9' rx='4.5' fill='%23F6F1EA'/><ellipse cx='32' cy='24' rx='22' ry='13' fill='%23F2A2A2'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#/home">
+      <svg viewBox="0 0 64 64" width="38" height="38" aria-hidden="true"><defs><linearGradient id="mp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F8C4BF"/><stop offset="1" stop-color="#F2A2A2"/></linearGradient><linearGradient id="mm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D5EEE9"/><stop offset="1" stop-color="#93B5C8"/></linearGradient></defs><ellipse cx="32" cy="43" rx="22" ry="12" fill="url(#mm)"/><rect x="10" y="29" width="44" height="9" rx="4.5" fill="#F6F1EA"/><ellipse cx="32" cy="24" rx="22" ry="13" fill="url(#mp)"/></svg>
+      <span><b>Cornelieur</b><small>less lieur, step by step</small></span>
+    </a>
+    <nav>
+      <a href="#/home" data-nav="home"><span class="ico">☀</span>Today</a>
+      <a href="#/radar" data-nav="radar"><span class="ico">◎</span>Opportunity radar</a>
+      <a href="#/learn" data-nav="learn"><span class="ico">✦</span>Learn</a>
+      <a href="#/read" data-nav="read"><span class="ico">❡</span>Read</a>
+      <a href="#/settings" data-nav="settings"><span class="ico">⚙</span>Settings</a>
+    </nav>
+    <div class="side-foot" id="sideStats"></div>
+  </aside>
+  <main id="app" tabindex="-1"></main>
+</div>
+<nav class="tabbar" id="tabbar">
+  <a href="#/home" data-nav="home"><span>☀</span>Today</a>
+  <a href="#/radar" data-nav="radar"><span>◎</span>Radar</a>
+  <a href="#/learn" data-nav="learn"><span>✦</span>Learn</a>
+  <a href="#/read" data-nav="read"><span>❡</span>Read</a>
+  <a href="#/settings" data-nav="settings"><span>⚙</span>More</a>
+</nav>
+<div id="toast" role="status" aria-live="polite"></div>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
