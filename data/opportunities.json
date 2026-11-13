@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T22:55:12+00:00",
+ "updated": "2026-11-13T07:24:25+00:00",
  "count": 71,
  "sources": [
   {
@@ -16,7 +16,7 @@
   },
   {
    "name": "Univ. of Bath",
-   "count": 17
+   "count": 15
   },
   {
    "name": "Univ. of Bath",
@@ -117,7 +117,7 @@
   },
   {
    "name": "Univ. of Bath · Management, Specialist and Administration",
-   "count": 17,
+   "count": 15,
    "ok": true
   },
   {
@@ -397,7 +397,7 @@
   },
   {
    "name": "Royal Holloway · Research",
-   "count": 4,
+   "count": 3,
    "ok": true
   },
   {
@@ -487,22 +487,22 @@
   },
   {
    "name": "LSHTM · Academic",
-   "count": 7,
+   "count": 6,
    "ok": true
   },
   {
    "name": "LSHTM · Professional Services",
-   "count": 4,
+   "count": 3,
    "ok": true
   },
   {
    "name": "LSHTM · Central Services",
-   "count": 3,
+   "count": 2,
    "ok": true
   },
   {
    "name": "LSHTM · Epidemiology and Population Health",
-   "count": 3,
+   "count": 2,
    "ok": true
   },
   {
@@ -567,7 +567,7 @@
   },
   {
    "name": "LSHTM · Department of Infectious Disease Epidemiology and Dynamics",
-   "count": 2,
+   "count": 1,
    "ok": true
   },
   {
