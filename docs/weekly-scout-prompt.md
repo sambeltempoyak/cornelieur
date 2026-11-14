@@ -55,3 +55,7 @@ Easiest: tell Claude in chat: "Ocha now has X (for example, a new certificate, a
 Claude edits `config/ocha-profile.md` (and, if needed, the keywords in `config/sources.json`) and explains the change.
 Or edit `config/ocha-profile.md` yourself on GitHub (open the file, click the pencil, change, "Commit changes"). Add a dated line in the log at the bottom.
 The next scout run reads it automatically. The in-app keywords (Settings → Profile) are separate and live in Ocha's browser.
+
+## 5. The weekly email (kept out of this public file)
+The scheduled task has one extra last step (F): after a successful run with new items, it emails a short, funny "your app is refreshed" note
+from the maintainer's Gmail. That step is stored only in the scheduled task itself, not here, because it contains an email address and this repository is public.
