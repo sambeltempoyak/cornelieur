@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-13T07:24:25+00:00",
- "count": 71,
+ "updated": "2026-11-14T07:08:11+00:00",
+ "count": 76,
  "sources": [
   {
    "name": "Univ. of Nottingham — studentships",
@@ -16,7 +16,7 @@
   },
   {
    "name": "Univ. of Bath",
-   "count": 15
+   "count": 19
   },
   {
    "name": "Univ. of Bath",
@@ -117,7 +117,7 @@
   },
   {
    "name": "Univ. of Bath · Management, Specialist and Administration",
-   "count": 15,
+   "count": 19,
    "ok": true
   },
   {
@@ -267,7 +267,7 @@
   },
   {
    "name": "Univ. of Bradford · Professional Services",
-   "count": 3,
+   "count": 2,
    "ok": true
   },
   {
@@ -287,7 +287,7 @@
   },
   {
    "name": "Univ. of Bradford · -",
-   "count": 1,
+   "count": 0,
    "ok": true
   },
   {
@@ -397,7 +397,7 @@
   },
   {
    "name": "Royal Holloway · Research",
-   "count": 3,
+   "count": 1,
    "ok": true
   },
   {
@@ -447,7 +447,7 @@
   },
   {
    "name": "Royal Holloway · Department of Biological Sciences",
-   "count": 3,
+   "count": 1,
    "ok": true
   },
   {
@@ -492,12 +492,12 @@
   },
   {
    "name": "LSHTM · Professional Services",
-   "count": 3,
+   "count": 4,
    "ok": true
   },
   {
    "name": "LSHTM · Central Services",
-   "count": 2,
+   "count": 3,
    "ok": true
   },
   {
@@ -602,7 +602,7 @@
   },
   {
    "name": "LSHTM · Education Services",
-   "count": 1,
+   "count": 2,
    "ok": true
   },
   {
@@ -612,6 +612,81 @@
   }
  ],
  "items": [
+  {
+   "id": "r19f98c4b784c",
+   "title": "International Student Recruitment Manager (CC14081)",
+   "link": "https://www.bath.ac.uk/jobs/rss/click.aspx?ref=CC14081",
+   "org": "University of Bath",
+   "source": "Univ. of Bath · Management, Specialist and Administration",
+   "type": "job",
+   "summary": "The University of Bath is seeking to appoint an Recruitment Manager to join the International Student Recruitment Team. About the role Focusing on the Middle East and Africa, and supported by the Deputy Head of International Student Recruitment, you will manage and deliver recruitment activity in the region to build the brand and reputation of the University in the region, delivering a resilient base of applications and enrolments to the University. Activity spans international recruitment at all study levels, as well as recruitment from partnership organisations where appropriate. You will take a lead role in developing relationships with prospective applicants and key external stakeholders, primarily through extensive outreach, including in-person and digital outreach activities, to increase the number of highly qualified applicants considering a course of study at the University of Ba",
+   "published": "2026-11-13",
+   "deadline": "2026-11-30",
+   "intl": true,
+   "location": "",
+   "first_seen": "2026-11-14",
+   "salary": "£38,784 to £46,049"
+  },
+  {
+   "id": "r042d35be7dfd",
+   "title": "Community Tennis Coach (CC14096)",
+   "link": "https://www.bath.ac.uk/jobs/rss/click.aspx?ref=CC14096",
+   "org": "University of Bath",
+   "source": "Univ. of Bath · Management, Specialist and Administration",
+   "type": "job",
+   "summary": "TeamBath Tennis is looking for an enthusiastic and motivated Community Tennis Coach to join our Development Tennis team. Based at the University of Bath's world-class Sports Training Village, you will play a key role in delivering high-quality coaching programmes for players of all ages and abilities, helping to grow participation whilst supporting player development across the TeamBath pathway including out U10 performance programme. The role involves leading and assisting tennis sessions, building positive relationships with players and parents, supporting events and holiday camps, and contributing to the continued success and growth of one of the UK's leading tennis programmes. You will work within a collaborative coaching team that is passionate about creating outstanding experiences and opportunities for every player. This position would suit an energetic coach who is passionate abo",
+   "published": "2026-11-13",
+   "deadline": "2026-11-30",
+   "intl": null,
+   "location": "",
+   "first_seen": "2026-11-14",
+   "salary": "£27,241 to £30,986"
+  },
+  {
+   "id": "r0983416fef5c",
+   "title": "Head of Global Mobility (AS14100)",
+   "link": "https://www.bath.ac.uk/jobs/rss/click.aspx?ref=AS14100",
+   "org": "University of Bath",
+   "source": "Univ. of Bath · Management, Specialist and Administration",
+   "type": "job",
+   "summary": "About the role We are looking for an experienced and collaborative Head of Global Mobility to establish and lead this new service as the University of Bath enters an exciting period of international development. Our Strategy 2036 sets out our ambition to achieve global excellence with impact, transforming the world through education, research and innovation. As our international activity grows, we are creating a new global mobility service to make it easy, safe and effective for our people to work overseas. You will shape the University’s approach to outbound staff mobility, providing strategic leadership alongside practical oversight of international assignments, secondments, overseas working and other cross-border employment arrangements. This is an opportunity to build a high-quality service from the ground up. Working across HR, Finance, Payroll, Legal, International Relations, acade",
+   "published": "2026-11-13",
+   "deadline": "2026-12-03",
+   "intl": null,
+   "location": "",
+   "first_seen": "2026-11-14",
+   "salary": "£48,337 to £62,994"
+  },
+  {
+   "id": "r786889a2f907",
+   "title": "Global Mobility Advisor (AS14101)",
+   "link": "https://www.bath.ac.uk/jobs/rss/click.aspx?ref=AS14101",
+   "org": "University of Bath",
+   "source": "Univ. of Bath · Management, Specialist and Administration",
+   "type": "job",
+   "summary": "About the role The University of Bath is creating a new global mobility service to support colleagues undertaking work overseas. We are looking for an experienced and customer-focused Global Mobility Advisor to help establish the service and provide practical, end-to-end support to employees and managers. You will be the principal adviser and case owner for a varied portfolio of outbound global mobility cases. These may include international assignments, secondments, short-term overseas teaching, remote working and other cross-border employment arrangements. From the first enquiry through to an employee’s return to the UK, you will help colleagues understand what is required, coordinate specialist advice and keep arrangements progressing. You will make complex information accessible, ensure that appropriate approvals and safeguards are in place and provide employees and managers with a c",
+   "published": "2026-11-13",
+   "deadline": "2026-12-11",
+   "intl": null,
+   "location": "",
+   "first_seen": "2026-11-14",
+   "salary": "£39,560 to £46,970"
+  },
+  {
+   "id": "rd2c4e0525d75",
+   "title": "Student Support Services Assistant (CEN-EDU-2026-16)",
+   "link": "https://jobs.lshtm.ac.uk/rss/click.aspx?ref=CEN-EDU-2026-16",
+   "org": "LSHTM",
+   "source": "LSHTM · Education Services",
+   "type": "job",
+   "summary": "The London School of Hygiene & Tropical Medicine (LSHTM) is one of the world’s leading public health universities. Student Support Services provides confidential and impartial advice and support to the School’s London-based students, as well as guidance to applicants to the School. The primary aim of the service is to assist students in resolving practical and/or personal concerns, enabling them to concentrate on their studies and achieve their potential during their time at the School. Each year, around 1,000 appointments are made with the Service by students seeking advice and guidance on a range of issues. The main areas of support are: Student disability support Accommodation One-to-one counselling Mental health Wellbeing initiatives Financial hardship Orientation to life in London (e.g. opening a bank account, healthcare in the UK, council tax, transport) Careers advice Chaplaincy T",
+   "published": "2026-11-13",
+   "deadline": "2026-11-27",
+   "intl": null,
+   "location": "London",
+   "first_seen": "2026-11-14",
+   "salary": "£35,436 - £39,766 per annum"
+  },
   {
    "id": "r398374721398",
    "title": "PhD Studentship: Sustainable aviation fuel thermochemical modelling (ENG422)",
@@ -1655,7 +1730,7 @@
   },
   {
    "id": "rd9a7b04d6401",
-   "title": "Lay Member of University Council (HRLG001)",
+   "title": "University Council (Board) Members (HRLG001)",
    "link": "https://jobs.bradford.ac.uk/rss/click.aspx?ref=HRLG001",
    "org": "University of Bradford",
    "source": "Univ. of Bradford · Professional Services",
