@@ -163,13 +163,43 @@ def find_org(title, summary, default):
     return m.group(1).strip() if m else default
 
 
+def build_relevance(words):
+    """Whole-word-start matching: 'cell' matches 'cells' but not 'excellence'."""
+    ws = [w.strip().lower() for w in words if w.strip()]
+    return re.compile(r"\b(?:" + "|".join(re.escape(w) for w in ws) + ")", re.I) if ws else None
+
+
+def is_relevant(title, summary, rx):
+    """Keep an item if a keyword is in the TITLE, or at least two different keywords are in the body.
+    One stray word in a long advert (e.g. 'clinical' in a facilities post) is not enough."""
+    if rx is None:
+        return True
+    if rx.search(title):
+        return True
+    return len({m.lower() for m in rx.findall(summary)}) >= 2
+
+
+def build_exclude(patterns):
+    ps = [p for p in patterns if p]
+    return re.compile("|".join(ps), re.I) if ps else None
+
+
+KEEP_TITLE = re.compile(r"\bphd|studentship|\bdphil|doctoral training|\bcdt\b|\bdtp\b|research (assistant|technician|officer)|technician|scientist", re.I)
+
+
+def is_non_research(title, rx):
+    """Admin, facilities, teaching-only and senior-academic posts. PhD/studentship/research-staff titles always survive."""
+    return bool(rx and rx.search(title) and not KEEP_TITLE.search(title))
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--root", default=".")
     args = ap.parse_args()
     root = Path(args.root)
     cfg = json.loads((root / "config/sources.json").read_text(encoding="utf-8"))
-    rel = [k.lower() for k in cfg.get("relevance", [])]
+    rel = build_relevance(cfg.get("relevance", []))
+    excl = build_exclude(cfg.get("exclude_titles", []))
     out_path = root / "data/opportunities.json"
     old = {}
     if out_path.exists():
@@ -208,7 +238,9 @@ def main():
         for it in items:
             summary = strip_html(it["summary"])
             blob = (it["title"] + " " + summary).lower()
-            if not f.get("all") and rel and not any(k in blob for k in rel):
+            if is_non_research(it["title"], excl):
+                continue
+            if not f.get("all") and not is_relevant(it["title"], summary, rel):
                 continue
             iid = "r" + hashlib.sha1(it["link"].encode()).hexdigest()[:12]
             deadline = parse_date(summary) or parse_date(it["title"])
@@ -238,8 +270,14 @@ def main():
     merged = dict(old)
     merged.update(fresh)
     keep_days = cfg.get("keep_days", 75)
+    all_names = {f["name"] for f in feeds if f.get("all")}
     final = []
     for it in merged.values():
+        if it["id"] not in fresh:  # carried over from an earlier run: apply today's (stricter) filters too
+            if is_non_research(it["title"], excl):
+                continue
+            if it.get("source") not in all_names and not is_relevant(it["title"], it.get("summary", ""), rel):
+                continue
         fs = dt.date.fromisoformat(it.get("first_seen", today.isoformat()))
         if (today - fs).days > keep_days:
             continue
