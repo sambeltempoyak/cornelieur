@@ -1,53 +1,37 @@
 {
- "updated": "2026-11-14T07:08:11+00:00",
- "count": 4,
+ "updated": "2026-11-15T07:11:04+00:00",
+ "count": 5,
  "sources": [
   {
    "name": "Univ. of Nottingham — studentships",
-   "count": 9
+   "count": 1
   },
   {
    "name": "Cambridge — Pharmacology",
-   "count": 3
+   "count": 1
   },
   {
-   "name": "Univ. of Bath",
-   "count": 19
+   "name": "Royal Holloway",
+   "count": 1
   },
   {
-   "name": "Univ. of Bath",
-   "count": 19
+   "name": "Royal Holloway",
+   "count": 1
   },
   {
-   "name": "Univ. of Bath",
+   "name": "LSHTM",
    "count": 2
   },
   {
-   "name": "Univ. of Bath",
+   "name": "LSHTM",
    "count": 2
   },
   {
-   "name": "Univ. of Bath",
+   "name": "LSHTM",
    "count": 1
   },
   {
-   "name": "Univ. of Bath",
-   "count": 1
-  },
-  {
-   "name": "Univ. of Bath",
-   "count": 1
-  },
-  {
-   "name": "Univ. of Bath",
-   "count": 1
-  },
-  {
-   "name": "Univ. of Bath",
-   "count": 2
-  },
-  {
-   "name": "Univ. of Bath",
+   "name": "LSHTM",
    "count": 1
   }
  ],
@@ -74,7 +58,7 @@
   },
   {
    "name": "Univ. of Nottingham — studentships",
-   "count": 9,
+   "count": 1,
    "ok": true
   },
   {
@@ -89,22 +73,27 @@
   },
   {
    "name": "Cambridge — Pharmacology",
-   "count": 3,
+   "count": 1,
+   "ok": true
+  },
+  {
+   "name": "Cambridge — MRC Toxicology Unit",
+   "count": 0,
    "ok": true
   },
   {
    "name": "Univ. of Bath · Education & Research",
-   "count": 19,
+   "count": 0,
    "ok": true
   },
   {
    "name": "Univ. of Bath · Management, Specialist and Administration",
-   "count": 19,
+   "count": 0,
    "ok": true
   },
   {
    "name": "Univ. of Bath · Operations & Facilities Support",
-   "count": 2,
+   "count": 0,
    "ok": true
   },
   {
@@ -139,12 +128,12 @@
   },
   {
    "name": "Univ. of Bath · Campus Infrastructure",
-   "count": 2,
+   "count": 0,
    "ok": true
   },
   {
    "name": "Univ. of Bath · Campus Services",
-   "count": 1,
+   "count": 0,
    "ok": true
   },
   {
@@ -159,17 +148,17 @@
   },
   {
    "name": "Univ. of Bath · Chemical Engineering",
-   "count": 1,
+   "count": 0,
    "ok": true
   },
   {
    "name": "Univ. of Bath · Chemistry",
-   "count": 1,
+   "count": 0,
    "ok": true
   },
   {
    "name": "Univ. of Bath · Computer Science",
-   "count": 1,
+   "count": 0,
    "ok": true
   },
   {
@@ -184,7 +173,7 @@
   },
   {
    "name": "Univ. of Bath · Department for Health",
-   "count": 2,
+   "count": 0,
    "ok": true
   },
   {
@@ -194,7 +183,7 @@
   },
   {
    "name": "Univ. of Bath · Digital, Data & Technology Group",
-   "count": 1,
+   "count": 0,
    "ok": true
   },
   {
@@ -214,7 +203,7 @@
   },
   {
    "name": "Univ. of Bath · Electronic & Electrical Engineering",
-   "count": 1,
+   "count": 0,
    "ok": true
   },
   {
@@ -249,7 +238,7 @@
   },
   {
    "name": "Univ. of Bradford · Professional Services",
-   "count": 2,
+   "count": 0,
    "ok": true
   },
   {
@@ -344,7 +333,7 @@
   },
   {
    "name": "Royal Holloway · Academic",
-   "count": 1,
+   "count": 0,
    "ok": true
   },
   {
@@ -374,7 +363,7 @@
   },
   {
    "name": "Royal Holloway · Professional Services",
-   "count": 5,
+   "count": 0,
    "ok": true
   },
   {
@@ -414,7 +403,7 @@
   },
   {
    "name": "Royal Holloway · Commercial Services",
-   "count": 2,
+   "count": 0,
    "ok": true
   },
   {
@@ -469,17 +458,17 @@
   },
   {
    "name": "LSHTM · Academic",
-   "count": 6,
+   "count": 2,
    "ok": true
   },
   {
    "name": "LSHTM · Professional Services",
-   "count": 4,
+   "count": 0,
    "ok": true
   },
   {
    "name": "LSHTM · Central Services",
-   "count": 3,
+   "count": 0,
    "ok": true
   },
   {
@@ -489,7 +478,7 @@
   },
   {
    "name": "LSHTM · Infectious and Tropical Diseases",
-   "count": 3,
+   "count": 0,
    "ok": true
   },
   {
@@ -504,7 +493,7 @@
   },
   {
    "name": "LSHTM · Public Health and Policy",
-   "count": 2,
+   "count": 0,
    "ok": true
   },
   {
@@ -529,7 +518,7 @@
   },
   {
    "name": "LSHTM · Department of Clinical Research",
-   "count": 3,
+   "count": 0,
    "ok": true
   },
   {
@@ -584,7 +573,7 @@
   },
   {
    "name": "LSHTM · Education Services",
-   "count": 2,
+   "count": 0,
    "ok": true
   },
   {
@@ -594,6 +583,20 @@
   }
  ],
  "items": [
+  {
+   "id": "rba50d45b6286",
+   "title": "ENHANCE Doctoral Training Programme (EPH-NCDE-2026-07)",
+   "link": "https://jobs.lshtm.ac.uk/rss/click.aspx?ref=EPH-NCDE-2026-07",
+   "org": "LSHTM",
+   "source": "LSHTM · Department of Non-Communicable Disease Epidemiology",
+   "type": "phd",
+   "summary": "Applications are invited for the Wellcome Trust funded ENHANCE Doctoral Programme for healthcare professionals, commencing September 2027. Led by the London School of Hygiene & Tropical Medicine in partnership with King’s College London and Queen Mary University of London, the programme combines expertise in the development and application of artificial intelligence and digital tools in healthcare. ENHANCE focuses on discovery research (as defined by the Wellcome Trust) to improve the use of digital tools and artificial intelligence in healthcare, advancing equitable care through data science approaches in diverse national and global populations. The programme supports UK-registered health professionals seeking research training. Funding includes three years of salary, research expenses, home-rate tuition fees, and training and travel costs. Applicants must be accepted onto the pre-appli",
+   "published": "2026-11-03",
+   "deadline": "2026-11-16",
+   "intl": null,
+   "location": "London",
+   "first_seen": "2026-11-15"
+  },
   {
    "id": "r580fc454e725",
    "title": "AstraZeneca Non-Clinical PhD Studentship in Next-generation TPD for oncology: Harnessing ubiquitin-independent pathways",
