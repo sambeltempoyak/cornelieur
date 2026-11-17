@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-16T08:53:58+00:00",
- "count": 5,
+ "updated": "2026-11-17T07:27:34+00:00",
+ "count": 3,
  "sources": [
   {
    "name": "Univ. of Nottingham — studentships",
@@ -20,11 +20,7 @@
   },
   {
    "name": "LSHTM",
-   "count": 2
-  },
-  {
-   "name": "LSHTM",
-   "count": 2
+   "count": 1
   },
   {
    "name": "LSHTM",
@@ -458,7 +454,7 @@
   },
   {
    "name": "LSHTM · Academic",
-   "count": 2,
+   "count": 1,
    "ok": true
   },
   {
@@ -473,7 +469,7 @@
   },
   {
    "name": "LSHTM · Epidemiology and Population Health",
-   "count": 2,
+   "count": 1,
    "ok": true
   },
   {
@@ -553,7 +549,7 @@
   },
   {
    "name": "LSHTM · Department of Non-Communicable Disease Epidemiology",
-   "count": 1,
+   "count": 0,
    "ok": true
   },
   {
@@ -584,20 +580,6 @@
  ],
  "items": [
   {
-   "id": "rba50d45b6286",
-   "title": "ENHANCE Doctoral Training Programme (EPH-NCDE-2026-07)",
-   "link": "https://jobs.lshtm.ac.uk/rss/click.aspx?ref=EPH-NCDE-2026-07",
-   "org": "LSHTM",
-   "source": "LSHTM · Department of Non-Communicable Disease Epidemiology",
-   "type": "phd",
-   "summary": "Applications are invited for the Wellcome Trust funded ENHANCE Doctoral Programme for healthcare professionals, commencing September 2027. Led by the London School of Hygiene & Tropical Medicine in partnership with King’s College London and Queen Mary University of London, the programme combines expertise in the development and application of artificial intelligence and digital tools in healthcare. ENHANCE focuses on discovery research (as defined by the Wellcome Trust) to improve the use of digital tools and artificial intelligence in healthcare, advancing equitable care through data science approaches in diverse national and global populations. The programme supports UK-registered health professionals seeking research training. Funding includes three years of salary, research expenses, home-rate tuition fees, and training and travel costs. Applicants must be accepted onto the pre-appli",
-   "published": "2026-11-03",
-   "deadline": "2026-11-16",
-   "intl": null,
-   "location": "London",
-   "first_seen": "2026-11-15"
-  },
-  {
    "id": "r580fc454e725",
    "title": "AstraZeneca Non-Clinical PhD Studentship in Next-generation TPD for oncology: Harnessing ubiquitin-independent pathways",
    "link": "https://www.jobs.cam.ac.uk/job/57403/",
@@ -625,21 +607,6 @@
    "location": "London",
    "first_seen": "2026-11-12",
    "salary": "£35,312 to £41,038 per annum"
-  },
-  {
-   "id": "rbb69a7f5f582",
-   "title": "Research Assistant (1026-358)",
-   "link": "https://jobs.royalholloway.ac.uk/rss/click.aspx?ref=1026-358",
-   "org": "Royal Holloway",
-   "source": "Royal Holloway · Department of Biological Sciences",
-   "type": "job",
-   "summary": "Part-Time, Fixed-Term, 0.3 FTE to 30 November 2028 Applications are invited for the post of Research Assistant in Molecular Biology and Biochemistry in the Department of Biological Sciences . About the Role. We are seeking an enthusiastic and motivated Research Assistant to join Professor Alessandra Devoto's research group in the Department of Biological Sciences at Royal Holloway, University of London. This part-time position offers an exciting opportunity, in in collaboration with SYNGENTA Jealott’s Hill, to contribute to the innovative “Plant Cell Libraries” research project, supporting research in plant molecular biology and biochemistry. The successful candidate will assist with laboratory-based experiments, including the preparation of reagents and biological samples, maintenance of plant cell and tissue cultures, and collection and recording of experimental data. Working closely w",
-   "published": "2026-10-30",
-   "deadline": "2026-11-13",
-   "intl": null,
-   "location": "London",
-   "first_seen": "2026-11-12",
-   "salary": "£35,312 per annum"
   },
   {
    "id": "rf2c38c0c88c9",
