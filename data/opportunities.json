@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-17T07:27:34+00:00",
- "count": 3,
+ "updated": "2026-11-18T07:26:23+00:00",
+ "count": 4,
  "sources": [
   {
    "name": "Univ. of Nottingham — studentships",
@@ -8,6 +8,10 @@
   },
   {
    "name": "Cambridge — Pharmacology",
+   "count": 1
+  },
+  {
+   "name": "Univ. of Bath",
    "count": 1
   },
   {
@@ -84,7 +88,7 @@
   },
   {
    "name": "Univ. of Bath · Management, Specialist and Administration",
-   "count": 0,
+   "count": 1,
    "ok": true
   },
   {
@@ -579,6 +583,21 @@
   }
  ],
  "items": [
+  {
+   "id": "r0131c7a43013",
+   "title": "Mental Health and Wellbeing Practitioner (CC14083)",
+   "link": "https://www.bath.ac.uk/jobs/rss/click.aspx?ref=CC14083",
+   "org": "University of Bath",
+   "source": "Univ. of Bath · Management, Specialist and Administration",
+   "type": "job",
+   "summary": "The Department of Student Support & Safeguarding is a collaborative and student-focused team dedicated to enhancing the student experience through innovative and sector-leading support practices. Working within a multidisciplinary environment, the Mental Health & Wellbeing Service collaborates closely with Therapeutic Services, Disability Services, Money Advice, and Student Retention & Success teams to provide a holistic and integrated response to student needs. We are looking to recruit Mental Health & Wellbeing Practitioners. About the role We are seeking an organised, experienced, and creative registered Mental Health & Wellbeing Professional to join our team and provide quality support to students experiencing mental health and wellbeing challenges. The position offers an opportunity to contribute to a dynamic and committed service that places student wellbeing at the heart of its wo",
+   "published": "2026-11-18",
+   "deadline": "2026-12-02",
+   "intl": null,
+   "location": "",
+   "first_seen": "2026-11-18",
+   "salary": "£39,560 to £46,970"
+  },
   {
    "id": "r580fc454e725",
    "title": "AstraZeneca Non-Clinical PhD Studentship in Next-generation TPD for oncology: Harnessing ubiquitin-independent pathways",
