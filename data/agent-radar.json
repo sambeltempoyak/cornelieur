@@ -1,5 +1,145 @@
 {
   "_help": "Optional. Written by an AI scout (e.g. a weekly Claude scheduled task) with hand-picked opportunities. Same item format as opportunities.json, plus optional 'why' (one line) and 'steps' (list of strings).",
-  "updated": null,
-  "items": []
+  "updated": "2026-11-19",
+  "items": [
+    {
+      "id": "scout-lido-dtp-2027",
+      "title": "LIDo BBSRC Doctoral Training Partnership: fully funded biosciences PhDs (2027 entry)",
+      "org": "London Interdisciplinary Biosciences Consortium (LIDo), admissions via UCL",
+      "link": "https://www.lido-dtp.ac.uk/apply",
+      "type": "phd",
+      "summary": "London consortium offering about 26 four-year BBSRC studentships a year across DTP and iCASE routes, with a stipend at the UKRI London rate. Up to 7 places cover full overseas fees for international students; visa and relocation costs are not covered. Needs a first/high 2:1 or a relevant Master's and IELTS 7.0 (6.5 per part).",
+      "deadline": "2026-12-01",
+      "location": "London",
+      "source": "found by weekly scout",
+      "intl": true,
+      "published": "2026-11-19",
+      "why": "London-based, King's Institute of Pharmaceutical Science recruits PhD students through LIDo, and her Master's meets the entry bar.",
+      "steps": [
+        "Today: browse the LIDo 2027 project list and shortlist rotations linked to drug delivery, pharmacology or antimicrobials (KCL/UCL groups)",
+        "Check the IELTS 7.0 requirement or whether her MSc counts as English evidence",
+        "Draft the personal statement around her pharmaceutics MSc and why interdisciplinary bioscience",
+        "Line up two referees now and ask them to submit early",
+        "Submit before 17:00 UK time on 1 Dec 2026"
+      ]
+    },
+    {
+      "id": "scout-cambridge-bbsrc-dtp-2027",
+      "title": "Cambridge BBSRC DTP PhD in Biological Sciences (Targeted and iCASE projects, 2027 entry)",
+      "org": "University of Cambridge",
+      "link": "https://bbsrcdtp.lifesci.cam.ac.uk/how-apply",
+      "type": "phd",
+      "summary": "About 25 fully funded studentships (stipend about £21,805 plus fees). Up to 30% go to international candidates, and for them the student visa and health surcharge are also covered. Apply through the Cambridge Applicant Portal choosing up to two projects.",
+      "deadline": "2026-12-08",
+      "location": "Cambridge",
+      "source": "found by weekly scout",
+      "intl": true,
+      "published": "2026-11-19",
+      "why": "One of the few UK studentships that pays visa and IHS costs for international students; iCASE project ics27-san-ml1 is about drug action.",
+      "steps": [
+        "Read the Targeted and iCASE project lists and pick two (e.g. ics27-san-ml1, extracellular vesicle assays for drug action)",
+        "Email the project supervisors with a short CV and one paragraph of interest this week",
+        "Write a statement of interest for each project and answer the short questions",
+        "Ask two referees to submit before 8 Dec 2026",
+        "Submit on the Applicant Portal by 8 Dec 2026"
+      ]
+    },
+    {
+      "id": "scout-kcl-mrc-dtp-2027",
+      "title": "King's College London MRC DTP studentships (2027 entry)",
+      "org": "King's College London",
+      "link": "https://kcl-mrcdtp.com/apply/application-timeline/",
+      "type": "phd",
+      "summary": "Fully funded MRC studentships (fees, stipend, bench fee) at King's; home, EU and international students can apply, with roughly 10 places a year shared by EU/international applicants. Overseas students pay their own visa and IHS. Stage 1 runs 11 to 27 Jan 2027.",
+      "deadline": "2027-01-27",
+      "location": "London",
+      "source": "found by weekly scout",
+      "intl": true,
+      "published": "2026-11-19",
+      "why": "King's pharmaceutical science is on her university list and uses the MRC DTP as a main funding route.",
+      "steps": [
+        "Before Christmas: browse the 2027 project list when it is published and shortlist pharmacology/drug delivery projects",
+        "Contact one or two supervisors in December with a CV",
+        "Budget about £4,000 for visa plus IHS, since the DTP does not cover them",
+        "Submit Stage 1 between 11 Jan (13:00) and 27 Jan 2027 (13:00)"
+      ]
+    },
+    {
+      "id": "scout-nottingham-bbsrc-dtp-2027",
+      "title": "Nottingham BBSRC Doctoral Training Programme (2027 entry)",
+      "org": "University of Nottingham / Nottingham Trent University",
+      "link": "https://www.nottingham.ac.uk/bbdtp/documents/dla-recruitment/2027-applicant-guidance.pdf",
+      "type": "phd",
+      "summary": "Up to 30 four-year studentships covering fees and UKRI stipend. International applicants can apply (max 30% of the cohort) and successful ones get a scholarship covering the gap between home and international fees; visa and IHS not covered. Apply to one research cluster.",
+      "deadline": "2026-12-08",
+      "location": "Nottingham",
+      "source": "found by weekly scout",
+      "intl": true,
+      "published": "2026-11-19",
+      "why": "Nottingham is a strong pharmacy school on her list and the fee gap is covered for international winners.",
+      "steps": [
+        "Pick the one research cluster closest to pharmaceutics/biotech",
+        "Apply on the Nottingham portal naming the BBSRC DTP as research topic",
+        "Complete the Microsoft Form with the application number",
+        "Deadline 12 noon UK time, 8 Dec 2026; interviews week of 1 Feb 2027"
+      ]
+    },
+    {
+      "id": "scout-bbsrc-nwdp-2027",
+      "title": "BBSRC North West Doctoral Programme in Bioscience (2027/28 entry)",
+      "org": "University of Manchester (with Liverpool)",
+      "link": "https://www.bmh.manchester.ac.uk/study/research/funding-fees/funded-programmes/bbsrc-nwdp/",
+      "type": "phd",
+      "summary": "Four-year fully funded studentships (fees and UKRI stipend). Non-UK applicants can apply but full awards for international students are limited to exceptional candidates.",
+      "deadline": "2026-12-04",
+      "location": "Manchester / Liverpool",
+      "source": "found by weekly scout",
+      "intl": true,
+      "published": "2026-11-19",
+      "why": "Manchester and Liverpool are on her list and both have drug delivery groups; international applicants are eligible.",
+      "steps": [
+        "Check the NWDP project list for drug delivery, biotech or antimicrobial projects",
+        "Confirm English language evidence meets the requirement",
+        "Submit by 4 Dec 2026"
+      ]
+    },
+    {
+      "id": "scout-wessex-one-health-2027",
+      "title": "Wessex One Health BBSRC Doctoral Landscape Award scholarships (infection biosciences, 2027)",
+      "org": "University of Surrey, University of Sussex, University of Exeter and partner institutes",
+      "link": "https://www.sussex.ac.uk/study/fees-funding/phd-funding/view/1995-Wessex-One-Health-BBSRC-Doctoral-Landscape-Award-scholarships",
+      "type": "phd",
+      "summary": "Four-year scholarships in infection biosciences, including microbial evolution and drug resistance. Open to UK and international applicants (up to 30% international, with fees covered). Projects hosted at Dstl, UKHSA, APHA or Pirbright have UK residency rules, so pick university-hosted projects.",
+      "deadline": "2027-01-11",
+      "location": "Guildford / Brighton / Exeter",
+      "source": "found by weekly scout",
+      "intl": true,
+      "published": "2026-11-19",
+      "why": "Antimicrobial/drug-resistance theme fits her biotech and pharmaceutics background, and international fees are covered.",
+      "steps": [
+        "Filter the project list to university-hosted projects (avoid Dstl/UKHSA/APHA/Pirbright residency rules)",
+        "Shortlist projects on drug resistance or antimicrobials",
+        "Apply on the Wessex One Health form (not the Sussex form) by midday 11 Jan 2027"
+      ]
+    },
+    {
+      "id": "scout-yorkshire-bioscience-dtp-2027",
+      "title": "Yorkshire Bioscience DTP 2027, incl. 'A modular adhiron-VLP platform for targeted molecular delivery' (Huddersfield)",
+      "org": "Yorkshire Bioscience DTP (University of Huddersfield project)",
+      "link": "https://www.yorkshirebiosciencedtp.ac.uk/apply/",
+      "type": "phd",
+      "summary": "BBSRC DTP open for 2027 entry via an expression of interest form; one listed project at Huddersfield builds virus-like particles for targeted delivery. A very limited number of international bursaries exist and they are extremely competitive; visa and IHS are not covered.",
+      "deadline": null,
+      "location": "Huddersfield (and other Yorkshire universities)",
+      "source": "found by weekly scout",
+      "intl": true,
+      "published": "2026-11-19",
+      "why": "The VLP project is squarely targeted drug delivery, her core subject, though international places are very scarce.",
+      "steps": [
+        "Confirm the expression of interest deadline on the DTP site (a secondary site says 6 Jan 2027; not verified)",
+        "Email the project supervisor at Huddersfield to ask about international eligibility",
+        "Submit the expression of interest naming this project"
+      ]
+    }
+  ]
 }
