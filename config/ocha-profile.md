@@ -4,7 +4,7 @@ This file is read by the weekly Claude "scout" (see docs/weekly-scout-prompt.md)
 (a new qualification, a changed goal, a new constraint), on GitHub with the pencil icon, or tell Claude in a chat and ask it to update this file.
 Keep it professional and short. This repository is public: no surname, no contact details, no ID or visa numbers.
 
-Last reviewed: 12 Nov 2026
+Last reviewed: 19 Nov 2026
 
 ## Who she is
 - Pharmacy graduate with an MSc in Biotechnology and Pharmaceutics.
@@ -25,8 +25,10 @@ Last reviewed: 12 Nov 2026
 
 ## Useful angles for searching
 - UKRI / BBSRC / MRC / EPSRC doctoral training partnerships that accept international students (30% cap rules apply), university-funded studentships, industry CASE and KTP projects.
+- UKRI doctoral training programmes (DTPs, now called Doctoral Landscape Awards, DLAs) recruiting as whole programmes, not single adverts: most international-friendly funding sits here. Check each autumn for the next October entry. Examples: LIDo (London), Cambridge BBSRC DTP, KCL MRC DTP, Nottingham BBSRC DTP, BBSRC/MRC North West, Wessex One Health, Yorkshire Bioscience, GW4 BioMed, UCL-Birkbeck MRC. Deadlines usually Oct to Jan. Note what each covers for international students (fee gap, visa, IHS) and any English test (often IELTS 7.0).
 - Universities with strong pharmacy and pharmaceutical science: UCL, King's College London, Imperial, University of Nottingham, Strathclyde, Manchester, Cardiff, Aston, Hertfordshire, Greenwich, UWL, Bath, Bradford, Reading, Liverpool, Queen's Belfast.
 - Roles at licensed sponsors in life sciences around London, Hertfordshire, Cambridge, Oxford and the M4 corridor.
 
 ## Qualifications and updates log (add a line when something changes)
 - 2026-11-12: profile created. No UK publications, no UK research experience yet (confirm with Ejak).
+- 2026-11-19: added UKRI doctoral training programme (DTP/DLA) search angle (asked by Ejak).
