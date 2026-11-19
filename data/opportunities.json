@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-18T07:26:23+00:00",
- "count": 4,
+ "updated": "2026-11-19T07:27:22+00:00",
+ "count": 5,
  "sources": [
   {
    "name": "Univ. of Nottingham — studentships",
@@ -8,6 +8,10 @@
   },
   {
    "name": "Cambridge — Pharmacology",
+   "count": 1
+  },
+  {
+   "name": "Univ. of Bath",
    "count": 1
   },
   {
@@ -83,7 +87,7 @@
   },
   {
    "name": "Univ. of Bath · Education & Research",
-   "count": 0,
+   "count": 1,
    "ok": true
   },
   {
@@ -583,6 +587,21 @@
   }
  ],
  "items": [
+  {
+   "id": "r9b397dc7918b",
+   "title": "Research Associate in Online Drug Supply and Youth Drug Harms (SS14093)",
+   "link": "https://www.bath.ac.uk/jobs/rss/click.aspx?ref=SS14093",
+   "org": "University of Bath",
+   "source": "Univ. of Bath · Education & Research",
+   "type": "phd",
+   "summary": "About the role The Bath Mental Health Research Group (MHRG) at the University of Bath undertakes applied research to improve the mental health and wellbeing of children and young people aged 12-25 in the local region. The group is funded by the National Institute for Health and Care Research (NIHR). This Research Associate post sits within MHRG Work Package 3 and focuses on online drug supply and its potential consequences for young people. It will investigate how drugs are promoted, advertised and made accessible through public-facing social-media platforms and associated online channels. The post builds upon research into emerging drug risks for young people, including our finding that synthetic cannabinoids ('Spice') were detected in approximately one in six vapes seized in English schools (Cozier et al., 2025, Addiction). The new focus is complementary: understanding the online envir",
+   "published": "2026-11-10",
+   "deadline": "2026-12-09",
+   "intl": null,
+   "location": "",
+   "first_seen": "2026-11-19",
+   "salary": "£39,560 to £46,970"
+  },
   {
    "id": "r0131c7a43013",
    "title": "Mental Health and Wellbeing Practitioner (CC14083)",
