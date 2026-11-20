@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-19T07:27:22+00:00",
- "count": 5,
+ "updated": "2026-11-20T07:27:10+00:00",
+ "count": 6,
  "sources": [
   {
    "name": "Univ. of Nottingham — studentships",
@@ -12,7 +12,7 @@
   },
   {
    "name": "Univ. of Bath",
-   "count": 1
+   "count": 2
   },
   {
    "name": "Univ. of Bath",
@@ -87,7 +87,7 @@
   },
   {
    "name": "Univ. of Bath · Education & Research",
-   "count": 1,
+   "count": 2,
    "ok": true
   },
   {
@@ -587,6 +587,21 @@
   }
  ],
  "items": [
+  {
+   "id": "r7fc83e53cb75",
+   "title": "Research Associate in Statistics (SS14110)",
+   "link": "https://www.bath.ac.uk/jobs/rss/click.aspx?ref=SS14110",
+   "org": "University of Bath",
+   "source": "Univ. of Bath · Education & Research",
+   "type": "phd",
+   "summary": "About the role Applications are invited for a postdoctoral research associate to work with Dr Haiyan Zheng as part of the CRUK funded 6-year programme, titled ‘STEEP: Statistically Efficient Methods for Precision Medicine Trials’. This STEEP programme aims to develop, as well as to promote the implementation of, advanced statistical methods for precision oncology trials that support decisions to be made in an adaptive manner. The programme spans several topics in medical statistics. The successful applicant for this post will mainly work on topics including (1) design and analysis of modern clinical trials, (2) controlling error rates in Bayesian clinical trials. Applicants should have, or be close to completing, a PhD in a strongly quantitative discipline, ideally in Statistics/Biostatistics, with strong skills in analytical thinking, mathematical reasoning, and coding. Knowledge and ex",
+   "published": "2026-11-19",
+   "deadline": "2026-12-04",
+   "intl": null,
+   "location": "",
+   "first_seen": "2026-11-20",
+   "salary": "£39,560 to £46,970"
+  },
   {
    "id": "r9b397dc7918b",
    "title": "Research Associate in Online Drug Supply and Youth Drug Harms (SS14093)",
