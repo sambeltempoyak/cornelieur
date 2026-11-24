@@ -1494,7 +1494,7 @@
      "name": "Paul De Bank",
      "openalex": "https://openalex.org/A5078294887",
      "orcid": "https://orcid.org/0000-0002-5717-7486",
-     "score": 7.6,
+     "score": 7.5,
      "n": 3,
      "papers": [
       {
@@ -1676,7 +1676,7 @@
      "name": "Paul De Bank",
      "openalex": "https://openalex.org/A5078294887",
      "orcid": "https://orcid.org/0000-0002-5717-7486",
-     "score": 7.6,
+     "score": 7.5,
      "n": 3,
      "papers": [
       {
@@ -4321,7 +4321,7 @@
  },
  "report": {
   "phds": 12,
-  "calls": 87,
+  "calls": 47,
   "failed": 0
  }
 }
