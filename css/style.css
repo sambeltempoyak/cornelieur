@@ -461,3 +461,20 @@ html[data-theme=dark] .sidebar nav a,html[data-theme=dark] .tabbar a{color:#E4EE
   .board > *{scroll-snap-align:start}
   .triage{grid-template-columns:1fr}
 }
+
+/* Explain the number */
+.ex-btn{background:none;border:0;padding:2px 0;font:inherit;font-size:11.5px;font-weight:600;color:var(--indigo);cursor:pointer;text-decoration:underline;text-underline-offset:2px;white-space:nowrap}
+.ex-btn:hover{color:var(--forest)}
+.ex-panel{grid-column:1/-1;cursor:default;margin-top:4px;border:1px solid var(--line);border-radius:12px;background:var(--paper);padding:12px 14px}
+.ex-detail{margin-bottom:12px}
+.ex{font-size:13.5px;line-height:1.5;color:var(--ink)}
+.ex h4{font-family:var(--sans);font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--forest);margin:12px 0 4px}
+.ex ul{margin:0;padding-left:18px}.ex li{margin:2px 0}.ex p{margin:4px 0}
+.ex-lead{margin-top:0!important}
+.ex-pts{margin-top:10px;background:var(--card)}
+.ex-pts table{width:100%;border-collapse:collapse;margin-top:6px;font-size:13px}
+.ex-pts td{padding:3px 0;border-top:1px solid var(--line)}
+.ex-pts td:last-child{text-align:right;font-weight:700;color:var(--good);width:48px}
+.ex-pts td.neg{color:var(--bad)}
+.ex-pts tr.tot td{font-weight:700;color:var(--forest)}
+.ex-foot{font-size:12px;color:var(--muted);margin-top:10px!important}

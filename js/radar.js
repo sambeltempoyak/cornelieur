@@ -1,5 +1,5 @@
 import { S, save, esc, $, $$, toast, fmtDate, daysLeft, uid, getJSON, modal, copyText, addXP, today } from './util.js';
-import { analyse, toMarkdown, VERDICT } from './analyze.js';
+import { analyse, toMarkdown, VERDICT, explainPriority } from './analyze.js';
 import { connected, fetchPage, putText, del, list as driveList, getJSONFile, putJSONFile, safeName, DIR } from './drive.js';
 import { openReader } from './reader.js';
 
@@ -209,7 +209,7 @@ async function feed(el) {
   items.forEach(applyAnalysis); items.sort((a, b) => b.priority - a.priority);
   const filter = { type: 'all', intl: false, q: '', showFlagged: false };
   const draw = () => {
-    const ranked = rankList(items); const rankOf = new Map(ranked.map((o, i) => [o.id, i + 1]));
+    ITEMS = items; const ranked = rankList(items); const rankOf = new Map(ranked.map((o, i) => [o.id, i + 1]));
     const flaggedN = items.filter(isFlagged).length;
     const list = items.filter(o => (filter.showFlagged ? isFlagged(o) : !isFlagged(o)) &&
       (filter.type === 'all' || o.type === filter.type) && (!filter.intl || o.an.positives.some(p => p.id === 'intl' || p.id === 'sponsor')) &&
@@ -253,6 +253,62 @@ async function feed(el) {
   }
 }
 
+/* ---------------- Explain the number ---------------- */
+const PLAIN = {
+  fit: (e) => e.hits.length ? `It mentions ${listWords(e.hits)}${e.titleHits ? ` (${e.titleHits === 1 ? 'one of them is' : 'some are'} right in the title)` : ''}, which sit in your field.` : 'It touches your field.',
+  intl: () => 'It says international applicants can apply, which matters because you need a UK visa route.',
+  sponsor: () => 'It mentions visa sponsorship, which you need.',
+  funded: (e) => e.isPhd ? 'It is a funded PhD, your first goal, so you would not have to find the fees yourself.' : 'It mentions funding.',
+  pay: () => 'It states the pay or stipend, so you know what you would live on.',
+  time: (e, a) => a.daysLeft > 75 ? 'The deadline is far off, so there is no rush, but it is not urgent either.' : `The deadline is ${a.daysLeft} days away: enough time to write a good application.`,
+  london: () => 'It is in or near London, where you already live.',
+  phd: () => 'It is a PhD, the route you want most.',
+  curated: () => 'The weekly AI scout picked it by hand after reading it against your profile.',
+};
+const listWords = arr => { const q = arr.map(w => `“${w}”`); return q.length < 2 ? q.join('') : q.slice(0, -1).join(', ') + ' and ' + q[q.length - 1]; };
+const ptsOf = (e, key) => (e.parts.find(p => p.key === key) || {}).pts || 0;
+const signed = n => (n > 0 ? '+' : n < 0 ? '−' : '') + Math.abs(n);
+
+function compareLine(me, other, otherRank, above) {
+  const eo = explainPriority(other.an, other), em = explainPriority(me.an, me);
+  const keys = new Set([...em.parts, ...eo.parts].map(p => p.key)); keys.delete('base');
+  const diffs = [...keys].map(k => { const p = em.parts.find(x => x.key === k) || eo.parts.find(x => x.key === k); return { k, d: ptsOf(eo, k) - ptsOf(em, k), label: p.label }; })
+    .filter(x => above ? x.d > 0 : x.d < 0).sort((x, y) => Math.abs(y.d) - Math.abs(x.d)).slice(0, 2);
+  const name = `<a href="#/radar/item/${encodeURIComponent(other.id)}">#${otherRank} ${esc(shorten(other.title, 60))}</a> (${other.priority})`;
+  const UP = { fit: 'matches your field more closely', intl: 'says international applicants are welcome', sponsor: 'mentions visa sponsorship', funded: 'is fully funded', pay: 'states its pay or stipend', time: 'has a more comfortable deadline', london: 'is in or near London', phd: 'is a PhD', curated: 'was hand-picked by the AI scout', high: 'has fewer problems to check', med: 'has fewer problems to check' };
+  const DOWN = { fit: 'matches your field less closely', intl: "doesn't say international applicants are welcome", sponsor: "doesn't mention visa sponsorship", funded: "isn't fully funded", pay: "doesn't state its pay", time: 'has a less comfortable deadline', london: "isn't in London", phd: "isn't a PhD", curated: "wasn't hand-picked by the AI scout", high: 'has more problems to check', med: 'has more problems to check' };
+  const reason = x => (above ? UP : DOWN)[x.k] || x.label.toLowerCase();
+  if (other.priority === me.priority) return `${above ? 'Above' : 'Below'} it: ${name}, with the same score. They are tied; the order between them is arbitrary.`;
+  if (!diffs.length) return `${above ? 'Above' : 'Below'} it: ${name}.`;
+  return above ? `Above it: ${name}. It ranks higher mainly because it ${[...new Set(diffs.map(reason))].join(' and ')}.`
+               : `Below it: ${name}. That one sits lower because it ${[...new Set(diffs.map(reason))].join(' and ')}.`;
+}
+
+function explainHtml(o, items) {
+  const a = o.an, e = explainPriority(a, o);
+  const ranked = rankList(items); const i = ranked.findIndex(x => x.id === o.id); const rk = i + 1;
+  const ups = e.parts.filter(p => p.key !== 'base' && p.pts > 0), downs = e.parts.filter(p => p.pts < 0);
+  const why = ups.filter(p => !(p.key === 'phd' && ups.some(q => q.key === 'funded'))).map(p => `<li>${PLAIN[p.key] ? PLAIN[p.key](e, a) : esc(p.label)}</li>`);
+  const hold = a.blockers.map(b => `<li>${b.sev === 'high' ? '🚩' : '⚠️'} ${esc(b.text)}</li>`);
+  if (!ptsOf(e, 'fit')) hold.push('<li>None of your field words (pharmaceutics, drug delivery, formulation…) appear in it, so it may be off-topic.</li>');
+  else if (ptsOf(e, 'fit') < 12) hold.push('<li>Your field words only appear in passing, not in the title.</li>');
+  if (!ups.some(p => p.key === 'intl' || p.key === 'sponsor')) hold.push('<li>It does not say whether international applicants can apply. Check this before spending time on it.</li>');
+  const band = a.priority >= 68 ? 'Strong match (68 and above)' : a.priority >= 50 ? 'Worth a look (50–67)' : a.priority >= 34 ? 'Long shot (34–49)' : 'Low priority (below 34)';
+  const place = rk ? `It is <b>#${rk} of ${ranked.length}</b> in your list. ${band}.` : a.verdict === 'skip' ? 'It is left out of your ranked list because of a hard blocker, whatever its score.' : 'It is not in your ranked list right now (flagged or closed).';
+  const nb = rk ? [i > 0 ? compareLine(o, ranked[i - 1], rk - 1, true) : 'Nothing ranks above it: this is your top pick right now.', i < ranked.length - 1 ? compareLine(o, ranked[i + 1], rk + 1, false) : ''].filter(Boolean) : [];
+  return `<div class="ex">
+    <p class="ex-lead"><b>${a.priority} out of 99.</b> ${place}</p>
+    ${why.length ? `<h4>Why it is relevant to you</h4><ul>${why.join('')}</ul>` : ''}
+    ${hold.length ? `<h4>What holds it back</h4><ul>${hold.join('')}</ul>` : ''}
+    ${nb.length ? `<h4>Compared with its neighbours</h4>${nb.map(t => `<p>${t}</p>`).join('')}` : ''}
+    <details class="ex-pts"><summary>See the points</summary><table>
+      ${e.parts.map(p => `<tr><td>${esc(p.label)}</td><td class="${p.pts < 0 ? 'neg' : ''}">${p.key === 'base' ? p.pts : signed(p.pts)}</td></tr>`).join('')}
+      <tr class="tot"><td>Total${e.raw !== e.pr ? ` (${e.raw}, kept between 1 and 99)` : ''}</td><td>${e.pr}</td></tr></table></details>
+    <p class="ex-foot">${a.source === 'page' ? 'Worked out from the full advert.' : 'Worked out from the short feed summary only. Once the full advert is read, the number may change.'} It is a guide for sorting, not a judgement of your chances.</p>
+  </div>`;
+}
+
+const openEx = new Set(); let ITEMS = [];
 function oppRow(o, rank, flaggedView) {
   const fl = S().flags[o.id];
   return `<div class="opp ${flaggedView ? 'is-flagged' : ''}" data-id="${esc(o.id)}" tabindex="0" role="link" aria-label="Open details: ${esc(o.title)}">
@@ -262,19 +318,26 @@ function oppRow(o, rank, flaggedView) {
       ${flaggedView && fl ? `<div class="why muted">Flagged: ${esc((FLAG_REASONS.find(r => r[0] === fl.reason) || [, fl.reason])[1])}${fl.note ? ' · ' + esc(fl.note) : ''}</div>` : `<div class="why">${esc(shorten(o.why || o.an.verdictText, 150))}</div>`}
     </div>
     <div class="acts"><span class="pri ${pri(o.priority)}" title="Priority for you, out of 99">${o.priority}</span>
+      ${flaggedView ? '' : `<button class="ex-btn" data-act="explain" aria-expanded="${openEx.has(o.id)}">${openEx.has(o.id) ? 'Hide' : 'Explain the number'}</button>`}
       ${flaggedView ? `<button class="btn sm" data-act="restore">Restore</button>` : `<button class="btn sm" data-act="track">${S().tracker.some(t => t.oppId === o.id) ? '✓ Tracking' : 'Track + plan'}</button>
       <button class="btn sm ghost" data-act="flag">🚩 Not relevant</button>`}
-    </div></div>`;
+    </div>${!flaggedView && openEx.has(o.id) ? `<div class="ex-panel">${explainHtml(o, ITEMS)}</div>` : ''}</div>`;
 }
 function bindOppActions(el, redraw, items) {
   $$('.opp', el).forEach(card => {
     const id = card.dataset.id; const go = () => { location.hash = '#/radar/item/' + encodeURIComponent(id); };
-    card.onclick = e => { if (e.target.closest('[data-act]') || e.target.closest('a')) return; go(); };
+    card.onclick = e => { if (e.target.closest('[data-act]') || e.target.closest('a') || e.target.closest('.ex-panel')) return; go(); };
     card.onkeydown = e => { if (e.key === 'Enter' && e.target === card) go(); };
   });
   $$('.opp [data-act]', el).forEach(b => b.onclick = e => {
     e.stopPropagation();
     const o = items.find(x => x.id === b.closest('.opp').dataset.id);
+    if (b.dataset.act === 'explain') {
+      const card = b.closest('.opp'); let p = card.querySelector('.ex-panel');
+      if (p) { p.remove(); openEx.delete(o.id); b.textContent = 'Explain the number'; b.setAttribute('aria-expanded', 'false'); }
+      else { p = document.createElement('div'); p.className = 'ex-panel'; p.innerHTML = explainHtml(o, items); card.appendChild(p); openEx.add(o.id); b.textContent = 'Hide'; b.setAttribute('aria-expanded', 'true'); }
+      return;
+    }
     if (b.dataset.act === 'flag') return flagModal(o, redraw);
     if (b.dataset.act === 'restore') { unflag(o); toast('Restored'); }
     if (b.dataset.act === 'track') trackOpp(o);
@@ -296,6 +359,7 @@ async function detail(el, id) {
     el.innerHTML = `
       <a href="#/radar" class="back">← Back to the list</a>
       <div class="verdict ${V.cls}"><div class="v-ico">${V.icon}</div><div><div class="v-label">${V.label} · priority ${a.priority}/99${rk ? ` · #${rk} of ${ranked.length} for you` : ''}</div><div class="v-text">${esc(a.verdictText)}</div></div></div>
+      <details class="ex-detail"><summary>Explain the number (${a.priority})</summary>${explainHtml(o, items)}</details>
       <h1 class="d-title">${esc(o.title)}</h1>
       <div class="muted" style="margin-bottom:12px">${esc(o.org || '')}${o.org && o.source ? ' · ' : ''}${esc(o.source || '')}</div>
       ${fl ? `<div class="notice dew" style="margin-bottom:12px">🚩 You flagged this as not relevant (${esc((FLAG_REASONS.find(r => r[0] === fl.reason) || [, fl.reason])[1])}). <button class="btn sm" id="dRestore">Restore</button></div>` : ''}

@@ -179,15 +179,8 @@ export function analyse(o, ctx = {}) {
   for (const k of profile.keywords || []) { const kk = k.toLowerCase().trim(); if (!kk) continue; if (titleLow.includes(kk)) { titleHits++; hits.add(k); } else if (lower.includes(kk)) { bodyHits++; hits.add(k); } }
   for (const a of profile.avoid || []) if (a && lower.includes(a.toLowerCase())) blockers.push({ id: 'avoid', sev: 'med', text: `Mentions "${a}", which you wanted to avoid.` });
 
-  // priority 1..99
-  let pr = 25;
-  pr += Math.min(32, titleHits * 12 + Math.min(18, bodyHits * 3));
-  if (intlOk) pr += 14; if (spOk) pr += 8; if (pay.funded === 'full') pr += isPhd ? 8 : 3; if (pay.pay) pr += 3;
-  const nHigh = blockers.filter(b => b.sev === 'high').length, nMed = blockers.filter(b => b.sev === 'med').length;
-  pr -= Math.min(60, nHigh * 40) + Math.min(25, nMed * 10);
-  if (days != null && days >= 7 && days <= 75) pr += 8; else if (days != null && days > 75) pr += 3;
-  if (/london/i.test(full)) pr += 3; if (isPhd) pr += 4; if (o.curated) pr += 8;
-  pr = Math.max(1, Math.min(99, Math.round(pr)));
+  // priority 1..99 (one shared formula, so "Explain the number" always matches)
+  const { pr, nHigh } = scorePriority({ titleHits, bodyHits, intl: !!intlOk, sponsor: !!spOk, funded: pay.funded === 'full', pay: !!pay.pay, blockers, days, london: /london/i.test(full), isPhd, curated: !!o.curated });
   const verdict = nHigh ? 'skip' : pr >= 68 ? 'top' : pr >= 50 ? 'good' : pr >= 34 ? 'maybe' : 'low';
   const firstHigh = blockers.find(b => b.sev === 'high'), firstMed = blockers.find(b => b.sev === 'med');
   const verdictText = {
@@ -212,6 +205,38 @@ export function analyse(o, ctx = {}) {
     analysedAt: today, expires: dl ? addDays(dl.iso, 3) : addDays(today, 30),
   };
 }
+// The priority formula, step by step. Returns the total and every part that moved it.
+export function scorePriority(f) {
+  const parts = [{ key: 'base', pts: 25, label: 'Starting point for every advert' }];
+  const add = (key, pts, label) => { if (pts) parts.push({ key, pts, label }); };
+  add('fit', Math.min(32, f.titleHits * 12 + Math.min(18, f.bodyHits * 3)), 'Matches your field');
+  if (f.intl) add('intl', 14, 'Says international applicants are welcome');
+  if (f.sponsor) add('sponsor', 8, 'Mentions visa sponsorship');
+  if (f.funded) add('funded', f.isPhd ? 8 : 3, f.isPhd ? 'Fully funded PhD' : 'Funding mentioned');
+  if (f.pay) add('pay', 3, 'States the pay or stipend');
+  const nHigh = f.blockers.filter(b => b.sev === 'high').length, nMed = f.blockers.filter(b => b.sev === 'med').length;
+  add('high', -Math.min(60, nHigh * 40), nHigh === 1 ? 'A hard blocker' : `${nHigh} hard blockers`);
+  add('med', -Math.min(25, nMed * 10), nMed === 1 ? 'Something to check first' : `${nMed} things to check first`);
+  if (f.days != null && f.days >= 7 && f.days <= 75) add('time', 8, 'Deadline is comfortably ahead (1 week to 2.5 months)');
+  else if (f.days != null && f.days > 75) add('time', 3, 'Deadline is far off');
+  if (f.london) add('london', 3, 'In or near London');
+  if (f.isPhd) add('phd', 4, 'A PhD: your first goal');
+  if (f.curated) add('curated', 8, 'Hand-picked by the weekly AI scout');
+  const raw = parts.reduce((t, p) => t + p.pts, 0);
+  return { pr: Math.max(1, Math.min(99, Math.round(raw))), raw, parts, nHigh, nMed };
+}
+
+// Rebuild the breakdown from a finished analysis (works for cached full reads too).
+export function explainPriority(a, o = {}) {
+  const tl = (o.title || a.title || '').toLowerCase();
+  const hits = a.hits || [];
+  const titleHits = hits.filter(k => tl.includes(k.toLowerCase())).length;
+  const has = id => a.positives.some(p => p.id === id);
+  const isPhd = /^PhD/.test(a.level || '');
+  const r = scorePriority({ titleHits, bodyHits: hits.length - titleHits, intl: has('intl'), sponsor: has('sponsor'), funded: a.funded === 'full', pay: !!a.pay, blockers: a.blockers, days: a.daysLeft, london: has('london'), isPhd, curated: !!o.curated });
+  return { ...r, hits, titleHits, isPhd, matches: r.pr === a.priority };
+}
+
 function snippet(s, i, len) { const a = Math.max(0, i - 60), b = Math.min(s.length, i + len + 60); return (a ? '…' : '') + s.slice(a, b).replace(/\s+/g, ' ').trim() + (b < s.length ? '…' : ''); }
 function addDays(isoStr, n) { const d = new Date(Date.parse(isoStr) + n * 86400000); return d.toISOString().slice(0, 10); }
 
