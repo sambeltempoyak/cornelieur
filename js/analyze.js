@@ -151,7 +151,11 @@ export function analyse(o, ctx = {}) {
   else if (days != null && days <= 7) blockers.push({ id: 'tight', sev: 'med', text: days === 0 ? 'Closes today.' : `Closes in ${days} day${days === 1 ? '' : 's'}: very tight.`, quote: dl.text });
 
   const intlOk = INTL_OK.exec(full), spOk = SPONSOR_OK.exec(full);
+  // The weekly scout opened the advert and confirmed international eligibility: trust that over a loose regex hit.
+  const scoutIntl = o.intl === true && o.curated;
+  if (scoutIntl) { const i = blockers.findIndex(b => b.id === 'home-only'); if (i >= 0) blockers.splice(i, 1); }
   if (intlOk) positives.push({ id: 'intl', text: 'International applicants are welcome / eligible.', quote: snippet(full, intlOk.index, intlOk[0].length) });
+  else if (scoutIntl) positives.push({ id: 'intl', text: 'International applicants are eligible (checked by the weekly scout).' });
   if (spOk) positives.push({ id: 'sponsor', text: 'Visa sponsorship is mentioned as possible.', quote: snippet(full, spOk.index, spOk[0].length) });
   if (pay.funded === 'full') positives.push({ id: 'funded', text: 'Funded (fees and/or stipend mentioned).' });
   if (/\b(master'?s|msc|m\.sc)\b/i.test(full) && isPhd) positives.push({ id: 'msc', text: "A master's degree is mentioned: yours counts." });
@@ -180,7 +184,7 @@ export function analyse(o, ctx = {}) {
   for (const a of profile.avoid || []) if (a && lower.includes(a.toLowerCase())) blockers.push({ id: 'avoid', sev: 'med', text: `Mentions "${a}", which you wanted to avoid.` });
 
   // priority 1..99 (one shared formula, so "Explain the number" always matches)
-  const { pr, nHigh } = scorePriority({ titleHits, bodyHits, intl: !!intlOk, sponsor: !!spOk, funded: pay.funded === 'full', pay: !!pay.pay, blockers, days, london: /london/i.test(full), isPhd, curated: !!o.curated });
+  const { pr, nHigh } = scorePriority({ titleHits, bodyHits, intl: !!intlOk || scoutIntl, sponsor: !!spOk, funded: pay.funded === 'full', pay: !!pay.pay, blockers, days, london: /london/i.test(full), isPhd, curated: !!o.curated });
   const verdict = nHigh ? 'skip' : pr >= 68 ? 'top' : pr >= 50 ? 'good' : pr >= 34 ? 'maybe' : 'low';
   const firstHigh = blockers.find(b => b.sev === 'high'), firstMed = blockers.find(b => b.sev === 'med');
   const verdictText = {

@@ -18,6 +18,8 @@ async function loadOpps() {
     if (seenIds.has(id)) continue; seenIds.add(id);
     items.push({ ...it, id });
   }
+  const enrich = agent.enrich || {};
+  for (const it of items) { const r = enrich[it.id] || enrich[it.link]; if (r && !it.research) it.research = r; }
   items.forEach(scoreItem);
   items.forEach(applyAnalysis);
   items.sort((a, b) => b.priority - a.priority);
@@ -101,7 +103,8 @@ const tried = new Set();            // adverts we already tried to read this ses
 let indexSynced = false, pushTimer = null;
 
 function applyAnalysis(o) {
-  const a = AN[o.id];
+  let a = AN[o.id];
+  if (a && o.curated && o.intl === true && a.blockers.some(b => b.id === 'home-only')) { delete AN[o.id]; a = null; } // stale read from before scout-verified eligibility
   o.an = a && a.source === 'page' ? { ...a, hits: a.hits } : analyse(o, { profile: S().profile });
   if (o.an.source !== 'page') o.an.source = 'feed';
   o.priority = o.an.priority;
@@ -146,7 +149,7 @@ async function deepRead(o) {
   const a = analyse(o, { html: r.text, profile: S().profile });
   if (a.source !== 'page') throw new Error('The page had too little text to analyse (it may need JavaScript).');
   AN[o.id] = a; saveAN(); o.an = a; o.priority = a.priority;
-  putText(`${DIR.cache}/${o.id}.md`, toMarkdown(a), 'text/markdown').catch(() => {});
+  putText(`${DIR.cache}/${o.id}.md`, toMarkdown(a) + researchMd(o), 'text/markdown').catch(() => {});
   schedulePush();
   return a;
 }
@@ -209,7 +212,7 @@ async function feed(el) {
   items.forEach(applyAnalysis); items.sort((a, b) => b.priority - a.priority);
   const filter = { type: 'all', intl: false, q: '', showFlagged: false };
   const draw = () => {
-    ITEMS = items; const ranked = rankList(items); const rankOf = new Map(ranked.map((o, i) => [o.id, i + 1]));
+    const ranked = rankList(items); const rankOf = new Map(ranked.map((o, i) => [o.id, i + 1]));
     const flaggedN = items.filter(isFlagged).length;
     const list = items.filter(o => (filter.showFlagged ? isFlagged(o) : !isFlagged(o)) &&
       (filter.type === 'all' || o.type === filter.type) && (!filter.intl || o.an.positives.some(p => p.id === 'intl' || p.id === 'sponsor')) &&
@@ -308,7 +311,6 @@ function explainHtml(o, items) {
   </div>`;
 }
 
-const openEx = new Set(); let ITEMS = [];
 function oppRow(o, rank, flaggedView) {
   const fl = S().flags[o.id];
   return `<div class="opp ${flaggedView ? 'is-flagged' : ''}" data-id="${esc(o.id)}" tabindex="0" role="link" aria-label="Open details: ${esc(o.title)}">
@@ -318,31 +320,53 @@ function oppRow(o, rank, flaggedView) {
       ${flaggedView && fl ? `<div class="why muted">Flagged: ${esc((FLAG_REASONS.find(r => r[0] === fl.reason) || [, fl.reason])[1])}${fl.note ? ' · ' + esc(fl.note) : ''}</div>` : `<div class="why">${esc(shorten(o.why || o.an.verdictText, 150))}</div>`}
     </div>
     <div class="acts"><span class="pri ${pri(o.priority)}" title="Priority for you, out of 99">${o.priority}</span>
-      ${flaggedView ? '' : `<button class="ex-btn" data-act="explain" aria-expanded="${openEx.has(o.id)}">${openEx.has(o.id) ? 'Hide' : 'Explain the number'}</button>`}
       ${flaggedView ? `<button class="btn sm" data-act="restore">Restore</button>` : `<button class="btn sm" data-act="track">${S().tracker.some(t => t.oppId === o.id) ? '✓ Tracking' : 'Track + plan'}</button>
       <button class="btn sm ghost" data-act="flag">🚩 Not relevant</button>`}
-    </div>${!flaggedView && openEx.has(o.id) ? `<div class="ex-panel">${explainHtml(o, ITEMS)}</div>` : ''}</div>`;
+    </div></div>`;
 }
 function bindOppActions(el, redraw, items) {
   $$('.opp', el).forEach(card => {
     const id = card.dataset.id; const go = () => { location.hash = '#/radar/item/' + encodeURIComponent(id); };
-    card.onclick = e => { if (e.target.closest('[data-act]') || e.target.closest('a') || e.target.closest('.ex-panel')) return; go(); };
+    card.onclick = e => { if (e.target.closest('[data-act]') || e.target.closest('a')) return; go(); };
     card.onkeydown = e => { if (e.key === 'Enter' && e.target === card) go(); };
   });
   $$('.opp [data-act]', el).forEach(b => b.onclick = e => {
     e.stopPropagation();
     const o = items.find(x => x.id === b.closest('.opp').dataset.id);
-    if (b.dataset.act === 'explain') {
-      const card = b.closest('.opp'); let p = card.querySelector('.ex-panel');
-      if (p) { p.remove(); openEx.delete(o.id); b.textContent = 'Explain the number'; b.setAttribute('aria-expanded', 'false'); }
-      else { p = document.createElement('div'); p.className = 'ex-panel'; p.innerHTML = explainHtml(o, items); card.appendChild(p); openEx.add(o.id); b.textContent = 'Hide'; b.setAttribute('aria-expanded', 'true'); }
-      return;
-    }
     if (b.dataset.act === 'flag') return flagModal(o, redraw);
     if (b.dataset.act === 'restore') { unflag(o); toast('Restored'); }
     if (b.dataset.act === 'track') trackOpp(o);
     redraw();
   });
+}
+
+/* ---------------- Supervisors & reading (filled by the weekly scout) ---------------- */
+const link = (u, t) => /^https?:\/\//.test(u || '') ? `<a href="${esc(u)}" target="_blank" rel="noopener">${t}</a>` : t;
+function researchHtml(o) {
+  const r = o.research; const isPhd = o.type === 'phd' || /^PhD/.test(o.an.level || '');
+  if (!isPhd) return '';
+  if (!r) return `<details class="ex-detail"><summary>Supervisors & what to read</summary><div class="ex"><p class="ex-lead">Not researched yet. Every Thursday the AI scout looks up the supervisors, their recent papers and a short reading list for the PhDs in your list. This one will be filled in at the next run.</p></div></details>`;
+  const sup = r.supervisors || [], pubs = r.publications || [], read = r.reading || [];
+  const start = read.filter(x => x.level !== 'deeper'), deeper = read.filter(x => x.level === 'deeper');
+  const readLi = x => `<li>${link(x.link, `<b>${esc(x.title)}</b>`)}${x.authors || x.year ? ` <span class="muted">(${esc([x.authors, x.year].filter(Boolean).join(', '))})</span>` : ''}${x.why ? `<div class="ex-why">${esc(x.why)}</div>` : ''}</li>`;
+  return `<details class="ex-detail"><summary>Supervisors & what to read${sup.length ? ` (${sup.length})` : ''}</summary><div class="ex">
+    ${r.angle ? `<p class="ex-lead"><b>Your angle:</b> ${esc(r.angle)}</p>` : ''}
+    ${sup.length ? `<h4>Who you would work with</h4><ul>${sup.map(x => `<li>${link(x.profile, `<b>${esc(x.name)}</b>`)}${x.role || x.dept ? ` <span class="muted">· ${esc([x.role, x.dept].filter(Boolean).join(', '))}</span>` : ''}${x.focus ? `<div class="ex-why">${esc(x.focus)}</div>` : ''}</li>`).join('')}</ul>` : ''}
+    ${pubs.length ? `<h4>Their recent papers</h4><ul>${pubs.map(x => `<li>${link(x.link, esc(x.title))} <span class="muted">(${esc([x.by, x.venue, x.year].filter(Boolean).join(', '))})</span></li>`).join('')}</ul>` : ''}
+    ${start.length ? `<h4>Read first</h4><ul>${start.map(readLi).join('')}</ul>` : ''}
+    ${deeper.length ? `<h4>Go deeper</h4><ul>${deeper.map(readLi).join('')}</ul>` : ''}
+    <p class="ex-foot">Found by the weekly AI scout${r.checked ? ' on ' + fmtDate(r.checked) : ''}. Check names and papers on the university page before you email anyone.</p>
+  </div></details>`;
+}
+function researchMd(o) {
+  const r = o.research; if (!r) return '';
+  const L = ['', '## Supervisors & reading (weekly scout)', ''];
+  if (r.angle) L.push(`**Your angle:** ${r.angle}`, '');
+  if ((r.supervisors || []).length) { L.push('### Supervisors'); for (const x of r.supervisors) L.push(`- ${x.profile ? `[${x.name}](${x.profile})` : x.name}${x.role || x.dept ? ` · ${[x.role, x.dept].filter(Boolean).join(', ')}` : ''}${x.focus ? `: ${x.focus}` : ''}`); L.push(''); }
+  if ((r.publications || []).length) { L.push('### Their recent papers'); for (const x of r.publications) L.push(`- ${x.link ? `[${x.title}](${x.link})` : x.title} (${[x.by, x.venue, x.year].filter(Boolean).join(', ')})`); L.push(''); }
+  if ((r.reading || []).length) { L.push('### Reading list'); for (const x of r.reading) L.push(`- ${x.level === 'deeper' ? '(deeper) ' : ''}${x.link ? `[${x.title}](${x.link})` : x.title}${x.authors || x.year ? ` (${[x.authors, x.year].filter(Boolean).join(', ')})` : ''}${x.why ? ` — ${x.why}` : ''}`); L.push(''); }
+  L.push(`_Found by the AI scout${r.checked ? ' on ' + r.checked : ''}. Check before emailing._`);
+  return L.join('\n');
 }
 
 /* ---------------- Detail view: what the advert actually says ---------------- */
@@ -362,6 +386,7 @@ async function detail(el, id) {
       <details class="ex-detail"><summary>Explain the number (${a.priority})</summary>${explainHtml(o, items)}</details>
       <h1 class="d-title">${esc(o.title)}</h1>
       <div class="muted" style="margin-bottom:12px">${esc(o.org || '')}${o.org && o.source ? ' · ' : ''}${esc(o.source || '')}</div>
+      ${researchHtml(o)}
       ${fl ? `<div class="notice dew" style="margin-bottom:12px">🚩 You flagged this as not relevant (${esc((FLAG_REASONS.find(r => r[0] === fl.reason) || [, fl.reason])[1])}). <button class="btn sm" id="dRestore">Restore</button></div>` : ''}
       ${a.blockers.length ? `<section class="card warn-card"><h2>Check before you apply</h2>${a.blockers.map(b => `<div class="flagrow ${b.sev}"><span>${b.sev === 'high' ? '🚩' : '⚠️'}</span><div><b>${esc(b.text)}</b>${b.quote ? `<div class="muted quote">“${esc(b.quote)}”</div>` : ''}</div></div>`).join('')}</section>` : ''}
       <section class="card"><h2>Key facts</h2><dl class="facts">
@@ -383,7 +408,7 @@ async function detail(el, id) {
         <p class="muted" style="font-size:12.5px;margin:10px 0 0" id="dNote">${note || (a.source === 'page' ? `Read from the full advert on ${fmtDate(a.analysedAt)}.` : 'Quick read from the short feed summary only.')} Always confirm dates and eligibility on the advert itself.</p>
       </section>`;
     $('#dTrack', el).onclick = () => { trackOpp(o); draw(); };
-    $('#dMd', el).onclick = () => openReader({ title: o.title, md: toMarkdown(a), key: 'an:' + o.id, subtitle: 'Advert summary', filename: safeName(o.title) + ' (summary).md' });
+    $('#dMd', el).onclick = () => openReader({ title: o.title, md: toMarkdown(a) + researchMd(o), key: 'an:' + o.id, subtitle: 'Advert summary', filename: safeName(o.title) + ' (summary).md' });
     const f = $('#dFlag', el); if (f) f.onclick = () => flagModal(o, () => { draw(); });
     const r = $('#dRestore', el); if (r) r.onclick = () => { unflag(o); draw(); };
   };

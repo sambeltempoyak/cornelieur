@@ -1,5 +1,5 @@
 {
-  "_help": "Optional. Written by an AI scout (e.g. a weekly Claude scheduled task) with hand-picked opportunities. Same item format as opportunities.json, plus optional 'why' (one line) and 'steps' (list of strings).",
+  "_help": "Written by the weekly Claude scout (docs/weekly-scout-prompt.md). Same item format as opportunities.json, plus optional 'why', 'steps' and, for PhDs, 'research' (supervisors, publications, reading, angle). Top-level 'enrich' maps robot item ids to a research object.",
   "updated": "2026-11-19",
   "items": [
     {

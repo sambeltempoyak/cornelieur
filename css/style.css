@@ -463,10 +463,10 @@ html[data-theme=dark] .sidebar nav a,html[data-theme=dark] .tabbar a{color:#E4EE
 }
 
 /* Explain the number */
-.ex-btn{background:none;border:0;padding:2px 0;font:inherit;font-size:11.5px;font-weight:600;color:var(--indigo);cursor:pointer;text-decoration:underline;text-underline-offset:2px;white-space:nowrap}
-.ex-btn:hover{color:var(--forest)}
-.ex-panel{grid-column:1/-1;cursor:default;margin-top:4px;border:1px solid var(--line);border-radius:12px;background:var(--paper);padding:12px 14px}
 .ex-detail{margin-bottom:12px}
+.ex-detail > summary{font-weight:600}
+.ex-detail[open] > summary{margin-bottom:6px}
+.ex-why{font-size:12.5px;color:var(--muted);margin-top:1px}
 .ex{font-size:13.5px;line-height:1.5;color:var(--ink)}
 .ex h4{font-family:var(--sans);font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--forest);margin:12px 0 4px}
 .ex ul{margin:0;padding-left:18px}.ex li{margin:2px 0}.ex p{margin:4px 0}
