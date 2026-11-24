@@ -20,6 +20,7 @@ from pathlib import Path
 API = "https://api.openalex.org"
 UA = "CornelieurRobot/1.0 (personal PhD helper; github.com/sambeltempoyak/cornelieur)"
 CALLS = {"n": 0, "fail": 0}
+VERSION = 2  # bump when the ranking changes, to rebuild the university map
 
 
 def get(path, params):
@@ -111,6 +112,16 @@ def link(w):
     return oa or w.get("id")
 
 
+JUNK = re.compile(r"^(response to|reply to|correction|erratum|corrigendum|comment on|retraction|editorial)", re.I)
+CORE = []
+
+
+def paper_weight(title):
+    t = (title or "").lower()
+    if any(c in t for c in CORE): return 2.0
+    return 0.5
+
+
 def people_at(inst, terms, since, n_people):
     j = get("works", {
         "search": or_query(terms),
@@ -121,7 +132,8 @@ def people_at(inst, terms, since, n_people):
     works = (j or {}).get("results") or []
     people = {}
     for rank, w in enumerate(works):
-        weight = 1.0 + max(0, 50 - rank) / 50  # more relevant results count more
+        if JUNK.match(w.get("display_name") or ""): continue
+        weight = paper_weight(w.get("display_name")) * (1.0 + max(0, 50 - rank) / 100)  # her core field first, then search relevance
         yr = w.get("publication_year") or 0
         for a in w.get("authorships") or []:
             if inst["id"] not in [short_id(i.get("id")) for i in a.get("institutions") or []]: continue
@@ -135,27 +147,39 @@ def people_at(inst, terms, since, n_people):
                 p["papers"].append({"title": w.get("display_name") or "", "year": yr, "venue": venue(w), "link": link(w), "date": w.get("publication_date") or ""})
     ranked = sorted((p for p in people.values() if p["n"] >= 2), key=lambda p: -p["score"])[:n_people]
     for p in ranked:
-        p["papers"] = sorted(p["papers"], key=lambda x: x["date"], reverse=True)[:3]
+        p["papers"] = sorted(p["papers"], key=lambda x: (paper_weight(x["title"]), x["date"]), reverse=True)[:3]
         for x in p["papers"]: x.pop("date", None)
         p["score"] = round(p["score"], 1)
         p["senior_hint"] = p.pop("last")  # often last author = group leader (a hint, not a rule)
     return ranked, len(works)
 
 
-def reviews(terms, n=2):
-    since = f"{dt.date.today().year - 6}-01-01"
-    j = get("works", {
-        "search": or_query(terms[:4]),
-        "filter": f"type:review,is_oa:true,from_publication_date:{since},cited_by_count:>20",
-        "sort": "relevance_score:desc", "per-page": n,
-        "select": "id,display_name,publication_year,doi,authorships,open_access,primary_location",
-    })
+def _review_list(params, why, n):
+    j = get("works", dict(params, **{"per-page": n, "select": "id,display_name,publication_year,doi,authorships,open_access,primary_location"}))
     out = []
     for w in (j or {}).get("results") or []:
+        if JUNK.match(w.get("display_name") or ""): continue
         au = [a["author"]["display_name"] for a in (w.get("authorships") or []) if (a.get("author") or {}).get("display_name")]
         out.append({"title": w.get("display_name") or "", "authors": (au[0] + (" et al." if len(au) > 1 else "")) if au else "",
-                    "year": w.get("publication_year"), "link": link(w), "venue": venue(w), "level": "start",
-                    "why": "Open-access review: a readable overview of the topic before you write to anyone."})
+                    "year": w.get("publication_year"), "link": link(w), "venue": venue(w), "level": "start", "why": why})
+    return out
+
+
+def reviews(terms, insts):
+    """One open-access review written at this university (closest to the group), plus one well-cited general review."""
+    since = f"{dt.date.today().year - 6}-01-01"
+    core = [t for t in terms if t in CORE] or terms
+    out = []
+    if insts:
+        out += _review_list({"search": or_query(core[:5]), "sort": "relevance_score:desc",
+                             "filter": f"type:review,is_oa:true,from_publication_date:{since},authorships.institutions.id:{'|'.join(i['id'] for i in insts)}"},
+                            "Open-access review written at this university: shows how people here think about the field.", 1)
+    gen = _review_list({"search": or_query(core[:3]), "sort": "relevance_score:desc",
+                        "filter": f"type:review,is_oa:true,from_publication_date:{since},cited_by_count:>50"},
+                       "Well-cited open-access review: a readable overview of the topic before you write to anyone.", 2)
+    for g in gen:
+        if len(out) >= 2: break
+        if g["title"] not in [o["title"] for o in out]: out.append(g)
     return out
 
 
@@ -164,6 +188,7 @@ def main():
     root = Path(args.root)
     cfg = json.loads((root / "config/people.json").read_text(encoding="utf-8"))
     topics = cfg["topics"]
+    CORE[:] = [t.lower() for t in cfg.get("core_topics", [])]
     since = f"{dt.date.today().year - int(cfg.get('since_years', 5))}-01-01"
     npp = int(cfg.get("people_per_place", 5))
     out_path = root / "data/people.json"
@@ -194,10 +219,10 @@ def main():
             people += [dict(p, institution=inst["name"]) for p in ppl]
         people = sorted(people, key=lambda p: -p["score"])[:npp]
         by_item[it["id"]] = {"institutions": [i["name"] for i in insts], "topics": terms[:6], "people": people,
-                             "reading": reviews(terms), "scanned": scanned, "checked": today}
+                             "reading": reviews(terms, insts), "scanned": scanned, "checked": today}
 
     # University map (weekly): who publishes on her topics at each target university
-    unis = old.get("universities") or {}
+    unis = (old.get("universities") or {}) if old.get("version") == VERSION else {}
     fresh_days = int(cfg.get("university_refresh_days", 7))
     for name in cfg.get("universities", []):
         prev = unis.get(name)
@@ -212,7 +237,7 @@ def main():
     if CALLS["n"] and CALLS["fail"] >= CALLS["n"] * 0.8 and old:
         print("Most OpenAlex calls failed: keeping the previous data/people.json", file=sys.stderr); return 0
     data = {"_help": "Written by scripts/update_people.py from OpenAlex publication records. People who publish on Ocha's topics at each university; NOT a list of who takes PhD students. The weekly scout verifies.",
-            "updated": today, "source": "OpenAlex (openalex.org)", "items": by_item, "universities": unis,
+            "updated": today, "version": VERSION, "source": "OpenAlex (openalex.org)", "items": by_item, "universities": unis,
             "report": {"phds": len(by_item), "calls": CALLS["n"], "failed": CALLS["fail"]}}
     out_path.write_text(json.dumps(data, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"Wrote {out_path}: {len(by_item)} PhDs, {len(unis)} universities, {CALLS['n']} calls ({CALLS['fail']} failed)")
