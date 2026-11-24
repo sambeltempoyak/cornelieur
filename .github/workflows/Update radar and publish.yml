@@ -43,11 +43,16 @@ jobs:
           python scripts/update_sponsors.py
         continue-on-error: true
 
+      - name: Find researchers in her field (OpenAlex)
+        if: github.event_name != 'push' || hashFiles('data/people.json') == ''
+        run: python scripts/update_people.py
+        continue-on-error: true
+
       - name: Save data back to the repo
         run: |
           git config user.name "cornelieur-robot"
           git config user.email "cornelieur-robot@users.noreply.github.com"
-          git add data/opportunities.json data/sponsors.json || true
+          for f in data/opportunities.json data/sponsors.json data/people.json; do [ -f "$f" ] && git add "$f"; done; true
           if git diff --cached --quiet; then echo "No data changes"; else git commit -m "Radar update $(date -u +%F)" && git push; fi
 
       - uses: actions/configure-pages@v5

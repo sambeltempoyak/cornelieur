@@ -28,6 +28,9 @@ READ FIRST
 - config/sources.json (feeds and relevance keywords the daily robot uses)
 - data/agent-radar.json (what you wrote last week, including "research" and "enrich") and data/opportunities.json
   (what the daily robot found; do not duplicate its links as new items)
+- data/people.json (written daily by the robot from OpenAlex publication records): for each PhD ("items", by id) and each target
+  university ("universities"), the people with the most recent papers on her topics, their latest papers and 2 open-access reviews.
+  These are CANDIDATES only: the robot cannot see who takes students, and author-affiliation data can be wrong or out of date.
 
 DO
 A. Search the web (many separate searches, standard then extended if thin) for NEW opportunities that match the profile:
@@ -56,6 +59,9 @@ C2. RESEARCH EACH PhD (supervisors, their papers, what to read). Do this for eve
     "reading":[{"title":"exact title","authors":"First author et al.","year":2023,"link":"DOI/PubMed/open-access URL",
                 "level":"start|deeper","why":"one line: how it helps her (understand the field, prepare the email, the interview)"}]}
    Rules:
+   - Start from data/people.json for that PhD (or its university). Check each candidate on the official staff page: still there,
+     works on something that fits, and (where the page says) supervises PhD students. Keep the ones that pass; drop the rest. Then look for
+     anyone the robot missed (named on the advert, or in the programme's project list).
    - Supervisors: 1-4 people named on the advert or project page. For a programme advert (DTP/DLA, CDT, school-wide call) with no named
      supervisor, pick 2-4 supervisors from that programme's project list or member staff whose work fits her profile (pharmaceutics,
      drug delivery, formulation, biopharmaceutics, pharmacology, antimicrobials), and say so in "focus" ("listed in the 2027 project list").
@@ -76,6 +82,7 @@ E. Validate the JSON (e.g. python -m json.tool). Commit only data/agent-radar.js
 REPORT (short, plain, for Ejak)
 - How many items added, kept, dropped, and the top 3 with one-line reasons.
 - How many PhDs got research (new / kept from last week), and any where no supervisor or paper could be confirmed.
+- How many robot candidates from data/people.json you confirmed vs dropped (a rough check on the robot's quality).
 - Anything you could not verify, any search that came back empty, and any suggested profile or keyword changes.
 - Whether the push succeeded.
 ```

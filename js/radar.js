@@ -7,9 +7,10 @@ import { openReader } from './reader.js';
 let cache = null;
 async function loadOpps() {
   if (cache) return cache;
-  const [robot, agent] = await Promise.all([
+  const [robot, agent, people] = await Promise.all([
     getJSON('data/opportunities.json', { items: [], sources: [], updated: null }),
     getJSON('data/agent-radar.json', { items: [], updated: null }),
+    getJSON('data/people.json', { items: {}, universities: {} }),
   ]);
   const items = [];
   const seenIds = new Set();
@@ -19,7 +20,7 @@ async function loadOpps() {
     items.push({ ...it, id });
   }
   const enrich = agent.enrich || {};
-  for (const it of items) { const r = enrich[it.id] || enrich[it.link]; if (r && !it.research) it.research = r; }
+  for (const it of items) { const r = enrich[it.id] || enrich[it.link]; if (r && !it.research) it.research = r; const au = (people.items || {})[it.id]; if (au && (au.people || []).length) it.auto = au; }
   items.forEach(scoreItem);
   items.forEach(applyAnalysis);
   items.sort((a, b) => b.priority - a.priority);
@@ -342,10 +343,20 @@ function bindOppActions(el, redraw, items) {
 
 /* ---------------- Supervisors & reading (filled by the weekly scout) ---------------- */
 const link = (u, t) => /^https?:\/\//.test(u || '') ? `<a href="${esc(u)}" target="_blank" rel="noopener">${t}</a>` : t;
+function autoHtml(au, nested) {
+  const since = new Date().getFullYear() - 5;
+  const ppl = au.people.map(x => `<li>${link(x.orcid || x.openalex, `<b>${esc(x.name)}</b>`)} <span class="muted">· ${esc(x.institution || '')}${x.n ? ` · ${x.n} papers on your topics since ${since}` : ''}${x.senior_hint ? ' · often last author, may lead a group' : ''}</span>${(x.papers || []).slice(0, 2).map(pp => `<div class="ex-why">${link(pp.link, esc(pp.title))} (${esc([pp.venue, pp.year].filter(Boolean).join(', '))})</div>`).join('')}</li>`).join('');
+  const rd = (au.reading || []).map(x => `<li>${link(x.link, `<b>${esc(x.title)}</b>`)} <span class="muted">(${esc([x.authors, x.year].filter(Boolean).join(', '))})</span><div class="ex-why">${esc(x.why || '')}</div></li>`).join('');
+  const body = `<p class="ex-lead">${nested ? '' : '<b>Found automatically.</b> '}People at ${esc(au.institutions.join(' and ') || 'this university')} with recent papers on ${esc(au.topics.slice(0, 3).join(', '))}. This shows who publishes in your field, not who takes PhD students: check their staff page and the project list.</p>
+    <h4>People publishing in your field here</h4><ul>${ppl}</ul>${rd ? `<h4>Read first</h4><ul>${rd}</ul>` : ''}
+    <p class="ex-foot">From open publication records (OpenAlex), updated ${fmtDate(au.checked)} by the daily robot.</p>`;
+  return nested ? `<details class="ex-pts"><summary>More people publishing in your field here (automatic)</summary><div style="margin-top:6px">${body}</div></details>` : body;
+}
 function researchHtml(o) {
   const r = o.research; const isPhd = o.type === 'phd' || /^PhD/.test(o.an.level || '');
   if (!isPhd) return '';
-  if (!r) return `<details class="ex-detail"><summary>Supervisors & what to read</summary><div class="ex"><p class="ex-lead">Not researched yet. Every Thursday the AI scout looks up the supervisors, their recent papers and a short reading list for the PhDs in your list. This one will be filled in at the next run.</p></div></details>`;
+  if (!r && o.auto) return `<details class="ex-detail"><summary>Supervisors & what to read</summary><div class="ex">${autoHtml(o.auto)}<p class="ex-foot">The Thursday AI scout will check the staff pages and pick the best fits.</p></div></details>`;
+  if (!r) return `<details class="ex-detail"><summary>Supervisors & what to read</summary><div class="ex"><p class="ex-lead">Not researched yet. The daily robot and the Thursday AI scout look up supervisors, their recent papers and a short reading list for the PhDs in your list. This one will be filled in soon.</p></div></details>`;
   const sup = r.supervisors || [], pubs = r.publications || [], read = r.reading || [];
   const start = read.filter(x => x.level !== 'deeper'), deeper = read.filter(x => x.level === 'deeper');
   const readLi = x => `<li>${link(x.link, `<b>${esc(x.title)}</b>`)}${x.authors || x.year ? ` <span class="muted">(${esc([x.authors, x.year].filter(Boolean).join(', '))})</span>` : ''}${x.why ? `<div class="ex-why">${esc(x.why)}</div>` : ''}</li>`;
@@ -355,11 +366,17 @@ function researchHtml(o) {
     ${pubs.length ? `<h4>Their recent papers</h4><ul>${pubs.map(x => `<li>${link(x.link, esc(x.title))} <span class="muted">(${esc([x.by, x.venue, x.year].filter(Boolean).join(', '))})</span></li>`).join('')}</ul>` : ''}
     ${start.length ? `<h4>Read first</h4><ul>${start.map(readLi).join('')}</ul>` : ''}
     ${deeper.length ? `<h4>Go deeper</h4><ul>${deeper.map(readLi).join('')}</ul>` : ''}
-    <p class="ex-foot">Found by the weekly AI scout${r.checked ? ' on ' + fmtDate(r.checked) : ''}. Check names and papers on the university page before you email anyone.</p>
+    <p class="ex-foot">Checked by the weekly AI scout${r.checked ? ' on ' + fmtDate(r.checked) : ''}. Check names and papers on the university page before you email anyone.</p>
+    ${o.auto ? autoHtml(o.auto, true) : ''}
   </div></details>`;
 }
 function researchMd(o) {
-  const r = o.research; if (!r) return '';
+  const r = o.research;
+  if (!r && o.auto) { const au = o.auto; const L = ['', '## People publishing in your field here (automatic, OpenAlex)', '', `_Who publishes on ${au.topics.slice(0, 3).join(', ')} at ${au.institutions.join(' and ')}. Not a list of who takes PhD students: check staff pages._`, ''];
+    for (const x of au.people) { L.push(`- ${x.orcid || x.openalex ? `[${x.name}](${x.orcid || x.openalex})` : x.name} · ${x.institution || ''} · ${x.n} papers`); for (const pp of (x.papers || []).slice(0, 2)) L.push(`  - ${pp.link ? `[${pp.title}](${pp.link})` : pp.title} (${[pp.venue, pp.year].filter(Boolean).join(', ')})`); }
+    if ((au.reading || []).length) { L.push('', '### Read first'); for (const x of au.reading) L.push(`- ${x.link ? `[${x.title}](${x.link})` : x.title} (${[x.authors, x.year].filter(Boolean).join(', ')})`); }
+    return L.join('\n'); }
+  if (!r) return '';
   const L = ['', '## Supervisors & reading (weekly scout)', ''];
   if (r.angle) L.push(`**Your angle:** ${r.angle}`, '');
   if ((r.supervisors || []).length) { L.push('### Supervisors'); for (const x of r.supervisors) L.push(`- ${x.profile ? `[${x.name}](${x.profile})` : x.name}${x.role || x.dept ? ` · ${[x.role, x.dept].filter(Boolean).join(', ')}` : ''}${x.focus ? `: ${x.focus}` : ''}`); L.push(''); }
