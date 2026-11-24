@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-23T07:44:17+00:00",
- "count": 6,
+ "updated": "2026-11-24T03:45:19+00:00",
+ "count": 7,
  "sources": [
   {
    "name": "Univ. of Nottingham — studentships",
-   "count": 1
+   "count": 2
   },
   {
    "name": "Cambridge — Pharmacology",
@@ -62,7 +62,7 @@
   },
   {
    "name": "Univ. of Nottingham — studentships",
-   "count": 1,
+   "count": 2,
    "ok": true
   },
   {
@@ -587,6 +587,21 @@
   }
  ],
  "items": [
+  {
+   "id": "r7a2d11435fb1",
+   "title": "PhD Studentship: Residency (Senior Clinical Training Scholarship) in Veterinary Anatomic Pathology (MED2056)",
+   "link": "https://jobs.nottingham.ac.uk/rss/click.aspx?ref=MED2056",
+   "org": "University of Nottingham",
+   "source": "Univ. of Nottingham — studentships",
+   "type": "phd",
+   "summary": "Supervisors: Dr Sai Fingerhood, Dr Marta Pereira, Dr Alberto Rodriguez Barbon, Dr Samuel Hailes, Dr. Athanasia Kapetanou Background: Veterinary pathology at University of Nottingham provides a diagnostic service on a wide range of animals, including companion, exotics and farm animals (part of disease surveillance activity with the Animal and Plant Health Agency). The unit is involved in the clinical teaching of year 5 veterinary students and servicing a surgical and post-mortem case submissions caseload. Description: Applications are invited from veterinary graduates to undertake a three-year training programme (residency) in veterinary anatomic pathology. The successful candidate will be trained in comparative anatomic pathology, with the majority of the diagnostic case load encompassing companion and farm species. The trainee will be registered for a Master of Veterinary Medicine (MVM",
+   "published": "2026-11-23",
+   "deadline": "2027-02-15",
+   "intl": true,
+   "location": "",
+   "first_seen": "2026-11-24",
+   "salary": "£30,488"
+  },
   {
    "id": "r7fc83e53cb75",
    "title": "Research Associate in Statistics (SS14110)",

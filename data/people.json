@@ -1,6 +1,7 @@
 {
  "_help": "Written by scripts/update_people.py from OpenAlex publication records. People who publish on Ocha's topics at each university; NOT a list of who takes PhD students. The weekly scout verifies.",
  "updated": "2026-11-24",
+ "version": 2,
  "source": "OpenAlex (openalex.org)",
  "items": {
   "scout-lido-dtp-2027": {
@@ -17,10 +18,68 @@
    ],
    "people": [
     {
+     "name": "Gareth R. Williams",
+     "openalex": "https://openalex.org/A5073999918",
+     "orcid": "https://orcid.org/0000-0002-3066-2860",
+     "score": 10.0,
+     "n": 4,
+     "papers": [
+      {
+       "title": "Expanding the Antimicrobial Toolbox with Therapeutic Viruses: Mechanisms, Pharmaceutical Formulation, and Translational Outlook",
+       "year": 2026,
+       "venue": "Pharmaceuticals",
+       "link": "https://doi.org/10.3390/ph19030478"
+      },
+      {
+       "title": "Mesoporous Doxorubicin-Loaded Polydopamine Nanoparticles Coated with a Platelet Membrane Suppress Tumor Growth in a Murine Model of Human Breast Cancer",
+       "year": 2021,
+       "venue": "ACS Applied Bio Materials",
+       "link": "https://doi.org/10.1021/acsabm.1c00926"
+      },
+      {
+       "title": "Layered terbium hydroxides for simultaneous drug delivery and imaging",
+       "year": 2021,
+       "venue": "Dalton Transactions",
+       "link": "https://doi.org/10.1039/d1dt01251g"
+      }
+     ],
+     "senior_hint": true,
+     "institution": "University College London"
+    },
+    {
+     "name": "Abdul W. Basit",
+     "openalex": "https://openalex.org/A5020162492",
+     "orcid": "https://orcid.org/0000-0002-5368-6603",
+     "score": 9.4,
+     "n": 5,
+     "papers": [
+      {
+       "title": "Advances in powder bed fusion 3D printing in drug delivery and healthcare",
+       "year": 2021,
+       "venue": "Advanced Drug Delivery Reviews",
+       "link": "https://doi.org/10.1016/j.addr.2021.04.025"
+      },
+      {
+       "title": "Semi-solid extrusion 3D printing in drug delivery and biomedicine: Personalised solutions for healthcare challenges",
+       "year": 2021,
+       "venue": "Journal of Controlled Release",
+       "link": "https://doi.org/10.1016/j.jconrel.2021.02.027"
+      },
+      {
+       "title": "Inkjet Printing of Pharmaceuticals",
+       "year": 2023,
+       "venue": "Advanced Materials",
+       "link": "https://doi.org/10.1002/adma.202309164"
+      }
+     ],
+     "senior_hint": true,
+     "institution": "University College London"
+    },
+    {
      "name": "Magnus Unemo",
      "openalex": "https://openalex.org/A5069892567",
      "orcid": "https://orcid.org/0000-0003-1710-2081",
-     "score": 13.5,
+     "score": 9.4,
      "n": 8,
      "papers": [
       {
@@ -46,10 +105,39 @@
      "institution": "University College London"
     },
     {
+     "name": "Álvaro Goyanes",
+     "openalex": "https://openalex.org/A5031888549",
+     "orcid": "https://orcid.org/0000-0002-3378-6797",
+     "score": 8.1,
+     "n": 4,
+     "papers": [
+      {
+       "title": "Advances in powder bed fusion 3D printing in drug delivery and healthcare",
+       "year": 2021,
+       "venue": "Advanced Drug Delivery Reviews",
+       "link": "https://doi.org/10.1016/j.addr.2021.04.025"
+      },
+      {
+       "title": "Semi-solid extrusion 3D printing in drug delivery and biomedicine: Personalised solutions for healthcare challenges",
+       "year": 2021,
+       "venue": "Journal of Controlled Release",
+       "link": "https://doi.org/10.1016/j.jconrel.2021.02.027"
+      },
+      {
+       "title": "Inkjet Printing of Pharmaceuticals",
+       "year": 2023,
+       "venue": "Advanced Materials",
+       "link": "https://doi.org/10.1002/adma.202309164"
+      }
+     ],
+     "senior_hint": true,
+     "institution": "University College London"
+    },
+    {
      "name": "Robert S. Heyderman",
      "openalex": "https://openalex.org/A5034013271",
      "orcid": "https://orcid.org/0000-0003-4573-449X",
-     "score": 10.5,
+     "score": 6.8,
      "n": 6,
      "papers": [
       {
@@ -73,113 +161,26 @@
      ],
      "senior_hint": true,
      "institution": "University College London"
-    },
-    {
-     "name": "Abdul W. Basit",
-     "openalex": "https://openalex.org/A5020162492",
-     "orcid": "https://orcid.org/0000-0002-5368-6603",
-     "score": 9.8,
-     "n": 5,
-     "papers": [
-      {
-       "title": "Inkjet Printing of Pharmaceuticals",
-       "year": 2023,
-       "venue": "Advanced Materials",
-       "link": "https://doi.org/10.1002/adma.202309164"
-      },
-      {
-       "title": "Disrupting 3D printing of medicines with machine learning",
-       "year": 2021,
-       "venue": "Trends in Pharmacological Sciences",
-       "link": "https://doi.org/10.1016/j.tips.2021.06.002"
-      },
-      {
-       "title": "Let’s talk about sex: Differences in drug therapy in males and females",
-       "year": 2021,
-       "venue": "Advanced Drug Delivery Reviews",
-       "link": "https://doi.org/10.1016/j.addr.2021.05.014"
-      }
-     ],
-     "senior_hint": true,
-     "institution": "University College London"
-    },
-    {
-     "name": "Gareth R. Williams",
-     "openalex": "https://openalex.org/A5073999918",
-     "orcid": "https://orcid.org/0000-0002-3066-2860",
-     "score": 7.8,
-     "n": 4,
-     "papers": [
-      {
-       "title": "Expanding the Antimicrobial Toolbox with Therapeutic Viruses: Mechanisms, Pharmaceutical Formulation, and Translational Outlook",
-       "year": 2026,
-       "venue": "Pharmaceuticals",
-       "link": "https://doi.org/10.3390/ph19030478"
-      },
-      {
-       "title": "Glucan-based biomaterials and their applications in the biomedical field",
-       "year": 2025,
-       "venue": "International Journal of Biological Macromolecules",
-       "link": "https://doi.org/10.1016/j.ijbiomac.2025.144940"
-      },
-      {
-       "title": "Mesoporous Doxorubicin-Loaded Polydopamine Nanoparticles Coated with a Platelet Membrane Suppress Tumor Growth in a Murine Model of Human Breast Cancer",
-       "year": 2021,
-       "venue": "ACS Applied Bio Materials",
-       "link": "https://doi.org/10.1021/acsabm.1c00926"
-      }
-     ],
-     "senior_hint": true,
-     "institution": "University College London"
-    },
-    {
-     "name": "Álvaro Goyanes",
-     "openalex": "https://openalex.org/A5031888549",
-     "orcid": "https://orcid.org/0000-0002-3378-6797",
-     "score": 7.3,
-     "n": 4,
-     "papers": [
-      {
-       "title": "Inkjet Printing of Pharmaceuticals",
-       "year": 2023,
-       "venue": "Advanced Materials",
-       "link": "https://doi.org/10.1002/adma.202309164"
-      },
-      {
-       "title": "Disrupting 3D printing of medicines with machine learning",
-       "year": 2021,
-       "venue": "Trends in Pharmacological Sciences",
-       "link": "https://doi.org/10.1016/j.tips.2021.06.002"
-      },
-      {
-       "title": "Advances in powder bed fusion 3D printing in drug delivery and healthcare",
-       "year": 2021,
-       "venue": "Advanced Drug Delivery Reviews",
-       "link": "https://doi.org/10.1016/j.addr.2021.04.025"
-      }
-     ],
-     "senior_hint": true,
-     "institution": "University College London"
     }
    ],
    "reading": [
     {
-     "title": "Engineering precision nanoparticles for drug delivery",
-     "authors": "Michael J. Mitchell et al.",
-     "year": 2020,
-     "link": "https://doi.org/10.1038/s41573-020-0090-8",
-     "venue": "Nature Reviews Drug Discovery",
+     "title": "Characterisation of polymeric nanoparticles for drug delivery",
+     "authors": "Thomas G. Floyd et al.",
+     "year": 2025,
+     "link": "https://doi.org/10.1039/d5nr00071h",
+     "venue": "Nanoscale",
      "level": "start",
-     "why": "Open-access review: a readable overview of the topic before you write to anyone."
+     "why": "Open-access review written at this university: shows how people here think about the field."
     },
     {
-     "title": "Toxicology of Nanoparticles in Drug Delivery",
-     "authors": "Swati Sharma et al.",
-     "year": 2021,
-     "link": "https://doi.org/10.1007/s40139-021-00227-z",
-     "venue": "Current Pathobiology Reports",
+     "title": "Technologies and Formulation Design of Polysaccharide-Based Hydrogels for Drug Delivery",
+     "authors": "Giulia Auriemma et al.",
+     "year": 2020,
+     "link": "https://doi.org/10.3390/molecules25143156",
+     "venue": "Molecules",
      "level": "start",
-     "why": "Open-access review: a readable overview of the topic before you write to anyone."
+     "why": "Well-cited open-access review: a readable overview of the topic before you write to anyone."
     }
    ],
    "scanned": 100,
@@ -202,7 +203,7 @@
      "name": "Sharon J. Peacock",
      "openalex": "https://openalex.org/A5014626556",
      "orcid": "https://orcid.org/0000-0002-1718-2782",
-     "score": 15.2,
+     "score": 8.1,
      "n": 8,
      "papers": [
       {
@@ -228,68 +229,10 @@
      "institution": "University of Cambridge"
     },
     {
-     "name": "Stephen G. Baker",
-     "openalex": "https://openalex.org/A5028534327",
-     "orcid": "https://orcid.org/0000-0003-1308-5755",
-     "score": 11.3,
-     "n": 8,
-     "papers": [
-      {
-       "title": "Evolutionary histories and antimicrobial resistance inShigella flexneri and Shigella sonnei in Southeast Asia",
-       "year": 2022,
-       "venue": "Access Microbiology",
-       "link": "https://doi.org/10.1099/acmi.ac2021.po0330"
-      },
-      {
-       "title": "Mobility of antimicrobial resistance across serovars and disease presentations in non-typhoidal Salmonella from animals and humans in Vietnam",
-       "year": 2022,
-       "venue": "Microbial Genomics",
-       "link": "https://doi.org/10.1099/mgen.0.000798"
-      },
-      {
-       "title": "Exploiting genomics to mitigate the public health impact of antimicrobial resistance",
-       "year": 2022,
-       "venue": "Genome Medicine",
-       "link": "https://doi.org/10.1186/s13073-022-01020-2"
-      }
-     ],
-     "senior_hint": true,
-     "institution": "University of Cambridge"
-    },
-    {
-     "name": "Kate Susan Baker",
-     "openalex": "https://openalex.org/A5059561585",
-     "orcid": "https://orcid.org/0000-0001-5850-1949",
-     "score": 11.1,
-     "n": 6,
-     "papers": [
-      {
-       "title": "Conference report of the 2024 Antimicrobial Resistance Meeting",
-       "year": 2024,
-       "venue": "npj Antimicrobials and Resistance",
-       "link": "https://doi.org/10.1038/s44259-024-00058-z"
-      },
-      {
-       "title": "WHO global research priorities for antimicrobial resistance in human health",
-       "year": 2024,
-       "venue": "The Lancet Microbe",
-       "link": "https://doi.org/10.1016/s2666-5247(24)00134-4"
-      },
-      {
-       "title": "Genomics for public health and international surveillance of antimicrobial resistance",
-       "year": 2023,
-       "venue": "The Lancet Microbe",
-       "link": "https://doi.org/10.1016/s2666-5247(23)00283-5"
-      }
-     ],
-     "senior_hint": true,
-     "institution": "University of Cambridge"
-    },
-    {
      "name": "Florian Marks",
      "openalex": "https://openalex.org/A5006942560",
      "orcid": "https://orcid.org/0000-0002-6043-7170",
-     "score": 10.6,
+     "score": 7.1,
      "n": 7,
      "papers": [
       {
@@ -315,29 +258,81 @@
      "institution": "University of Cambridge"
     },
     {
-     "name": "Sally C. Davies",
-     "openalex": "https://openalex.org/A5108415628",
-     "orcid": null,
-     "score": 7.4,
-     "n": 4,
+     "name": "Kate Susan Baker",
+     "openalex": "https://openalex.org/A5059561585",
+     "orcid": "https://orcid.org/0000-0001-5850-1949",
+     "score": 6.2,
+     "n": 6,
      "papers": [
       {
-       "title": "Vaccines and antimicrobial resistance: from science to policy—introduction",
-       "year": 2026,
-       "venue": "Philosophical Transactions of the Royal Society B Biological Sciences",
-       "link": "https://doi.org/10.1098/rstb.2025.0001"
+       "title": "Conference report of the 2024 Antimicrobial Resistance Meeting",
+       "year": 2024,
+       "venue": "npj Antimicrobials and Resistance",
+       "link": "https://doi.org/10.1038/s44259-024-00058-z"
       },
       {
-       "title": "Vaccines and antimicrobial resistance: from science to policy—summary and outcomes",
-       "year": 2026,
-       "venue": "Philosophical Transactions of the Royal Society B Biological Sciences",
-       "link": "https://doi.org/10.1098/rstb.2025.0012"
+       "title": "WHO global research priorities for antimicrobial resistance in human health",
+       "year": 2024,
+       "venue": "The Lancet Microbe",
+       "link": "https://doi.org/10.1016/s2666-5247(24)00134-4"
       },
       {
-       "title": "The effect of geopolitical flux on antimicrobial resistance",
+       "title": "Genomics for public health and international surveillance of antimicrobial resistance",
+       "year": 2023,
+       "venue": "The Lancet Microbe",
+       "link": "https://doi.org/10.1016/s2666-5247(23)00283-5"
+      }
+     ],
+     "senior_hint": true,
+     "institution": "University of Cambridge"
+    },
+    {
+     "name": "Ljiljana Fruk",
+     "openalex": "https://openalex.org/A5031178143",
+     "orcid": "https://orcid.org/0000-0003-2104-5817",
+     "score": 6.1,
+     "n": 2,
+     "papers": [
+      {
+       "title": "Drug Delivery With Metal–Organic Frameworks",
+       "year": 2026,
+       "venue": "Angewandte Chemie Novit",
+       "link": "https://doi.org/10.1002/anov.70037"
+      },
+      {
+       "title": "Reimagining drug nanocarriers: clinical realities and smarter strategies for targeted drug delivery",
        "year": 2025,
-       "venue": "Nature Medicine",
-       "link": "https://doi.org/10.1038/s41591-025-03758-9"
+       "venue": "Materials Horizons",
+       "link": "https://doi.org/10.1039/d5mh00927h"
+      }
+     ],
+     "senior_hint": true,
+     "institution": "University of Cambridge"
+    },
+    {
+     "name": "Stephen G. Baker",
+     "openalex": "https://openalex.org/A5028534327",
+     "orcid": "https://orcid.org/0000-0003-1308-5755",
+     "score": 5.8,
+     "n": 8,
+     "papers": [
+      {
+       "title": "Evolutionary histories and antimicrobial resistance inShigella flexneri and Shigella sonnei in Southeast Asia",
+       "year": 2022,
+       "venue": "Access Microbiology",
+       "link": "https://doi.org/10.1099/acmi.ac2021.po0330"
+      },
+      {
+       "title": "Mobility of antimicrobial resistance across serovars and disease presentations in non-typhoidal Salmonella from animals and humans in Vietnam",
+       "year": 2022,
+       "venue": "Microbial Genomics",
+       "link": "https://doi.org/10.1099/mgen.0.000798"
+      },
+      {
+       "title": "Exploiting genomics to mitigate the public health impact of antimicrobial resistance",
+       "year": 2022,
+       "venue": "Genome Medicine",
+       "link": "https://doi.org/10.1186/s13073-022-01020-2"
       }
      ],
      "senior_hint": true,
@@ -346,22 +341,22 @@
    ],
    "reading": [
     {
-     "title": "Engineering precision nanoparticles for drug delivery",
-     "authors": "Michael J. Mitchell et al.",
-     "year": 2020,
-     "link": "https://doi.org/10.1038/s41573-020-0090-8",
-     "venue": "Nature Reviews Drug Discovery",
+     "title": "Physiological and Pathological Factors Affecting Drug Delivery to the Brain by Nanoparticles",
+     "authors": "Yamir Islam et al.",
+     "year": 2021,
+     "link": "https://doi.org/10.1002/advs.202002085",
+     "venue": "Advanced Science",
      "level": "start",
-     "why": "Open-access review: a readable overview of the topic before you write to anyone."
+     "why": "Open-access review written at this university: shows how people here think about the field."
     },
     {
-     "title": "Toxicology of Nanoparticles in Drug Delivery",
-     "authors": "Swati Sharma et al.",
-     "year": 2021,
-     "link": "https://doi.org/10.1007/s40139-021-00227-z",
-     "venue": "Current Pathobiology Reports",
+     "title": "Technologies and Formulation Design of Polysaccharide-Based Hydrogels for Drug Delivery",
+     "authors": "Giulia Auriemma et al.",
+     "year": 2020,
+     "link": "https://doi.org/10.3390/molecules25143156",
+     "venue": "Molecules",
      "level": "start",
-     "why": "Open-access review: a readable overview of the topic before you write to anyone."
+     "why": "Well-cited open-access review: a readable overview of the topic before you write to anyone."
     }
    ],
    "scanned": 100,
@@ -384,7 +379,7 @@
      "name": "Khondaker Miraz Rahman",
      "openalex": "https://openalex.org/A5006583391",
      "orcid": "https://orcid.org/0000-0001-8566-8648",
-     "score": 13.1,
+     "score": 8.6,
      "n": 7,
      "papers": [
       {
@@ -410,140 +405,122 @@
      "institution": "King's College London"
     },
     {
-     "name": "Debbie Lindsay Shawcross",
-     "openalex": "https://openalex.org/A5013434946",
-     "orcid": "https://orcid.org/0000-0001-6133-4619",
-     "score": 9.6,
-     "n": 5,
+     "name": "Khuloud T. Al‐Jamal",
+     "openalex": "https://openalex.org/A5026580896",
+     "orcid": "https://orcid.org/0000-0001-5165-2699",
+     "score": 7.3,
+     "n": 3,
      "papers": [
       {
-       "title": "Response to the Comment on ‘Burden and global distribution of antimicrobial resistance in nonbloodstream infections among adults with cirrhosis: A systematic review and proportional meta-analysis’",
-       "year": 2026,
-       "venue": "International Journal of Antimicrobial Agents",
-       "link": "https://doi.org/10.1016/j.ijantimicag.2026.108019"
+       "title": "Combined Facile Synthesis, Purification, and Surface Functionalization Approach Yields Monodispersed Gold Nanorods for Drug Delivery Applications",
+       "year": 2023,
+       "venue": "Particle & Particle Systems Characterization",
+       "link": "https://doi.org/10.1002/ppsc.202300043"
       },
       {
-       "title": "Burden and global distribution of antimicrobial resistance in non-bloodstream infections among adults with cirrhosis: A systematic review and proportional meta-analysis",
-       "year": 2026,
-       "venue": "International Journal of Antimicrobial Agents",
-       "link": "https://doi.org/10.1016/j.ijantimicag.2026.107849"
+       "title": "Intranasal administration of edaravone nanoparticles improves its stability and brain bioavailability",
+       "year": 2023,
+       "venue": "Journal of Controlled Release",
+       "link": "https://doi.org/10.1016/j.jconrel.2023.06.001"
       },
       {
-       "title": "Global Trends in Antimicrobial Resistance Among Cirrhosis Patients With Bacteremia: A Systematic Review and Meta-analysis",
-       "year": 2025,
-       "venue": "Clinical Gastroenterology and Hepatology",
-       "link": "https://doi.org/10.1016/j.cgh.2025.07.014"
+       "title": "Green synthesis of methoxy-poly(ethylene glycol)- block -poly( l -lactide- co -glycolide) copolymer using zinc proline as a biocompatible initiator for irinotecan delivery to colon cancer in vivo",
+       "year": 2021,
+       "venue": "Biomaterials Science",
+       "link": "https://doi.org/10.1039/d0bm01421d"
       }
      ],
      "senior_hint": true,
      "institution": "King's College London"
     },
     {
-     "name": "Seong‐Heun Kim",
-     "openalex": "https://openalex.org/A5026461992",
-     "orcid": "https://orcid.org/0000-0002-9774-9311",
-     "score": 7.6,
-     "n": 4,
+     "name": "Mehrasa Nikandish",
+     "openalex": "https://openalex.org/A5005017065",
+     "orcid": "https://orcid.org/0000-0001-6420-6073",
+     "score": 6.0,
+     "n": 2,
      "papers": [
       {
-       "title": "Enantiomer-dependent biodistribution and exposure determine the in vivo behavior of a pleurocidin-derived antimicrobial peptide",
-       "year": 2026,
-       "venue": "mBio",
-       "link": "https://doi.org/10.1128/mbio.01718-26"
+       "title": "Advancements in Nanoparticle-Based Precision Drug Delivery: A Review of Development and Optimization for Targeted Therapy in Preclinical Models",
+       "year": 2024,
+       "venue": "European Scientific Journal ESJ",
+       "link": "https://doi.org/10.19044/esj.2024.v20n27p49"
       },
       {
-       "title": "Antibacterial drug discovery: challenges and preclinical promises from synthetic small molecules",
-       "year": 2026,
-       "venue": "Chemical Society Reviews",
-       "link": "https://doi.org/10.1039/d5cs00617a"
-      },
-      {
-       "title": "Oxazolidinones as versatile scaffolds in medicinal chemistry",
-       "year": 2023,
-       "venue": "RSC Medicinal Chemistry",
-       "link": "https://doi.org/10.1039/d2md00415a"
+       "title": "Enhancing Drug Delivery Precision: Development and Optimization of Nanoparticle-Based Formulations for Targeted Therapy in Preclinical Models",
+       "year": 2024,
+       "venue": "European Scientific Journal ESJ",
+       "link": "https://doi.org/10.19044/esipreprint.2.2024.p232"
       }
      ],
      "senior_hint": false,
      "institution": "King's College London"
     },
     {
-     "name": "A. James Mason",
-     "openalex": "https://openalex.org/A5045535688",
-     "orcid": "https://orcid.org/0000-0003-0411-602X",
-     "score": 7.2,
-     "n": 4,
+     "name": "Hanzhi Wang",
+     "openalex": "https://openalex.org/A5056850838",
+     "orcid": "https://orcid.org/0000-0002-8836-5447",
+     "score": 6.0,
+     "n": 2,
      "papers": [
       {
-       "title": "Modulating Growth Conditions and Microenvironment to Boost Antimicrobial Efficacy of Probiotics Against Pathogens",
-       "year": 2026,
-       "venue": "Probiotics and Antimicrobial Proteins",
-       "link": "https://doi.org/10.1007/s12602-026-11302-5"
+       "title": "Advancements in Nanoparticle-Based Precision Drug Delivery: A Review of Development and Optimization for Targeted Therapy in Preclinical Models",
+       "year": 2024,
+       "venue": "European Scientific Journal ESJ",
+       "link": "https://doi.org/10.19044/esj.2024.v20n27p49"
       },
       {
-       "title": "Enantiomer-dependent biodistribution and exposure determine the in vivo behavior of a pleurocidin-derived antimicrobial peptide",
-       "year": 2026,
-       "venue": "mBio",
-       "link": "https://doi.org/10.1128/mbio.01718-26"
-      },
-      {
-       "title": "Biochar filtration of drug-resistant bacteria and active pharmaceutical ingredients to combat antimicrobial resistance",
-       "year": 2025,
-       "venue": "Scientific Reports",
-       "link": "https://doi.org/10.1038/s41598-024-83825-2"
+       "title": "Enhancing Drug Delivery Precision: Development and Optimization of Nanoparticle-Based Formulations for Targeted Therapy in Preclinical Models",
+       "year": 2024,
+       "venue": "European Scientific Journal ESJ",
+       "link": "https://doi.org/10.19044/esipreprint.2.2024.p232"
       }
      ],
-     "senior_hint": true,
+     "senior_hint": false,
      "institution": "King's College London"
     },
     {
-     "name": "Ellis Kobina Paintsil",
-     "openalex": "https://openalex.org/A5044238668",
-     "orcid": "https://orcid.org/0000-0001-8385-1326",
-     "score": 7.1,
-     "n": 4,
+     "name": "Xinqi Bao",
+     "openalex": "https://openalex.org/A5034037954",
+     "orcid": "https://orcid.org/0000-0002-7117-1267",
+     "score": 6.0,
+     "n": 2,
      "papers": [
       {
-       "title": "Response to the Comment on ‘Burden and global distribution of antimicrobial resistance in nonbloodstream infections among adults with cirrhosis: A systematic review and proportional meta-analysis’",
-       "year": 2026,
-       "venue": "International Journal of Antimicrobial Agents",
-       "link": "https://doi.org/10.1016/j.ijantimicag.2026.108019"
+       "title": "Advancements in Nanoparticle-Based Precision Drug Delivery: A Review of Development and Optimization for Targeted Therapy in Preclinical Models",
+       "year": 2024,
+       "venue": "European Scientific Journal ESJ",
+       "link": "https://doi.org/10.19044/esj.2024.v20n27p49"
       },
       {
-       "title": "Burden and global distribution of antimicrobial resistance in non-bloodstream infections among adults with cirrhosis: A systematic review and proportional meta-analysis",
-       "year": 2026,
-       "venue": "International Journal of Antimicrobial Agents",
-       "link": "https://doi.org/10.1016/j.ijantimicag.2026.107849"
-      },
-      {
-       "title": "Global Trends in Antimicrobial Resistance Among Cirrhosis Patients With Bacteremia: A Systematic Review and Meta-analysis",
-       "year": 2025,
-       "venue": "Clinical Gastroenterology and Hepatology",
-       "link": "https://doi.org/10.1016/j.cgh.2025.07.014"
+       "title": "Enhancing Drug Delivery Precision: Development and Optimization of Nanoparticle-Based Formulations for Targeted Therapy in Preclinical Models",
+       "year": 2024,
+       "venue": "European Scientific Journal ESJ",
+       "link": "https://doi.org/10.19044/esipreprint.2.2024.p232"
       }
      ],
-     "senior_hint": true,
+     "senior_hint": false,
      "institution": "King's College London"
     }
    ],
    "reading": [
     {
-     "title": "Engineering precision nanoparticles for drug delivery",
-     "authors": "Michael J. Mitchell et al.",
+     "title": "Hydrogel design strategies for drug delivery",
+     "authors": "Cécile A. Dreiss",
      "year": 2020,
-     "link": "https://doi.org/10.1038/s41573-020-0090-8",
-     "venue": "Nature Reviews Drug Discovery",
+     "link": "https://doi.org/10.1016/j.cocis.2020.02.001",
+     "venue": "Current Opinion in Colloid & Interface Science",
      "level": "start",
-     "why": "Open-access review: a readable overview of the topic before you write to anyone."
+     "why": "Open-access review written at this university: shows how people here think about the field."
     },
     {
-     "title": "Toxicology of Nanoparticles in Drug Delivery",
-     "authors": "Swati Sharma et al.",
-     "year": 2021,
-     "link": "https://doi.org/10.1007/s40139-021-00227-z",
-     "venue": "Current Pathobiology Reports",
+     "title": "Technologies and Formulation Design of Polysaccharide-Based Hydrogels for Drug Delivery",
+     "authors": "Giulia Auriemma et al.",
+     "year": 2020,
+     "link": "https://doi.org/10.3390/molecules25143156",
+     "venue": "Molecules",
      "level": "start",
-     "why": "Open-access review: a readable overview of the topic before you write to anyone."
+     "why": "Well-cited open-access review: a readable overview of the topic before you write to anyone."
     }
    ],
    "scanned": 100,
@@ -564,105 +541,12 @@
    ],
    "people": [
     {
-     "name": "Diane A.I. Ashiru-Oredope",
-     "openalex": "https://openalex.org/A5050622865",
-     "orcid": "https://orcid.org/0000-0001-9579-2028",
-     "score": 15.2,
-     "n": 8,
-     "papers": [
-      {
-       "title": "Enhancing antimicrobial stewardship: recommendations to support implementation of the 2024 UN General Assembly political declaration on antimicrobial resistance",
-       "year": 2025,
-       "venue": "Clinical Microbiology and Infection",
-       "link": "https://doi.org/10.1016/j.cmi.2025.02.024"
-      },
-      {
-       "title": "Leveraging local public health to advance antimicrobial stewardship (AMS) implementation and mitigate antimicrobial resistance (AMR): a scoping review",
-       "year": 2024,
-       "venue": "JAC-Antimicrobial Resistance",
-       "link": "https://doi.org/10.1093/jacamr/dlae187"
-      },
-      {
-       "title": "Improving healthcare professionals’ interactions with patients to tackle antimicrobial resistance: a systematic review of interventions, barriers, and facilitators",
-       "year": 2024,
-       "venue": "Frontiers in Public Health",
-       "link": "https://doi.org/10.3389/fpubh.2024.1359790"
-      }
-     ],
-     "senior_hint": true,
-     "institution": "University of Nottingham"
-    },
-    {
-     "name": "Lesley Hoyles",
-     "openalex": "https://openalex.org/A5064786562",
-     "orcid": "https://orcid.org/0000-0002-6418-342X",
-     "score": 14.9,
-     "n": 7,
-     "papers": [
-      {
-       "title": "The urgent need to integrate infectious diseases expertise into the management of cancer patients with infections in sub-Saharan Africa in the era of antimicrobial resistance: a policy brief",
-       "year": 2026,
-       "venue": "Frontiers in Pharmacology",
-       "link": "https://doi.org/10.3389/fphar.2026.1889223"
-      },
-      {
-       "title": "Phenotype–genotype discordance in antimicrobial resistance profiles of Gram-negative uropathogens recovered from catheter-associated urinary tract infections in Egypt",
-       "year": 2025,
-       "venue": "Journal of Antimicrobial Chemotherapy",
-       "link": "https://doi.org/10.1093/jac/dkaf352"
-      },
-      {
-       "title": "Host interactions of bioactive molecules produced by Klebsiella spp",
-       "year": 2025,
-       "venue": "Microbiota and Host",
-       "link": "https://doi.org/10.1530/mah-24-0011"
-      }
-     ],
-     "senior_hint": true,
-     "institution": "Nottingham Trent University"
-    },
-    {
-     "name": "Alasdair T. M. Hubbard",
-     "openalex": "https://openalex.org/A5075639856",
-     "orcid": "https://orcid.org/0000-0001-6668-9179",
-     "score": 14.4,
-     "n": 7,
-     "papers": [
-      {
-       "title": "Utilizing collateral effects of antibiotic resistance to sustain antibiotic efficacy and addressing current barriers to translation",
-       "year": 2026,
-       "venue": "Microbiology",
-       "link": "https://doi.org/10.1099/mic.0.001795"
-      },
-      {
-       "title": "Screening the antimicrobial properties of snake venoms: an iterative fractionation approach",
-       "year": 2026,
-       "venue": "Access Microbiology",
-       "link": "https://doi.org/10.1099/acmi.0.001151.v3"
-      },
-      {
-       "title": "Molecular mechanisms of re-emerging chloramphenicol susceptibility in extended-spectrum beta-lactamase-producing Enterobacterales",
-       "year": 2024,
-       "venue": "Nature Communications",
-       "link": "https://doi.org/10.1038/s41467-024-53391-2"
-      }
-     ],
-     "senior_hint": true,
-     "institution": "Nottingham Trent University"
-    },
-    {
      "name": "Mahdi Bodaghi",
      "openalex": "https://openalex.org/A5043306953",
      "orcid": "https://orcid.org/0000-0002-0707-944X",
-     "score": 14.3,
+     "score": 14.8,
      "n": 8,
      "papers": [
-      {
-       "title": "Engineering multifunctional dynamic hydrogel for biomedical and tissue regenerative applications",
-       "year": 2024,
-       "venue": "Chemical Engineering Journal",
-       "link": "https://doi.org/10.1016/j.cej.2024.150403"
-      },
       {
        "title": "Revolutionizing drug delivery by bioinspired 4D transdermal microneedles: Advances and future horizons",
        "year": 2024,
@@ -670,39 +554,132 @@
        "link": "https://doi.org/10.1016/j.eurpolymj.2024.112952"
       },
       {
-       "title": "Enhanced in vitro and in vivo anticancer activity through the development of Sunitinib-Loaded nanoniosomes with controlled release and improved uptake",
-       "year": 2023,
-       "venue": "International Journal of Pharmaceutics",
-       "link": "https://doi.org/10.1016/j.ijpharm.2023.122977"
+       "title": "Nonordered dendritic mesoporous silica nanoparticles as promising platforms for advanced methods of diagnosis and therapies",
+       "year": 2022,
+       "venue": "Materials Today Chemistry",
+       "link": "https://doi.org/10.1016/j.mtchem.2022.101144"
+      },
+      {
+       "title": "Engineering multifunctional dynamic hydrogel for biomedical and tissue regenerative applications",
+       "year": 2024,
+       "venue": "Chemical Engineering Journal",
+       "link": "https://doi.org/10.1016/j.cej.2024.150403"
       }
      ],
      "senior_hint": true,
      "institution": "Nottingham Trent University"
     },
     {
+     "name": "Vincenzo Taresco",
+     "openalex": "https://openalex.org/A5056060581",
+     "orcid": "https://orcid.org/0000-0003-4476-8233",
+     "score": 14.6,
+     "n": 6,
+     "papers": [
+      {
+       "title": "Nanoprecipitation and Drug Delivery with PMTC: Toward Biomedical Application of Polyesters from Radical Ring‐Opening Polymerization",
+       "year": 2025,
+       "venue": "Macromolecular Bioscience",
+       "link": "https://doi.org/10.1002/mabi.202500432"
+      },
+      {
+       "title": "Glycerol‐Based Copolyesters as Polymeric Nanocarriers for Drug Delivery",
+       "year": 2024,
+       "venue": "Journal of Polymer Science",
+       "link": "https://doi.org/10.1002/pol.20240762"
+      },
+      {
+       "title": "Poly (diglycerol adipate) variants as enhanced nanocarrier replacements in drug delivery applications",
+       "year": 2023,
+       "venue": "Journal of Colloid and Interface Science",
+       "link": "https://doi.org/10.1016/j.jcis.2023.03.124"
+      }
+     ],
+     "senior_hint": true,
+     "institution": "University of Nottingham"
+    },
+    {
      "name": "Farooq Sher",
      "openalex": "https://openalex.org/A5038687492",
      "orcid": "https://orcid.org/0000-0003-2890-5912",
-     "score": 14.3,
+     "score": 14.6,
      "n": 8,
      "papers": [
-      {
-       "title": "Sustainable management of rosemary wastewater and essential oil in agri-environmental bioprocessing",
-       "year": 2024,
-       "venue": "Food Bioscience",
-       "link": "https://doi.org/10.1016/j.fbio.2024.105263"
-      },
-      {
-       "title": "Current state and novel outlook on prevention and treatment of rising antibiotic resistance in urinary tract infections",
-       "year": 2024,
-       "venue": "Pharmacology & Therapeutics",
-       "link": "https://doi.org/10.1016/j.pharmthera.2024.108688"
-      },
       {
        "title": "Nanotechnology in medicine revolutionizing drug delivery for cancer and viral infection treatments",
        "year": 2024,
        "venue": "International Journal of Pharmaceutics",
        "link": "https://doi.org/10.1016/j.ijpharm.2024.124345"
+      },
+      {
+       "title": "Nanostructured Materials for Drug Delivery and Tissue Engineering Applications",
+       "year": 2023,
+       "venue": "Molecular Biotechnology",
+       "link": "https://doi.org/10.1007/s12033-023-00784-1"
+      },
+      {
+       "title": "Effects of intestinal flora on pharmacokinetics and pharmacodynamics of drugs",
+       "year": 2023,
+       "venue": "Drug Metabolism Reviews",
+       "link": "https://doi.org/10.1080/03602532.2023.2186313"
+      }
+     ],
+     "senior_hint": true,
+     "institution": "Nottingham Trent University"
+    },
+    {
+     "name": "Dmitry V. Volodkin",
+     "openalex": "https://openalex.org/A5083341771",
+     "orcid": "https://orcid.org/0000-0001-7474-5329",
+     "score": 12.8,
+     "n": 9,
+     "papers": [
+      {
+       "title": "Calcium carbonate in drug delivery: functional carrier design, applications, and data-driven perspectives",
+       "year": 2025,
+       "venue": "Expert Opinion on Drug Delivery",
+       "link": "https://doi.org/10.1080/17425247.2025.2587907"
+      },
+      {
+       "title": "Hydrophilic carriers for encapsulation of hydrophobic drug cannabidiol: Vaterite CaCO3 crystals and multilayer microgels made of sustainable polymers",
+       "year": 2026,
+       "venue": "Biomaterials Advances",
+       "link": "https://doi.org/10.1016/j.bioadv.2026.214906"
+      },
+      {
+       "title": "Encapsulation Strategy Matters: Pre- and Post-Loading of Macromolecules into Surface-Supported Microgels Formed via Vaterite Templates",
+       "year": 2025,
+       "venue": "ACS Materials Au",
+       "link": "https://doi.org/10.1021/acsmaterialsau.5c00099"
+      }
+     ],
+     "senior_hint": true,
+     "institution": "Nottingham Trent University"
+    },
+    {
+     "name": "Gareth W. V. Cave",
+     "openalex": "https://openalex.org/A5000847694",
+     "orcid": "https://orcid.org/0000-0002-4167-1332",
+     "score": 12.4,
+     "n": 7,
+     "papers": [
+      {
+       "title": "Amino Acid-Coated Nanoparticles for Preservation of Cut Roses: Formulation and Performance",
+       "year": 2026,
+       "venue": "ACS Omega",
+       "link": "https://doi.org/10.1021/acsomega.6c00583"
+      },
+      {
+       "title": "Surface-Functionalised Copper Oxide Nanoparticles: A Pathway to Multidrug-Resistant Pathogen Control in Medical Devices",
+       "year": 2024,
+       "venue": "Nanomaterials",
+       "link": "https://doi.org/10.3390/nano14231899"
+      },
+      {
+       "title": "Vaterite vectors for the protection, storage and release of silver nanoparticles",
+       "year": 2022,
+       "venue": "Journal of Colloid and Interface Science",
+       "link": "https://doi.org/10.1016/j.jcis.2022.10.094"
       }
      ],
      "senior_hint": true,
@@ -711,22 +688,22 @@
    ],
    "reading": [
     {
-     "title": "Engineering precision nanoparticles for drug delivery",
-     "authors": "Michael J. Mitchell et al.",
-     "year": 2020,
-     "link": "https://doi.org/10.1038/s41573-020-0090-8",
-     "venue": "Nature Reviews Drug Discovery",
+     "title": "Investigating the Application of Liposomes as Drug Delivery Systems for the Diagnosis and Treatment of Cancer",
+     "authors": "Latifa W. Allahou et al.",
+     "year": 2021,
+     "link": "https://doi.org/10.1155/2021/3041969",
+     "venue": "International Journal of Biomaterials",
      "level": "start",
-     "why": "Open-access review: a readable overview of the topic before you write to anyone."
+     "why": "Open-access review written at this university: shows how people here think about the field."
     },
     {
-     "title": "Toxicology of Nanoparticles in Drug Delivery",
-     "authors": "Swati Sharma et al.",
-     "year": 2021,
-     "link": "https://doi.org/10.1007/s40139-021-00227-z",
-     "venue": "Current Pathobiology Reports",
+     "title": "Technologies and Formulation Design of Polysaccharide-Based Hydrogels for Drug Delivery",
+     "authors": "Giulia Auriemma et al.",
+     "year": 2020,
+     "link": "https://doi.org/10.3390/molecules25143156",
+     "venue": "Molecules",
      "level": "start",
-     "why": "Open-access review: a readable overview of the topic before you write to anyone."
+     "why": "Well-cited open-access review: a readable overview of the topic before you write to anyone."
     }
    ],
    "scanned": 200,
@@ -741,97 +718,10 @@
    ],
    "people": [
     {
-     "name": "Tom O. McDonald",
-     "openalex": "https://openalex.org/A5045044657",
-     "orcid": "https://orcid.org/0000-0002-9273-9173",
-     "score": 8.5,
-     "n": 4,
-     "papers": [
-      {
-       "title": "Compositional variation insights into nanoprecipitation through Asymmetric flow field-flow fractionation (AF4): Impact of lipid composition and surfactant placement on particle formation",
-       "year": 2026,
-       "venue": "Nano Today",
-       "link": "https://doi.org/10.1016/j.nantod.2026.103214"
-      },
-      {
-       "title": "Capturing the dynamic integrity of carbocyanine fluorophore-based lipid nanoparticles using the FRET technique",
-       "year": 2025,
-       "venue": "Journal of Materials Chemistry B",
-       "link": "https://doi.org/10.1039/d4tb02653e"
-      },
-      {
-       "title": "High drug loading solid lipid nanoparticles, nanostructured lipid carriers and nanoemulsions for the dual drug delivery of the HIV drugs darunavir and ritonavir",
-       "year": 2023,
-       "venue": "JCIS Open",
-       "link": "https://doi.org/10.1016/j.jciso.2023.100087"
-      }
-     ],
-     "senior_hint": true,
-     "institution": "University of Manchester"
-    },
-    {
-     "name": "Vassilis G. Gorgoulis",
-     "openalex": "https://openalex.org/A5016235730",
-     "orcid": "https://orcid.org/0000-0001-9001-4112",
-     "score": 8.2,
-     "n": 5,
-     "papers": [
-      {
-       "title": "Fluorographene-derived colloidal dispersions for donepezil delivery: From chemical synthesis to engineering of drug carriers",
-       "year": 2025,
-       "venue": "Colloids and Surfaces A Physicochemical and Engineering Aspects",
-       "link": "https://doi.org/10.1016/j.colsurfa.2025.139225"
-      },
-      {
-       "title": "Fluorographene-derived colloidal dispersions for donepezil delivery: From chemical synthesis to engineering of drug carriers",
-       "year": 2025,
-       "venue": "Colloids and Surfaces A Physicochemical and Engineering Aspects",
-       "link": "https://doi.org/10.5281/zenodo.17938208"
-      },
-      {
-       "title": "Unveiling the Performance of Co-Assembled Hybrid Nanocarriers: Moving towards the Formation of a Multifunctional Lipid/Random Copolymer Nanoplatform",
-       "year": 2024,
-       "venue": "Pharmaceutics",
-       "link": "https://doi.org/10.3390/pharmaceutics16091204"
-      }
-     ],
-     "senior_hint": false,
-     "institution": "University of Manchester"
-    },
-    {
-     "name": "Guillaume De Bo",
-     "openalex": "https://openalex.org/A5014852936",
-     "orcid": "https://orcid.org/0000-0003-2670-6370",
-     "score": 7.3,
-     "n": 3,
-     "papers": [
-      {
-       "title": "Logic‐Gated Release of a Dual Payload from a β‐Lactam Mechanophore with a Rotaxane Actuator",
-       "year": 2025,
-       "venue": "Angewandte Chemie International Edition",
-       "link": "https://doi.org/10.1002/anie.202512698"
-      },
-      {
-       "title": "Logic‐Gated Release of a Dual Payload from a β‐Lactam Mechanophore with a Rotaxane Actuator",
-       "year": 2025,
-       "venue": "Angewandte Chemie",
-       "link": "https://doi.org/10.1002/ange.202512698"
-      },
-      {
-       "title": "Force-controlled release of small molecules with a rotaxane actuator",
-       "year": 2024,
-       "venue": "Nature",
-       "link": "https://doi.org/10.1038/s41586-024-07154-0"
-      }
-     ],
-     "senior_hint": true,
-     "institution": "University of Manchester"
-    },
-    {
      "name": "Lynda K. Harris",
      "openalex": "https://openalex.org/A5021918263",
      "orcid": "https://orcid.org/0000-0001-7709-5202",
-     "score": 6.9,
+     "score": 10.9,
      "n": 4,
      "papers": [
       {
@@ -857,36 +747,126 @@
      "institution": "University of Manchester"
     },
     {
-     "name": "Pankaj Singla",
-     "openalex": "https://openalex.org/A5008359936",
-     "orcid": "https://orcid.org/0000-0001-6999-1744",
-     "score": 6.2,
+     "name": "Tom O. McDonald",
+     "openalex": "https://openalex.org/A5045044657",
+     "orcid": "https://orcid.org/0000-0002-9273-9173",
+     "score": 9.5,
      "n": 4,
      "papers": [
       {
-       "title": "Probing Pluronics as carriers for delivery of antiplasmodials",
+       "title": "Capturing the dynamic integrity of carbocyanine fluorophore-based lipid nanoparticles using the FRET technique",
        "year": 2025,
-       "venue": "Colloids and Surfaces A Physicochemical and Engineering Aspects",
-       "link": "https://doi.org/10.1016/j.colsurfa.2025.138395"
+       "venue": "Journal of Materials Chemistry B",
+       "link": "https://doi.org/10.1039/d4tb02653e"
       },
       {
-       "title": "Future Perspectives on the Automation and Biocompatibility of Molecularly Imprinted Polymers for Healthcare Applications",
-       "year": 2025,
-       "venue": "Macromolecules",
-       "link": "https://doi.org/10.1021/acs.macromol.4c01621"
+       "title": "High drug loading solid lipid nanoparticles, nanostructured lipid carriers and nanoemulsions for the dual drug delivery of the HIV drugs darunavir and ritonavir",
+       "year": 2023,
+       "venue": "JCIS Open",
+       "link": "https://doi.org/10.1016/j.jciso.2023.100087"
       },
+      {
+       "title": "Compositional variation insights into nanoprecipitation through Asymmetric flow field-flow fractionation (AF4): Impact of lipid composition and surfactant placement on particle formation",
+       "year": 2026,
+       "venue": "Nano Today",
+       "link": "https://doi.org/10.1016/j.nantod.2026.103214"
+      }
+     ],
+     "senior_hint": true,
+     "institution": "University of Manchester"
+    },
+    {
+     "name": "Amlan Chakraborty",
+     "openalex": "https://openalex.org/A5078517652",
+     "orcid": "https://orcid.org/0000-0002-2917-6486",
+     "score": 6.7,
+     "n": 3,
+     "papers": [
+      {
+       "title": "Recent trends and applications of nanostructure-based drug delivery in alleviating pulmonary fibrosis",
+       "year": 2024,
+       "venue": "European Polymer Journal",
+       "link": "https://doi.org/10.1016/j.eurpolymj.2024.113467"
+      },
+      {
+       "title": "Applications and advancements of nanoparticle-based drug delivery in alleviating lung cancer and chronic obstructive pulmonary disease",
+       "year": 2023,
+       "venue": "Naunyn-Schmiedeberg s Archives of Pharmacology",
+       "link": "https://doi.org/10.1007/s00210-023-02830-w"
+      },
+      {
+       "title": "Anti-inflammatory and anti-fibrotic effects of berberine-loaded liquid crystalline nanoparticles",
+       "year": 2023,
+       "venue": "EXCLI journal",
+       "link": "https://doi.org/10.17179/excli2023-6467"
+      }
+     ],
+     "senior_hint": false,
+     "institution": "University of Manchester"
+    },
+    {
+     "name": "Pankaj Singla",
+     "openalex": "https://openalex.org/A5008359936",
+     "orcid": "https://orcid.org/0000-0001-6999-1744",
+     "score": 6.6,
+     "n": 4,
+     "papers": [
       {
        "title": "Versatile mixed micellar Pluronic formulations as drug delivery carriers for aripiprazole and carbamazepine – A comparative study",
        "year": 2024,
        "venue": "Colloids and Surfaces A Physicochemical and Engineering Aspects",
        "link": "https://doi.org/10.1016/j.colsurfa.2024.135997"
+      },
+      {
+       "title": "Double Imprinted Nanoparticles for Sequential Membrane‐to‐Nuclear Drug Delivery",
+       "year": 2024,
+       "venue": "Advanced Science",
+       "link": "https://doi.org/10.1002/advs.202309976"
+      },
+      {
+       "title": "Probing Pluronics as carriers for delivery of antiplasmodials",
+       "year": 2025,
+       "venue": "Colloids and Surfaces A Physicochemical and Engineering Aspects",
+       "link": "https://doi.org/10.1016/j.colsurfa.2025.138395"
       }
      ],
      "senior_hint": false,
      "institution": "University of Manchester"
+    },
+    {
+     "name": "Annalisa Tirella",
+     "openalex": "https://openalex.org/A5080631273",
+     "orcid": "https://orcid.org/0000-0002-3743-3593",
+     "score": 6.2,
+     "n": 2,
+     "papers": [
+      {
+       "title": "Sustained Drug Release from Smart Nanoparticles in Cancer Therapy: A Comprehensive Review",
+       "year": 2022,
+       "venue": "Micromachines",
+       "link": "https://doi.org/10.3390/mi13101623"
+      },
+      {
+       "title": "Microfluidic-assisted fabrication of phosphatidylcholine-based liposomes for controlled drug delivery of chemotherapeutics",
+       "year": 2021,
+       "venue": "International Journal of Pharmaceutics",
+       "link": "https://doi.org/10.1016/j.ijpharm.2021.120711"
+      }
+     ],
+     "senior_hint": true,
+     "institution": "University of Manchester"
     }
    ],
    "reading": [
+    {
+     "title": "Sustained Drug Release from Smart Nanoparticles in Cancer Therapy: A Comprehensive Review",
+     "authors": "Xue Bai et al.",
+     "year": 2022,
+     "link": "https://doi.org/10.3390/mi13101623",
+     "venue": "Micromachines",
+     "level": "start",
+     "why": "Open-access review written at this university: shows how people here think about the field."
+    },
     {
      "title": "Engineering precision nanoparticles for drug delivery",
      "authors": "Michael J. Mitchell et al.",
@@ -894,16 +874,7 @@
      "link": "https://doi.org/10.1038/s41573-020-0090-8",
      "venue": "Nature Reviews Drug Discovery",
      "level": "start",
-     "why": "Open-access review: a readable overview of the topic before you write to anyone."
-    },
-    {
-     "title": "Electrospinning for drug delivery applications: A review",
-     "authors": "Andrea Luraghi et al.",
-     "year": 2021,
-     "link": "https://doi.org/10.1016/j.jconrel.2021.03.033",
-     "venue": "Journal of Controlled Release",
-     "level": "start",
-     "why": "Open-access review: a readable overview of the topic before you write to anyone."
+     "why": "Well-cited open-access review: a readable overview of the topic before you write to anyone."
     }
    ],
    "scanned": 100,
@@ -924,7 +895,7 @@
      "name": "Ali Nokhodchi",
      "openalex": "https://openalex.org/A5023571572",
      "orcid": "https://orcid.org/0000-0002-3244-2482",
-     "score": 45.1,
+     "score": 40.9,
      "n": 25,
      "papers": [
       {
@@ -950,39 +921,10 @@
      "institution": "University of Sussex"
     },
     {
-     "name": "William H. Gaze",
-     "openalex": "https://openalex.org/A5072007160",
-     "orcid": "https://orcid.org/0000-0002-9345-6204",
-     "score": 32.5,
-     "n": 21,
-     "papers": [
-      {
-       "title": "Common non-antibiotic drugs enhance selection for antimicrobial resistance in mixture with ciprofloxacin",
-       "year": 2025,
-       "venue": "ISME Communications",
-       "link": "https://doi.org/10.1093/ismeco/ycaf169"
-      },
-      {
-       "title": "A review of wastewater-based epidemiology for antimicrobial resistance surveillance",
-       "year": 2024,
-       "venue": "Journal of Environmental Exposure Assessment",
-       "link": "https://doi.org/10.20517/jeea.2023.29"
-      },
-      {
-       "title": "The Complex Interplay Between Antibiotic Resistance and Pharmaceutical and Personal Care Products in the Environment",
-       "year": 2022,
-       "venue": "Environmental Toxicology and Chemistry",
-       "link": "https://doi.org/10.1002/etc.5555"
-      }
-     ],
-     "senior_hint": true,
-     "institution": "University of Exeter"
-    },
-    {
      "name": "Roberto Marcello La Ragione",
      "openalex": "https://openalex.org/A5056667622",
      "orcid": "https://orcid.org/0000-0001-5861-613X",
-     "score": 31.5,
+     "score": 19.5,
      "n": 21,
      "papers": [
       {
@@ -1008,10 +950,39 @@
      "institution": "University of Surrey"
     },
     {
+     "name": "William H. Gaze",
+     "openalex": "https://openalex.org/A5072007160",
+     "orcid": "https://orcid.org/0000-0002-9345-6204",
+     "score": 18.4,
+     "n": 21,
+     "papers": [
+      {
+       "title": "Common non-antibiotic drugs enhance selection for antimicrobial resistance in mixture with ciprofloxacin",
+       "year": 2025,
+       "venue": "ISME Communications",
+       "link": "https://doi.org/10.1093/ismeco/ycaf169"
+      },
+      {
+       "title": "A review of wastewater-based epidemiology for antimicrobial resistance surveillance",
+       "year": 2024,
+       "venue": "Journal of Environmental Exposure Assessment",
+       "link": "https://doi.org/10.20517/jeea.2023.29"
+      },
+      {
+       "title": "The Complex Interplay Between Antibiotic Resistance and Pharmaceutical and Personal Care Products in the Environment",
+       "year": 2022,
+       "venue": "Environmental Toxicology and Chemistry",
+       "link": "https://doi.org/10.1002/etc.5555"
+      }
+     ],
+     "senior_hint": true,
+     "institution": "University of Exeter"
+    },
+    {
      "name": "Aimee Kaye Murray",
      "openalex": "https://openalex.org/A5058606539",
      "orcid": "https://orcid.org/0000-0002-1388-754X",
-     "score": 29.4,
+     "score": 17.8,
      "n": 15,
      "papers": [
       {
@@ -1040,7 +1011,7 @@
      "name": "Charles R. Tyler",
      "openalex": "https://openalex.org/A5002493080",
      "orcid": "https://orcid.org/0000-0003-2353-5748",
-     "score": 23.9,
+     "score": 15.5,
      "n": 11,
      "papers": [
       {
@@ -1068,22 +1039,22 @@
    ],
    "reading": [
     {
-     "title": "New Perspectives on Antimicrobial Agents: Cefiderocol",
-     "authors": "Erin K McCreary et al.",
-     "year": 2021,
-     "link": "https://doi.org/10.1128/aac.02171-20",
-     "venue": "Antimicrobial Agents and Chemotherapy",
+     "title": "GREENER Pharmaceuticals for More Sustainable Healthcare",
+     "authors": "Caroline Moermond et al.",
+     "year": 2022,
+     "link": "https://doi.org/10.1021/acs.estlett.2c00446",
+     "venue": "Environmental Science & Technology Letters",
      "level": "start",
-     "why": "Open-access review: a readable overview of the topic before you write to anyone."
+     "why": "Open-access review written at this university: shows how people here think about the field."
     },
     {
-     "title": "Metal-Based Nanoparticles as Antimicrobial Agents: An Overview",
-     "authors": "Elena Sánchez‐López et al.",
+     "title": "Contribution of Organofluorine Compounds to Pharmaceuticals",
+     "authors": "Munenori Inoue et al.",
      "year": 2020,
-     "link": "https://doi.org/10.3390/nano10020292",
-     "venue": "Nanomaterials",
+     "link": "https://doi.org/10.1021/acsomega.0c00830",
+     "venue": "ACS Omega",
      "level": "start",
-     "why": "Open-access review: a readable overview of the topic before you write to anyone."
+     "why": "Well-cited open-access review: a readable overview of the topic before you write to anyone."
     }
    ],
    "scanned": 300,
@@ -1101,15 +1072,9 @@
      "name": "Kofi Asare‐Addo",
      "openalex": "https://openalex.org/A5065872485",
      "orcid": "https://orcid.org/0000-0001-6824-5336",
-     "score": 60.9,
+     "score": 66.5,
      "n": 37,
      "papers": [
-      {
-       "title": "A Double‐Blind Randomised Clinical Trial of Terbinafine‐Nanostructured Lipid Carriers: Should We Anticipate This Strategy for Effective Topical Treatment of Onychomycosis?",
-       "year": 2025,
-       "venue": "Mycoses",
-       "link": "https://doi.org/10.1111/myc.70076"
-      },
       {
        "title": "Chitosan nanoparticles for nasal drug delivery",
        "year": 2025,
@@ -1121,6 +1086,12 @@
        "year": 2024,
        "venue": "Journal of Drug Delivery Science and Technology",
        "link": "https://doi.org/10.1016/j.jddst.2024.105564"
+      },
+      {
+       "title": "Electrospun nanofibers: Exploring process parameters, polymer selection, and recent applications in pharmaceuticals and drug delivery",
+       "year": 2023,
+       "venue": "Journal of Drug Delivery Science and Technology",
+       "link": "https://doi.org/10.1016/j.jddst.2023.105156"
       }
      ],
      "senior_hint": true,
@@ -1130,7 +1101,7 @@
      "name": "Barbara R. Conway",
      "openalex": "https://openalex.org/A5069035256",
      "orcid": "https://orcid.org/0000-0001-5570-3318",
-     "score": 47.5,
+     "score": 51.9,
      "n": 28,
      "papers": [
       {
@@ -1159,7 +1130,7 @@
      "name": "Muhammad Usman Ghori",
      "openalex": "https://openalex.org/A5072701255",
      "orcid": "https://orcid.org/0000-0003-1884-6648",
-     "score": 25.9,
+     "score": 31.7,
      "n": 15,
      "papers": [
       {
@@ -1185,39 +1156,10 @@
      "institution": "University of Huddersfield"
     },
     {
-     "name": "Peter Timmins",
-     "openalex": "https://openalex.org/A5038330603",
-     "orcid": "https://orcid.org/0000-0002-5840-0678",
-     "score": 20.5,
-     "n": 11,
-     "papers": [
-      {
-       "title": "Industry Update: the latest developments in the field of therapeutic delivery, July 2024",
-       "year": 2024,
-       "venue": "Therapeutic Delivery",
-       "link": "https://doi.org/10.1080/20415990.2024.2414732"
-      },
-      {
-       "title": "Industry Update: The Latest Developments in the Field of Therapeutic Delivery, October 2023",
-       "year": 2024,
-       "venue": "Therapeutic Delivery",
-       "link": "https://doi.org/10.4155/tde-2023-0139"
-      },
-      {
-       "title": "Industry Update: the Latest Developments in the Field of Therapeutic delivery, July 2023",
-       "year": 2023,
-       "venue": "Therapeutic Delivery",
-       "link": "https://doi.org/10.4155/tde-2023-0085"
-      }
-     ],
-     "senior_hint": false,
-     "institution": "University of Huddersfield"
-    },
-    {
      "name": "Adeola O. Adebisi",
      "openalex": "https://openalex.org/A5077234561",
      "orcid": "https://orcid.org/0000-0003-1658-148X",
-     "score": 18.1,
+     "score": 23.1,
      "n": 8,
      "papers": [
       {
@@ -1241,9 +1183,47 @@
      ],
      "senior_hint": true,
      "institution": "University of Huddersfield"
+    },
+    {
+     "name": "Peter Timmins",
+     "openalex": "https://openalex.org/A5038330603",
+     "orcid": "https://orcid.org/0000-0002-5840-0678",
+     "score": 15.2,
+     "n": 11,
+     "papers": [
+      {
+       "title": "Industry Update: the latest developments in the field of therapeutic delivery, July 2024",
+       "year": 2024,
+       "venue": "Therapeutic Delivery",
+       "link": "https://doi.org/10.1080/20415990.2024.2414732"
+      },
+      {
+       "title": "Industry Update: The Latest Developments in the Field of Therapeutic Delivery, October 2023",
+       "year": 2024,
+       "venue": "Therapeutic Delivery",
+       "link": "https://doi.org/10.4155/tde-2023-0139"
+      },
+      {
+       "title": "Industry Update: the Latest Developments in the Field of Therapeutic delivery, July 2023",
+       "year": 2023,
+       "venue": "Therapeutic Delivery",
+       "link": "https://doi.org/10.4155/tde-2023-0085"
+      }
+     ],
+     "senior_hint": false,
+     "institution": "University of Huddersfield"
     }
    ],
    "reading": [
+    {
+     "title": "Let’s talk about sex: Differences in drug therapy in males and females",
+     "authors": "Christine M. Madla et al.",
+     "year": 2021,
+     "link": "https://doi.org/10.1016/j.addr.2021.05.014",
+     "venue": "Advanced Drug Delivery Reviews",
+     "level": "start",
+     "why": "Open-access review written at this university: shows how people here think about the field."
+    },
     {
      "title": "Engineering precision nanoparticles for drug delivery",
      "authors": "Michael J. Mitchell et al.",
@@ -1251,16 +1231,189 @@
      "link": "https://doi.org/10.1038/s41573-020-0090-8",
      "venue": "Nature Reviews Drug Discovery",
      "level": "start",
-     "why": "Open-access review: a readable overview of the topic before you write to anyone."
+     "why": "Well-cited open-access review: a readable overview of the topic before you write to anyone."
+    }
+   ],
+   "scanned": 100,
+   "checked": "2026-11-24"
+  },
+  "r7a2d11435fb1": {
+   "institutions": [
+    "University of Nottingham"
+   ],
+   "topics": [
+    "drug delivery",
+    "pharmaceutics",
+    "formulation",
+    "nanoparticles",
+    "biopharmaceutics",
+    "pharmacokinetics"
+   ],
+   "people": [
+    {
+     "name": "Vincenzo Taresco",
+     "openalex": "https://openalex.org/A5056060581",
+     "orcid": "https://orcid.org/0000-0003-4476-8233",
+     "score": 14.6,
+     "n": 6,
+     "papers": [
+      {
+       "title": "Nanoprecipitation and Drug Delivery with PMTC: Toward Biomedical Application of Polyesters from Radical Ring‐Opening Polymerization",
+       "year": 2025,
+       "venue": "Macromolecular Bioscience",
+       "link": "https://doi.org/10.1002/mabi.202500432"
+      },
+      {
+       "title": "Glycerol‐Based Copolyesters as Polymeric Nanocarriers for Drug Delivery",
+       "year": 2024,
+       "venue": "Journal of Polymer Science",
+       "link": "https://doi.org/10.1002/pol.20240762"
+      },
+      {
+       "title": "Poly (diglycerol adipate) variants as enhanced nanocarrier replacements in drug delivery applications",
+       "year": 2023,
+       "venue": "Journal of Colloid and Interface Science",
+       "link": "https://doi.org/10.1016/j.jcis.2023.03.124"
+      }
+     ],
+     "senior_hint": true,
+     "institution": "University of Nottingham"
     },
     {
-     "title": "Electrospinning for drug delivery applications: A review",
-     "authors": "Andrea Luraghi et al.",
+     "name": "Diane A.I. Ashiru-Oredope",
+     "openalex": "https://openalex.org/A5050622865",
+     "orcid": "https://orcid.org/0000-0001-9579-2028",
+     "score": 10.4,
+     "n": 8,
+     "papers": [
+      {
+       "title": "Enhancing antimicrobial stewardship: recommendations to support implementation of the 2024 UN General Assembly political declaration on antimicrobial resistance",
+       "year": 2025,
+       "venue": "Clinical Microbiology and Infection",
+       "link": "https://doi.org/10.1016/j.cmi.2025.02.024"
+      },
+      {
+       "title": "Leveraging local public health to advance antimicrobial stewardship (AMS) implementation and mitigate antimicrobial resistance (AMR): a scoping review",
+       "year": 2024,
+       "venue": "JAC-Antimicrobial Resistance",
+       "link": "https://doi.org/10.1093/jacamr/dlae187"
+      },
+      {
+       "title": "Improving healthcare professionals’ interactions with patients to tackle antimicrobial resistance: a systematic review of interventions, barriers, and facilitators",
+       "year": 2024,
+       "venue": "Frontiers in Public Health",
+       "link": "https://doi.org/10.3389/fpubh.2024.1359790"
+      }
+     ],
+     "senior_hint": true,
+     "institution": "University of Nottingham"
+    },
+    {
+     "name": "Robert J. Cavanagh",
+     "openalex": "https://openalex.org/A5075104148",
+     "orcid": "https://orcid.org/0000-0002-5639-3056",
+     "score": 8.8,
+     "n": 4,
+     "papers": [
+      {
+       "title": "Nanoprecipitation and Drug Delivery with PMTC: Toward Biomedical Application of Polyesters from Radical Ring‐Opening Polymerization",
+       "year": 2025,
+       "venue": "Macromolecular Bioscience",
+       "link": "https://doi.org/10.1002/mabi.202500432"
+      },
+      {
+       "title": "Glycerol‐Based Copolyesters as Polymeric Nanocarriers for Drug Delivery",
+       "year": 2024,
+       "venue": "Journal of Polymer Science",
+       "link": "https://doi.org/10.1002/pol.20240762"
+      },
+      {
+       "title": "Poly (diglycerol adipate) variants as enhanced nanocarrier replacements in drug delivery applications",
+       "year": 2023,
+       "venue": "Journal of Colloid and Interface Science",
+       "link": "https://doi.org/10.1016/j.jcis.2023.03.124"
+      }
+     ],
+     "senior_hint": false,
+     "institution": "University of Nottingham"
+    },
+    {
+     "name": "Dov  Joseph Stekel",
+     "openalex": "https://openalex.org/A5069506221",
+     "orcid": "https://orcid.org/0000-0002-2492-8079",
+     "score": 8.3,
+     "n": 8,
+     "papers": [
+      {
+       "title": "Rethinking the words hotspot reservoir and pristine in the environmental dimensions of antimicrobial resistance",
+       "year": 2025,
+       "venue": "npj Antimicrobials and Resistance",
+       "link": "https://doi.org/10.1038/s44259-025-00080-9"
+      },
+      {
+       "title": "Modelling the impact of wastewater flows and management practices on antimicrobial resistance in dairy farms",
+       "year": 2024,
+       "venue": "npj Antimicrobials and Resistance",
+       "link": "https://doi.org/10.1038/s44259-024-00029-4"
+      },
+      {
+       "title": "The need for One Health systems-thinking approaches to understand multiscale dissemination of antimicrobial resistance",
+       "year": 2024,
+       "venue": "The Lancet Planetary Health",
+       "link": "https://doi.org/10.1016/s2542-5196(23)00278-4"
+      }
+     ],
+     "senior_hint": true,
+     "institution": "University of Nottingham"
+    },
+    {
+     "name": "Eleni Axioti",
+     "openalex": "https://openalex.org/A5093864321",
+     "orcid": "https://orcid.org/0009-0006-6751-557X",
+     "score": 6.6,
+     "n": 3,
+     "papers": [
+      {
+       "title": "Nanoprecipitation and Drug Delivery with PMTC: Toward Biomedical Application of Polyesters from Radical Ring‐Opening Polymerization",
+       "year": 2025,
+       "venue": "Macromolecular Bioscience",
+       "link": "https://doi.org/10.1002/mabi.202500432"
+      },
+      {
+       "title": "Glycerol‐Based Copolyesters as Polymeric Nanocarriers for Drug Delivery",
+       "year": 2024,
+       "venue": "Journal of Polymer Science",
+       "link": "https://doi.org/10.1002/pol.20240762"
+      },
+      {
+       "title": "Multiple drug-delivery strategies to enhance the pharmacological and toxicological properties of Mefenamic acid",
+       "year": 2024,
+       "venue": "Biomedicine & Pharmacotherapy",
+       "link": "https://doi.org/10.1016/j.biopha.2024.116647"
+      }
+     ],
+     "senior_hint": false,
+     "institution": "University of Nottingham"
+    }
+   ],
+   "reading": [
+    {
+     "title": "Investigating the Application of Liposomes as Drug Delivery Systems for the Diagnosis and Treatment of Cancer",
+     "authors": "Latifa W. Allahou et al.",
      "year": 2021,
-     "link": "https://doi.org/10.1016/j.jconrel.2021.03.033",
-     "venue": "Journal of Controlled Release",
+     "link": "https://doi.org/10.1155/2021/3041969",
+     "venue": "International Journal of Biomaterials",
      "level": "start",
-     "why": "Open-access review: a readable overview of the topic before you write to anyone."
+     "why": "Open-access review written at this university: shows how people here think about the field."
+    },
+    {
+     "title": "Technologies and Formulation Design of Polysaccharide-Based Hydrogels for Drug Delivery",
+     "authors": "Giulia Auriemma et al.",
+     "year": 2020,
+     "link": "https://doi.org/10.3390/molecules25143156",
+     "venue": "Molecules",
+     "level": "start",
+     "why": "Well-cited open-access review: a readable overview of the topic before you write to anyone."
     }
    ],
    "scanned": 100,
@@ -1283,7 +1436,7 @@
      "name": "Barbara Kasprzyk‐Hordern",
      "openalex": "https://openalex.org/A5034486320",
      "orcid": "https://orcid.org/0000-0002-6809-2875",
-     "score": 36.1,
+     "score": 21.9,
      "n": 18,
      "papers": [
       {
@@ -1312,7 +1465,7 @@
      "name": "Edward J. Feil",
      "openalex": "https://openalex.org/A5014816450",
      "orcid": "https://orcid.org/0000-0003-1446-6744",
-     "score": 18.4,
+     "score": 9.8,
      "n": 11,
      "papers": [
       {
@@ -1338,10 +1491,68 @@
      "institution": "University of Bath"
     },
     {
+     "name": "Paul De Bank",
+     "openalex": "https://openalex.org/A5078294887",
+     "orcid": "https://orcid.org/0000-0002-5717-7486",
+     "score": 7.6,
+     "n": 3,
+     "papers": [
+      {
+       "title": "Gold Nanoparticles: Tunable Characteristics and Potential for Nasal Drug Delivery",
+       "year": 2024,
+       "venue": "Pharmaceutics",
+       "link": "https://doi.org/10.3390/pharmaceutics16050669"
+      },
+      {
+       "title": "Intestinal Transcytosis of a Protein Cargo and Nanoparticles Mediated by a Non-Toxic Form of Pseudomonas aeruginosa Exotoxin A",
+       "year": 2021,
+       "venue": "Pharmaceutics",
+       "link": "https://doi.org/10.3390/pharmaceutics13081171"
+      },
+      {
+       "title": "In Vitro Evaluation of Nasal Aerosol Depositions: An Insight for Direct Nose to Brain Drug Delivery",
+       "year": 2021,
+       "venue": "Pharmaceutics",
+       "link": "https://doi.org/10.3390/pharmaceutics13071079"
+      }
+     ],
+     "senior_hint": true,
+     "institution": "University of Bath"
+    },
+    {
+     "name": "Randall J. Mrsny",
+     "openalex": "https://openalex.org/A5002768937",
+     "orcid": "https://orcid.org/0000-0001-8505-8516",
+     "score": 5.6,
+     "n": 4,
+     "papers": [
+      {
+       "title": "Intestinal Transcytosis of a Protein Cargo and Nanoparticles Mediated by a Non-Toxic Form of Pseudomonas aeruginosa Exotoxin A",
+       "year": 2021,
+       "venue": "Pharmaceutics",
+       "link": "https://doi.org/10.3390/pharmaceutics13081171"
+      },
+      {
+       "title": "Modelling intramuscular drug fate in vitro with tissue-relevant biomimetic hydrogels",
+       "year": 2022,
+       "venue": "International Journal of Pharmaceutics X",
+       "link": "https://doi.org/10.1016/j.ijpx.2022.100125"
+      },
+      {
+       "title": "Re-Assessing PK/PD Issues for Oral Protein and Peptide Delivery",
+       "year": 2021,
+       "venue": "Pharmaceutics",
+       "link": "https://doi.org/10.3390/pharmaceutics13071006"
+      }
+     ],
+     "senior_hint": true,
+     "institution": "University of Bath"
+    },
+    {
      "name": "Stephanie W. Lo",
      "openalex": "https://openalex.org/A5022302563",
      "orcid": "https://orcid.org/0000-0002-2182-0222",
-     "score": 8.9,
+     "score": 5.5,
      "n": 6,
      "papers": [
       {
@@ -1365,84 +1576,26 @@
      ],
      "senior_hint": false,
      "institution": "University of Bath"
-    },
-    {
-     "name": "Ben Pascoe",
-     "openalex": "https://openalex.org/A5071129241",
-     "orcid": "https://orcid.org/0000-0001-6376-5121",
-     "score": 8.6,
-     "n": 6,
-     "papers": [
-      {
-       "title": "Genetic diversity and variation in antimicrobial-resistance determinants of non-serotype 2 Streptococcus suis isolates from healthy pigs",
-       "year": 2022,
-       "venue": "Microbial Genomics",
-       "link": "https://doi.org/10.1099/mgen.0.000882"
-      },
-      {
-       "title": "Local accessory gene sharing among Egyptian Campylobacter potentially promotes the spread of antimicrobial resistance",
-       "year": 2022,
-       "venue": "Microbial Genomics",
-       "link": "https://doi.org/10.1099/mgen.0.000834"
-      },
-      {
-       "title": "Host ecology regulates interspecies recombination in bacteria of the genus Campylobacter",
-       "year": 2022,
-       "venue": "eLife",
-       "link": "https://doi.org/10.7554/elife.73552"
-      }
-     ],
-     "senior_hint": true,
-     "institution": "University of Bath"
-    },
-    {
-     "name": "Elizabeth Holton",
-     "openalex": "https://openalex.org/A5101633480",
-     "orcid": "https://orcid.org/0000-0001-7401-4876",
-     "score": 8.4,
-     "n": 5,
-     "papers": [
-      {
-       "title": "Antimicrobials and antimicrobial resistance genes in a one-year city metabolism longitudinal study using wastewater-based epidemiology",
-       "year": 2023,
-       "venue": "Environmental Pollution",
-       "link": "https://doi.org/10.1016/j.envpol.2023.122020"
-      },
-      {
-       "title": "Quantifying community-wide antibiotic usage via urban water fingerprinting: Focus on contrasting resource settings in South Africa",
-       "year": 2023,
-       "venue": "Water Research",
-       "link": "https://doi.org/10.1016/j.watres.2023.120110"
-      },
-      {
-       "title": "Community infectious disease treatment with antimicrobial agents – A longitudinal one year study of antimicrobials in two cities via wastewater-based epidemiology",
-       "year": 2023,
-       "venue": "Journal of Hazardous Materials",
-       "link": "https://doi.org/10.1016/j.jhazmat.2023.131461"
-      }
-     ],
-     "senior_hint": false,
-     "institution": "University of Bath"
     }
    ],
    "reading": [
     {
-     "title": "Engineering precision nanoparticles for drug delivery",
-     "authors": "Michael J. Mitchell et al.",
-     "year": 2020,
-     "link": "https://doi.org/10.1038/s41573-020-0090-8",
-     "venue": "Nature Reviews Drug Discovery",
+     "title": "Surface-enhanced Raman spectroscopy for bioanalysis and diagnosis",
+     "authors": "Muhammad Ali Tahir et al.",
+     "year": 2021,
+     "link": "https://doi.org/10.1039/d1nr00708d",
+     "venue": "Nanoscale",
      "level": "start",
-     "why": "Open-access review: a readable overview of the topic before you write to anyone."
+     "why": "Open-access review written at this university: shows how people here think about the field."
     },
     {
-     "title": "Toxicology of Nanoparticles in Drug Delivery",
-     "authors": "Swati Sharma et al.",
-     "year": 2021,
-     "link": "https://doi.org/10.1007/s40139-021-00227-z",
-     "venue": "Current Pathobiology Reports",
+     "title": "Technologies and Formulation Design of Polysaccharide-Based Hydrogels for Drug Delivery",
+     "authors": "Giulia Auriemma et al.",
+     "year": 2020,
+     "link": "https://doi.org/10.3390/molecules25143156",
+     "venue": "Molecules",
      "level": "start",
-     "why": "Open-access review: a readable overview of the topic before you write to anyone."
+     "why": "Well-cited open-access review: a readable overview of the topic before you write to anyone."
     }
    ],
    "scanned": 100,
@@ -1465,7 +1618,7 @@
      "name": "Barbara Kasprzyk‐Hordern",
      "openalex": "https://openalex.org/A5034486320",
      "orcid": "https://orcid.org/0000-0002-6809-2875",
-     "score": 36.1,
+     "score": 21.9,
      "n": 18,
      "papers": [
       {
@@ -1494,7 +1647,7 @@
      "name": "Edward J. Feil",
      "openalex": "https://openalex.org/A5014816450",
      "orcid": "https://orcid.org/0000-0003-1446-6744",
-     "score": 18.4,
+     "score": 9.8,
      "n": 11,
      "papers": [
       {
@@ -1520,10 +1673,68 @@
      "institution": "University of Bath"
     },
     {
+     "name": "Paul De Bank",
+     "openalex": "https://openalex.org/A5078294887",
+     "orcid": "https://orcid.org/0000-0002-5717-7486",
+     "score": 7.6,
+     "n": 3,
+     "papers": [
+      {
+       "title": "Gold Nanoparticles: Tunable Characteristics and Potential for Nasal Drug Delivery",
+       "year": 2024,
+       "venue": "Pharmaceutics",
+       "link": "https://doi.org/10.3390/pharmaceutics16050669"
+      },
+      {
+       "title": "Intestinal Transcytosis of a Protein Cargo and Nanoparticles Mediated by a Non-Toxic Form of Pseudomonas aeruginosa Exotoxin A",
+       "year": 2021,
+       "venue": "Pharmaceutics",
+       "link": "https://doi.org/10.3390/pharmaceutics13081171"
+      },
+      {
+       "title": "In Vitro Evaluation of Nasal Aerosol Depositions: An Insight for Direct Nose to Brain Drug Delivery",
+       "year": 2021,
+       "venue": "Pharmaceutics",
+       "link": "https://doi.org/10.3390/pharmaceutics13071079"
+      }
+     ],
+     "senior_hint": true,
+     "institution": "University of Bath"
+    },
+    {
+     "name": "Randall J. Mrsny",
+     "openalex": "https://openalex.org/A5002768937",
+     "orcid": "https://orcid.org/0000-0001-8505-8516",
+     "score": 5.6,
+     "n": 4,
+     "papers": [
+      {
+       "title": "Intestinal Transcytosis of a Protein Cargo and Nanoparticles Mediated by a Non-Toxic Form of Pseudomonas aeruginosa Exotoxin A",
+       "year": 2021,
+       "venue": "Pharmaceutics",
+       "link": "https://doi.org/10.3390/pharmaceutics13081171"
+      },
+      {
+       "title": "Modelling intramuscular drug fate in vitro with tissue-relevant biomimetic hydrogels",
+       "year": 2022,
+       "venue": "International Journal of Pharmaceutics X",
+       "link": "https://doi.org/10.1016/j.ijpx.2022.100125"
+      },
+      {
+       "title": "Re-Assessing PK/PD Issues for Oral Protein and Peptide Delivery",
+       "year": 2021,
+       "venue": "Pharmaceutics",
+       "link": "https://doi.org/10.3390/pharmaceutics13071006"
+      }
+     ],
+     "senior_hint": true,
+     "institution": "University of Bath"
+    },
+    {
      "name": "Stephanie W. Lo",
      "openalex": "https://openalex.org/A5022302563",
      "orcid": "https://orcid.org/0000-0002-2182-0222",
-     "score": 8.9,
+     "score": 5.5,
      "n": 6,
      "papers": [
       {
@@ -1547,84 +1758,26 @@
      ],
      "senior_hint": false,
      "institution": "University of Bath"
-    },
-    {
-     "name": "Ben Pascoe",
-     "openalex": "https://openalex.org/A5071129241",
-     "orcid": "https://orcid.org/0000-0001-6376-5121",
-     "score": 8.6,
-     "n": 6,
-     "papers": [
-      {
-       "title": "Genetic diversity and variation in antimicrobial-resistance determinants of non-serotype 2 Streptococcus suis isolates from healthy pigs",
-       "year": 2022,
-       "venue": "Microbial Genomics",
-       "link": "https://doi.org/10.1099/mgen.0.000882"
-      },
-      {
-       "title": "Local accessory gene sharing among Egyptian Campylobacter potentially promotes the spread of antimicrobial resistance",
-       "year": 2022,
-       "venue": "Microbial Genomics",
-       "link": "https://doi.org/10.1099/mgen.0.000834"
-      },
-      {
-       "title": "Host ecology regulates interspecies recombination in bacteria of the genus Campylobacter",
-       "year": 2022,
-       "venue": "eLife",
-       "link": "https://doi.org/10.7554/elife.73552"
-      }
-     ],
-     "senior_hint": true,
-     "institution": "University of Bath"
-    },
-    {
-     "name": "Elizabeth Holton",
-     "openalex": "https://openalex.org/A5101633480",
-     "orcid": "https://orcid.org/0000-0001-7401-4876",
-     "score": 8.4,
-     "n": 5,
-     "papers": [
-      {
-       "title": "Antimicrobials and antimicrobial resistance genes in a one-year city metabolism longitudinal study using wastewater-based epidemiology",
-       "year": 2023,
-       "venue": "Environmental Pollution",
-       "link": "https://doi.org/10.1016/j.envpol.2023.122020"
-      },
-      {
-       "title": "Quantifying community-wide antibiotic usage via urban water fingerprinting: Focus on contrasting resource settings in South Africa",
-       "year": 2023,
-       "venue": "Water Research",
-       "link": "https://doi.org/10.1016/j.watres.2023.120110"
-      },
-      {
-       "title": "Community infectious disease treatment with antimicrobial agents – A longitudinal one year study of antimicrobials in two cities via wastewater-based epidemiology",
-       "year": 2023,
-       "venue": "Journal of Hazardous Materials",
-       "link": "https://doi.org/10.1016/j.jhazmat.2023.131461"
-      }
-     ],
-     "senior_hint": false,
-     "institution": "University of Bath"
     }
    ],
    "reading": [
     {
-     "title": "Engineering precision nanoparticles for drug delivery",
-     "authors": "Michael J. Mitchell et al.",
-     "year": 2020,
-     "link": "https://doi.org/10.1038/s41573-020-0090-8",
-     "venue": "Nature Reviews Drug Discovery",
+     "title": "Surface-enhanced Raman spectroscopy for bioanalysis and diagnosis",
+     "authors": "Muhammad Ali Tahir et al.",
+     "year": 2021,
+     "link": "https://doi.org/10.1039/d1nr00708d",
+     "venue": "Nanoscale",
      "level": "start",
-     "why": "Open-access review: a readable overview of the topic before you write to anyone."
+     "why": "Open-access review written at this university: shows how people here think about the field."
     },
     {
-     "title": "Toxicology of Nanoparticles in Drug Delivery",
-     "authors": "Swati Sharma et al.",
-     "year": 2021,
-     "link": "https://doi.org/10.1007/s40139-021-00227-z",
-     "venue": "Current Pathobiology Reports",
+     "title": "Technologies and Formulation Design of Polysaccharide-Based Hydrogels for Drug Delivery",
+     "authors": "Giulia Auriemma et al.",
+     "year": 2020,
+     "link": "https://doi.org/10.3390/molecules25143156",
+     "venue": "Molecules",
      "level": "start",
-     "why": "Open-access review: a readable overview of the topic before you write to anyone."
+     "why": "Well-cited open-access review: a readable overview of the topic before you write to anyone."
     }
    ],
    "scanned": 100,
@@ -1642,7 +1795,7 @@
      "name": "Anthony P. Davenport",
      "openalex": "https://openalex.org/A5060689377",
      "orcid": "https://orcid.org/0000-0002-2096-3117",
-     "score": 24.4,
+     "score": 12.2,
      "n": 12,
      "papers": [
       {
@@ -1671,7 +1824,7 @@
      "name": "Emmanuel Andreas Stamatakis",
      "openalex": "https://openalex.org/A5007542404",
      "orcid": "https://orcid.org/0000-0001-6955-9601",
-     "score": 8.8,
+     "score": 5.9,
      "n": 4,
      "papers": [
       {
@@ -1700,7 +1853,7 @@
      "name": "Janet J. Maguire",
      "openalex": "https://openalex.org/A5019791662",
      "orcid": "https://orcid.org/0000-0002-9254-7040",
-     "score": 7.9,
+     "score": 4.3,
      "n": 4,
      "papers": [
       {
@@ -1729,7 +1882,7 @@
      "name": "Andrea I. Luppi",
      "openalex": "https://openalex.org/A5065968159",
      "orcid": "https://orcid.org/0000-0002-3461-6431",
-     "score": 6.4,
+     "score": 3.5,
      "n": 4,
      "papers": [
       {
@@ -1755,36 +1908,39 @@
      "institution": "University of Cambridge"
     },
     {
-     "name": "Robyn G. C. Macrae",
-     "openalex": "https://openalex.org/A5023111250",
-     "orcid": "https://orcid.org/0000-0002-8129-7242",
-     "score": 5.2,
-     "n": 3,
+     "name": "Graham Ladds",
+     "openalex": "https://openalex.org/A5076475814",
+     "orcid": "https://orcid.org/0000-0001-7320-9612",
+     "score": 3.2,
+     "n": 2,
      "papers": [
       {
-       "title": "International Union of Basic and Clinical Pharmacology. CXXI. Apelin receptor pharmacology in the human cardiovascular system and emerging clinical applications",
+       "title": "Using a N ano BRET ‐Based Ligand‐Binding Assay at the β 2 ‐Adrenoceptor for Undergraduate Pharmacology Education",
        "year": 2026,
-       "venue": "Pharmacological Reviews",
-       "link": "https://doi.org/10.1016/j.pharmr.2026.100130"
+       "venue": "Pharmacology Research & Perspectives",
+       "link": "https://doi.org/10.1002/prp2.70275"
       },
       {
-       "title": "Expanding the apelin receptor pharmacological toolbox using novel fluorescent ligands",
-       "year": 2023,
-       "venue": "Frontiers in Endocrinology",
-       "link": "https://doi.org/10.3389/fendo.2023.1139121"
-      },
-      {
-       "title": "THE CONCISE GUIDE TO PHARMACOLOGY 2021/22: G protein‐coupled receptors",
-       "year": 2021,
-       "venue": "British Journal of Pharmacology",
-       "link": "https://doi.org/10.1111/bph.15538"
+       "title": "Quantitative approaches for studying G protein-coupled receptor signalling and pharmacology",
+       "year": 2025,
+       "venue": "Journal of Cell Science",
+       "link": "https://doi.org/10.1242/jcs.263434"
       }
      ],
-     "senior_hint": false,
+     "senior_hint": true,
      "institution": "University of Cambridge"
     }
    ],
    "reading": [
+    {
+     "title": "Pharmacological targeting of endoplasmic reticulum stress in disease",
+     "authors": "Stefan John Marciniak et al.",
+     "year": 2021,
+     "link": "https://doi.org/10.1038/s41573-021-00320-3",
+     "venue": "Nature Reviews Drug Discovery",
+     "level": "start",
+     "why": "Open-access review written at this university: shows how people here think about the field."
+    },
     {
      "title": "SGLT2 Inhibitors: Physiology and Pharmacology",
      "authors": "Ernest M. Wright",
@@ -1792,16 +1948,7 @@
      "link": "https://doi.org/10.34067/kid.0002772021",
      "venue": "Kidney360",
      "level": "start",
-     "why": "Open-access review: a readable overview of the topic before you write to anyone."
-    },
-    {
-     "title": "Oridonin: A Review of Its Pharmacology, Pharmacokinetics and Toxicity",
-     "authors": "Xiang Li et al.",
-     "year": 2021,
-     "link": "https://doi.org/10.3389/fphar.2021.645824",
-     "venue": "Frontiers in Pharmacology",
-     "level": "start",
-     "why": "Open-access review: a readable overview of the topic before you write to anyone."
+     "why": "Well-cited open-access review: a readable overview of the topic before you write to anyone."
     }
    ],
    "scanned": 100,
@@ -1820,22 +1967,22 @@
    "people": [],
    "reading": [
     {
-     "title": "Engineering precision nanoparticles for drug delivery",
-     "authors": "Michael J. Mitchell et al.",
+     "title": "Technologies and Formulation Design of Polysaccharide-Based Hydrogels for Drug Delivery",
+     "authors": "Giulia Auriemma et al.",
      "year": 2020,
-     "link": "https://doi.org/10.1038/s41573-020-0090-8",
-     "venue": "Nature Reviews Drug Discovery",
+     "link": "https://doi.org/10.3390/molecules25143156",
+     "venue": "Molecules",
      "level": "start",
-     "why": "Open-access review: a readable overview of the topic before you write to anyone."
+     "why": "Well-cited open-access review: a readable overview of the topic before you write to anyone."
     },
     {
-     "title": "Toxicology of Nanoparticles in Drug Delivery",
-     "authors": "Swati Sharma et al.",
-     "year": 2021,
-     "link": "https://doi.org/10.1007/s40139-021-00227-z",
-     "venue": "Current Pathobiology Reports",
+     "title": "Pharmaceutical and drug delivery applications of pectin and its modified nanocomposites",
+     "authors": "Welela Meka Kedir et al.",
+     "year": 2022,
+     "link": "https://doi.org/10.1016/j.heliyon.2022.e10654",
+     "venue": "Heliyon",
      "level": "start",
-     "why": "Open-access review: a readable overview of the topic before you write to anyone."
+     "why": "Well-cited open-access review: a readable overview of the topic before you write to anyone."
     }
    ],
    "scanned": 0,
@@ -1847,10 +1994,66 @@
    "openalex": "I45129253",
    "people": [
     {
+     "name": "Gareth R. Williams",
+     "openalex": "https://openalex.org/A5073999918",
+     "orcid": "https://orcid.org/0000-0002-3066-2860",
+     "score": 10.0,
+     "n": 4,
+     "papers": [
+      {
+       "title": "Expanding the Antimicrobial Toolbox with Therapeutic Viruses: Mechanisms, Pharmaceutical Formulation, and Translational Outlook",
+       "year": 2026,
+       "venue": "Pharmaceuticals",
+       "link": "https://doi.org/10.3390/ph19030478"
+      },
+      {
+       "title": "Mesoporous Doxorubicin-Loaded Polydopamine Nanoparticles Coated with a Platelet Membrane Suppress Tumor Growth in a Murine Model of Human Breast Cancer",
+       "year": 2021,
+       "venue": "ACS Applied Bio Materials",
+       "link": "https://doi.org/10.1021/acsabm.1c00926"
+      },
+      {
+       "title": "Layered terbium hydroxides for simultaneous drug delivery and imaging",
+       "year": 2021,
+       "venue": "Dalton Transactions",
+       "link": "https://doi.org/10.1039/d1dt01251g"
+      }
+     ],
+     "senior_hint": true
+    },
+    {
+     "name": "Abdul W. Basit",
+     "openalex": "https://openalex.org/A5020162492",
+     "orcid": "https://orcid.org/0000-0002-5368-6603",
+     "score": 9.4,
+     "n": 5,
+     "papers": [
+      {
+       "title": "Advances in powder bed fusion 3D printing in drug delivery and healthcare",
+       "year": 2021,
+       "venue": "Advanced Drug Delivery Reviews",
+       "link": "https://doi.org/10.1016/j.addr.2021.04.025"
+      },
+      {
+       "title": "Semi-solid extrusion 3D printing in drug delivery and biomedicine: Personalised solutions for healthcare challenges",
+       "year": 2021,
+       "venue": "Journal of Controlled Release",
+       "link": "https://doi.org/10.1016/j.jconrel.2021.02.027"
+      },
+      {
+       "title": "Inkjet Printing of Pharmaceuticals",
+       "year": 2023,
+       "venue": "Advanced Materials",
+       "link": "https://doi.org/10.1002/adma.202309164"
+      }
+     ],
+     "senior_hint": true
+    },
+    {
      "name": "Magnus Unemo",
      "openalex": "https://openalex.org/A5069892567",
      "orcid": "https://orcid.org/0000-0003-1710-2081",
-     "score": 13.5,
+     "score": 9.4,
      "n": 8,
      "papers": [
       {
@@ -1875,10 +2078,38 @@
      "senior_hint": true
     },
     {
+     "name": "Álvaro Goyanes",
+     "openalex": "https://openalex.org/A5031888549",
+     "orcid": "https://orcid.org/0000-0002-3378-6797",
+     "score": 8.1,
+     "n": 4,
+     "papers": [
+      {
+       "title": "Advances in powder bed fusion 3D printing in drug delivery and healthcare",
+       "year": 2021,
+       "venue": "Advanced Drug Delivery Reviews",
+       "link": "https://doi.org/10.1016/j.addr.2021.04.025"
+      },
+      {
+       "title": "Semi-solid extrusion 3D printing in drug delivery and biomedicine: Personalised solutions for healthcare challenges",
+       "year": 2021,
+       "venue": "Journal of Controlled Release",
+       "link": "https://doi.org/10.1016/j.jconrel.2021.02.027"
+      },
+      {
+       "title": "Inkjet Printing of Pharmaceuticals",
+       "year": 2023,
+       "venue": "Advanced Materials",
+       "link": "https://doi.org/10.1002/adma.202309164"
+      }
+     ],
+     "senior_hint": true
+    },
+    {
      "name": "Robert S. Heyderman",
      "openalex": "https://openalex.org/A5034013271",
      "orcid": "https://orcid.org/0000-0003-4573-449X",
-     "score": 10.5,
+     "score": 6.8,
      "n": 6,
      "papers": [
       {
@@ -1901,90 +2132,6 @@
       }
      ],
      "senior_hint": true
-    },
-    {
-     "name": "Abdul W. Basit",
-     "openalex": "https://openalex.org/A5020162492",
-     "orcid": "https://orcid.org/0000-0002-5368-6603",
-     "score": 9.8,
-     "n": 5,
-     "papers": [
-      {
-       "title": "Inkjet Printing of Pharmaceuticals",
-       "year": 2023,
-       "venue": "Advanced Materials",
-       "link": "https://doi.org/10.1002/adma.202309164"
-      },
-      {
-       "title": "Disrupting 3D printing of medicines with machine learning",
-       "year": 2021,
-       "venue": "Trends in Pharmacological Sciences",
-       "link": "https://doi.org/10.1016/j.tips.2021.06.002"
-      },
-      {
-       "title": "Let’s talk about sex: Differences in drug therapy in males and females",
-       "year": 2021,
-       "venue": "Advanced Drug Delivery Reviews",
-       "link": "https://doi.org/10.1016/j.addr.2021.05.014"
-      }
-     ],
-     "senior_hint": true
-    },
-    {
-     "name": "Gareth R. Williams",
-     "openalex": "https://openalex.org/A5073999918",
-     "orcid": "https://orcid.org/0000-0002-3066-2860",
-     "score": 7.8,
-     "n": 4,
-     "papers": [
-      {
-       "title": "Expanding the Antimicrobial Toolbox with Therapeutic Viruses: Mechanisms, Pharmaceutical Formulation, and Translational Outlook",
-       "year": 2026,
-       "venue": "Pharmaceuticals",
-       "link": "https://doi.org/10.3390/ph19030478"
-      },
-      {
-       "title": "Glucan-based biomaterials and their applications in the biomedical field",
-       "year": 2025,
-       "venue": "International Journal of Biological Macromolecules",
-       "link": "https://doi.org/10.1016/j.ijbiomac.2025.144940"
-      },
-      {
-       "title": "Mesoporous Doxorubicin-Loaded Polydopamine Nanoparticles Coated with a Platelet Membrane Suppress Tumor Growth in a Murine Model of Human Breast Cancer",
-       "year": 2021,
-       "venue": "ACS Applied Bio Materials",
-       "link": "https://doi.org/10.1021/acsabm.1c00926"
-      }
-     ],
-     "senior_hint": true
-    },
-    {
-     "name": "Álvaro Goyanes",
-     "openalex": "https://openalex.org/A5031888549",
-     "orcid": "https://orcid.org/0000-0002-3378-6797",
-     "score": 7.3,
-     "n": 4,
-     "papers": [
-      {
-       "title": "Inkjet Printing of Pharmaceuticals",
-       "year": 2023,
-       "venue": "Advanced Materials",
-       "link": "https://doi.org/10.1002/adma.202309164"
-      },
-      {
-       "title": "Disrupting 3D printing of medicines with machine learning",
-       "year": 2021,
-       "venue": "Trends in Pharmacological Sciences",
-       "link": "https://doi.org/10.1016/j.tips.2021.06.002"
-      },
-      {
-       "title": "Advances in powder bed fusion 3D printing in drug delivery and healthcare",
-       "year": 2021,
-       "venue": "Advanced Drug Delivery Reviews",
-       "link": "https://doi.org/10.1016/j.addr.2021.04.025"
-      }
-     ],
-     "senior_hint": true
     }
    ],
    "scanned": 100,
@@ -1997,7 +2144,7 @@
      "name": "Khondaker Miraz Rahman",
      "openalex": "https://openalex.org/A5006583391",
      "orcid": "https://orcid.org/0000-0001-8566-8648",
-     "score": 13.1,
+     "score": 8.6,
      "n": 7,
      "papers": [
       {
@@ -2022,116 +2169,98 @@
      "senior_hint": true
     },
     {
-     "name": "Debbie Lindsay Shawcross",
-     "openalex": "https://openalex.org/A5013434946",
-     "orcid": "https://orcid.org/0000-0001-6133-4619",
-     "score": 9.6,
-     "n": 5,
+     "name": "Khuloud T. Al‐Jamal",
+     "openalex": "https://openalex.org/A5026580896",
+     "orcid": "https://orcid.org/0000-0001-5165-2699",
+     "score": 7.3,
+     "n": 3,
      "papers": [
       {
-       "title": "Response to the Comment on ‘Burden and global distribution of antimicrobial resistance in nonbloodstream infections among adults with cirrhosis: A systematic review and proportional meta-analysis’",
-       "year": 2026,
-       "venue": "International Journal of Antimicrobial Agents",
-       "link": "https://doi.org/10.1016/j.ijantimicag.2026.108019"
+       "title": "Combined Facile Synthesis, Purification, and Surface Functionalization Approach Yields Monodispersed Gold Nanorods for Drug Delivery Applications",
+       "year": 2023,
+       "venue": "Particle & Particle Systems Characterization",
+       "link": "https://doi.org/10.1002/ppsc.202300043"
       },
       {
-       "title": "Burden and global distribution of antimicrobial resistance in non-bloodstream infections among adults with cirrhosis: A systematic review and proportional meta-analysis",
-       "year": 2026,
-       "venue": "International Journal of Antimicrobial Agents",
-       "link": "https://doi.org/10.1016/j.ijantimicag.2026.107849"
+       "title": "Intranasal administration of edaravone nanoparticles improves its stability and brain bioavailability",
+       "year": 2023,
+       "venue": "Journal of Controlled Release",
+       "link": "https://doi.org/10.1016/j.jconrel.2023.06.001"
       },
       {
-       "title": "Global Trends in Antimicrobial Resistance Among Cirrhosis Patients With Bacteremia: A Systematic Review and Meta-analysis",
-       "year": 2025,
-       "venue": "Clinical Gastroenterology and Hepatology",
-       "link": "https://doi.org/10.1016/j.cgh.2025.07.014"
+       "title": "Green synthesis of methoxy-poly(ethylene glycol)- block -poly( l -lactide- co -glycolide) copolymer using zinc proline as a biocompatible initiator for irinotecan delivery to colon cancer in vivo",
+       "year": 2021,
+       "venue": "Biomaterials Science",
+       "link": "https://doi.org/10.1039/d0bm01421d"
       }
      ],
      "senior_hint": true
     },
     {
-     "name": "Seong‐Heun Kim",
-     "openalex": "https://openalex.org/A5026461992",
-     "orcid": "https://orcid.org/0000-0002-9774-9311",
-     "score": 7.6,
-     "n": 4,
+     "name": "Mehrasa Nikandish",
+     "openalex": "https://openalex.org/A5005017065",
+     "orcid": "https://orcid.org/0000-0001-6420-6073",
+     "score": 6.0,
+     "n": 2,
      "papers": [
       {
-       "title": "Enantiomer-dependent biodistribution and exposure determine the in vivo behavior of a pleurocidin-derived antimicrobial peptide",
-       "year": 2026,
-       "venue": "mBio",
-       "link": "https://doi.org/10.1128/mbio.01718-26"
+       "title": "Advancements in Nanoparticle-Based Precision Drug Delivery: A Review of Development and Optimization for Targeted Therapy in Preclinical Models",
+       "year": 2024,
+       "venue": "European Scientific Journal ESJ",
+       "link": "https://doi.org/10.19044/esj.2024.v20n27p49"
       },
       {
-       "title": "Antibacterial drug discovery: challenges and preclinical promises from synthetic small molecules",
-       "year": 2026,
-       "venue": "Chemical Society Reviews",
-       "link": "https://doi.org/10.1039/d5cs00617a"
-      },
-      {
-       "title": "Oxazolidinones as versatile scaffolds in medicinal chemistry",
-       "year": 2023,
-       "venue": "RSC Medicinal Chemistry",
-       "link": "https://doi.org/10.1039/d2md00415a"
+       "title": "Enhancing Drug Delivery Precision: Development and Optimization of Nanoparticle-Based Formulations for Targeted Therapy in Preclinical Models",
+       "year": 2024,
+       "venue": "European Scientific Journal ESJ",
+       "link": "https://doi.org/10.19044/esipreprint.2.2024.p232"
       }
      ],
      "senior_hint": false
     },
     {
-     "name": "A. James Mason",
-     "openalex": "https://openalex.org/A5045535688",
-     "orcid": "https://orcid.org/0000-0003-0411-602X",
-     "score": 7.2,
-     "n": 4,
+     "name": "Hanzhi Wang",
+     "openalex": "https://openalex.org/A5056850838",
+     "orcid": "https://orcid.org/0000-0002-8836-5447",
+     "score": 6.0,
+     "n": 2,
      "papers": [
       {
-       "title": "Modulating Growth Conditions and Microenvironment to Boost Antimicrobial Efficacy of Probiotics Against Pathogens",
-       "year": 2026,
-       "venue": "Probiotics and Antimicrobial Proteins",
-       "link": "https://doi.org/10.1007/s12602-026-11302-5"
+       "title": "Advancements in Nanoparticle-Based Precision Drug Delivery: A Review of Development and Optimization for Targeted Therapy in Preclinical Models",
+       "year": 2024,
+       "venue": "European Scientific Journal ESJ",
+       "link": "https://doi.org/10.19044/esj.2024.v20n27p49"
       },
       {
-       "title": "Enantiomer-dependent biodistribution and exposure determine the in vivo behavior of a pleurocidin-derived antimicrobial peptide",
-       "year": 2026,
-       "venue": "mBio",
-       "link": "https://doi.org/10.1128/mbio.01718-26"
-      },
-      {
-       "title": "Biochar filtration of drug-resistant bacteria and active pharmaceutical ingredients to combat antimicrobial resistance",
-       "year": 2025,
-       "venue": "Scientific Reports",
-       "link": "https://doi.org/10.1038/s41598-024-83825-2"
+       "title": "Enhancing Drug Delivery Precision: Development and Optimization of Nanoparticle-Based Formulations for Targeted Therapy in Preclinical Models",
+       "year": 2024,
+       "venue": "European Scientific Journal ESJ",
+       "link": "https://doi.org/10.19044/esipreprint.2.2024.p232"
       }
      ],
-     "senior_hint": true
+     "senior_hint": false
     },
     {
-     "name": "Ellis Kobina Paintsil",
-     "openalex": "https://openalex.org/A5044238668",
-     "orcid": "https://orcid.org/0000-0001-8385-1326",
-     "score": 7.1,
-     "n": 4,
+     "name": "Xinqi Bao",
+     "openalex": "https://openalex.org/A5034037954",
+     "orcid": "https://orcid.org/0000-0002-7117-1267",
+     "score": 6.0,
+     "n": 2,
      "papers": [
       {
-       "title": "Response to the Comment on ‘Burden and global distribution of antimicrobial resistance in nonbloodstream infections among adults with cirrhosis: A systematic review and proportional meta-analysis’",
-       "year": 2026,
-       "venue": "International Journal of Antimicrobial Agents",
-       "link": "https://doi.org/10.1016/j.ijantimicag.2026.108019"
+       "title": "Advancements in Nanoparticle-Based Precision Drug Delivery: A Review of Development and Optimization for Targeted Therapy in Preclinical Models",
+       "year": 2024,
+       "venue": "European Scientific Journal ESJ",
+       "link": "https://doi.org/10.19044/esj.2024.v20n27p49"
       },
       {
-       "title": "Burden and global distribution of antimicrobial resistance in non-bloodstream infections among adults with cirrhosis: A systematic review and proportional meta-analysis",
-       "year": 2026,
-       "venue": "International Journal of Antimicrobial Agents",
-       "link": "https://doi.org/10.1016/j.ijantimicag.2026.107849"
-      },
-      {
-       "title": "Global Trends in Antimicrobial Resistance Among Cirrhosis Patients With Bacteremia: A Systematic Review and Meta-analysis",
-       "year": 2025,
-       "venue": "Clinical Gastroenterology and Hepatology",
-       "link": "https://doi.org/10.1016/j.cgh.2025.07.014"
+       "title": "Enhancing Drug Delivery Precision: Development and Optimization of Nanoparticle-Based Formulations for Targeted Therapy in Preclinical Models",
+       "year": 2024,
+       "venue": "European Scientific Journal ESJ",
+       "link": "https://doi.org/10.19044/esipreprint.2.2024.p232"
       }
      ],
-     "senior_hint": true
+     "senior_hint": false
     }
    ],
    "scanned": 100,
@@ -2144,7 +2273,7 @@
      "name": "Alison Helen Holmes",
      "openalex": "https://openalex.org/A5044991598",
      "orcid": "https://orcid.org/0000-0001-5554-5743",
-     "score": 20.8,
+     "score": 11.8,
      "n": 11,
      "papers": [
       {
@@ -2169,38 +2298,10 @@
      "senior_hint": true
     },
     {
-     "name": "Aula Abbara",
-     "openalex": "https://openalex.org/A5050295216",
-     "orcid": "https://orcid.org/0000-0002-7049-8399",
-     "score": 11.0,
-     "n": 6,
-     "papers": [
-      {
-       "title": "Communicable episode 40: Antimicrobial resistance in conflict and crisis zones",
-       "year": 2025,
-       "venue": "CMI Communications",
-       "link": "https://doi.org/10.1016/j.cmicom.2025.105166"
-      },
-      {
-       "title": "Healthcare providers’ perspectives on antimicrobial resistance in Northwest Syria: an exploratory qualitative study",
-       "year": 2025,
-       "venue": "Frontiers in Public Health",
-       "link": "https://doi.org/10.3389/fpubh.2025.1662934"
-      },
-      {
-       "title": "Syria’s intersecting crises exacerbate antimicrobial resistance",
-       "year": 2025,
-       "venue": "npj Antimicrobials and Resistance",
-       "link": "https://doi.org/10.1038/s44259-025-00164-6"
-      }
-     ],
-     "senior_hint": true
-    },
-    {
      "name": "Luke S. P. Moore",
      "openalex": "https://openalex.org/A5050198943",
      "orcid": "https://orcid.org/0000-0001-7095-7922",
-     "score": 11.0,
+     "score": 7.3,
      "n": 6,
      "papers": [
       {
@@ -2225,57 +2326,79 @@
      "senior_hint": true
     },
     {
-     "name": "Raheelah Ahmad",
-     "openalex": "https://openalex.org/A5024899305",
-     "orcid": "https://orcid.org/0000-0002-4294-7142",
-     "score": 7.9,
-     "n": 5,
+     "name": "Nazila Kamaly",
+     "openalex": "https://openalex.org/A5052029617",
+     "orcid": "https://orcid.org/0000-0002-9716-5121",
+     "score": 6.9,
+     "n": 3,
      "papers": [
       {
-       "title": "Understanding diagnostic challenges and identifying priorities to tackle antimicrobial resistance in conflict zones",
-       "year": 2026,
-       "venue": "Communications Medicine",
-       "link": "https://doi.org/10.1038/s43856-026-01866-2"
+       "title": "Nanogels: A chemically versatile drug delivery platform",
+       "year": 2025,
+       "venue": "Nano Today",
+       "link": "https://doi.org/10.1016/j.nantod.2025.102645"
       },
       {
-       "title": "Inclusion of antimicrobial resistance in a pandemic agreement: why it matters and what comes next?",
-       "year": 2026,
-       "venue": "Health Affairs Scholar",
-       "link": "https://doi.org/10.1093/haschl/qxag044"
-      },
-      {
-       "title": "Systems Policy Analysis for Antimicrobial Resistance Targeted Action (SPAARTA): A Research Protocol",
+       "title": "Magnetic iron oxide nanogels for combined hyperthermia and drug delivery for cancer treatment",
        "year": 2024,
-       "venue": "Wellcome Open Research",
-       "link": "https://doi.org/10.12688/wellcomeopenres.22923.2"
+       "venue": "Nanoscale",
+       "link": "https://doi.org/10.1039/d4nr02058h"
+      },
+      {
+       "title": "Advancements in nanomedicines for the detection and treatment of diabetic kidney disease",
+       "year": 2022,
+       "venue": "Biomaterials and Biosystems",
+       "link": "https://doi.org/10.1016/j.bbiosy.2022.100047"
       }
      ],
-     "senior_hint": false
+     "senior_hint": true
     },
     {
-     "name": "Timothy M. Rawson",
-     "openalex": "https://openalex.org/A5056505013",
-     "orcid": "https://orcid.org/0000-0002-2630-9722",
-     "score": 7.7,
-     "n": 5,
+     "name": "Aula Abbara",
+     "openalex": "https://openalex.org/A5050295216",
+     "orcid": "https://orcid.org/0000-0002-7049-8399",
+     "score": 6.4,
+     "n": 6,
      "papers": [
       {
-       "title": "Perspective: large language models and antimicrobial resistance among migrants: an equity imperative",
-       "year": 2026,
-       "venue": "npj Digital Medicine",
-       "link": "https://doi.org/10.1038/s41746-026-02742-y"
+       "title": "Communicable episode 40: Antimicrobial resistance in conflict and crisis zones",
+       "year": 2025,
+       "venue": "CMI Communications",
+       "link": "https://doi.org/10.1016/j.cmicom.2025.105166"
       },
       {
-       "title": "Does anticancer therapy directly contribute to antimicrobial resistance?",
+       "title": "Healthcare providers’ perspectives on antimicrobial resistance in Northwest Syria: an exploratory qualitative study",
        "year": 2025,
-       "venue": "The Lancet Microbe",
-       "link": "https://doi.org/10.1016/j.lanmic.2025.101115"
+       "venue": "Frontiers in Public Health",
+       "link": "https://doi.org/10.3389/fpubh.2025.1662934"
       },
       {
-       "title": "Antimicrobial resistance-attributable mortality in England: Acquired problems or expected phenotype?",
+       "title": "Syria’s intersecting crises exacerbate antimicrobial resistance",
        "year": 2025,
-       "venue": "Clinical Infection in Practice",
-       "link": "https://doi.org/10.1016/j.clinpr.2025.100425"
+       "venue": "npj Antimicrobials and Resistance",
+       "link": "https://doi.org/10.1038/s44259-025-00164-6"
+      }
+     ],
+     "senior_hint": true
+    },
+    {
+     "name": "Molly M. Stevens",
+     "openalex": "https://openalex.org/A5044430674",
+     "orcid": "https://orcid.org/0000-0002-7335-266X",
+     "score": 4.9,
+     "n": 2,
+     "papers": [
+      {
+       "title": "Nanoscale Biodegradable Printing for Designed Tuneability of Vaccine Delivery Kinetics",
+       "year": 2025,
+       "venue": "Advanced Materials",
+       "link": "https://doi.org/10.1002/adma.202417290"
+      },
+      {
+       "title": "Coupling Lipid Nanoparticle Structure and Automated Single‐Particle Composition Analysis to Design Phospholipase‐Responsive Nanocarriers",
+       "year": 2022,
+       "venue": "Advanced Materials",
+       "link": "https://doi.org/10.1002/adma.202200839"
       }
      ],
      "senior_hint": true
@@ -2288,10 +2411,38 @@
    "openalex": "I142263535",
    "people": [
     {
+     "name": "Vincenzo Taresco",
+     "openalex": "https://openalex.org/A5056060581",
+     "orcid": "https://orcid.org/0000-0003-4476-8233",
+     "score": 14.6,
+     "n": 6,
+     "papers": [
+      {
+       "title": "Nanoprecipitation and Drug Delivery with PMTC: Toward Biomedical Application of Polyesters from Radical Ring‐Opening Polymerization",
+       "year": 2025,
+       "venue": "Macromolecular Bioscience",
+       "link": "https://doi.org/10.1002/mabi.202500432"
+      },
+      {
+       "title": "Glycerol‐Based Copolyesters as Polymeric Nanocarriers for Drug Delivery",
+       "year": 2024,
+       "venue": "Journal of Polymer Science",
+       "link": "https://doi.org/10.1002/pol.20240762"
+      },
+      {
+       "title": "Poly (diglycerol adipate) variants as enhanced nanocarrier replacements in drug delivery applications",
+       "year": 2023,
+       "venue": "Journal of Colloid and Interface Science",
+       "link": "https://doi.org/10.1016/j.jcis.2023.03.124"
+      }
+     ],
+     "senior_hint": true
+    },
+    {
      "name": "Diane A.I. Ashiru-Oredope",
      "openalex": "https://openalex.org/A5050622865",
      "orcid": "https://orcid.org/0000-0001-9579-2028",
-     "score": 15.2,
+     "score": 10.4,
      "n": 8,
      "papers": [
       {
@@ -2316,10 +2467,38 @@
      "senior_hint": true
     },
     {
+     "name": "Robert J. Cavanagh",
+     "openalex": "https://openalex.org/A5075104148",
+     "orcid": "https://orcid.org/0000-0002-5639-3056",
+     "score": 8.8,
+     "n": 4,
+     "papers": [
+      {
+       "title": "Nanoprecipitation and Drug Delivery with PMTC: Toward Biomedical Application of Polyesters from Radical Ring‐Opening Polymerization",
+       "year": 2025,
+       "venue": "Macromolecular Bioscience",
+       "link": "https://doi.org/10.1002/mabi.202500432"
+      },
+      {
+       "title": "Glycerol‐Based Copolyesters as Polymeric Nanocarriers for Drug Delivery",
+       "year": 2024,
+       "venue": "Journal of Polymer Science",
+       "link": "https://doi.org/10.1002/pol.20240762"
+      },
+      {
+       "title": "Poly (diglycerol adipate) variants as enhanced nanocarrier replacements in drug delivery applications",
+       "year": 2023,
+       "venue": "Journal of Colloid and Interface Science",
+       "link": "https://doi.org/10.1016/j.jcis.2023.03.124"
+      }
+     ],
+     "senior_hint": false
+    },
+    {
      "name": "Dov  Joseph Stekel",
      "openalex": "https://openalex.org/A5069506221",
      "orcid": "https://orcid.org/0000-0002-2492-8079",
-     "score": 14.2,
+     "score": 8.3,
      "n": 8,
      "papers": [
       {
@@ -2344,11 +2523,11 @@
      "senior_hint": true
     },
     {
-     "name": "Vincenzo Taresco",
-     "openalex": "https://openalex.org/A5056060581",
-     "orcid": "https://orcid.org/0000-0003-4476-8233",
-     "score": 10.6,
-     "n": 6,
+     "name": "Eleni Axioti",
+     "openalex": "https://openalex.org/A5093864321",
+     "orcid": "https://orcid.org/0009-0006-6751-557X",
+     "score": 6.6,
+     "n": 3,
      "papers": [
       {
        "title": "Nanoprecipitation and Drug Delivery with PMTC: Toward Biomedical Application of Polyesters from Radical Ring‐Opening Polymerization",
@@ -2369,62 +2548,6 @@
        "link": "https://doi.org/10.1016/j.biopha.2024.116647"
       }
      ],
-     "senior_hint": true
-    },
-    {
-     "name": "Michelle Baker",
-     "openalex": "https://openalex.org/A5065783943",
-     "orcid": "https://orcid.org/0000-0002-8926-7689",
-     "score": 9.1,
-     "n": 6,
-     "papers": [
-      {
-       "title": "Genomic and socioeconomic drivers of antimicrobial resistance forecast to 2050",
-       "year": 2026,
-       "venue": "Cell Genomics",
-       "link": "https://doi.org/10.1016/j.xgen.2026.101273"
-      },
-      {
-       "title": "Modelling the impact of wastewater flows and management practices on antimicrobial resistance in dairy farms",
-       "year": 2024,
-       "venue": "npj Antimicrobials and Resistance",
-       "link": "https://doi.org/10.1038/s44259-024-00029-4"
-      },
-      {
-       "title": "Machine learning and metagenomics reveal shared antimicrobial resistance profiles across multiple chicken farms and abattoirs in China",
-       "year": 2023,
-       "venue": "Nature Food",
-       "link": "https://doi.org/10.1038/s43016-023-00814-w"
-      }
-     ],
-     "senior_hint": false
-    },
-    {
-     "name": "Alexandre Maciel-Guerra",
-     "openalex": "https://openalex.org/A5021169561",
-     "orcid": "https://orcid.org/0000-0003-1396-9438",
-     "score": 7.3,
-     "n": 5,
-     "papers": [
-      {
-       "title": "High-risk antimicrobial resistance genomic traits in multidrug-resistant Salmonella across China’s food chain: projections to 2050",
-       "year": 2026,
-       "venue": "Nature Communications",
-       "link": "https://doi.org/10.1038/s41467-026-78346-7"
-      },
-      {
-       "title": "Genomic and socioeconomic drivers of antimicrobial resistance forecast to 2050",
-       "year": 2026,
-       "venue": "Cell Genomics",
-       "link": "https://doi.org/10.1016/j.xgen.2026.101273"
-      },
-      {
-       "title": "Machine learning and metagenomics reveal shared antimicrobial resistance profiles across multiple chicken farms and abattoirs in China",
-       "year": 2023,
-       "venue": "Nature Food",
-       "link": "https://doi.org/10.1038/s43016-023-00814-w"
-      }
-     ],
      "senior_hint": false
     }
    ],
@@ -2438,7 +2561,7 @@
      "name": "Brian Godman",
      "openalex": "https://openalex.org/A5100656935",
      "orcid": "https://orcid.org/0000-0001-6539-6972",
-     "score": 49.7,
+     "score": 29.3,
      "n": 32,
      "papers": [
       {
@@ -2463,66 +2586,10 @@
      "senior_hint": true
     },
     {
-     "name": "Amanj Baker Kurdi",
-     "openalex": "https://openalex.org/A5019668892",
-     "orcid": "https://orcid.org/0000-0001-5036-1988",
-     "score": 15.5,
-     "n": 11,
-     "papers": [
-      {
-       "title": "Antimicrobial Resistance Across Four Iraqi Governorates: A Multicenter Cross-Sectional Surveillance Analysis With Implications for Antimicrobial Stewardship Policy and WHO AWaRe–Aligned Public Health Strategies",
-       "year": 2026,
-       "venue": "JMIR Public Health and Surveillance",
-       "link": "https://doi.org/10.2196/94436"
-      },
-      {
-       "title": "Knowledge and attitudes towards antibiotics and antimicrobial resistance among patients in rural South Africa and the implications for future policies",
-       "year": 2026,
-       "venue": "Frontiers in Pharmacology",
-       "link": "https://doi.org/10.3389/fphar.2026.1756239"
-      },
-      {
-       "title": "A Simulated Client Study on Non-Prescription Antibiotic Sales and Counselling Practices in Iraqi Nurse-Led Clinics: Implications for Antimicrobial Resistance",
-       "year": 2025,
-       "venue": "Infection and Drug Resistance",
-       "link": "https://doi.org/10.2147/idr.s533590"
-      }
-     ],
-     "senior_hint": true
-    },
-    {
-     "name": "Paul Flowers",
-     "openalex": "https://openalex.org/A5012589788",
-     "orcid": "https://orcid.org/0000-0001-6239-5616",
-     "score": 15.2,
-     "n": 8,
-     "papers": [
-      {
-       "title": "A biopolitics of antibiotic use: Controversies surrounding prophylaxis, antimicrobial resistance, and queer bodies",
-       "year": 2026,
-       "venue": "Body & Society",
-       "link": "https://doi.org/10.1177/1357034x261478060"
-      },
-      {
-       "title": "Antibiotic Economies: The Economisation of Antibiotic Use in Australia and Implications for the Mitigation of Antimicrobial Resistance",
-       "year": 2025,
-       "venue": "Sociology of Health & Illness",
-       "link": "https://doi.org/10.1111/1467-9566.70011"
-      },
-      {
-       "title": "Fragmentation in One Health policy and practice responses to antimicrobial resistance and the salutary value of collaborative humility",
-       "year": 2024,
-       "venue": "Social Theory & Health",
-       "link": "https://doi.org/10.1057/s41285-024-00209-2"
-      }
-     ],
-     "senior_hint": true
-    },
-    {
      "name": "Aikaterini Lalatsa",
      "openalex": "https://openalex.org/A5069328902",
      "orcid": "https://orcid.org/0000-0003-4791-7468",
-     "score": 9.8,
+     "score": 10.2,
      "n": 4,
      "papers": [
       {
@@ -2547,29 +2614,85 @@
      "senior_hint": true
     },
     {
-     "name": "Tracy Morse",
-     "openalex": "https://openalex.org/A5027621258",
-     "orcid": "https://orcid.org/0000-0003-4185-9471",
-     "score": 9.4,
-     "n": 5,
+     "name": "Valerie Anne Ferro",
+     "openalex": "https://openalex.org/A5089950244",
+     "orcid": "https://orcid.org/0000-0003-1967-3603",
+     "score": 9.3,
+     "n": 4,
      "papers": [
       {
-       "title": "Transmission of extended spectrum β-lactamase-producing Escherichia coli and antimicrobial resistance gene flow across One Health compartments in eastern Africa: a whole-genome sequence analysis from a prospective cohort study",
+       "title": "Drug delivery systems incorporating bile salts: advancements since the conception of bilosomes",
        "year": 2025,
-       "venue": "The Lancet Microbe",
-       "link": "https://doi.org/10.1016/j.lanmic.2025.101224"
+       "venue": "Therapeutic Delivery",
+       "link": "https://doi.org/10.1080/20415990.2025.2469488"
       },
       {
-       "title": "Environmental hazards from pollution of antibiotics and resistance-driving chemicals in an urban river network from Malawi",
-       "year": 2025,
-       "venue": "npj Antimicrobials and Resistance",
-       "link": "https://doi.org/10.1038/s44259-025-00149-5"
+       "title": "Characterisation of niosome nanoparticles prepared by microfluidic mixing for drug delivery",
+       "year": 2022,
+       "venue": "International Journal of Pharmaceutics X",
+       "link": "https://doi.org/10.1016/j.ijpx.2022.100137"
       },
       {
-       "title": "Risk Perception and Psychosocial Factors Influencing Exposure to Antimicrobial Resistance through Environmental Pathways in Malawi",
+       "title": "Biomolecular interactions with nanoparticles: applications for coronavirus disease 2019",
+       "year": 2021,
+       "venue": "Current Opinion in Colloid & Interface Science",
+       "link": "https://doi.org/10.1016/j.cocis.2021.101461"
+      }
+     ],
+     "senior_hint": true
+    },
+    {
+     "name": "Paul Flowers",
+     "openalex": "https://openalex.org/A5012589788",
+     "orcid": "https://orcid.org/0000-0001-6239-5616",
+     "score": 8.9,
+     "n": 8,
+     "papers": [
+      {
+       "title": "A biopolitics of antibiotic use: Controversies surrounding prophylaxis, antimicrobial resistance, and queer bodies",
+       "year": 2026,
+       "venue": "Body & Society",
+       "link": "https://doi.org/10.1177/1357034x261478060"
+      },
+      {
+       "title": "Antibiotic Economies: The Economisation of Antibiotic Use in Australia and Implications for the Mitigation of Antimicrobial Resistance",
+       "year": 2025,
+       "venue": "Sociology of Health & Illness",
+       "link": "https://doi.org/10.1111/1467-9566.70011"
+      },
+      {
+       "title": "Fragmentation in One Health policy and practice responses to antimicrobial resistance and the salutary value of collaborative humility",
        "year": 2024,
-       "venue": "American Journal of Tropical Medicine and Hygiene",
-       "link": "https://doi.org/10.4269/ajtmh.24-0253"
+       "venue": "Social Theory & Health",
+       "link": "https://doi.org/10.1057/s41285-024-00209-2"
+      }
+     ],
+     "senior_hint": true
+    },
+    {
+     "name": "Amanj Baker Kurdi",
+     "openalex": "https://openalex.org/A5019668892",
+     "orcid": "https://orcid.org/0000-0001-5036-1988",
+     "score": 8.9,
+     "n": 11,
+     "papers": [
+      {
+       "title": "Antimicrobial Resistance Across Four Iraqi Governorates: A Multicenter Cross-Sectional Surveillance Analysis With Implications for Antimicrobial Stewardship Policy and WHO AWaRe–Aligned Public Health Strategies",
+       "year": 2026,
+       "venue": "JMIR Public Health and Surveillance",
+       "link": "https://doi.org/10.2196/94436"
+      },
+      {
+       "title": "Knowledge and attitudes towards antibiotics and antimicrobial resistance among patients in rural South Africa and the implications for future policies",
+       "year": 2026,
+       "venue": "Frontiers in Pharmacology",
+       "link": "https://doi.org/10.3389/fphar.2026.1756239"
+      },
+      {
+       "title": "A Simulated Client Study on Non-Prescription Antibiotic Sales and Counselling Practices in Iraqi Nurse-Led Clinics: Implications for Antimicrobial Resistance",
+       "year": 2025,
+       "venue": "Infection and Drug Resistance",
+       "link": "https://doi.org/10.2147/idr.s533590"
       }
      ],
      "senior_hint": true
@@ -2582,38 +2705,10 @@
    "openalex": "I28407311",
    "people": [
     {
-     "name": "Stephen Campbell",
-     "openalex": "https://openalex.org/A5010513682",
-     "orcid": "https://orcid.org/0000-0002-2328-4136",
-     "score": 10.9,
-     "n": 8,
-     "papers": [
-      {
-       "title": "Knowledge and attitudes towards antibiotics and antimicrobial resistance among patients in rural South Africa and the implications for future policies",
-       "year": 2026,
-       "venue": "Frontiers in Pharmacology",
-       "link": "https://doi.org/10.3389/fphar.2026.1756239"
-      },
-      {
-       "title": "Prevalence and Associated Factors for Purchasing Antibiotics Without a Prescription Among Patients in Rural South Africa: Implications for Addressing Antimicrobial Resistance",
-       "year": 2025,
-       "venue": "Antibiotics",
-       "link": "https://doi.org/10.3390/antibiotics14121273"
-      },
-      {
-       "title": "Adapting global guidelines to local contexts: optimising community-acquired pneumonia (CAP) specific prescribing in Pakistan to counter antimicrobial resistance",
-       "year": 2025,
-       "venue": "BMJ Open Respiratory Research",
-       "link": "https://doi.org/10.1136/bmjresp-2025-003699"
-      }
-     ],
-     "senior_hint": false
-    },
-    {
      "name": "Jian Ren Lu",
      "openalex": "https://openalex.org/A5030131037",
      "orcid": "https://orcid.org/0000-0001-5648-3564",
-     "score": 10.2,
+     "score": 6.7,
      "n": 6,
      "papers": [
       {
@@ -2638,10 +2733,38 @@
      "senior_hint": true
     },
     {
+     "name": "Stephen Campbell",
+     "openalex": "https://openalex.org/A5010513682",
+     "orcid": "https://orcid.org/0000-0002-2328-4136",
+     "score": 6.2,
+     "n": 8,
+     "papers": [
+      {
+       "title": "Knowledge and attitudes towards antibiotics and antimicrobial resistance among patients in rural South Africa and the implications for future policies",
+       "year": 2026,
+       "venue": "Frontiers in Pharmacology",
+       "link": "https://doi.org/10.3389/fphar.2026.1756239"
+      },
+      {
+       "title": "Prevalence and Associated Factors for Purchasing Antibiotics Without a Prescription Among Patients in Rural South Africa: Implications for Addressing Antimicrobial Resistance",
+       "year": 2025,
+       "venue": "Antibiotics",
+       "link": "https://doi.org/10.3390/antibiotics14121273"
+      },
+      {
+       "title": "Adapting global guidelines to local contexts: optimising community-acquired pneumonia (CAP) specific prescribing in Pakistan to counter antimicrobial resistance",
+       "year": 2025,
+       "venue": "BMJ Open Respiratory Research",
+       "link": "https://doi.org/10.1136/bmjresp-2025-003699"
+      }
+     ],
+     "senior_hint": false
+    },
+    {
      "name": "Michael Anderson",
      "openalex": "https://openalex.org/A5072921389",
      "orcid": "https://orcid.org/0000-0002-8454-4640",
-     "score": 9.5,
+     "score": 5.8,
      "n": 4,
      "papers": [
       {
@@ -2666,10 +2789,38 @@
      "senior_hint": true
     },
     {
+     "name": "Kangcheng Shen",
+     "openalex": "https://openalex.org/A5011681458",
+     "orcid": "https://orcid.org/0000-0003-0817-9140",
+     "score": 4.1,
+     "n": 3,
+     "papers": [
+      {
+       "title": "Zwitterionic PEGylation of Nanodrugs for Reduced Immunogenicity and Improved Drug Delivery Efficacy",
+       "year": 2026,
+       "venue": "ACS Applied Materials & Interfaces",
+       "link": "https://doi.org/10.1021/acsami.6c12129"
+      },
+      {
+       "title": "Probing antimicrobial synergy by novel lipopeptides paired with antibiotics",
+       "year": 2024,
+       "venue": "Journal of Colloid and Interface Science",
+       "link": "https://doi.org/10.1016/j.jcis.2024.11.169"
+      },
+      {
+       "title": "Combinatorial therapies of surfactant-like antimicrobial peptides and antibiotics for improved therapeutic efficacy",
+       "year": 2024,
+       "venue": "Current Opinion in Colloid & Interface Science",
+       "link": "https://doi.org/10.1016/j.cocis.2024.101829"
+      }
+     ],
+     "senior_hint": false
+    },
+    {
      "name": "Wendy Thompson",
      "openalex": "https://openalex.org/A5090838868",
      "orcid": "https://orcid.org/0000-0001-6799-4087",
-     "score": 6.8,
+     "score": 3.7,
      "n": 4,
      "papers": [
       {
@@ -2692,34 +2843,6 @@
       }
      ],
      "senior_hint": true
-    },
-    {
-     "name": "Andrew J. McBain",
-     "openalex": "https://openalex.org/A5031720939",
-     "orcid": "https://orcid.org/0000-0002-5255-5425",
-     "score": 5.3,
-     "n": 3,
-     "papers": [
-      {
-       "title": "A critical view of antimicrobial peptides: exploring their potential and the barriers to realization",
-       "year": 2025,
-       "venue": "Journal of Applied Microbiology",
-       "link": "https://doi.org/10.1093/jambio/lxaf087"
-      },
-      {
-       "title": "Probing antimicrobial synergy by novel lipopeptides paired with antibiotics",
-       "year": 2024,
-       "venue": "Journal of Colloid and Interface Science",
-       "link": "https://doi.org/10.1016/j.jcis.2024.11.169"
-      },
-      {
-       "title": "Sustainable application of biocides to promote hygiene and minimize antimicrobial resistance",
-       "year": 2024,
-       "venue": "Sustainable Microbiology",
-       "link": "https://doi.org/10.1093/sumbio/qvae015"
-      }
-     ],
-     "senior_hint": true
     }
    ],
    "scanned": 100,
@@ -2732,7 +2855,7 @@
      "name": "Abiola Catherine Senok",
      "openalex": "https://openalex.org/A5024936477",
      "orcid": "https://orcid.org/0000-0001-6382-198X",
-     "score": 24.4,
+     "score": 15.2,
      "n": 12,
      "papers": [
       {
@@ -2760,7 +2883,7 @@
      "name": "Owen Brad Spiller",
      "openalex": "https://openalex.org/A5090001718",
      "orcid": "https://orcid.org/0000-0002-9117-6911",
-     "score": 12.8,
+     "score": 7.1,
      "n": 8,
      "papers": [
       {
@@ -2788,7 +2911,7 @@
      "name": "Andrew J. Weightman",
      "openalex": "https://openalex.org/A5060801806",
      "orcid": "https://orcid.org/0000-0002-6671-2209",
-     "score": 11.9,
+     "score": 6.5,
      "n": 7,
      "papers": [
       {
@@ -2813,38 +2936,38 @@
      "senior_hint": false
     },
     {
-     "name": "Kirsty M. Sands",
-     "openalex": "https://openalex.org/A5091291615",
-     "orcid": "https://orcid.org/0000-0001-5049-4481",
-     "score": 7.8,
-     "n": 5,
+     "name": "Katja E. Hill",
+     "openalex": "https://openalex.org/A5019415991",
+     "orcid": "https://orcid.org/0000-0002-8590-0117",
+     "score": 4.7,
+     "n": 3,
      "papers": [
       {
-       "title": "International manufacturing and trade in colistin, its implications in colistin resistance and One Health global policies: a microbiological, economic, and anthropological study",
-       "year": 2023,
-       "venue": "The Lancet Microbe",
-       "link": "https://doi.org/10.1016/s2666-5247(22)00387-1"
+       "title": "The pharmacokinetics of hexylresorcinol-containing lozenges and their antimicrobial efficacy against oral and respiratory microorganisms",
+       "year": 2025,
+       "venue": "Journal of Oral Microbiology",
+       "link": "https://doi.org/10.1080/20002297.2025.2525229"
       },
       {
-       "title": "Genomic Analysis Reveals New Integrative Conjugal Elements and Transposons in GBS Conferring Antimicrobial Resistance",
-       "year": 2023,
-       "venue": "Antibiotics",
-       "link": "https://doi.org/10.3390/antibiotics12030544"
+       "title": "Photoinduced force microscopy as a novel method for the study of microbial nanostructures",
+       "year": 2024,
+       "venue": "Nanoscale",
+       "link": "https://doi.org/10.1039/d3nr03499b"
       },
       {
-       "title": "Early-Onset Neonatal Sepsis in Low- and Middle-Income Countries: Current Challenges and Future Opportunities",
-       "year": 2022,
-       "venue": "Infection and Drug Resistance",
-       "link": "https://doi.org/10.2147/idr.s294156"
+       "title": "Quantifying the effects of antibiotic treatment on the extracellular polymer network of antimicrobial resistant and sensitive biofilms using multiple particle tracking",
+       "year": 2021,
+       "venue": "npj Biofilms and Microbiomes",
+       "link": "https://doi.org/10.1038/s41522-020-00172-6"
       }
      ],
-     "senior_hint": false
+     "senior_hint": true
     },
     {
      "name": "Gordon Webster",
      "openalex": "https://openalex.org/A5033300640",
      "orcid": "https://orcid.org/0000-0002-9530-7835",
-     "score": 7.3,
+     "score": 4.2,
      "n": 5,
      "papers": [
       {
@@ -2876,18 +2999,40 @@
    "openalex": "I169199633",
    "people": [
     {
-     "name": "Afzal R. Mohammed",
-     "openalex": "https://openalex.org/A5022107797",
-     "orcid": "https://orcid.org/0000-0002-5212-3040",
-     "score": 20.2,
+     "name": "Raj Kumar Singh Badhan",
+     "openalex": "https://openalex.org/A5029805964",
+     "orcid": "https://orcid.org/0000-0002-0904-9324",
+     "score": 23.3,
      "n": 11,
      "papers": [
       {
-       "title": "Precision Medicine in Oncology: Imatinib Dosing in the Obese Cancer Population Using Virtual Clinical Trials",
-       "year": 2025,
-       "venue": "CPT Pharmacometrics & Systems Pharmacology",
-       "link": "https://doi.org/10.1002/psp4.70018"
+       "title": "The Impact of Paediatric Obesity on Drug Pharmacokinetics: A Virtual Clinical Trials Case Study with Amlodipine",
+       "year": 2024,
+       "venue": "Pharmaceutics",
+       "link": "https://doi.org/10.3390/pharmaceutics16040489"
       },
+      {
+       "title": "The Application of Virtual Therapeutic Drug Monitoring to Assess the Pharmacokinetics of Imatinib in a Chinese Cancer Population Group",
+       "year": 2022,
+       "venue": "Journal of Pharmaceutical Sciences",
+       "link": "https://doi.org/10.1016/j.xphs.2022.09.028"
+      },
+      {
+       "title": "Precision dosing of methadone during pregnancy: A pharmacokinetics virtual clinical trials study",
+       "year": 2021,
+       "venue": "Journal of Substance Abuse Treatment",
+       "link": "https://doi.org/10.1016/j.jsat.2021.108521"
+      }
+     ],
+     "senior_hint": true
+    },
+    {
+     "name": "Afzal R. Mohammed",
+     "openalex": "https://openalex.org/A5022107797",
+     "orcid": "https://orcid.org/0000-0002-5212-3040",
+     "score": 21.4,
+     "n": 11,
+     "papers": [
       {
        "title": "Buccal Absorption of Biopharmaceutics Classification System III Drugs: Formulation Approaches and Mechanistic Insights",
        "year": 2024,
@@ -2899,99 +3044,21 @@
        "year": 2024,
        "venue": "Pharmaceutics",
        "link": "https://doi.org/10.3390/pharmaceutics16040489"
-      }
-     ],
-     "senior_hint": true
-    },
-    {
-     "name": "Raj Kumar Singh Badhan",
-     "openalex": "https://openalex.org/A5029805964",
-     "orcid": "https://orcid.org/0000-0002-0904-9324",
-     "score": 18.6,
-     "n": 11,
-     "papers": [
-      {
-       "title": "The Impact of Paediatric Obesity on Drug Pharmacokinetics: A Virtual Clinical Trials Case Study with Amlodipine",
-       "year": 2024,
-       "venue": "Pharmaceutics",
-       "link": "https://doi.org/10.3390/pharmaceutics16040489"
       },
       {
-       "title": "Single administration vaccines: delivery challenges, in vivo performance, and translational considerations",
-       "year": 2023,
-       "venue": "Expert Review of Vaccines",
-       "link": "https://doi.org/10.1080/14760584.2023.2229431"
-      },
-      {
-       "title": "The Application of Virtual Therapeutic Drug Monitoring to Assess the Pharmacokinetics of Imatinib in a Chinese Cancer Population Group",
+       "title": "Paediatric specific dosage forms: Patient and formulation considerations",
        "year": 2022,
-       "venue": "Journal of Pharmaceutical Sciences",
-       "link": "https://doi.org/10.1016/j.xphs.2022.09.028"
+       "venue": "International Journal of Pharmaceutics",
+       "link": "https://doi.org/10.1016/j.ijpharm.2022.121501"
       }
      ],
      "senior_hint": true
-    },
-    {
-     "name": "Jonathan A. G. Cox",
-     "openalex": "https://openalex.org/A5012140483",
-     "orcid": "https://orcid.org/0000-0001-5208-4056",
-     "score": 16.7,
-     "n": 8,
-     "papers": [
-      {
-       "title": "Unique Mānuka Factor (UMF)-dependent antimicrobial activity of Mānuka honey against respiratory pathogens cannot be explained by sugar and methylglyoxal alone",
-       "year": 2026,
-       "venue": "Microbiology",
-       "link": "https://doi.org/10.1099/mic.0.001746"
-      },
-      {
-       "title": "Cystic fibrosis sputum media induces an overall loss of antibiotic susceptibility in Mycobacterium abscessus",
-       "year": 2024,
-       "venue": "npj Antimicrobials and Resistance",
-       "link": "https://doi.org/10.1038/s44259-024-00054-3"
-      },
-      {
-       "title": "Drug Repurposing for the Treatment of Mycobacterium abscessus Infections",
-       "year": 2023,
-       "venue": "Infectious Microbes & Diseases",
-       "link": "https://doi.org/10.1097/im9.0000000000000123"
-      }
-     ],
-     "senior_hint": true
-    },
-    {
-     "name": "Paul D. Topham",
-     "openalex": "https://openalex.org/A5049923344",
-     "orcid": "https://orcid.org/0000-0003-4152-6976",
-     "score": 14.6,
-     "n": 10,
-     "papers": [
-      {
-       "title": "Chitosan-Modified Biodegradable Polymeric Nanoparticles for Tunable Cannabidiol Release and Enhanced Mucosal Transport",
-       "year": 2026,
-       "venue": "Journal of Polymers and the Environment",
-       "link": "https://doi.org/10.1007/s10924-025-03740-z"
-      },
-      {
-       "title": "Tailoring Hydrogel Sheet Properties through Co-Monomer Selection in AMPS Copolymer Macromers",
-       "year": 2024,
-       "venue": "Polymers",
-       "link": "https://doi.org/10.3390/polym16172522"
-      },
-      {
-       "title": "Low cytotoxicity, antibacterial property, and curcumin delivery performance of toughness-enhanced electrospun composite membranes based on poly(lactic acid) and MAX phase (Ti3AlC2)",
-       "year": 2024,
-       "venue": "International Journal of Biological Macromolecules",
-       "link": "https://doi.org/10.1016/j.ijbiomac.2024.129967"
-      }
-     ],
-     "senior_hint": false
     },
     {
      "name": "Mohamad Anas Al Tahan",
      "openalex": "https://openalex.org/A5108998674",
      "orcid": "https://orcid.org/0009-0006-0956-0487",
-     "score": 14.0,
+     "score": 17.0,
      "n": 8,
      "papers": [
       {
@@ -3001,16 +3068,72 @@
        "link": "https://doi.org/10.1016/j.ejps.2025.107408"
       },
       {
-       "title": "Oral peptide delivery Systems: Synergistic approaches using polymers, lipids, Nanotechnology, and needle-based carriers",
-       "year": 2025,
-       "venue": "Journal of Drug Delivery Science and Technology",
-       "link": "https://doi.org/10.1016/j.jddst.2025.107205"
-      },
-      {
        "title": "Exploring mesoporous silica microparticles in pharmaceutical sciences: Drug delivery and therapeutic insights",
        "year": 2025,
        "venue": "International Journal of Pharmaceutics",
        "link": "https://doi.org/10.1016/j.ijpharm.2025.125656"
+      },
+      {
+       "title": "Stearic acid-capped mesoporous silica microparticles as novel needle-like-structured drug delivery carriers",
+       "year": 2024,
+       "venue": "European Journal of Pharmaceutics and Biopharmaceutics",
+       "link": "https://doi.org/10.1016/j.ejpb.2024.114619"
+      }
+     ],
+     "senior_hint": false
+    },
+    {
+     "name": "Daniel J. Kirby",
+     "openalex": "https://openalex.org/A5049833173",
+     "orcid": "https://orcid.org/0000-0002-0878-2620",
+     "score": 15.9,
+     "n": 7,
+     "papers": [
+      {
+       "title": "The behaviour and control of poloxamer activity in aqueous solution: polymer assembly, impact of bulk composition and tuneable nano formulation design",
+       "year": 2026,
+       "venue": "Pharmaceutics and Pharmacology",
+       "link": "https://doi.org/10.1093/pp/rqag005"
+      },
+      {
+       "title": "Buccal Absorption of Biopharmaceutics Classification System III Drugs: Formulation Approaches and Mechanistic Insights",
+       "year": 2024,
+       "venue": "Pharmaceutics",
+       "link": "https://doi.org/10.3390/pharmaceutics16121563"
+      },
+      {
+       "title": "Virtual Clinical Trials Guided Design of an Age-Appropriate Formulation and Dosing Strategy of Nifedipine for Paediatric Use",
+       "year": 2023,
+       "venue": "Pharmaceutics",
+       "link": "https://doi.org/10.3390/pharmaceutics15020556"
+      }
+     ],
+     "senior_hint": false
+    },
+    {
+     "name": "Paul D. Topham",
+     "openalex": "https://openalex.org/A5049923344",
+     "orcid": "https://orcid.org/0000-0003-4152-6976",
+     "score": 13.1,
+     "n": 10,
+     "papers": [
+      {
+       "title": "Chitosan-Modified Biodegradable Polymeric Nanoparticles for Tunable Cannabidiol Release and Enhanced Mucosal Transport",
+       "year": 2026,
+       "venue": "Journal of Polymers and the Environment",
+       "link": "https://doi.org/10.1007/s10924-025-03740-z"
+      },
+      {
+       "title": "Encapsulation of propolis extracts in aqueous formulations by using nanovesicles of lipid and poly(styrene-alt-maleic acid)",
+       "year": 2023,
+       "venue": "Artificial Cells Nanomedicine and Biotechnology",
+       "link": "https://doi.org/10.1080/21691401.2023.2198570"
+      },
+      {
+       "title": "Tailoring Hydrogel Sheet Properties through Co-Monomer Selection in AMPS Copolymer Macromers",
+       "year": 2024,
+       "venue": "Polymers",
+       "link": "https://doi.org/10.3390/polym16172522"
       }
      ],
      "senior_hint": false
@@ -3026,7 +3149,7 @@
      "name": "Rasha Abdelsalam Elshenawy",
      "openalex": "https://openalex.org/A5086480418",
      "orcid": "https://orcid.org/0000-0002-8954-0817",
-     "score": 79.2,
+     "score": 49.2,
      "n": 40,
      "papers": [
       {
@@ -3054,7 +3177,7 @@
      "name": "Zoe Aslanpour",
      "openalex": "https://openalex.org/A5077991744",
      "orcid": "https://orcid.org/0000-0002-2567-0540",
-     "score": 42.6,
+     "score": 27.3,
      "n": 19,
      "papers": [
       {
@@ -3082,7 +3205,7 @@
      "name": "Nkiruka Umaru",
      "openalex": "https://openalex.org/A5113058571",
      "orcid": "https://orcid.org/0000-0002-8378-5987",
-     "score": 29.5,
+     "score": 15.8,
      "n": 17,
      "papers": [
       {
@@ -3110,15 +3233,9 @@
      "name": "Guogang Ren",
      "openalex": "https://openalex.org/A5030306649",
      "orcid": "https://orcid.org/0000-0001-8865-1526",
-     "score": 9.3,
+     "score": 13.7,
      "n": 6,
      "papers": [
-      {
-       "title": "Structural characterisation and dynamic modelling of pegylated graphene oxide with Ag and Cu nanocluster",
-       "year": 2025,
-       "venue": "Applied Surface Science",
-       "link": "https://doi.org/10.1016/j.apsusc.2025.162430"
-      },
       {
        "title": "Applied Methods to Assess the Antimicrobial Activity of Metallic-Based Nanoparticles",
        "year": 2023,
@@ -3130,34 +3247,40 @@
        "year": 2022,
        "venue": "Carbohydrate Polymers",
        "link": "https://doi.org/10.1016/j.carbpol.2022.120516"
+      },
+      {
+       "title": "pH Alteration in Plant-Mediated Green Synthesis and Its Resultant Impact on Antimicrobial Properties of Silver Nanoparticles (AgNPs)",
+       "year": 2022,
+       "venue": "Antibiotics",
+       "link": "https://doi.org/10.3390/antibiotics11111592"
       }
      ],
      "senior_hint": true
     },
     {
-     "name": "Rishal Dsouza",
-     "openalex": "https://openalex.org/A5018281491",
-     "orcid": null,
-     "score": 7.4,
+     "name": "Etelka Chung",
+     "openalex": "https://openalex.org/A5032723115",
+     "orcid": "https://orcid.org/0000-0001-6919-4876",
+     "score": 9.3,
      "n": 4,
      "papers": [
       {
-       "title": "Closing the Surveillance-to-Stewardship Gap in antimicrobial resistance: a narrative review of global lessons from WHO GLASS, UK ESPAUR, and low- and middle-income countries",
-       "year": 2026,
-       "venue": "Clinical Microbiology and Infection",
-       "link": "https://doi.org/10.1016/j.cmi.2026.09.020"
+       "title": "Applied Methods to Assess the Antimicrobial Activity of Metallic-Based Nanoparticles",
+       "year": 2023,
+       "venue": "Bioengineering",
+       "link": "https://doi.org/10.3390/bioengineering10111259"
       },
       {
-       "title": "P66 Multi-country synthesis of antimicrobial stewardship implementation in low- and middle-income countries: facilitators, barriers, and strategies across Bangladesh, Nigeria and India",
-       "year": 2026,
-       "venue": "JAC-Antimicrobial Resistance",
-       "link": "https://doi.org/10.1093/jacamr/dlag102.072"
+       "title": "Sustainable γ-cyclodextrin frameworks containing ultra-fine silver nanoparticles with enhanced antimicrobial efficacy",
+       "year": 2022,
+       "venue": "Carbohydrate Polymers",
+       "link": "https://doi.org/10.1016/j.carbpol.2022.120516"
       },
       {
-       "title": "Dental stewardship implementation and antimicrobial resistance awareness in India: prescribing patterns, knowledge gaps, and barriers–systematic review with narrative synthesis",
-       "year": 2026,
-       "venue": "Antimicrobial Stewardship & Healthcare Epidemiology",
-       "link": "https://doi.org/10.1017/ash.2026.10388"
+       "title": "pH Alteration in Plant-Mediated Green Synthesis and Its Resultant Impact on Antimicrobial Properties of Silver Nanoparticles (AgNPs)",
+       "year": 2022,
+       "venue": "Antibiotics",
+       "link": "https://doi.org/10.3390/antibiotics11111592"
       }
      ],
      "senior_hint": false
@@ -3170,29 +3293,29 @@
    "openalex": "I55060895",
    "people": [
     {
-     "name": "Delia Grace",
-     "openalex": "https://openalex.org/A5005472729",
-     "orcid": "https://orcid.org/0000-0002-0195-9489",
-     "score": 20.1,
-     "n": 11,
+     "name": "Joshua Siaw Boateng",
+     "openalex": "https://openalex.org/A5033241727",
+     "orcid": "https://orcid.org/0000-0002-6310-729X",
+     "score": 17.1,
+     "n": 7,
      "papers": [
       {
-       "title": "Prevalence and Antimicrobial-Resistant Campylobacter jejuni and Campylobacter coli in Free-Range Chickens in Northwest Ethiopia",
+       "title": "Transmucosal drug delivery: prospects, challenges, advances, and future directions",
        "year": 2025,
-       "venue": "American Journal of Tropical Medicine and Hygiene",
-       "link": "https://doi.org/10.4269/ajtmh.24-0578"
+       "venue": "Expert Opinion on Drug Delivery",
+       "link": "https://doi.org/10.1080/17425247.2025.2470224"
       },
       {
-       "title": "Systematic Review and Meta-Analysis on Prevalence and Antimicrobial Resistance Patterns of Important Foodborne Pathogens Isolated from Retail Chicken Meat and Associated Environments in India",
-       "year": 2025,
-       "venue": "Foods",
-       "link": "https://doi.org/10.3390/foods14040555"
-      },
-      {
-       "title": "Campylobacter jejuni and Campylobacter coli infection, determinants and antimicrobial resistance patterns among under-five children with diarrhea in Amhara National Regional State, Northwest Ethiopia",
+       "title": "Matrix hyaluronic acid and bilayer poly-hydroxyethyl methacrylate-hyaluronic acid films as potential ocular drug delivery platforms",
        "year": 2024,
-       "venue": "PLoS ONE",
-       "link": "https://doi.org/10.1371/journal.pone.0304409"
+       "venue": "International Journal of Biological Macromolecules",
+       "link": "https://doi.org/10.1016/j.ijbiomac.2024.129496"
+      },
+      {
+       "title": "Surface functionalization of PLGA nanoparticles for potential oral vaccine delivery targeting intestinal immune cells",
+       "year": 2022,
+       "venue": "Colloids and Surfaces B Biointerfaces",
+       "link": "https://doi.org/10.1016/j.colsurfb.2022.113121"
       }
      ],
      "senior_hint": true
@@ -3201,7 +3324,7 @@
      "name": "Dennis Douroumis",
      "openalex": "https://openalex.org/A5090614750",
      "orcid": "https://orcid.org/0000-0002-3782-0091",
-     "score": 17.6,
+     "score": 14.8,
      "n": 10,
      "papers": [
       {
@@ -3226,85 +3349,85 @@
      "senior_hint": true
     },
     {
-     "name": "Joshua Siaw Boateng",
-     "openalex": "https://openalex.org/A5033241727",
-     "orcid": "https://orcid.org/0000-0002-6310-729X",
-     "score": 13.1,
-     "n": 7,
+     "name": "Delia Grace",
+     "openalex": "https://openalex.org/A5005472729",
+     "orcid": "https://orcid.org/0000-0002-0195-9489",
+     "score": 10.8,
+     "n": 11,
      "papers": [
       {
-       "title": "Dual-targeting sulfamethoxazole derivatives overcome multidrug resistance in ESKAPE pathogens by inhibiting quorum sensing and efflux pumps",
-       "year": 2026,
-       "venue": "RSC Advances",
-       "link": "https://doi.org/10.1039/d5ra08024j"
-      },
-      {
-       "title": "Transmucosal drug delivery: prospects, challenges, advances, and future directions",
+       "title": "Prevalence and Antimicrobial-Resistant Campylobacter jejuni and Campylobacter coli in Free-Range Chickens in Northwest Ethiopia",
        "year": 2025,
-       "venue": "Expert Opinion on Drug Delivery",
-       "link": "https://doi.org/10.1080/17425247.2025.2470224"
+       "venue": "American Journal of Tropical Medicine and Hygiene",
+       "link": "https://doi.org/10.4269/ajtmh.24-0578"
       },
       {
-       "title": "Matrix hyaluronic acid and bilayer poly-hydroxyethyl methacrylate-hyaluronic acid films as potential ocular drug delivery platforms",
+       "title": "Systematic Review and Meta-Analysis on Prevalence and Antimicrobial Resistance Patterns of Important Foodborne Pathogens Isolated from Retail Chicken Meat and Associated Environments in India",
+       "year": 2025,
+       "venue": "Foods",
+       "link": "https://doi.org/10.3390/foods14040555"
+      },
+      {
+       "title": "Campylobacter jejuni and Campylobacter coli infection, determinants and antimicrobial resistance patterns among under-five children with diarrhea in Amhara National Regional State, Northwest Ethiopia",
        "year": 2024,
-       "venue": "International Journal of Biological Macromolecules",
-       "link": "https://doi.org/10.1016/j.ijbiomac.2024.129496"
+       "venue": "PLoS ONE",
+       "link": "https://doi.org/10.1371/journal.pone.0304409"
       }
      ],
      "senior_hint": true
     },
     {
-     "name": "Solomon Habtemariam",
-     "openalex": "https://openalex.org/A5050614530",
-     "orcid": "https://orcid.org/0000-0001-6743-2244",
-     "score": 11.5,
-     "n": 8,
+     "name": "Asma B. M. Buanz",
+     "openalex": "https://openalex.org/A5090574722",
+     "orcid": "https://orcid.org/0000-0002-2556-1256",
+     "score": 9.5,
+     "n": 3,
      "papers": [
       {
-       "title": "Anticancer potential of decursin, decursinol angelate, and decursinol from Angelica gigas Nakai: A comprehensive review and future therapeutic prospects",
-       "year": 2024,
-       "venue": "Food Science & Nutrition",
-       "link": "https://doi.org/10.1002/fsn3.4376"
-      },
-      {
-       "title": "A review of botanical, phytochemical, and pharmacological properties of Alcea rosea L.",
-       "year": 2023,
-       "venue": "Future natural products.",
-       "link": "https://doi.org/10.34172/fnp.2210-1232"
-      },
-      {
-       "title": "Medicinal and mechanistic overview of artemisinin in the treatment of human diseases",
-       "year": 2023,
-       "venue": "Biomedicine & Pharmacotherapy",
-       "link": "https://doi.org/10.1016/j.biopha.2023.114866"
-      }
-     ],
-     "senior_hint": true
-    },
-    {
-     "name": "Stacey Duvenage",
-     "openalex": "https://openalex.org/A5058750112",
-     "orcid": "https://orcid.org/0000-0002-5984-1491",
-     "score": 7.8,
-     "n": 5,
-     "papers": [
-      {
-       "title": "Cucumber Production System as a Reservoir for Clinically Important Extended‐Spectrum Beta‐Lactamase‐ and AmpC Beta‐Lactamase‐Producing Escherichia coli and Klebsiella pneumoniae Strains",
+       "title": "Review on Gastroretentive Drug Delivery Systems with Emphasis on Film Type",
        "year": 2026,
-       "venue": "International Journal of Food Science",
-       "link": "https://doi.org/10.1155/ijfo/1361352"
+       "venue": "Al Mustansiriyah Journal of Pharmaceutical Sciences",
+       "link": "https://doi.org/10.32947/ajps.v25i5.1280"
       },
       {
-       "title": "Genomic Evaluation of Multidrug-Resistant Extended-Spectrum β-Lactamase (ESBL)-Producing Escherichia coli from Irrigation Water and Fresh Produce in South Africa: A Cross-Sectional Analysis",
-       "year": 2024,
-       "venue": "Environmental Science & Technology",
-       "link": "https://doi.org/10.1021/acs.est.4c02431"
+       "title": "Preparation and Formulation of Ocusert using Dipping and Solvent Casting Technique",
+       "year": 2026,
+       "venue": "Al Mustansiriyah Journal of Pharmaceutical Sciences",
+       "link": "https://doi.org/10.32947/ajps.v25i5.1319"
       },
       {
-       "title": "Serotype Distribution, Antimicrobial Resistance, Virulence Genes, and Genetic Diversity of Salmonella spp. Isolated from small-scale Leafy Green Vegetable Supply Chains in South Africa",
+       "title": "3D printed implantable drug delivery devices for women’s health: Formulation challenges and regulatory perspective",
        "year": 2023,
-       "venue": "Journal of Food Protection",
-       "link": "https://doi.org/10.1016/j.jfp.2023.100195"
+       "venue": "Advanced Drug Delivery Reviews",
+       "link": "https://doi.org/10.1016/j.addr.2023.114859"
+      }
+     ],
+     "senior_hint": true
+    },
+    {
+     "name": "Siva Satyanarayana Kolipaka",
+     "openalex": "https://openalex.org/A5094128405",
+     "orcid": "https://orcid.org/0009-0002-6037-9721",
+     "score": 8.6,
+     "n": 4,
+     "papers": [
+      {
+       "title": "Novel Hybrid Polymer-Lipid-Based Formulations for Enhanced Dissolution Rates of Poorly Water-Soluble Drugs: A Quality by Design (QbD) Approach via Hot Melt Extrusion",
+       "year": 2026,
+       "venue": "AAPS PharmSciTech",
+       "link": "https://doi.org/10.1208/s12249-026-03530-3"
+      },
+      {
+       "title": "HME as a transformative platform in pharmaceutics: from molecular dispersion engineering to personalized drug delivery",
+       "year": 2026,
+       "venue": "International Journal of Pharmaceutics",
+       "link": "https://doi.org/10.1016/j.ijpharm.2026.127161"
+      },
+      {
+       "title": "Formulation and in vitro evaluation of liposomal and self-microemulsifying drug delivery systems for oral delivery of cannabidiol",
+       "year": 2025,
+       "venue": "Journal of Pharmaceutical Sciences",
+       "link": "https://doi.org/10.1016/j.xphs.2025.104053"
       }
      ],
      "senior_hint": false
@@ -3320,7 +3443,7 @@
      "name": "Hermine V. Mkrtchyan",
      "openalex": "https://openalex.org/A5012549594",
      "orcid": "https://orcid.org/0000-0001-7339-7297",
-     "score": 24.3,
+     "score": 14.8,
      "n": 10,
      "papers": [
       {
@@ -3345,38 +3468,10 @@
      "senior_hint": true
     },
     {
-     "name": "Hanieh Khalili",
-     "openalex": "https://openalex.org/A5087587877",
-     "orcid": "https://orcid.org/0000-0002-6612-1628",
-     "score": 13.5,
-     "n": 7,
-     "papers": [
-      {
-       "title": "3D-printed alginate implants for sustained-release of Faricimab; fabrication and characterisation",
-       "year": 2026,
-       "venue": "Journal of Drug Delivery Science and Technology",
-       "link": "https://doi.org/10.1016/j.jddst.2026.108899"
-      },
-      {
-       "title": "Advanced bispecific antibody design and inhaled biologics; emerging strategies for asthma",
-       "year": 2026,
-       "venue": "RSC Pharmaceutics",
-       "link": "https://doi.org/10.1039/d5pm00230c"
-      },
-      {
-       "title": "Histidine Tag-Specific PEGylation Improves the Circulating Half-Life of TIMP2",
-       "year": 2025,
-       "venue": "ACS Applied Bio Materials",
-       "link": "https://doi.org/10.1021/acsabm.4c01385"
-      }
-     ],
-     "senior_hint": true
-    },
-    {
      "name": "Konstantin Nikolić",
      "openalex": "https://openalex.org/A5063863728",
      "orcid": "https://orcid.org/0000-0002-6551-2977",
-     "score": 13.0,
+     "score": 10.5,
      "n": 6,
      "papers": [
       {
@@ -3401,10 +3496,38 @@
      "senior_hint": true
     },
     {
+     "name": "Hanieh Khalili",
+     "openalex": "https://openalex.org/A5087587877",
+     "orcid": "https://orcid.org/0000-0002-6612-1628",
+     "score": 8.7,
+     "n": 7,
+     "papers": [
+      {
+       "title": "3D-printed alginate implants for sustained-release of Faricimab; fabrication and characterisation",
+       "year": 2026,
+       "venue": "Journal of Drug Delivery Science and Technology",
+       "link": "https://doi.org/10.1016/j.jddst.2026.108899"
+      },
+      {
+       "title": "Advanced bispecific antibody design and inhaled biologics; emerging strategies for asthma",
+       "year": 2026,
+       "venue": "RSC Pharmaceutics",
+       "link": "https://doi.org/10.1039/d5pm00230c"
+      },
+      {
+       "title": "Histidine Tag-Specific PEGylation Improves the Circulating Half-Life of TIMP2",
+       "year": 2025,
+       "venue": "ACS Applied Bio Materials",
+       "link": "https://doi.org/10.1021/acsabm.4c01385"
+      }
+     ],
+     "senior_hint": true
+    },
+    {
      "name": "Kamyar Afarinkia",
      "openalex": "https://openalex.org/A5037537205",
      "orcid": "https://orcid.org/0000-0003-2819-4364",
-     "score": 12.1,
+     "score": 7.1,
      "n": 6,
      "papers": [
       {
@@ -3429,29 +3552,29 @@
      "senior_hint": true
     },
     {
-     "name": "Rory J. Cave",
-     "openalex": "https://openalex.org/A5005497456",
-     "orcid": "https://orcid.org/0000-0002-3564-2340",
-     "score": 11.0,
-     "n": 6,
+     "name": "Mariya L. Ivanova",
+     "openalex": "https://openalex.org/A5006964885",
+     "orcid": "https://orcid.org/0009-0005-7730-2423",
+     "score": 6.7,
+     "n": 5,
      "papers": [
       {
-       "title": "High-resolution long-read sequencing maps genomic Island–associated gene duplication in South African carbapenem non-susceptible Pseudomonas aeruginosa",
+       "title": "Machine Learning Model Leveraging SMILES-derived NMR Spectroscopy Data to Predict Dopamine D1 Receptor Antagonists: A Prospective Framework for Forecasting the Impact of Engineered Nanoparticles on the Functionalities of Small Biomolecules",
        "year": 2026,
-       "venue": "Frontiers in Microbiology",
-       "link": "https://doi.org/10.3389/fmicb.2026.1891542"
+       "venue": "BioNanoScience",
+       "link": "https://doi.org/10.1007/s12668-026-02523-7"
       },
       {
-       "title": "Emergence of mcr-8.1 -bearing MDR-hypervirulent Klebsiella pneumoniae ST307",
-       "year": 2024,
-       "venue": "Microbiology Spectrum",
-       "link": "https://doi.org/10.1128/spectrum.01910-24"
+       "title": "IUPAC-induced computational approaches for identifying boosters of small biomolecule functionality: A case study of human tyrosyl-DNA phosphodiesterase 1 (TDP1) inhibitors",
+       "year": 2026,
+       "venue": "Computers in Biology and Medicine",
+       "link": "https://doi.org/10.1016/j.compbiomed.2026.111531"
       },
       {
-       "title": "Whole-Genome Sequencing and Comparative Genomics Analysis of a Newly Emerged Multidrug-Resistant Klebsiella pneumoniae Isolate of ST967",
-       "year": 2023,
-       "venue": "Microbiology Spectrum",
-       "link": "https://doi.org/10.1128/spectrum.04011-22"
+       "title": "Toward Predictable Nanomedicine: Current Forecasting Frameworks for Nanoparticle–Biology Interactions",
+       "year": 2026,
+       "venue": "Advanced Intelligent Discovery",
+       "link": "https://doi.org/10.1002/aidi.202500205"
       }
      ],
      "senior_hint": false
@@ -3467,7 +3590,7 @@
      "name": "Barbara Kasprzyk‐Hordern",
      "openalex": "https://openalex.org/A5034486320",
      "orcid": "https://orcid.org/0000-0002-6809-2875",
-     "score": 36.1,
+     "score": 21.9,
      "n": 18,
      "papers": [
       {
@@ -3495,7 +3618,7 @@
      "name": "Edward J. Feil",
      "openalex": "https://openalex.org/A5014816450",
      "orcid": "https://orcid.org/0000-0003-1446-6744",
-     "score": 18.4,
+     "score": 9.8,
      "n": 11,
      "papers": [
       {
@@ -3520,10 +3643,66 @@
      "senior_hint": true
     },
     {
+     "name": "Paul De Bank",
+     "openalex": "https://openalex.org/A5078294887",
+     "orcid": "https://orcid.org/0000-0002-5717-7486",
+     "score": 7.6,
+     "n": 3,
+     "papers": [
+      {
+       "title": "Gold Nanoparticles: Tunable Characteristics and Potential for Nasal Drug Delivery",
+       "year": 2024,
+       "venue": "Pharmaceutics",
+       "link": "https://doi.org/10.3390/pharmaceutics16050669"
+      },
+      {
+       "title": "Intestinal Transcytosis of a Protein Cargo and Nanoparticles Mediated by a Non-Toxic Form of Pseudomonas aeruginosa Exotoxin A",
+       "year": 2021,
+       "venue": "Pharmaceutics",
+       "link": "https://doi.org/10.3390/pharmaceutics13081171"
+      },
+      {
+       "title": "In Vitro Evaluation of Nasal Aerosol Depositions: An Insight for Direct Nose to Brain Drug Delivery",
+       "year": 2021,
+       "venue": "Pharmaceutics",
+       "link": "https://doi.org/10.3390/pharmaceutics13071079"
+      }
+     ],
+     "senior_hint": true
+    },
+    {
+     "name": "Randall J. Mrsny",
+     "openalex": "https://openalex.org/A5002768937",
+     "orcid": "https://orcid.org/0000-0001-8505-8516",
+     "score": 5.6,
+     "n": 4,
+     "papers": [
+      {
+       "title": "Intestinal Transcytosis of a Protein Cargo and Nanoparticles Mediated by a Non-Toxic Form of Pseudomonas aeruginosa Exotoxin A",
+       "year": 2021,
+       "venue": "Pharmaceutics",
+       "link": "https://doi.org/10.3390/pharmaceutics13081171"
+      },
+      {
+       "title": "Modelling intramuscular drug fate in vitro with tissue-relevant biomimetic hydrogels",
+       "year": 2022,
+       "venue": "International Journal of Pharmaceutics X",
+       "link": "https://doi.org/10.1016/j.ijpx.2022.100125"
+      },
+      {
+       "title": "Re-Assessing PK/PD Issues for Oral Protein and Peptide Delivery",
+       "year": 2021,
+       "venue": "Pharmaceutics",
+       "link": "https://doi.org/10.3390/pharmaceutics13071006"
+      }
+     ],
+     "senior_hint": true
+    },
+    {
      "name": "Stephanie W. Lo",
      "openalex": "https://openalex.org/A5022302563",
      "orcid": "https://orcid.org/0000-0002-2182-0222",
-     "score": 8.9,
+     "score": 5.5,
      "n": 6,
      "papers": [
       {
@@ -3546,62 +3725,6 @@
       }
      ],
      "senior_hint": false
-    },
-    {
-     "name": "Ben Pascoe",
-     "openalex": "https://openalex.org/A5071129241",
-     "orcid": "https://orcid.org/0000-0001-6376-5121",
-     "score": 8.6,
-     "n": 6,
-     "papers": [
-      {
-       "title": "Genetic diversity and variation in antimicrobial-resistance determinants of non-serotype 2 Streptococcus suis isolates from healthy pigs",
-       "year": 2022,
-       "venue": "Microbial Genomics",
-       "link": "https://doi.org/10.1099/mgen.0.000882"
-      },
-      {
-       "title": "Local accessory gene sharing among Egyptian Campylobacter potentially promotes the spread of antimicrobial resistance",
-       "year": 2022,
-       "venue": "Microbial Genomics",
-       "link": "https://doi.org/10.1099/mgen.0.000834"
-      },
-      {
-       "title": "Host ecology regulates interspecies recombination in bacteria of the genus Campylobacter",
-       "year": 2022,
-       "venue": "eLife",
-       "link": "https://doi.org/10.7554/elife.73552"
-      }
-     ],
-     "senior_hint": true
-    },
-    {
-     "name": "Elizabeth Holton",
-     "openalex": "https://openalex.org/A5101633480",
-     "orcid": "https://orcid.org/0000-0001-7401-4876",
-     "score": 8.4,
-     "n": 5,
-     "papers": [
-      {
-       "title": "Antimicrobials and antimicrobial resistance genes in a one-year city metabolism longitudinal study using wastewater-based epidemiology",
-       "year": 2023,
-       "venue": "Environmental Pollution",
-       "link": "https://doi.org/10.1016/j.envpol.2023.122020"
-      },
-      {
-       "title": "Quantifying community-wide antibiotic usage via urban water fingerprinting: Focus on contrasting resource settings in South Africa",
-       "year": 2023,
-       "venue": "Water Research",
-       "link": "https://doi.org/10.1016/j.watres.2023.120110"
-      },
-      {
-       "title": "Community infectious disease treatment with antimicrobial agents – A longitudinal one year study of antimicrobials in two cities via wastewater-based epidemiology",
-       "year": 2023,
-       "venue": "Journal of Hazardous Materials",
-       "link": "https://doi.org/10.1016/j.jhazmat.2023.131461"
-      }
-     ],
-     "senior_hint": false
     }
    ],
    "scanned": 100,
@@ -3614,15 +3737,9 @@
      "name": "Muhammad Wahajuddin",
      "openalex": "https://openalex.org/A5018239210",
      "orcid": "https://orcid.org/0000-0003-3362-7558",
-     "score": 21.9,
+     "score": 27.6,
      "n": 12,
      "papers": [
-      {
-       "title": "Antiplasmodial Activity and Pharmacokinetic Profiling of Cryptolepine and 2,7‐Dibromocryptolepine With a View to Informing the Design of Novel Antimalarial Cryptolepine Analogues",
-       "year": 2026,
-       "venue": "Drug Development Research",
-       "link": "https://doi.org/10.1002/ddr.70245"
-      },
       {
        "title": "A review on integrated machine learning and deep learning driven artificial intelligence models for pharmacokinetics and toxicokinetics predictions, and their application",
        "year": 2026,
@@ -3634,34 +3751,12 @@
        "year": 2025,
        "venue": "Bioorganic Chemistry",
        "link": "https://doi.org/10.1016/j.bioorg.2025.108128"
-      }
-     ],
-     "senior_hint": true
-    },
-    {
-     "name": "Farshid Sefat",
-     "openalex": "https://openalex.org/A5002716859",
-     "orcid": "https://orcid.org/0000-0002-0911-5213",
-     "score": 18.0,
-     "n": 10,
-     "papers": [
-      {
-       "title": "Engineering of medical-grade silicon-based biomaterials for male and female reproductive system",
-       "year": 2026,
-       "venue": "Materials Today Communications",
-       "link": "https://doi.org/10.1016/j.mtcomm.2026.114869"
       },
       {
-       "title": "Comparison of laboratory-acquired ZIF-8 drug delivery-related parameters with literature-based data via machine learning tools",
-       "year": 2025,
-       "venue": "Materials Today Chemistry",
-       "link": "https://doi.org/10.1016/j.mtchem.2025.102801"
-      },
-      {
-       "title": "Boosting antitumor efficacy using docetaxel-loaded nanoplatforms: from cancer therapy to regenerative medicine approaches",
+       "title": "Docetaxel-tethered di-Carboxylic Acid Derivatised Fullerenes: A Promising Drug Delivery Approach for Breast Cancer",
        "year": 2024,
-       "venue": "Journal of Translational Medicine",
-       "link": "https://doi.org/10.1186/s12967-024-05347-9"
+       "venue": "AAPS PharmSciTech",
+       "link": "https://doi.org/10.1208/s12249-024-02955-y"
       }
      ],
      "senior_hint": true
@@ -3670,15 +3765,9 @@
      "name": "Shahzeb Khan",
      "openalex": "https://openalex.org/A5068965772",
      "orcid": "https://orcid.org/0000-0002-3464-5435",
-     "score": 15.2,
+     "score": 18.5,
      "n": 9,
      "papers": [
-      {
-       "title": "Adsorption Tendency of Boron Oxide (B 24 O 24 ) Nanocarrier toward Some Nucleobases and Their Nucleoside-Based Anticancer Drugs: A Comparative Density Functional Theory Study",
-       "year": 2025,
-       "venue": "ACS Omega",
-       "link": "https://doi.org/10.1021/acsomega.5c05837"
-      },
       {
        "title": "Unravelling the potential of zinc oxide (Zn12O12) as a drug delivery system for 5-Aminolevulinic acid drug: Insights from DFT calculations",
        "year": 2025,
@@ -3686,66 +3775,100 @@
        "link": "https://doi.org/10.1016/j.cplett.2025.142348"
       },
       {
-       "title": "Polyethylene glycol-mediated functionalization of nanodelivery systems for improving their pharmacokinetic profile and anticancer efficacy",
-       "year": 2024,
-       "venue": "International Journal of Polymeric Materials",
-       "link": "https://doi.org/10.1080/00914037.2024.2383413"
+       "title": "Formulation and Optimization of Repaglinide Nanoparticles Using Microfluidics for Enhanced Bioavailability and Management of Diabetes",
+       "year": 2023,
+       "venue": "Biomedicines",
+       "link": "https://doi.org/10.3390/biomedicines11041064"
+      },
+      {
+       "title": "Polymeric Nanoparticles as Tunable Nanocarriers for Targeted Delivery of Drugs to Skin Tissues for Treatment of Topical Skin Diseases",
+       "year": 2023,
+       "venue": "Pharmaceutics",
+       "link": "https://doi.org/10.3390/pharmaceutics15020657"
       }
      ],
      "senior_hint": true
     },
     {
-     "name": "Maria G. Katsikogianni",
-     "openalex": "https://openalex.org/A5083322113",
-     "orcid": "https://orcid.org/0000-0002-1560-3993",
-     "score": 8.4,
+     "name": "Farshid Sefat",
+     "openalex": "https://openalex.org/A5002716859",
+     "orcid": "https://orcid.org/0000-0002-0911-5213",
+     "score": 17.2,
+     "n": 10,
+     "papers": [
+      {
+       "title": "Comparison of laboratory-acquired ZIF-8 drug delivery-related parameters with literature-based data via machine learning tools",
+       "year": 2025,
+       "venue": "Materials Today Chemistry",
+       "link": "https://doi.org/10.1016/j.mtchem.2025.102801"
+      },
+      {
+       "title": "Retinal Tissue Engineering: Regenerative and Drug Delivery Approaches",
+       "year": 2022,
+       "venue": "Current Stem Cell Research & Therapy",
+       "link": "https://doi.org/10.2174/1574888x17666220621153508"
+      },
+      {
+       "title": "Engineering of medical-grade silicon-based biomaterials for male and female reproductive system",
+       "year": 2026,
+       "venue": "Materials Today Communications",
+       "link": "https://doi.org/10.1016/j.mtcomm.2026.114869"
+      }
+     ],
+     "senior_hint": true
+    },
+    {
+     "name": "Mohammad Isreb",
+     "openalex": "https://openalex.org/A5029861563",
+     "orcid": "https://orcid.org/0000-0003-4042-3940",
+     "score": 8.9,
+     "n": 6,
+     "papers": [
+      {
+       "title": "Effect of Process Parameters on the critical attributes of the Liposomal formulations",
+       "year": 2022,
+       "venue": "British Journal of Pharmacy",
+       "link": "https://doi.org/10.5920/bjpharm.1172"
+      },
+      {
+       "title": "The effect of PEO homopolymers on the behaviours and structural evolution of Pluronic F127 smart hydrogels for controlled drug delivery systems",
+       "year": 2022,
+       "venue": "Colloids and Surfaces A Physicochemical and Engineering Aspects",
+       "link": "https://doi.org/10.1016/j.colsurfa.2022.128842"
+      },
+      {
+       "title": "Interferon-γ liposome: a new system to improve drug delivery in the treatment of lung cancer",
+       "year": 2021,
+       "venue": "ERJ Open Research",
+       "link": "https://doi.org/10.1183/23120541.00555-2020"
+      }
+     ],
+     "senior_hint": false
+    },
+    {
+     "name": "Mojgan Najafzadeh",
+     "openalex": "https://openalex.org/A5001995352",
+     "orcid": "https://orcid.org/0000-0002-2749-4595",
+     "score": 7.3,
      "n": 4,
      "papers": [
       {
-       "title": "Formulation, Characterisation, and Biocompatibility Assessment of Rifampicin-Loaded Poly(d,l-lactide-co-glycolide) Composites for Local Treatment of Orthopaedic and Wound Infections",
+       "title": "Development and evaluation of liquid formulations of chrysin and budesonide for asthma and COPD; evaluation of the formulations’ genotoxicity and anti-inflammatory activity",
        "year": 2024,
-       "venue": "Pharmaceutics",
-       "link": "https://doi.org/10.3390/pharmaceutics16111467"
-      },
-      {
-       "title": "Biodegradable Polymer Composites of Metal Organic Framework-5 (MOF-5) for the Efficient and Sustained Delivery of Cephalexin and Metronidazole",
-       "year": 2023,
-       "venue": "Applied Sciences",
-       "link": "https://doi.org/10.3390/app131910611"
-      },
-      {
-       "title": "Controlled delivery of ciprofloxacin using zirconium-based MOFs and poly-caprolactone composites",
-       "year": 2023,
        "venue": "Journal of Drug Delivery Science and Technology",
-       "link": "https://doi.org/10.1016/j.jddst.2023.104894"
-      }
-     ],
-     "senior_hint": true
-    },
-    {
-     "name": "Sanjit Nayak",
-     "openalex": "https://openalex.org/A5083051666",
-     "orcid": "https://orcid.org/0000-0002-0342-9860",
-     "score": 7.5,
-     "n": 3,
-     "papers": [
-      {
-       "title": "Biodegradable Polymer Composites of Metal Organic Framework-5 (MOF-5) for the Efficient and Sustained Delivery of Cephalexin and Metronidazole",
-       "year": 2023,
-       "venue": "Applied Sciences",
-       "link": "https://doi.org/10.3390/app131910611"
+       "link": "https://doi.org/10.1016/j.jddst.2024.106567"
       },
       {
-       "title": "Controlled delivery of ciprofloxacin using zirconium-based MOFs and poly-caprolactone composites",
-       "year": 2023,
-       "venue": "Journal of Drug Delivery Science and Technology",
-       "link": "https://doi.org/10.1016/j.jddst.2023.104894"
+       "title": "Interferon-γ liposome: a new system to improve drug delivery in the treatment of lung cancer",
+       "year": 2021,
+       "venue": "ERJ Open Research",
+       "link": "https://doi.org/10.1183/23120541.00555-2020"
       },
       {
-       "title": "Metal–Organic Frameworks and Their Biodegradable Composites for Controlled Delivery of Antimicrobial Drugs",
-       "year": 2023,
-       "venue": "Pharmaceutics",
-       "link": "https://doi.org/10.3390/pharmaceutics15010274"
+       "title": "Engineering of medical-grade silicon-based biomaterials for male and female reproductive system",
+       "year": 2026,
+       "venue": "Materials Today Communications",
+       "link": "https://doi.org/10.1016/j.mtcomm.2026.114869"
       }
      ],
      "senior_hint": true
@@ -3761,15 +3884,9 @@
      "name": "Vitaliy V. Khutoryanskiy",
      "openalex": "https://openalex.org/A5037839028",
      "orcid": "https://orcid.org/0000-0002-7221-2630",
-     "score": 50.3,
+     "score": 66.1,
      "n": 28,
      "papers": [
-      {
-       "title": "Potential bladder cancer therapeutic delivery systems: a recent update",
-       "year": 2024,
-       "venue": "Expert Opinion on Drug Delivery",
-       "link": "https://doi.org/10.1080/17425247.2024.2396958"
-      },
       {
        "title": "Dynamic light scattering and transmission electron microscopy in drug delivery: a roadmap for correct characterization of nanoparticles and interpretation of results",
        "year": 2023,
@@ -3777,10 +3894,16 @@
        "link": "https://doi.org/10.1039/d3mh00717k"
       },
       {
-       "title": "Advances in antimicrobial polymeric iodophors",
+       "title": "Nanotechnology based drug delivery systems for the treatment of anterior segment eye diseases",
        "year": 2023,
-       "venue": "European Polymer Journal",
-       "link": "https://doi.org/10.1016/j.eurpolymj.2023.112573"
+       "venue": "Journal of Controlled Release",
+       "link": "https://doi.org/10.1016/j.jconrel.2023.01.018"
+      },
+      {
+       "title": "Thiolated Nanoparticles for Biomedical Applications: Mimicking the Workhorses of Our Body",
+       "year": 2021,
+       "venue": "Advanced Science",
+       "link": "https://doi.org/10.1002/advs.202102451"
       }
      ],
      "senior_hint": true
@@ -3789,7 +3912,7 @@
      "name": "Hisham Al-Obaidi",
      "openalex": "https://openalex.org/A5079933462",
      "orcid": "https://orcid.org/0000-0001-9735-0303",
-     "score": 15.5,
+     "score": 17.1,
      "n": 8,
      "papers": [
       {
@@ -3799,44 +3922,44 @@
        "link": "https://doi.org/10.3390/pharmaceutics16050680"
       },
       {
-       "title": "Boosting antimicrobial potency: Micro encapsulated polymyxin in hydroxypropyl beta cyclodextrin ‘sugar cage’ and alginate via spray drying with coating",
-       "year": 2024,
-       "venue": "Clinica Chimica Acta",
-       "link": "https://doi.org/10.1016/j.cca.2024.119210"
+       "title": "A Comprehensive Study on Nanoparticle Drug Delivery to the Brain: Application of Machine Learning Techniques",
+       "year": 2023,
+       "venue": "Molecular Pharmaceutics",
+       "link": "https://doi.org/10.1021/acs.molpharmaceut.3c00880"
       },
       {
-       "title": "Inhaled Medicines for Targeting Non-Small Cell Lung Cancer",
-       "year": 2023,
+       "title": "Pulmonary Drug Delivery of Antimicrobials and Anticancer Drugs Using Solid Dispersions",
+       "year": 2021,
        "venue": "Pharmaceutics",
-       "link": "https://doi.org/10.3390/pharmaceutics15122777"
+       "link": "https://doi.org/10.3390/pharmaceutics13071056"
       }
      ],
      "senior_hint": true
     },
     {
-     "name": "Hyun S. Gweon",
-     "openalex": "https://openalex.org/A5009431634",
-     "orcid": "https://orcid.org/0000-0002-6218-6301",
-     "score": 14.5,
-     "n": 8,
+     "name": "Mahmoud H. Abu Elella",
+     "openalex": "https://openalex.org/A5086472797",
+     "orcid": "https://orcid.org/0000-0003-2232-8552",
+     "score": 8.0,
+     "n": 4,
      "papers": [
       {
-       "title": "Biofilm removal in hospital sink drains drives unintended surges in antibiotic resistance",
-       "year": 2026,
-       "venue": "npj Antimicrobials and Resistance",
-       "link": "https://doi.org/10.1038/s44259-025-00176-2"
-      },
-      {
-       "title": "Antimicrobial resistance as a signature of soil restoration across a 143-year chronosequence",
-       "year": 2026,
-       "venue": "ISME Communications",
-       "link": "https://doi.org/10.1093/ismeco/ycag250"
-      },
-      {
-       "title": "Dissemination and persistence of antimicrobial resistance (AMR) along the wastewater-river continuum",
+       "title": "Recent advances in modified chitosan-based drug delivery systems for transmucosal applications: A comprehensive review",
        "year": 2024,
-       "venue": "Water Research",
-       "link": "https://doi.org/10.1016/j.watres.2024.122204"
+       "venue": "International Journal of Biological Macromolecules",
+       "link": "https://doi.org/10.1016/j.ijbiomac.2024.134531"
+      },
+      {
+       "title": "Spray-Dried Nanolipid Powders for Pulmonary Drug Delivery: A Comprehensive Mini Review",
+       "year": 2024,
+       "venue": "Pharmaceutics",
+       "link": "https://doi.org/10.3390/pharmaceutics16050680"
+      },
+      {
+       "title": "Preparation of mucoadhesive methacrylated chitosan nanoparticles for delivery of ciprofloxacin",
+       "year": 2023,
+       "venue": "International Journal of Biological Macromolecules",
+       "link": "https://doi.org/10.1016/j.ijbiomac.2023.124980"
       }
      ],
      "senior_hint": false
@@ -3845,7 +3968,7 @@
      "name": "Rosemary Hwee Mei Lim",
      "openalex": "https://openalex.org/A5018777189",
      "orcid": "https://orcid.org/0000-0003-1705-1480",
-     "score": 14.2,
+     "score": 7.9,
      "n": 8,
      "papers": [
       {
@@ -3870,32 +3993,32 @@
      "senior_hint": true
     },
     {
-     "name": "C. Rymer",
-     "openalex": "https://openalex.org/A5070980462",
-     "orcid": "https://orcid.org/0000-0002-3535-4330",
-     "score": 14.2,
-     "n": 8,
+     "name": "Sergey K. Filippov",
+     "openalex": "https://openalex.org/A5053848268",
+     "orcid": "https://orcid.org/0000-0002-4253-5076",
+     "score": 7.4,
+     "n": 3,
      "papers": [
       {
-       "title": "Prevalence and Characterisation of Antimicrobial Resistance, Virulence Factors and Multilocus Sequence Typing (MLST) of Escherichia coli Isolated from Broiler Caeca",
-       "year": 2025,
-       "venue": "Animals",
-       "link": "https://doi.org/10.3390/ani15101353"
+       "title": "Dynamic light scattering and transmission electron microscopy in drug delivery: a roadmap for correct characterization of nanoparticles and interpretation of results",
+       "year": 2023,
+       "venue": "Materials Horizons",
+       "link": "https://doi.org/10.1039/d3mh00717k"
       },
       {
-       "title": "Fijian Veterinarian and Para-Veterinarians' Behavior, Attitude and Knowledge Toward Antimicrobial Use and Antimicrobial Resistance: A Qualitative Study",
+       "title": "Maleimide-Decorated PEGylated Mucoadhesive Liposomes for Ocular Drug Delivery",
        "year": 2022,
-       "venue": "Frontiers in Veterinary Science",
-       "link": "https://doi.org/10.3389/fvets.2022.898737"
+       "venue": "Langmuir",
+       "link": "https://doi.org/10.1021/acs.langmuir.2c02086"
       },
       {
-       "title": "Factors Associated with Antimicrobial Use in Fijian Livestock Farms",
+       "title": "Mucus-penetrating nanoparticles based on chitosan grafted with various non-ionic polymers: Synthesis, structural characterisation and diffusion studies",
        "year": 2022,
-       "venue": "Antibiotics",
-       "link": "https://doi.org/10.3390/antibiotics11050587"
+       "venue": "Journal of Colloid and Interface Science",
+       "link": "https://doi.org/10.1016/j.jcis.2022.06.126"
       }
      ],
-     "senior_hint": true
+     "senior_hint": false
     }
    ],
    "scanned": 100,
@@ -3908,7 +4031,7 @@
      "name": "William W. Hope",
      "openalex": "https://openalex.org/A5057302419",
      "orcid": "https://orcid.org/0000-0001-6187-878X",
-     "score": 32.3,
+     "score": 19.5,
      "n": 17,
      "papers": [
       {
@@ -3936,7 +4059,7 @@
      "name": "Alison Helen Holmes",
      "openalex": "https://openalex.org/A5044991598",
      "orcid": "https://orcid.org/0000-0001-5554-5743",
-     "score": 18.0,
+     "score": 11.0,
      "n": 9,
      "papers": [
       {
@@ -3964,7 +4087,7 @@
      "name": "Esmita Charani",
      "openalex": "https://openalex.org/A5062931451",
      "orcid": "https://orcid.org/0000-0002-5938-1202",
-     "score": 15.4,
+     "score": 9.5,
      "n": 9,
      "papers": [
       {
@@ -3992,7 +4115,7 @@
      "name": "Alessandro Gerada",
      "openalex": "https://openalex.org/A5012280272",
      "orcid": "https://orcid.org/0000-0002-6743-4271",
-     "score": 12.4,
+     "score": 6.5,
      "n": 7,
      "papers": [
       {
@@ -4017,32 +4140,32 @@
      "senior_hint": false
     },
     {
-     "name": "Nada Reza",
-     "openalex": "https://openalex.org/A5084795817",
-     "orcid": "https://orcid.org/0000-0003-1183-3262",
-     "score": 11.7,
+     "name": "Alex Howard",
+     "openalex": "https://openalex.org/A5106404035",
+     "orcid": "https://orcid.org/0000-0002-4195-6821",
+     "score": 6.2,
      "n": 6,
      "papers": [
-      {
-       "title": "Antimicrobial pharmacodynamics: defining regimens of antibiotics that are safe, effective and prevent the emergence of resistance",
-       "year": 2026,
-       "venue": "Philosophical Transactions of the Royal Society B Biological Sciences",
-       "link": "https://doi.org/10.1098/rstb.2024.0340"
-      },
-      {
-       "title": "Antimicrobial use and resistance",
-       "year": 2025,
-       "venue": "BMJ",
-       "link": "https://doi.org/10.1136/bmj-2024-082681"
-      },
       {
        "title": "Artificial intelligence and infectious diseases: tackling antimicrobial resistance, from personalised care to antibiotic discovery",
        "year": 2025,
        "venue": "The Lancet Infectious Diseases",
        "link": "https://doi.org/10.1016/s1473-3099(25)00313-5"
+      },
+      {
+       "title": "Combining antibiotics to tackle antimicrobial resistance",
+       "year": 2025,
+       "venue": "Nature Microbiology",
+       "link": "https://doi.org/10.1038/s41564-025-01969-x"
+      },
+      {
+       "title": "Bayesian estimation of the prevalence of antimicrobial resistance: a mathematical modelling study",
+       "year": 2024,
+       "venue": "Journal of Antimicrobial Chemotherapy",
+       "link": "https://doi.org/10.1093/jac/dkae230"
       }
      ],
-     "senior_hint": false
+     "senior_hint": true
     }
    ],
    "scanned": 100,
@@ -4055,7 +4178,7 @@
      "name": "Ryan F. Donnelly",
      "openalex": "https://openalex.org/A5035668087",
      "orcid": "https://orcid.org/0000-0002-0766-4147",
-     "score": 38.7,
+     "score": 46.9,
      "n": 21,
      "papers": [
       {
@@ -4083,7 +4206,7 @@
      "name": "Lalitkumar K. Vora",
      "openalex": "https://openalex.org/A5058455782",
      "orcid": "https://orcid.org/0000-0001-8106-9066",
-     "score": 18.8,
+     "score": 26.8,
      "n": 11,
      "papers": [
       {
@@ -4108,66 +4231,10 @@
      "senior_hint": true
     },
     {
-     "name": "Moira Dean",
-     "openalex": "https://openalex.org/A5015379361",
-     "orcid": "https://orcid.org/0000-0002-9014-1266",
-     "score": 11.2,
-     "n": 6,
-     "papers": [
-      {
-       "title": "Behaviour change interventions for responsible antimicrobial use on farms",
-       "year": 2023,
-       "venue": "Irish Veterinary Journal",
-       "link": "https://doi.org/10.1186/s13620-023-00236-x"
-      },
-      {
-       "title": "Consumer perception and understanding of the risks of antibiotic use and antimicrobial resistance in farming",
-       "year": 2022,
-       "venue": "Agriculture and Human Values",
-       "link": "https://doi.org/10.1007/s10460-022-10399-y"
-      },
-      {
-       "title": "Antimicrobial use in agriculture: critical review of the factors influencing behaviour",
-       "year": 2021,
-       "venue": "JAC-Antimicrobial Resistance",
-       "link": "https://doi.org/10.1093/jacamr/dlab178"
-      }
-     ],
-     "senior_hint": true
-    },
-    {
-     "name": "Linda Boniface Oyama",
-     "openalex": "https://openalex.org/A5080881522",
-     "orcid": "https://orcid.org/0000-0002-9553-8588",
-     "score": 10.6,
-     "n": 6,
-     "papers": [
-      {
-       "title": "The bovine milk microbiome as a One Health interface for antimicrobial resistance, food safety and nutrition",
-       "year": 2026,
-       "venue": "Applied Food Research",
-       "link": "https://doi.org/10.1016/j.afres.2026.102801"
-      },
-      {
-       "title": "From the lens of early-career researchers: bridging science, technology, arts, and humanities to tackle antimicrobial resistance",
-       "year": 2026,
-       "venue": "Nature Communications",
-       "link": "https://doi.org/10.1038/s41467-025-67863-6"
-      },
-      {
-       "title": "Mapping antimicrobial resistance across dairy cows, human, and environmental interfaces in food-producing regions of Brazil: a one health perspective",
-       "year": 2025,
-       "venue": "Animal - science proceedings",
-       "link": "https://doi.org/10.1016/j.anscip.2025.04.045"
-      }
-     ],
-     "senior_hint": true
-    },
-    {
      "name": "Eneko Larrañeta",
      "openalex": "https://openalex.org/A5001311671",
      "orcid": "https://orcid.org/0000-0003-3710-0438",
-     "score": 10.4,
+     "score": 12.7,
      "n": 6,
      "papers": [
       {
@@ -4177,19 +4244,75 @@
        "link": "https://doi.org/10.1016/j.ijpharm.2025.126529"
       },
       {
-       "title": "Curcumin nanocrystals-in-nanofibres as a promising platform for the management of periodontal disease",
-       "year": 2023,
-       "venue": "International Journal of Pharmaceutics",
-       "link": "https://doi.org/10.1016/j.ijpharm.2023.123585"
+       "title": "Ring inserts as a useful strategy to prepare tip-loaded microneedles for long-acting drug delivery with application in HIV pre-exposure prophylaxis",
+       "year": 2022,
+       "venue": "Materials & Design",
+       "link": "https://doi.org/10.1016/j.matdes.2022.111416"
+      },
+      {
+       "title": "Development and validation of a high-performance liquid chromatography method for levothyroxine sodium quantification in plasma for pre-clinical evaluation of long-acting drug delivery systems",
+       "year": 2021,
+       "venue": "Analytical Methods",
+       "link": "https://doi.org/10.1039/d1ay01049b"
+      }
+     ],
+     "senior_hint": true
+    },
+    {
+     "name": "Alejandro J. Paredes",
+     "openalex": "https://openalex.org/A5070773926",
+     "orcid": "https://orcid.org/0000-0002-0414-8972",
+     "score": 10.7,
+     "n": 5,
+     "papers": [
+      {
+       "title": "Bimodal Dissolving Microneedles with Nanoparticle Coating and Encapsulation for Extended Dual‐Drug Delivery",
+       "year": 2025,
+       "venue": "Small",
+       "link": "https://doi.org/10.1002/smll.202502904"
       },
       {
        "title": "Ring inserts as a useful strategy to prepare tip-loaded microneedles for long-acting drug delivery with application in HIV pre-exposure prophylaxis",
        "year": 2022,
        "venue": "Materials & Design",
        "link": "https://doi.org/10.1016/j.matdes.2022.111416"
+      },
+      {
+       "title": "On a highway to the brain: A review on nose-to-brain drug delivery using nanoparticles",
+       "year": 2022,
+       "venue": "Applied Materials Today",
+       "link": "https://doi.org/10.1016/j.apmt.2022.101631"
       }
      ],
      "senior_hint": true
+    },
+    {
+     "name": "Qonita Kurnia Anjani",
+     "openalex": "https://openalex.org/A5051846210",
+     "orcid": "https://orcid.org/0000-0002-4809-550X",
+     "score": 9.8,
+     "n": 6,
+     "papers": [
+      {
+       "title": "Poly (lactic-co-glycolic acid)-based microneedles for drug delivery across different biological barriers",
+       "year": 2025,
+       "venue": "International Journal of Pharmaceutics",
+       "link": "https://doi.org/10.1016/j.ijpharm.2025.126529"
+      },
+      {
+       "title": "Formulation and evaluation of hydrogel-forming microarray patches for transdermal primaquine and chloroquine delivery in malaria therapy",
+       "year": 2025,
+       "venue": "Biomaterials Advances",
+       "link": "https://doi.org/10.1016/j.bioadv.2025.214586"
+      },
+      {
+       "title": "Intestinal Absorption Study: Challenges and Absorption Enhancement Strategies in Improving Oral Drug Delivery",
+       "year": 2022,
+       "venue": "Pharmaceuticals",
+       "link": "https://doi.org/10.3390/ph15080975"
+      }
+     ],
+     "senior_hint": false
     }
    ],
    "scanned": 100,
@@ -4197,8 +4320,8 @@
   }
  },
  "report": {
-  "phds": 11,
-  "calls": 74,
+  "phds": 12,
+  "calls": 87,
   "failed": 0
  }
 }
