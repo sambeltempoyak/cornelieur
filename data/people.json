@@ -1,6 +1,6 @@
 {
  "_help": "Written by scripts/update_people.py from OpenAlex publication records. People who publish on Ocha's topics at each university; NOT a list of who takes PhD students. The weekly scout verifies.",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "version": 2,
  "source": "OpenAlex (openalex.org)",
  "items": {
@@ -184,7 +184,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-24"
+   "checked": "2026-11-25"
   },
   "scout-cambridge-bbsrc-dtp-2027": {
    "institutions": [
@@ -317,16 +317,16 @@
      "n": 8,
      "papers": [
       {
-       "title": "Evolutionary histories and antimicrobial resistance inShigella flexneri and Shigella sonnei in Southeast Asia",
-       "year": 2022,
-       "venue": "Access Microbiology",
-       "link": "https://doi.org/10.1099/acmi.ac2021.po0330"
-      },
-      {
        "title": "Mobility of antimicrobial resistance across serovars and disease presentations in non-typhoidal Salmonella from animals and humans in Vietnam",
        "year": 2022,
        "venue": "Microbial Genomics",
        "link": "https://doi.org/10.1099/mgen.0.000798"
+      },
+      {
+       "title": "Antimicrobial resistance in commensal Escherichia coli from humans and chickens in the Mekong Delta of Vietnam is driven by antimicrobial usage and potential cross-species transmission",
+       "year": 2022,
+       "venue": "JAC-Antimicrobial Resistance",
+       "link": "https://doi.org/10.1093/jacamr/dlac054"
       },
       {
        "title": "Exploiting genomics to mitigate the public health impact of antimicrobial resistance",
@@ -360,7 +360,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-24"
+   "checked": "2026-11-25"
   },
   "scout-kcl-mrc-dtp-2027": {
    "institutions": [
@@ -524,7 +524,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-24"
+   "checked": "2026-11-25"
   },
   "scout-nottingham-bbsrc-dtp-2027": {
    "institutions": [
@@ -707,7 +707,7 @@
     }
    ],
    "scanned": 200,
-   "checked": "2026-11-24"
+   "checked": "2026-11-25"
   },
   "scout-bbsrc-nwdp-2027": {
    "institutions": [
@@ -878,7 +878,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-24"
+   "checked": "2026-11-25"
   },
   "scout-wessex-one-health-2027": {
    "institutions": [
@@ -1058,7 +1058,7 @@
     }
    ],
    "scanned": 300,
-   "checked": "2026-11-24"
+   "checked": "2026-11-25"
   },
   "scout-yorkshire-bioscience-dtp-2027": {
    "institutions": [
@@ -1072,7 +1072,7 @@
      "name": "Kofi Asare‐Addo",
      "openalex": "https://openalex.org/A5065872485",
      "orcid": "https://orcid.org/0000-0001-6824-5336",
-     "score": 66.5,
+     "score": 66.3,
      "n": 37,
      "papers": [
       {
@@ -1101,7 +1101,7 @@
      "name": "Barbara R. Conway",
      "openalex": "https://openalex.org/A5069035256",
      "orcid": "https://orcid.org/0000-0001-5570-3318",
-     "score": 51.9,
+     "score": 51.7,
      "n": 28,
      "papers": [
       {
@@ -1130,7 +1130,7 @@
      "name": "Muhammad Usman Ghori",
      "openalex": "https://openalex.org/A5072701255",
      "orcid": "https://orcid.org/0000-0003-1884-6648",
-     "score": 31.7,
+     "score": 31.6,
      "n": 15,
      "papers": [
       {
@@ -1159,7 +1159,7 @@
      "name": "Adeola O. Adebisi",
      "openalex": "https://openalex.org/A5077234561",
      "orcid": "https://orcid.org/0000-0003-1658-148X",
-     "score": 23.1,
+     "score": 23.0,
      "n": 8,
      "papers": [
       {
@@ -1188,7 +1188,7 @@
      "name": "Peter Timmins",
      "openalex": "https://openalex.org/A5038330603",
      "orcid": "https://orcid.org/0000-0002-5840-0678",
-     "score": 15.2,
+     "score": 15.1,
      "n": 11,
      "papers": [
       {
@@ -1235,7 +1235,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-24"
+   "checked": "2026-11-25"
   },
   "r7a2d11435fb1": {
    "institutions": [
@@ -1417,7 +1417,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-24"
+   "checked": "2026-11-25"
   },
   "r7fc83e53cb75": {
    "institutions": [
@@ -1494,7 +1494,7 @@
      "name": "Paul De Bank",
      "openalex": "https://openalex.org/A5078294887",
      "orcid": "https://orcid.org/0000-0002-5717-7486",
-     "score": 7.5,
+     "score": 7.6,
      "n": 3,
      "papers": [
       {
@@ -1599,7 +1599,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-24"
+   "checked": "2026-11-25"
   },
   "r9b397dc7918b": {
    "institutions": [
@@ -1676,7 +1676,7 @@
      "name": "Paul De Bank",
      "openalex": "https://openalex.org/A5078294887",
      "orcid": "https://orcid.org/0000-0002-5717-7486",
-     "score": 7.5,
+     "score": 7.6,
      "n": 3,
      "papers": [
       {
@@ -1781,7 +1781,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-24"
+   "checked": "2026-11-25"
   },
   "r580fc454e725": {
    "institutions": [
@@ -1853,7 +1853,7 @@
      "name": "Janet J. Maguire",
      "openalex": "https://openalex.org/A5019791662",
      "orcid": "https://orcid.org/0000-0002-9254-7040",
-     "score": 4.3,
+     "score": 4.4,
      "n": 4,
      "papers": [
       {
@@ -1952,7 +1952,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-24"
+   "checked": "2026-11-25"
   },
   "rbdf39371b01a": {
    "institutions": [],
@@ -1986,7 +1986,7 @@
     }
    ],
    "scanned": 0,
-   "checked": "2026-11-24"
+   "checked": "2026-11-25"
   }
  },
  "universities": {

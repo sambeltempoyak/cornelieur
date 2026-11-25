@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T07:27:56+00:00",
+ "updated": "2026-11-25T07:31:32+00:00",
  "count": 7,
  "sources": [
   {
@@ -24,18 +24,6 @@
   },
   {
    "name": "Royal Holloway",
-   "count": 1
-  },
-  {
-   "name": "LSHTM",
-   "count": 1
-  },
-  {
-   "name": "LSHTM",
-   "count": 1
-  },
-  {
-   "name": "LSHTM",
    "count": 1
   }
  ],
@@ -462,7 +450,7 @@
   },
   {
    "name": "LSHTM · Academic",
-   "count": 1,
+   "count": 0,
    "ok": true
   },
   {
@@ -477,7 +465,7 @@
   },
   {
    "name": "LSHTM · Epidemiology and Population Health",
-   "count": 1,
+   "count": 0,
    "ok": true
   },
   {
@@ -542,7 +530,7 @@
   },
   {
    "name": "LSHTM · Department of Infectious Disease Epidemiology and Dynamics",
-   "count": 1,
+   "count": 0,
    "ok": true
   },
   {
