@@ -1,6 +1,6 @@
 {
  "_help": "Written by scripts/update_people.py from OpenAlex publication records. People who publish on Ocha's topics at each university; NOT a list of who takes PhD students. The weekly scout verifies.",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "version": 2,
  "source": "OpenAlex (openalex.org)",
  "items": {
@@ -21,7 +21,7 @@
      "name": "Gareth R. Williams",
      "openalex": "https://openalex.org/A5073999918",
      "orcid": "https://orcid.org/0000-0002-3066-2860",
-     "score": 10.0,
+     "score": 9.9,
      "n": 4,
      "papers": [
       {
@@ -137,7 +137,7 @@
      "name": "Robert S. Heyderman",
      "openalex": "https://openalex.org/A5034013271",
      "orcid": "https://orcid.org/0000-0003-4573-449X",
-     "score": 6.8,
+     "score": 6.7,
      "n": 6,
      "papers": [
       {
@@ -184,7 +184,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-25"
+   "checked": "2026-11-26"
   },
   "scout-cambridge-bbsrc-dtp-2027": {
    "institutions": [
@@ -310,29 +310,23 @@
      "institution": "University of Cambridge"
     },
     {
-     "name": "Stephen G. Baker",
-     "openalex": "https://openalex.org/A5028534327",
-     "orcid": "https://orcid.org/0000-0003-1308-5755",
-     "score": 5.8,
-     "n": 8,
+     "name": "David Fairen‐Jiménez",
+     "openalex": "https://openalex.org/A5081651773",
+     "orcid": "https://orcid.org/0000-0002-5013-1194",
+     "score": 6.1,
+     "n": 2,
      "papers": [
       {
-       "title": "Mobility of antimicrobial resistance across serovars and disease presentations in non-typhoidal Salmonella from animals and humans in Vietnam",
-       "year": 2022,
-       "venue": "Microbial Genomics",
-       "link": "https://doi.org/10.1099/mgen.0.000798"
+       "title": "Drug Delivery With Metal–Organic Frameworks",
+       "year": 2026,
+       "venue": "Angewandte Chemie Novit",
+       "link": "https://doi.org/10.1002/anov.70037"
       },
       {
-       "title": "Antimicrobial resistance in commensal Escherichia coli from humans and chickens in the Mekong Delta of Vietnam is driven by antimicrobial usage and potential cross-species transmission",
-       "year": 2022,
-       "venue": "JAC-Antimicrobial Resistance",
-       "link": "https://doi.org/10.1093/jacamr/dlac054"
-      },
-      {
-       "title": "Exploiting genomics to mitigate the public health impact of antimicrobial resistance",
-       "year": 2022,
-       "venue": "Genome Medicine",
-       "link": "https://doi.org/10.1186/s13073-022-01020-2"
+       "title": "Guiding the rational design of biocompatible metal-organic frameworks for drug delivery",
+       "year": 2025,
+       "venue": "Matter",
+       "link": "https://doi.org/10.1016/j.matt.2025.101958"
       }
      ],
      "senior_hint": true,
@@ -360,7 +354,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-25"
+   "checked": "2026-11-26"
   },
   "scout-kcl-mrc-dtp-2027": {
    "institutions": [
@@ -379,8 +373,8 @@
      "name": "Khondaker Miraz Rahman",
      "openalex": "https://openalex.org/A5006583391",
      "orcid": "https://orcid.org/0000-0001-8566-8648",
-     "score": 8.6,
-     "n": 7,
+     "score": 7.9,
+     "n": 6,
      "papers": [
       {
        "title": "MaxViT-Backbone Mask R-CNN for Bacterial Cell Detection and Instance Segmentation: Toward Antimicrobial Resistance Analysis",
@@ -424,7 +418,7 @@
        "link": "https://doi.org/10.1016/j.jconrel.2023.06.001"
       },
       {
-       "title": "Green synthesis of methoxy-poly(ethylene glycol)- block -poly( l -lactide- co -glycolide) copolymer using zinc proline as a biocompatible initiator for irinotecan delivery to colon cancer in vivo",
+       "title": "Green synthesis of methoxy-poly(ethylene glycol)- block -poly(l -lactide- co -glycolide) copolymer using zinc proline as a biocompatible initiator for irinotecan delivery to colon cancer in vivo",
        "year": 2021,
        "venue": "Biomaterials Science",
        "link": "https://doi.org/10.1039/d0bm01421d"
@@ -524,7 +518,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-25"
+   "checked": "2026-11-26"
   },
   "scout-nottingham-bbsrc-dtp-2027": {
    "institutions": [
@@ -540,6 +534,35 @@
     "pharmacokinetics"
    ],
    "people": [
+    {
+     "name": "Dmitry V. Volodkin",
+     "openalex": "https://openalex.org/A5083341771",
+     "orcid": "https://orcid.org/0000-0001-7474-5329",
+     "score": 15.6,
+     "n": 10,
+     "papers": [
+      {
+       "title": "Calcium carbonate in drug delivery: functional carrier design, applications, and data-driven perspectives",
+       "year": 2025,
+       "venue": "Expert Opinion on Drug Delivery",
+       "link": "https://doi.org/10.1080/17425247.2025.2587907"
+      },
+      {
+       "title": "Hydrophilic carriers for encapsulation of hydrophobic drug cannabidiol: Vaterite CaCO3 crystals and multilayer microgels made of sustainable polymers",
+       "year": 2026,
+       "venue": "Biomaterials Advances",
+       "link": "https://doi.org/10.1016/j.bioadv.2026.214906"
+      },
+      {
+       "title": "Encapsulation Strategy Matters: Pre- and Post-Loading of Macromolecules into Surface-Supported Microgels Formed via Vaterite Templates",
+       "year": 2025,
+       "venue": "ACS Materials Au",
+       "link": "https://doi.org/10.1021/acsmaterialsau.5c00099"
+      }
+     ],
+     "senior_hint": true,
+     "institution": "Nottingham Trent University"
+    },
     {
      "name": "Mahdi Bodaghi",
      "openalex": "https://openalex.org/A5043306953",
@@ -628,35 +651,6 @@
      "institution": "Nottingham Trent University"
     },
     {
-     "name": "Dmitry V. Volodkin",
-     "openalex": "https://openalex.org/A5083341771",
-     "orcid": "https://orcid.org/0000-0001-7474-5329",
-     "score": 12.8,
-     "n": 9,
-     "papers": [
-      {
-       "title": "Calcium carbonate in drug delivery: functional carrier design, applications, and data-driven perspectives",
-       "year": 2025,
-       "venue": "Expert Opinion on Drug Delivery",
-       "link": "https://doi.org/10.1080/17425247.2025.2587907"
-      },
-      {
-       "title": "Hydrophilic carriers for encapsulation of hydrophobic drug cannabidiol: Vaterite CaCO3 crystals and multilayer microgels made of sustainable polymers",
-       "year": 2026,
-       "venue": "Biomaterials Advances",
-       "link": "https://doi.org/10.1016/j.bioadv.2026.214906"
-      },
-      {
-       "title": "Encapsulation Strategy Matters: Pre- and Post-Loading of Macromolecules into Surface-Supported Microgels Formed via Vaterite Templates",
-       "year": 2025,
-       "venue": "ACS Materials Au",
-       "link": "https://doi.org/10.1021/acsmaterialsau.5c00099"
-      }
-     ],
-     "senior_hint": true,
-     "institution": "Nottingham Trent University"
-    },
-    {
      "name": "Gareth W. V. Cave",
      "openalex": "https://openalex.org/A5000847694",
      "orcid": "https://orcid.org/0000-0002-4167-1332",
@@ -707,7 +701,7 @@
     }
    ],
    "scanned": 200,
-   "checked": "2026-11-25"
+   "checked": "2026-11-26"
   },
   "scout-bbsrc-nwdp-2027": {
    "institutions": [
@@ -878,7 +872,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-25"
+   "checked": "2026-11-26"
   },
   "scout-wessex-one-health-2027": {
    "institutions": [
@@ -895,7 +889,7 @@
      "name": "Ali Nokhodchi",
      "openalex": "https://openalex.org/A5023571572",
      "orcid": "https://orcid.org/0000-0002-3244-2482",
-     "score": 40.9,
+     "score": 41.0,
      "n": 25,
      "papers": [
       {
@@ -1058,7 +1052,7 @@
     }
    ],
    "scanned": 300,
-   "checked": "2026-11-25"
+   "checked": "2026-11-26"
   },
   "scout-yorkshire-bioscience-dtp-2027": {
    "institutions": [
@@ -1072,8 +1066,8 @@
      "name": "Kofi Asare‐Addo",
      "openalex": "https://openalex.org/A5065872485",
      "orcid": "https://orcid.org/0000-0001-6824-5336",
-     "score": 66.3,
-     "n": 37,
+     "score": 64.8,
+     "n": 36,
      "papers": [
       {
        "title": "Chitosan nanoparticles for nasal drug delivery",
@@ -1101,8 +1095,8 @@
      "name": "Barbara R. Conway",
      "openalex": "https://openalex.org/A5069035256",
      "orcid": "https://orcid.org/0000-0001-5570-3318",
-     "score": 51.7,
-     "n": 28,
+     "score": 50.7,
+     "n": 27,
      "papers": [
       {
        "title": "Drug delivery and formulation development of hesperidin: a systematic review",
@@ -1159,8 +1153,8 @@
      "name": "Adeola O. Adebisi",
      "openalex": "https://openalex.org/A5077234561",
      "orcid": "https://orcid.org/0000-0003-1658-148X",
-     "score": 23.0,
-     "n": 8,
+     "score": 22.0,
+     "n": 7,
      "papers": [
       {
        "title": "Electrospun core-sheath nanofibers for transdermal drug delivery with combined UV imaging analysis",
@@ -1235,7 +1229,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-25"
+   "checked": "2026-11-26"
   },
   "r7a2d11435fb1": {
    "institutions": [
@@ -1341,7 +1335,7 @@
      "name": "Dov  Joseph Stekel",
      "openalex": "https://openalex.org/A5069506221",
      "orcid": "https://orcid.org/0000-0002-2492-8079",
-     "score": 8.3,
+     "score": 8.4,
      "n": 8,
      "papers": [
       {
@@ -1417,7 +1411,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-25"
+   "checked": "2026-11-26"
   },
   "r7fc83e53cb75": {
    "institutions": [
@@ -1599,7 +1593,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-25"
+   "checked": "2026-11-26"
   },
   "r9b397dc7918b": {
    "institutions": [
@@ -1781,7 +1775,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-25"
+   "checked": "2026-11-26"
   },
   "r580fc454e725": {
    "institutions": [
@@ -1853,7 +1847,7 @@
      "name": "Janet J. Maguire",
      "openalex": "https://openalex.org/A5019791662",
      "orcid": "https://orcid.org/0000-0002-9254-7040",
-     "score": 4.4,
+     "score": 4.3,
      "n": 4,
      "papers": [
       {
@@ -1952,41 +1946,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-25"
-  },
-  "rbdf39371b01a": {
-   "institutions": [],
-   "topics": [
-    "drug delivery",
-    "pharmaceutics",
-    "formulation",
-    "nanoparticles",
-    "biopharmaceutics",
-    "pharmacokinetics"
-   ],
-   "people": [],
-   "reading": [
-    {
-     "title": "Technologies and Formulation Design of Polysaccharide-Based Hydrogels for Drug Delivery",
-     "authors": "Giulia Auriemma et al.",
-     "year": 2020,
-     "link": "https://doi.org/10.3390/molecules25143156",
-     "venue": "Molecules",
-     "level": "start",
-     "why": "Well-cited open-access review: a readable overview of the topic before you write to anyone."
-    },
-    {
-     "title": "Pharmaceutical and drug delivery applications of pectin and its modified nanocomposites",
-     "authors": "Welela Meka Kedir et al.",
-     "year": 2022,
-     "link": "https://doi.org/10.1016/j.heliyon.2022.e10654",
-     "venue": "Heliyon",
-     "level": "start",
-     "why": "Well-cited open-access review: a readable overview of the topic before you write to anyone."
-    }
-   ],
-   "scanned": 0,
-   "checked": "2026-11-25"
+   "checked": "2026-11-26"
   }
  },
  "universities": {
@@ -4320,8 +4280,8 @@
   }
  },
  "report": {
-  "phds": 12,
-  "calls": 47,
+  "phds": 11,
+  "calls": 46,
   "failed": 0
  }
 }

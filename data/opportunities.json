@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T07:31:32+00:00",
+ "updated": "2026-11-26T07:30:33+00:00",
  "count": 7,
  "sources": [
   {
@@ -16,14 +16,6 @@
   },
   {
    "name": "Univ. of Bath",
-   "count": 1
-  },
-  {
-   "name": "Royal Holloway",
-   "count": 1
-  },
-  {
-   "name": "Royal Holloway",
    "count": 1
   }
  ],
@@ -360,7 +352,7 @@
   },
   {
    "name": "Royal Holloway · Research",
-   "count": 1,
+   "count": 0,
    "ok": true
   },
   {
@@ -410,7 +402,7 @@
   },
   {
    "name": "Royal Holloway · Department of Biological Sciences",
-   "count": 1,
+   "count": 0,
    "ok": true
   },
   {
