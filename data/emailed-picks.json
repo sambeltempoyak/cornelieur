@@ -1,3 +1,19 @@
 [
-  {"date": "2026-11-19", "id": "scout-lido-dtp-2027", "title": "LIDo BBSRC Doctoral Training Partnership: fully funded biosciences PhDs (2027 entry)", "org": "London Interdisciplinary Biosciences Consortium (LIDo), admissions via UCL", "link": "https://www.lido-dtp.ac.uk/apply"}
+ {
+  "date": "2026-11-19",
+  "id": "scout-lido-dtp-2027",
+  "title": "LIDo BBSRC Doctoral Training Partnership: fully funded biosciences PhDs (2027 entry)",
+  "org": "London Interdisciplinary Biosciences Consortium (LIDo), admissions via UCL",
+  "link": "https://www.lido-dtp.ac.uk/apply"
+ },
+ {
+  "date": "2026-11-26",
+  "kind": "new",
+  "id": "scout-reading-intl-phd-studentship-2027",
+  "title": "University of Reading International PhD Studentships (October 2027 entry)",
+  "org": "University of Reading, Doctoral and Researcher College",
+  "link": "https://www.reading.ac.uk/doctoral-researcher-college/funding/phd-studentships/international-phd-studentships",
+  "verse": "",
+  "joke": "pharmacy: A tablet asked a capsule why"
+ }
 ]
