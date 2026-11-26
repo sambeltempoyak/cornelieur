@@ -1,145 +1,1031 @@
 {
-  "_help": "Written by the weekly Claude scout (docs/weekly-scout-prompt.md). Same item format as opportunities.json, plus optional 'why', 'steps' and, for PhDs, 'research' (supervisors, publications, reading, angle). Top-level 'enrich' maps robot item ids to a research object.",
-  "updated": "2026-11-19",
-  "items": [
-    {
-      "id": "scout-lido-dtp-2027",
-      "title": "LIDo BBSRC Doctoral Training Partnership: fully funded biosciences PhDs (2027 entry)",
-      "org": "London Interdisciplinary Biosciences Consortium (LIDo), admissions via UCL",
-      "link": "https://www.lido-dtp.ac.uk/apply",
-      "type": "phd",
-      "summary": "London consortium offering about 26 four-year BBSRC studentships a year across DTP and iCASE routes, with a stipend at the UKRI London rate. Up to 7 places cover full overseas fees for international students; visa and relocation costs are not covered. Needs a first/high 2:1 or a relevant Master's and IELTS 7.0 (6.5 per part).",
-      "deadline": "2026-12-01",
-      "location": "London",
-      "source": "found by weekly scout",
-      "intl": true,
-      "published": "2026-11-19",
-      "why": "London-based, King's Institute of Pharmaceutical Science recruits PhD students through LIDo, and her Master's meets the entry bar.",
-      "steps": [
-        "Today: browse the LIDo 2027 project list and shortlist rotations linked to drug delivery, pharmacology or antimicrobials (KCL/UCL groups)",
-        "Check the IELTS 7.0 requirement or whether her MSc counts as English evidence",
-        "Draft the personal statement around her pharmaceutics MSc and why interdisciplinary bioscience",
-        "Line up two referees now and ask them to submit early",
-        "Submit before 17:00 UK time on 1 Dec 2026"
-      ]
-    },
-    {
-      "id": "scout-cambridge-bbsrc-dtp-2027",
-      "title": "Cambridge BBSRC DTP PhD in Biological Sciences (Targeted and iCASE projects, 2027 entry)",
-      "org": "University of Cambridge",
-      "link": "https://bbsrcdtp.lifesci.cam.ac.uk/how-apply",
-      "type": "phd",
-      "summary": "About 25 fully funded studentships (stipend about £21,805 plus fees). Up to 30% go to international candidates, and for them the student visa and health surcharge are also covered. Apply through the Cambridge Applicant Portal choosing up to two projects.",
-      "deadline": "2026-12-08",
-      "location": "Cambridge",
-      "source": "found by weekly scout",
-      "intl": true,
-      "published": "2026-11-19",
-      "why": "One of the few UK studentships that pays visa and IHS costs for international students; iCASE project ics27-san-ml1 is about drug action.",
-      "steps": [
-        "Read the Targeted and iCASE project lists and pick two (e.g. ics27-san-ml1, extracellular vesicle assays for drug action)",
-        "Email the project supervisors with a short CV and one paragraph of interest this week",
-        "Write a statement of interest for each project and answer the short questions",
-        "Ask two referees to submit before 8 Dec 2026",
-        "Submit on the Applicant Portal by 8 Dec 2026"
-      ]
-    },
-    {
-      "id": "scout-kcl-mrc-dtp-2027",
-      "title": "King's College London MRC DTP studentships (2027 entry)",
-      "org": "King's College London",
-      "link": "https://kcl-mrcdtp.com/apply/application-timeline/",
-      "type": "phd",
-      "summary": "Fully funded MRC studentships (fees, stipend, bench fee) at King's; home, EU and international students can apply, with roughly 10 places a year shared by EU/international applicants. Overseas students pay their own visa and IHS. Stage 1 runs 11 to 27 Jan 2027.",
-      "deadline": "2027-01-27",
-      "location": "London",
-      "source": "found by weekly scout",
-      "intl": true,
-      "published": "2026-11-19",
-      "why": "King's pharmaceutical science is on her university list and uses the MRC DTP as a main funding route.",
-      "steps": [
-        "Before Christmas: browse the 2027 project list when it is published and shortlist pharmacology/drug delivery projects",
-        "Contact one or two supervisors in December with a CV",
-        "Budget about £4,000 for visa plus IHS, since the DTP does not cover them",
-        "Submit Stage 1 between 11 Jan (13:00) and 27 Jan 2027 (13:00)"
-      ]
-    },
-    {
-      "id": "scout-nottingham-bbsrc-dtp-2027",
-      "title": "Nottingham BBSRC Doctoral Training Programme (2027 entry)",
-      "org": "University of Nottingham / Nottingham Trent University",
-      "link": "https://www.nottingham.ac.uk/bbdtp/documents/dla-recruitment/2027-applicant-guidance.pdf",
-      "type": "phd",
-      "summary": "Up to 30 four-year studentships covering fees and UKRI stipend. International applicants can apply (max 30% of the cohort) and successful ones get a scholarship covering the gap between home and international fees; visa and IHS not covered. Apply to one research cluster.",
-      "deadline": "2026-12-08",
-      "location": "Nottingham",
-      "source": "found by weekly scout",
-      "intl": true,
-      "published": "2026-11-19",
-      "why": "Nottingham is a strong pharmacy school on her list and the fee gap is covered for international winners.",
-      "steps": [
-        "Pick the one research cluster closest to pharmaceutics/biotech",
-        "Apply on the Nottingham portal naming the BBSRC DTP as research topic",
-        "Complete the Microsoft Form with the application number",
-        "Deadline 12 noon UK time, 8 Dec 2026; interviews week of 1 Feb 2027"
-      ]
-    },
-    {
-      "id": "scout-bbsrc-nwdp-2027",
-      "title": "BBSRC North West Doctoral Programme in Bioscience (2027/28 entry)",
-      "org": "University of Manchester (with Liverpool)",
-      "link": "https://www.bmh.manchester.ac.uk/study/research/funding-fees/funded-programmes/bbsrc-nwdp/",
-      "type": "phd",
-      "summary": "Four-year fully funded studentships (fees and UKRI stipend). Non-UK applicants can apply but full awards for international students are limited to exceptional candidates.",
-      "deadline": "2026-12-04",
-      "location": "Manchester / Liverpool",
-      "source": "found by weekly scout",
-      "intl": true,
-      "published": "2026-11-19",
-      "why": "Manchester and Liverpool are on her list and both have drug delivery groups; international applicants are eligible.",
-      "steps": [
-        "Check the NWDP project list for drug delivery, biotech or antimicrobial projects",
-        "Confirm English language evidence meets the requirement",
-        "Submit by 4 Dec 2026"
-      ]
-    },
-    {
-      "id": "scout-wessex-one-health-2027",
-      "title": "Wessex One Health BBSRC Doctoral Landscape Award scholarships (infection biosciences, 2027)",
-      "org": "University of Surrey, University of Sussex, University of Exeter and partner institutes",
-      "link": "https://www.sussex.ac.uk/study/fees-funding/phd-funding/view/1995-Wessex-One-Health-BBSRC-Doctoral-Landscape-Award-scholarships",
-      "type": "phd",
-      "summary": "Four-year scholarships in infection biosciences, including microbial evolution and drug resistance. Open to UK and international applicants (up to 30% international, with fees covered). Projects hosted at Dstl, UKHSA, APHA or Pirbright have UK residency rules, so pick university-hosted projects.",
-      "deadline": "2027-01-11",
-      "location": "Guildford / Brighton / Exeter",
-      "source": "found by weekly scout",
-      "intl": true,
-      "published": "2026-11-19",
-      "why": "Antimicrobial/drug-resistance theme fits her biotech and pharmaceutics background, and international fees are covered.",
-      "steps": [
-        "Filter the project list to university-hosted projects (avoid Dstl/UKHSA/APHA/Pirbright residency rules)",
-        "Shortlist projects on drug resistance or antimicrobials",
-        "Apply on the Wessex One Health form (not the Sussex form) by midday 11 Jan 2027"
-      ]
-    },
-    {
-      "id": "scout-yorkshire-bioscience-dtp-2027",
-      "title": "Yorkshire Bioscience DTP 2027, incl. 'A modular adhiron-VLP platform for targeted molecular delivery' (Huddersfield)",
-      "org": "Yorkshire Bioscience DTP (University of Huddersfield project)",
-      "link": "https://www.yorkshirebiosciencedtp.ac.uk/apply/",
-      "type": "phd",
-      "summary": "BBSRC DTP open for 2027 entry via an expression of interest form; one listed project at Huddersfield builds virus-like particles for targeted delivery. A very limited number of international bursaries exist and they are extremely competitive; visa and IHS are not covered.",
-      "deadline": null,
-      "location": "Huddersfield (and other Yorkshire universities)",
-      "source": "found by weekly scout",
-      "intl": true,
-      "published": "2026-11-19",
-      "why": "The VLP project is squarely targeted drug delivery, her core subject, though international places are very scarce.",
-      "steps": [
-        "Confirm the expression of interest deadline on the DTP site (a secondary site says 6 Jan 2027; not verified)",
-        "Email the project supervisor at Huddersfield to ask about international eligibility",
-        "Submit the expression of interest naming this project"
-      ]
-    }
-  ]
+ "_help": "Written by the weekly Claude scout (docs/weekly-scout-prompt.md). Same item format as opportunities.json, plus optional 'why', 'steps' and, for PhDs, 'research' (supervisors, publications, reading, angle). Top-level 'enrich' maps robot item ids to a research object.",
+ "updated": "2026-11-26",
+ "items": [
+  {
+   "id": "scout-lido-dtp-2027",
+   "title": "LIDo BBSRC Doctoral Training Partnership: fully funded biosciences PhDs (2027 entry)",
+   "org": "London Interdisciplinary Biosciences Consortium (LIDo), admissions via UCL",
+   "link": "https://www.lido-dtp.ac.uk/apply",
+   "type": "phd",
+   "summary": "London consortium offering about 26 four-year BBSRC studentships, with a stipend at the UKRI London rate (£23,805). Up to 7 places cover full overseas fees for international students; visa and relocation costs are not covered. Needs a first/high 2:1 or a relevant Master's and IELTS 7.0 (6.5 per part); closes 1 Dec 2026 at 17:00.",
+   "deadline": "2026-12-01",
+   "location": "London",
+   "source": "found by weekly scout",
+   "intl": true,
+   "published": "2026-11-19",
+   "why": "London-based, King's Institute of Pharmaceutical Science recruits PhD students through LIDo, and her Master's meets the entry bar.",
+   "steps": [
+    "Today: browse the LIDo 2027 project list and shortlist rotations linked to drug delivery, pharmacology or antimicrobials (KCL/UCL groups)",
+    "Check the IELTS 7.0 requirement or whether her MSc counts as English evidence",
+    "Draft the personal statement around her pharmaceutics MSc and why interdisciplinary bioscience",
+    "Line up two referees now and ask them to submit early",
+    "Submit before 17:00 UK time on 1 Dec 2026"
+   ],
+   "research": {
+    "checked": "2026-11-26",
+    "angle": "My MSc in Biotechnology and Pharmaceutics trained me in formulation and nanoparticle carriers; I would like to apply that to polymer and nanoscale delivery systems such as the electrospun fibres and printed dosage forms developed at the UCL School of Pharmacy.",
+    "supervisors": [
+     {
+      "name": "Dr Gareth R. Williams",
+      "role": "Senior Lecturer (as stated on the UCL page)",
+      "dept": "UCL School of Pharmacy, University College London",
+      "profile": "https://www.ucl.ac.uk/pharmacy/people/dr-gareth-williams",
+      "focus": "Electrospun and electrosprayed polymer systems for solubility and extended release, layered hydroxide carriers and vaccine adjuvants; UCL is a LIDo partner (not confirmed in the 2027 project list)."
+     },
+     {
+      "name": "Prof Abdul W. Basit",
+      "role": "Professor of Pharmaceutics",
+      "dept": "UCL School of Pharmacy, University College London",
+      "profile": "https://www.ucl.ac.uk/pharmacy/people/professor-abdul-basit",
+      "focus": "Oral drug delivery, gut microbiome and 3D printing of medicines; leads a large group with PhD students (not confirmed in the 2027 project list)."
+     }
+    ],
+    "publications": [
+     {
+      "title": "Thermoresponsive electrospun fibres for anticancer drug delivery",
+      "by": "Fatimah & Williams",
+      "venue": "Next Materials",
+      "year": 2025,
+      "link": "https://doi.org/10.1016/j.nxmate.2025.100492"
+     },
+     {
+      "title": "Layered terbium hydroxides for simultaneous drug delivery and imaging",
+      "by": "Strimaite, Harman, Duan, Wang, Davies & Williams",
+      "venue": "Dalton Transactions",
+      "year": 2021,
+      "link": "https://doi.org/10.1039/d1dt01251g"
+     },
+     {
+      "title": "Inkjet Printing of Pharmaceuticals",
+      "by": "Carou-Senra, Rodríguez-Pombo, Awad, Basit, Alvarez-Lorenzo & Goyanes",
+      "venue": "Advanced Materials",
+      "year": 2023,
+      "link": "https://doi.org/10.1002/adma.202309164"
+     },
+     {
+      "title": "Semi-solid extrusion 3D printing in drug delivery and biomedicine: Personalised solutions for healthcare challenges",
+      "by": "Seoane-Viaño, Januskaite, Alvarez-Lorenzo, Basit & Goyanes",
+      "venue": "Journal of Controlled Release",
+      "year": 2021,
+      "link": "https://doi.org/10.1016/j.jconrel.2021.02.027"
+     }
+    ],
+    "reading": [
+     {
+      "title": "Characterisation of polymeric nanoparticles for drug delivery",
+      "authors": "Floyd et al.",
+      "year": 2025,
+      "link": "https://doi.org/10.1039/d5nr00071h",
+      "level": "start",
+      "why": "Open-access review co-written at UCL on the characterisation methods any nanocarrier project uses."
+     },
+     {
+      "title": "Technologies and Formulation Design of Polysaccharide-Based Hydrogels for Drug Delivery",
+      "authors": "Auriemma et al.",
+      "year": 2020,
+      "link": "https://doi.org/10.3390/molecules25143156",
+      "level": "start",
+      "why": "Readable open-access overview of formulation design for polymer delivery systems."
+     },
+     {
+      "title": "Semi-solid extrusion 3D printing in drug delivery and biomedicine: Personalised solutions for healthcare challenges",
+      "authors": "Seoane-Viaño et al.",
+      "year": 2021,
+      "link": "https://doi.org/10.1016/j.jconrel.2021.02.027",
+      "level": "deeper",
+      "why": "The Basit group's approach to printed personalised dosage forms; free accepted manuscript on UCL Discovery."
+     },
+     {
+      "title": "Layered terbium hydroxides for simultaneous drug delivery and imaging",
+      "authors": "Strimaite et al.",
+      "year": 2021,
+      "link": "https://doi.org/10.1039/d1dt01251g",
+      "level": "deeper",
+      "why": "Open-access example of Williams' inorganic carrier work, useful for a first email."
+     }
+    ]
+   }
+  },
+  {
+   "id": "scout-reading-intl-phd-studentship-2027",
+   "title": "University of Reading International PhD Studentships (October 2027 entry)",
+   "org": "University of Reading, Doctoral and Researcher College",
+   "link": "https://www.reading.ac.uk/doctoral-researcher-college/funding/phd-studentships/international-phd-studentships",
+   "type": "scholarship",
+   "summary": "A university-wide competition only for applicants who pay international fees. It covers international tuition for up to four years, a stipend broadly at the UKRI rate (£21,805 in 2026/27) for Reading-based students and £1,000 a year for training; visa and IHS costs are not covered. Each School nominates one candidate, who then writes a short research proposal.",
+   "deadline": "2027-01-15",
+   "location": "Reading, UK",
+   "source": "found by weekly scout",
+   "intl": true,
+   "published": "2026-11-26",
+   "why": "Fully funded and written for international students, and Reading's pharmacy school does pharmaceutics, so she can propose her own drug delivery topic.",
+   "steps": [
+    "Shortlist 1-2 Reading pharmacy academics in pharmaceutics/drug delivery and email them a short project idea with her CV in December",
+    "Apply for a PhD place on the Reading admissions portal and write 'International Research Studentship Competition' in the scholarships box",
+    "Fill in the separate studentship application form linked from the page",
+    "Submit both by 15 Jan 2027, then prepare the short proposal in case the School nominates her",
+    "Budget for visa and IHS, which the award does not cover"
+   ]
+  },
+  {
+   "id": "scout-ucl-amr-cdt-2027",
+   "title": "PhD Studentships in Engineering Solutions for Antimicrobial Resistance (EPSRC/BBSRC CDT, 2027 entry)",
+   "org": "UCL – EPSRC & BBSRC Centre for Doctoral Training in Engineering Solutions for AMR",
+   "link": "https://www.jobs.ac.uk/job/DTO944/",
+   "type": "phd",
+   "summary": "A four-year, fully funded UKRI PhD programme at UCL with nine 2027 projects; the 'Novel Therapies' ones (antibiotic-sensitising enzyme inhibitors, antibacterial peptide pseudo-capsids, a mycobacterial drug target) suit her best. International applicants are welcome, but places are limited and offers depend on the host university agreeing a fee waiver.",
+   "deadline": "2026-12-13",
+   "location": "London (UCL)",
+   "source": "found by weekly scout",
+   "intl": true,
+   "published": "2026-11-10",
+   "why": "Antimicrobial therapeutics in London, with a lead supervisor whose group also works on liposomal antibiotic delivery.",
+   "steps": [
+    "Read the 'Available Projects' page and rank 2-3 Novel Therapies projects",
+    "Email Dr Castagnolo before applying, linking her MSc formulation work to the group's liposome antibiotic delivery paper",
+    "Ask the CDT team how many international places there are and how the fee waiver works",
+    "Draft the application form answers now",
+    "Submit by 23:59 on 13 Dec 2026 (interviews in Feb 2027)"
+   ],
+   "research": {
+    "checked": "2026-11-26",
+    "angle": "My MSc in Biotechnology and Pharmaceutics gave me formulation and microbiology-assay skills that fit the Castagnolo group's work on making antibiotics work again against Gram-negative and mycobacterial bacteria, including liposome-based delivery of moxifloxacin.",
+    "supervisors": [
+     {
+      "name": "Dr Daniele Castagnolo",
+      "role": "Academic staff, Organic Chemistry & Chemical Biology",
+      "dept": "Department of Chemistry, UCL",
+      "profile": "https://www.ucl.ac.uk/chemistry/people/academic-staff",
+      "focus": "Antibacterial and antitubercular medicinal chemistry and antibiotic adjuvants; lead on a 2027 CDT project (cyclopropane fatty acid synthases)."
+     },
+     {
+      "name": "Dr Dimitrios Evangelopoulos",
+      "role": "Lecturer in Microbiology",
+      "dept": "UCL Eastman Dental Institute (UCL-TB network)",
+      "profile": "https://www.ucl.ac.uk/medical-sciences/divisions/infection-and-immunity/research/tuberculosis-research/about-us/people",
+      "focus": "Mycobacterial microbiology; co-supervisor on the same 2027 project."
+     },
+     {
+      "name": "Dr Rachael Dickman",
+      "role": "Academic staff",
+      "dept": "Pharmaceutical & Biological Chemistry, UCL School of Pharmacy",
+      "profile": "https://www.ucl.ac.uk/pharmacy/research/pharmaceutical-biological-chemistry",
+      "focus": "Peptide assemblies; co-supervisor on the 2027 antibacterial peptide pseudo-capsid project."
+     }
+    ],
+    "publications": [
+     {
+      "title": "Liposome-siderophore conjugates loaded with moxifloxacin serve as a model for drug delivery against Mycobacterium tuberculosis",
+      "by": "Maringolo Ribeiro et al., Castagnolo, Chorilli & Pavan",
+      "venue": "International Journal of Pharmaceutics",
+      "year": 2024,
+      "link": "https://doi.org/10.1016/j.ijpharm.2024.124050"
+     },
+     {
+      "title": "Development of Novel Membrane Disrupting Lipoguanidine Compounds Sensitizing Gram-Negative Bacteria to Antibiotics",
+      "by": "Kim, Hind, Fernandes et al. & Castagnolo",
+      "venue": "ACS Medicinal Chemistry Letters",
+      "year": 2024,
+      "link": "https://doi.org/10.1021/acsmedchemlett.3c00460"
+     },
+     {
+      "title": "Oxazolidinones as versatile scaffolds in medicinal chemistry",
+      "by": "Fernandes, Scarim, Kim, Wu & Castagnolo",
+      "venue": "RSC Medicinal Chemistry",
+      "year": 2023,
+      "link": "https://doi.org/10.1039/d2md00415a"
+     }
+    ],
+    "reading": [
+     {
+      "title": "Oxazolidinones as versatile scaffolds in medicinal chemistry",
+      "authors": "Fernandes et al.",
+      "year": 2023,
+      "link": "https://discovery.ucl.ac.uk/id/eprint/10168012/1/d2md00415a.pdf",
+      "level": "start",
+      "why": "Open-access review from the lead supervisor's group on a key antibiotic class."
+     },
+     {
+      "title": "Tuberculosis Drug Discovery: Challenges and New Horizons",
+      "authors": "Fernandes et al.",
+      "year": 2022,
+      "link": "https://doi.org/10.1021/acs.jmedchem.2c00227",
+      "level": "start",
+      "why": "Broad overview of TB drug discovery co-written by Castagnolo (paywalled)"
+     },
+     {
+      "title": "Liposome-siderophore conjugates loaded with moxifloxacin serve as a model for drug delivery against Mycobacterium tuberculosis",
+      "authors": "Maringolo Ribeiro et al.",
+      "year": 2024,
+      "link": "https://doi.org/10.1016/j.ijpharm.2024.124050",
+      "level": "deeper",
+      "why": "Formulation meets antimicrobials: the most direct bridge to her MSc, good for the first email (paywalled)"
+     }
+    ]
+   }
+  },
+  {
+   "id": "scout-swbio-dtp-2027",
+   "title": "SWBio BBSRC Doctoral Training Partnership – fully funded 4-year PhDs starting Sept 2027",
+   "org": "South West Biosciences DTP (Bath, Bristol, Cardiff, Exeter, UWE, Rothamsted)",
+   "link": "https://www.swbio.ac.uk/programme/projects-available",
+   "type": "phd",
+   "summary": "About 37 funded four-year BBSRC studentships across more than 130 advertised projects, including opioid receptor pharmacology and antimicrobial-production projects at Bath. Up to 30% of places go to international students, who do not pay the fee difference; visa and IHS are not covered.",
+   "deadline": "2026-12-02",
+   "location": "South West England / Cardiff",
+   "source": "found by weekly scout",
+   "intl": true,
+   "published": "2026-11-26",
+   "why": "International fees covered and real pharmacology/antimicrobial projects at Bath, but only 6 days left.",
+   "steps": [
+    "Today: read the Molecular Mechanisms & Pathways project list, especially Prof Bailey's opioid receptor project and Dr Denham's antimicrobial project",
+    "Email the chosen lead supervisor straight away with a short CV",
+    "Register on the application system and submit by midday on Wed 2 Dec 2026",
+    "Note she must start in person in Sept 2027 (no deferral)"
+   ],
+   "research": {
+    "checked": "2026-11-26",
+    "angle": "My pharmacy training in pharmacology and my MSc lab skills fit Bath's opioid receptor pharmacology work, which also studies long-acting buprenorphine, a formulation link; microbiology skills fit Denham's antimicrobial resistance research.",
+    "supervisors": [
+     {
+      "name": "Prof Chris Bailey",
+      "role": "Professor",
+      "dept": "Department of Life Sciences, University of Bath",
+      "profile": "https://researchportal.bath.ac.uk/en/persons/chris-bailey/",
+      "focus": "Opioid receptor desensitisation, tolerance and biased agonism; lead on a SWBio 2027 project."
+     },
+     {
+      "name": "Dr Emma Denham",
+      "role": "Senior Lecturer (accepting doctoral students)",
+      "dept": "Department of Life Sciences, University of Bath",
+      "profile": "https://researchportal.bath.ac.uk/en/persons/emma-denham/",
+      "focus": "Bacterial regulatory RNAs, biofilms and antimicrobial and biocide resistance; lead on a SWBio 2027 project."
+     }
+    ],
+    "publications": [
+     {
+      "title": "Electrophysiological analysis of paraventricular thalamic neurons co-expressing kappa and mu opioid receptors",
+      "by": "Kuijer, Bailey S, Heal, Smith, Wonnacott & Bailey C",
+      "venue": "Neuropharmacology",
+      "year": 2025,
+      "link": "https://doi.org/10.1016/j.neuropharm.2025.110407"
+     },
+     {
+      "title": "A novel G protein-biased agonist at the μ opioid receptor induces substantial receptor desensitisation through G protein-coupled receptor kinase",
+      "by": "Groom et al., Kelly & Bailey",
+      "venue": "British Journal of Pharmacology",
+      "year": 2023,
+      "link": "https://doi.org/10.1111/bph.15334"
+     }
+    ],
+    "reading": [
+     {
+      "title": "Opioid receptor desensitization: mechanisms and its link to tolerance",
+      "authors": "Allouche et al.",
+      "year": 2014,
+      "link": "https://www.frontiersin.org/articles/10.3389/fphar.2014.00280/full",
+      "level": "start",
+      "why": "Open-access primer on the core idea behind the Bailey project."
+     },
+     {
+      "title": "A novel G protein-biased agonist at the μ opioid receptor induces substantial receptor desensitisation through G protein-coupled receptor kinase",
+      "authors": "Groom et al.",
+      "year": 2023,
+      "link": "https://doi.org/10.1111/bph.15334",
+      "level": "deeper",
+      "why": "Recent paper showing the lab's methods, useful before an interview."
+     },
+     {
+      "title": "Electrophysiological analysis of paraventricular thalamic neurons co-expressing kappa and mu opioid receptors",
+      "authors": "Kuijer et al.",
+      "year": 2025,
+      "link": "https://doi.org/10.1016/j.neuropharm.2025.110407",
+      "level": "deeper",
+      "why": "The group's newest research."
+     }
+    ]
+   }
+  },
+  {
+   "id": "scout-kcl-mrc-dtp-2027",
+   "title": "King's College London MRC DTP studentships (2027 entry)",
+   "org": "King's College London",
+   "link": "https://kcl-mrcdtp.com/apply/application-timeline/",
+   "type": "phd",
+   "summary": "Fully funded MRC studentships (fees, stipend, bench fee) at King's; home, EU and international students can apply (up to 30% of the cohort, about 10 places). Overseas students pay their own visa and IHS. Stage 1 runs 11 to 27 Jan 2027 and the overseas form closes early once 300 applications arrive; the project catalogue is due 14 Dec.",
+   "deadline": "2027-01-27",
+   "location": "London",
+   "source": "found by weekly scout",
+   "intl": true,
+   "published": "2026-11-19",
+   "why": "King's pharmaceutical science is on her university list and uses the MRC DTP as a main funding route.",
+   "steps": [
+    "Before Christmas: browse the 2027 project list when it is published and shortlist pharmacology/drug delivery projects",
+    "Contact one or two supervisors in December with a CV",
+    "Budget about £4,000 for visa plus IHS, since the DTP does not cover them",
+    "Submit Stage 1 between 11 Jan (13:00) and 27 Jan 2027 (13:00)"
+   ],
+   "research": {
+    "checked": "2026-11-26",
+    "angle": "My MSc in Biotechnology and Pharmaceutics covered nanoparticle formulation and the stability problems that limit many drugs, which matches King's Institute of Pharmaceutical Science work on nanocarriers that improve stability and brain bioavailability.",
+    "supervisors": [
+     {
+      "name": "Prof Khuloud T. Al-Jamal",
+      "role": "Professor of Drug Delivery & Nanomedicine",
+      "dept": "Institute of Pharmaceutical Science, King's College London",
+      "profile": "https://www.kcl.ac.uk/people/khuloud-al-jamal",
+      "focus": "Translating nanocarriers (liposomes, polymers) for drugs, proteins and nucleic acids; also holds a post at HKU, so check she still takes KCL PhD students. 2027 project list due 14 Dec."
+     },
+     {
+      "name": "Prof Khondaker Miraz Rahman",
+      "role": "Professor of Medicinal Chemistry",
+      "dept": "Institute of Pharmaceutical Science, King's College London",
+      "profile": "https://kcl.ac.uk/people/miraz-rahman",
+      "focus": "Antibiotics and antifungals designed to beat efflux pumps; antimicrobial drug design rather than formulation."
+     }
+    ],
+    "publications": [
+     {
+      "title": "Intranasal administration of edaravone nanoparticles improves its stability and brain bioavailability",
+      "by": "Lu, Wang, Li, Zhu, Li, Bansal, Wang & Al-Jamal",
+      "venue": "Journal of Controlled Release",
+      "year": 2023,
+      "link": "https://doi.org/10.1016/j.jconrel.2023.06.001"
+     },
+     {
+      "title": "Covalent DNA Binding Is Essential for Gram-Negative Antibacterial Activity of Broad Spectrum Pyrrolobenzodiazepines",
+      "by": "Picconi, Hind, Sutton & Rahman",
+      "venue": "Antibiotics",
+      "year": 2022,
+      "link": "https://doi.org/10.3390/antibiotics11121770"
+     }
+    ],
+    "reading": [
+     {
+      "title": "Hydrogel design strategies for drug delivery",
+      "authors": "Dreiss",
+      "year": 2020,
+      "link": "https://doi.org/10.1016/j.cocis.2020.02.001",
+      "level": "start",
+      "why": "Accessible review by a KCL pharmaceutical science academic; free accepted manuscript on KCL Pure."
+     },
+     {
+      "title": "Technologies and Formulation Design of Polysaccharide-Based Hydrogels for Drug Delivery",
+      "authors": "Auriemma et al.",
+      "year": 2020,
+      "link": "https://doi.org/10.3390/molecules25143156",
+      "level": "start",
+      "why": "Readable open-access overview of formulation design."
+     },
+     {
+      "title": "Intranasal administration of edaravone nanoparticles improves its stability and brain bioavailability",
+      "authors": "Lu et al.",
+      "year": 2023,
+      "link": "https://doi.org/10.1016/j.jconrel.2023.06.001",
+      "level": "deeper",
+      "why": "A concrete PLGA nanoparticle formulation study close to her MSc skills (paywalled)"
+     },
+     {
+      "title": "Covalent DNA Binding Is Essential for Gram-Negative Antibacterial Activity of Broad Spectrum Pyrrolobenzodiazepines",
+      "authors": "Picconi et al.",
+      "year": 2022,
+      "link": "https://doi.org/10.3390/antibiotics11121770",
+      "level": "deeper",
+      "why": "Open-access example of Rahman's antibiotic design work, if she leans towards antimicrobials."
+     }
+    ]
+   }
+  },
+  {
+   "id": "scout-nottingham-bbsrc-dtp-2027",
+   "title": "Nottingham BBSRC Doctoral Training Programme (2027 entry)",
+   "org": "University of Nottingham / Nottingham Trent University",
+   "link": "https://www.nottingham.ac.uk/bbdtp/documents/dla-recruitment/2027-applicant-guidance.pdf",
+   "type": "phd",
+   "summary": "Up to 30 four-year studentships covering fees and UKRI stipend. International applicants can apply (max 30% of the cohort) and successful ones get a scholarship covering the gap between home and international fees; visa and IHS not covered. Apply to one research cluster.",
+   "deadline": "2026-12-08",
+   "location": "Nottingham",
+   "source": "found by weekly scout",
+   "intl": true,
+   "published": "2026-11-19",
+   "why": "Nottingham is a strong pharmacy school on her list and the fee gap is covered for international winners.",
+   "steps": [
+    "Pick the one research cluster closest to pharmaceutics/biotech",
+    "Apply on the Nottingham portal naming the BBSRC DTP as research topic",
+    "Complete the Microsoft Form with the application number",
+    "Deadline 12 noon UK time, 8 Dec 2026; interviews week of 1 Feb 2027"
+   ],
+   "research": {
+    "checked": "2026-11-26",
+    "angle": "My MSc in Biotechnology and Pharmaceutics fits the Nottingham and NTU carrier groups: degradable polyester nanocarriers (Taresco), CaCO3 microcarriers for biomolecules (Volodkin) and antimicrobial nanoparticles (Cave).",
+    "supervisors": [
+     {
+      "name": "Dr Vincenzo Taresco",
+      "role": "Nottingham Research Fellow / Assistant Professor",
+      "dept": "School of Chemistry, University of Nottingham",
+      "profile": "https://www.nottingham.ac.uk/Chemistry/people/vincenzo.taresco",
+      "focus": "Sustainable degradable polymers for drug delivery; programme partner staff (the 2027 DLA is cluster-based, no named projects)."
+     },
+     {
+      "name": "Dr Dmitry Volodkin",
+      "role": "Associate Professor",
+      "dept": "Chemistry and Forensics, Nottingham Trent University",
+      "profile": "https://www.ntu.ac.uk/staff-profiles/science-technology/dmitry-volodkin",
+      "focus": "Stimuli-responsive CaCO3-templated carriers for drugs, proteins and nucleic acids; group offers PhD research."
+     },
+     {
+      "name": "Dr Gareth Cave",
+      "role": "Academic, Chemistry",
+      "dept": "Chemistry, Nottingham Trent University",
+      "profile": "https://www.ntu.ac.uk/staff-profiles/science-technology/gareth-cave",
+      "focus": "Nanoscale drug transport vehicles and antimicrobial nanoparticle coatings; fits the 'Microbes: Friend or Foe' cluster."
+     }
+    ],
+    "publications": [
+     {
+      "title": "Poly (diglycerol adipate) variants as enhanced nanocarrier replacements in drug delivery applications",
+      "by": "Jacob et al., Howdle & Taresco",
+      "venue": "Journal of Colloid and Interface Science",
+      "year": 2023,
+      "link": "https://doi.org/10.1016/j.jcis.2023.03.124"
+     },
+     {
+      "title": "Surface-functionalised copper oxide nanoparticles: a pathway to multidrug-resistant pathogen control in medical devices",
+      "by": "Hall, Mekapothula, Coxhill, Craske, Varney, Cave & McLean",
+      "venue": "Nanomaterials",
+      "year": 2024,
+      "link": "https://doi.org/10.3390/nano14231899"
+     }
+    ],
+    "reading": [
+     {
+      "title": "Hard, Soft, and Hard-and-Soft Drug Delivery Carriers Based on CaCO3 and Alginate Biomaterials: Synthesis, Properties, Pharmaceutical Applications",
+      "authors": "Huang et al.",
+      "year": 2022,
+      "link": "https://doi.org/10.3390/pharmaceutics14050909",
+      "level": "start",
+      "why": "Open-access primer on the CaCO3 carriers at the centre of Volodkin's work."
+     },
+     {
+      "title": "Poly (diglycerol adipate) variants as enhanced nanocarrier replacements in drug delivery applications",
+      "authors": "Jacob et al.",
+      "year": 2023,
+      "link": "https://doi.org/10.1016/j.jcis.2023.03.124",
+      "level": "deeper",
+      "why": "Taresco's core polyester nanocarrier work, open access."
+     },
+     {
+      "title": "Surface-functionalised copper oxide nanoparticles: a pathway to multidrug-resistant pathogen control in medical devices",
+      "authors": "Hall et al.",
+      "year": 2024,
+      "link": "https://doi.org/10.3390/nano14231899",
+      "level": "deeper",
+      "why": "Links nanoparticle formulation with antimicrobials for the microbes cluster; open access."
+     }
+    ]
+   }
+  },
+  {
+   "id": "scout-uclbbk-mrc-dtp-2027",
+   "title": "UCL-Birkbeck MRC Doctoral Training Programme – 2027/28 entry",
+   "org": "UCL & Birkbeck, University of London (MRC DTP)",
+   "link": "https://www.uclbbk-mrcdtp.ac.uk/apply",
+   "type": "phd",
+   "summary": "A four-year MRC programme in London: three lab rotations in year one, then a chosen project, or a fixed collaborative project such as a systems pharmacology modelling project with UCB. Stipend and UK fees are paid; limited bursaries cover the international fee gap, so international applicants can apply.",
+   "deadline": "2027-01-08",
+   "location": "London (UCL / Birkbeck)",
+   "source": "found by weekly scout",
+   "intl": true,
+   "published": "2026-11-26",
+   "why": "London-based route into UCL pharmacology and pharmacometrics, with rotations to try labs first.",
+   "steps": [
+    "Join the next online information session (15 Dec 2026)",
+    "Pick a theme and look at the UCB-linked systems pharmacology project with Prof Standing",
+    "Ask admissions how many international fee bursaries there are",
+    "Submit by 5pm on Fri 8 Jan 2027 (late applications are not reviewed)"
+   ],
+   "research": {
+    "checked": "2026-11-26",
+    "angle": "My pharmaceutics background in how dose, formulation and route shape drug exposure is the starting point for PK/PD and systems pharmacology, which Standing's group uses to link exposure to response, including antibiotic dosing.",
+    "supervisors": [
+     {
+      "name": "Prof Joseph Standing",
+      "role": "Professor",
+      "dept": "UCL Great Ormond Street Institute of Child Health",
+      "profile": "https://profiles.ucl.ac.uk/32012-joseph-standing",
+      "focus": "Pharmacometrics and PK/PD modelling, including paediatric antimicrobial dosing; lead on the 2027 UCB collaborative systems pharmacology project."
+     }
+    ],
+    "publications": [
+     {
+      "title": "The Neonatal and Paediatric Pharmacokinetics of Antimicrobials study (NAPPA): investigating amoxicillin, benzylpenicillin, flucloxacillin and piperacillin pharmacokinetics from birth to adolescence",
+      "by": "Barker, Kipper, Lonsdale et al., Sharland & Standing",
+      "venue": "Journal of Antimicrobial Chemotherapy",
+      "year": 2023,
+      "link": "https://doi.org/10.1093/jac/dkad196"
+     }
+    ],
+    "reading": [
+     {
+      "title": "Development of and insights from systems pharmacology models of antibody-drug conjugates",
+      "authors": "Lam et al.",
+      "year": 2022,
+      "link": "https://doi.org/10.1002/psp4.12833",
+      "level": "start",
+      "why": "Open-access introduction to systems pharmacology through a drug-delivery-style modality."
+     },
+     {
+      "title": "The Neonatal and Paediatric Pharmacokinetics of Antimicrobials study (NAPPA): investigating amoxicillin, benzylpenicillin, flucloxacillin and piperacillin pharmacokinetics from birth to adolescence",
+      "authors": "Barker et al.",
+      "year": 2023,
+      "link": "https://discovery.ucl.ac.uk/10174792/1/dkad196.pdf",
+      "level": "deeper",
+      "why": "Open-access PK study from the Standing group."
+     }
+    ]
+   }
+  },
+  {
+   "id": "scout-bham-oral-biologics-microdevice",
+   "title": "PhD Studentship: Actuated Microdevices for Oral Delivery of Biologics",
+   "org": "University of Birmingham – Department of Mechanical Engineering (EPSRC)",
+   "link": "https://www.jobs.ac.uk/job/DTB407/phd-studentship-actuated-microdevices-for-oral-delivery-of-biologics",
+   "type": "phd",
+   "summary": "A 3.5-year EPSRC studentship building a vibrating microdevice to help biologic drugs cross the gut wall, combining microfabrication and modelling with ex vivo tissue and cell work. International applicants are eligible within the EPSRC cap, but the advert lists UK-rate fees plus a £21,805 stipend, so the fee gap must be confirmed.",
+   "deadline": "2027-01-08",
+   "location": "Birmingham",
+   "source": "found by weekly scout",
+   "intl": true,
+   "published": "2026-09-25",
+   "why": "Oral delivery of biologics is squarely her MSc field; the lab needs the pharmaceutical side.",
+   "steps": [
+    "Email Dr Cummins with her CV and ask whether an international fee waiver comes with the award",
+    "Read his 2021 'Smart pills' review and say how her formulation experience fits",
+    "Apply through the Birmingham portal by 8 Jan 2027"
+   ],
+   "research": {
+    "checked": "2026-11-26",
+    "angle": "My MSc in Biotechnology and Pharmaceutics covered biologic stability and absorption barriers, the pharmaceutical side this engineering lab needs to test device-assisted oral delivery.",
+    "supervisors": [
+     {
+      "name": "Dr Gerard Cummins",
+      "role": "Associate Professor",
+      "dept": "Department of Mechanical Engineering, University of Birmingham",
+      "profile": "https://www.birmingham.ac.uk/staff/profiles/mechanical/cummins-gerard.aspx",
+      "focus": "Ingestible and miniaturised devices for gut diagnosis and drug delivery; named contact on the advert."
+     }
+    ],
+    "publications": [
+     {
+      "title": "Smart pills for gastrointestinal diagnostics and therapy",
+      "by": "Cummins",
+      "venue": "Advanced Drug Delivery Reviews",
+      "year": 2021,
+      "link": "https://doi.org/10.1016/j.addr.2021.113931"
+     },
+     {
+      "title": "Ultrasound mediated delivery of quantum dots from a proof of concept capsule endoscope to the gastrointestinal wall",
+      "by": "Cummins et al.",
+      "venue": "Scientific Reports",
+      "year": 2021,
+      "link": "https://doi.org/10.1038/s41598-021-82240-1"
+     },
+     {
+      "title": "PressureCap: An endoscopic sensor capsule for real-time gastrointestinal pressure monitoring",
+      "by": "Cummins et al.",
+      "venue": "Device",
+      "year": 2024,
+      "link": "https://doi.org/10.1016/j.device.2024.100325"
+     }
+    ],
+    "reading": [
+     {
+      "title": "Smart pills for gastrointestinal diagnostics and therapy",
+      "authors": "Cummins",
+      "year": 2021,
+      "link": "https://birmingham.elsevierpure.com/files/147134103/Drug_Delivery_Review_Final_01_09_21.pdf",
+      "level": "start",
+      "why": "The supervisor's own review, free accepted manuscript: read before emailing him."
+     },
+     {
+      "title": "Materials for oral delivery of proteins and peptides",
+      "authors": "Brown et al.",
+      "year": 2020,
+      "link": "https://www.nature.com/articles/s41578-019-0156-6",
+      "level": "deeper",
+      "why": "Standard overview of oral biologic delivery barriers (paywalled)"
+     },
+     {
+      "title": "Ultrasound mediated delivery of quantum dots from a proof of concept capsule endoscope to the gastrointestinal wall",
+      "authors": "Cummins et al.",
+      "year": 2021,
+      "link": "https://doi.org/10.1038/s41598-021-82240-1",
+      "level": "deeper",
+      "why": "A device-driven delivery precedent from the lab; open access."
+     }
+    ]
+   }
+  },
+  {
+   "id": "scout-yorkshire-bioscience-dtp-2027",
+   "title": "Yorkshire Bioscience DTP 2027, incl. 'A modular adhiron-VLP platform for targeted molecular delivery' (Huddersfield)",
+   "org": "Yorkshire Bioscience DTP (University of Huddersfield project)",
+   "link": "https://www.yorkshirebiosciencedtp.ac.uk/apply/",
+   "type": "phd",
+   "summary": "BBSRC DTP open for 2027 entry; one listed project at Huddersfield builds virus-like particles for targeted delivery. International applicants are accepted at Huddersfield, Bradford, Hull, Leeds, Sheffield and Teesside, but fees are paid at the UK rate unless she wins one of a few very competitive international bursaries; visa and IHS are not covered.",
+   "deadline": null,
+   "location": "Huddersfield (and other Yorkshire universities)",
+   "source": "found by weekly scout",
+   "intl": true,
+   "published": "2026-11-19",
+   "why": "The VLP project is squarely targeted drug delivery, her core subject, though international places are very scarce.",
+   "steps": [
+    "Confirm the expression of interest deadline on the DTP site (a secondary site says 6 Jan 2027; not verified)",
+    "Email the project supervisor at Huddersfield to ask about international eligibility",
+    "Submit the expression of interest naming this project"
+   ],
+   "research": {
+    "checked": "2026-11-26",
+    "angle": "My biotech and pharmaceutics MSc maps onto the Huddersfield adhiron-VLP targeted delivery project: protein-engineered carriers on the biotech side and Huddersfield's Pharmaceutics and Drug Delivery Centre on the formulation side.",
+    "supervisors": [
+     {
+      "name": "Dr Nicholas McCaul",
+      "role": "Senior Lecturer in Biological Sciences",
+      "dept": "Department of Physical and Life Sciences, University of Huddersfield",
+      "profile": "https://pure.hud.ac.uk/en/persons/nicholas-mccaul/",
+      "focus": "Protein folding and single-domain antibodies; named as contact for the adhiron-VLP delivery project on a third-party listing (official project page not opened)."
+     },
+     {
+      "name": "Prof Barbara Conway",
+      "role": "Professor and Head of Pharmacy",
+      "dept": "Department of Pharmacy, University of Huddersfield",
+      "profile": "https://pure.hud.ac.uk/en/persons/barbara-conway/",
+      "focus": "Drug and antimicrobial delivery, solubility enhancement and nanoparticles; accepting PhD students. DTP partner staff."
+     },
+     {
+      "name": "Dr Kofi Asare-Addo",
+      "role": "Reader in Pharmaceutics",
+      "dept": "Department of Pharmacy, University of Huddersfield",
+      "profile": "https://pure.hud.ac.uk/en/persons/kofi-asare-addo/",
+      "focus": "Dissolution imaging, matrix tablets, solid dispersions and inhaler particles. DTP partner staff."
+     }
+    ],
+    "publications": [
+     {
+      "title": "Chitosan nanoparticles for nasal drug delivery",
+      "by": "Alghareeb, Ekenna, Asare-Addo, Conway & Adebisi",
+      "venue": "Journal of Drug Delivery Science and Technology",
+      "year": 2025,
+      "link": "https://doi.org/10.1016/j.jddst.2025.106623"
+     },
+     {
+      "title": "Drug delivery and formulation development of hesperidin: a systematic review",
+      "by": "Hoang, Timmins, Smith, Conway & Ghori",
+      "venue": "Expert Opinion on Drug Delivery",
+      "year": 2026,
+      "link": "https://doi.org/10.1080/17425247.2025.2581839"
+     }
+    ],
+    "reading": [
+     {
+      "title": "Virus-like particles: preparation, immunogenicity and their roles as nanovaccines and drug nanocarriers",
+      "authors": "Nooraei et al.",
+      "year": 2021,
+      "link": "https://pubmed.ncbi.nlm.nih.gov/33632278/",
+      "level": "start",
+      "why": "Open-access primer on VLPs as drug carriers, the core of the adhiron-VLP project."
+     },
+     {
+      "title": "Chitosan nanoparticles for nasal drug delivery",
+      "authors": "Alghareeb et al.",
+      "year": 2025,
+      "link": "https://doi.org/10.1016/j.jddst.2025.106623",
+      "level": "start",
+      "why": "Review by the Huddersfield pharmaceutics group (paywalled)"
+     },
+     {
+      "title": "Affimer reagents enable targeted delivery of therapeutic agents and RNA via Virus-Like Particles",
+      "authors": "Roberts et al.",
+      "year": 2024,
+      "link": "https://doi.org/10.1016/j.isci.2024.110461",
+      "level": "deeper",
+      "why": "Closest precedent for adhiron/Affimer-targeted VLP delivery; open access."
+     }
+    ]
+   }
+  },
+  {
+   "id": "scout-bbsrc-nwdp-2027",
+   "title": "BBSRC North West Doctoral Programme in Bioscience (2027/28 entry)",
+   "org": "University of Manchester (with Liverpool)",
+   "link": "https://www.bmh.manchester.ac.uk/study/research/funding-fees/funded-programmes/bbsrc-nwdp/",
+   "type": "phd",
+   "summary": "Four-year fully funded studentships (fees and UKRI stipend). Non-UK applicants can apply but full awards for international students are limited to exceptional candidates.",
+   "deadline": "2026-12-04",
+   "location": "Manchester / Liverpool",
+   "source": "found by weekly scout",
+   "intl": true,
+   "published": "2026-11-19",
+   "why": "Manchester and Liverpool are on her list and both have drug delivery groups; international applicants are eligible.",
+   "steps": [
+    "Check the NWDP project list for drug delivery, biotech or antimicrobial projects",
+    "Confirm English language evidence meets the requirement",
+    "Submit by 4 Dec 2026"
+   ],
+   "research": {
+    "checked": "2026-11-26",
+    "angle": "My pharmaceutics MSc fits Manchester and Liverpool's lipid nanoparticle and long-acting delivery work (McDonald, Rannard) and biologics formulation (Pluen).",
+    "supervisors": [
+     {
+      "name": "Prof Tom McDonald",
+      "role": "Professor in Sustainable Polymer Materials",
+      "dept": "Department of Materials / Chemistry, University of Manchester",
+      "profile": "https://research.manchester.ac.uk/en/persons/tom-mcdonald/",
+      "focus": "Long-acting therapeutics, lipid and polymer nanoparticles; profile shows him accepting PhD students."
+     },
+     {
+      "name": "Dr Alain Pluen",
+      "role": "Senior Lecturer in Pharmacy; PGR Tutor",
+      "dept": "Division of Pharmacy and Optometry, University of Manchester",
+      "profile": "https://research.manchester.ac.uk/en/persons/alain.pluen/",
+      "focus": "Aggregation of biologics, RNA lipid nanoparticles and peptide-based delivery."
+     },
+     {
+      "name": "Dr Richard Campbell",
+      "role": "Senior Lecturer in Physical Pharmacy",
+      "dept": "Division of Pharmacy and Optometry, University of Manchester",
+      "profile": "https://research.manchester.ac.uk/en/persons/richard.campbell/",
+      "focus": "Drug-membrane interactions at interfaces and lung surfactant models; accepts PhD students."
+     },
+     {
+      "name": "Prof Steve Rannard",
+      "role": "Professor",
+      "dept": "Department of Chemistry, University of Liverpool (NWDP partner)",
+      "profile": "https://liverpool.ac.uk/people/steven-rannard",
+      "focus": "Nanomedicine and long-acting HIV formulations in clinical trials."
+     }
+    ],
+    "publications": [
+     {
+      "title": "Capturing the dynamic integrity of carbocyanine fluorophore-based lipid nanoparticles using the FRET technique",
+      "by": "Long, Turner, Hamill, Natrajan & McDonald",
+      "venue": "Journal of Materials Chemistry B",
+      "year": 2025,
+      "link": "https://doi.org/10.1039/d4tb02653e"
+     },
+     {
+      "title": "High drug loading solid lipid nanoparticles, nanostructured lipid carriers and nanoemulsions for the dual drug delivery of the HIV drugs darunavir and ritonavir",
+      "by": "Elkateb, Cauldbeck, Niezabitowska, Hogarth, Arnold, Rannard & McDonald",
+      "venue": "JCIS Open",
+      "year": 2023,
+      "link": "https://doi.org/10.1016/j.jciso.2023.100087"
+     }
+    ],
+    "reading": [
+     {
+      "title": "Lipid Nanocarriers for Anti-HIV Therapeutics: A Focus on Physicochemical Properties and Biotechnological Advances",
+      "authors": "Faria et al.",
+      "year": 2021,
+      "link": "https://doi.org/10.3390/pharmaceutics13081294",
+      "level": "start",
+      "why": "Open-access overview of SLN/NLC carriers, background for McDonald and Rannard."
+     },
+     {
+      "title": "High drug loading solid lipid nanoparticles, nanostructured lipid carriers and nanoemulsions for the dual drug delivery of the HIV drugs darunavir and ritonavir",
+      "authors": "Elkateb et al.",
+      "year": 2023,
+      "link": "https://doi.org/10.1016/j.jciso.2023.100087",
+      "level": "deeper",
+      "why": "Concrete formulation study joining both groups."
+     },
+     {
+      "title": "Capturing the dynamic integrity of carbocyanine fluorophore-based lipid nanoparticles using the FRET technique",
+      "authors": "Long et al.",
+      "year": 2025,
+      "link": "https://doi.org/10.1039/d4tb02653e",
+      "level": "deeper",
+      "why": "Recent McDonald method for tracking nanoparticle stability; open access."
+     }
+    ]
+   }
+  },
+  {
+   "id": "scout-cambridge-bbsrc-dtp-2027",
+   "title": "Cambridge BBSRC DTP PhD in Biological Sciences (Targeted and iCASE projects, 2027 entry)",
+   "org": "University of Cambridge",
+   "link": "https://bbsrcdtp.lifesci.cam.ac.uk/how-apply",
+   "type": "phd",
+   "summary": "About 25 fully funded studentships (stipend £21,805 plus fees). Up to 30% go to international candidates, and for them the Student visa and health surcharge are also covered. Apply through the Cambridge Applicant Portal choosing up to two projects from the 2027 list, which has few drug delivery projects.",
+   "deadline": "2026-12-08",
+   "location": "Cambridge",
+   "source": "found by weekly scout",
+   "intl": true,
+   "published": "2026-11-19",
+   "why": "One of the few UK studentships that pays visa and IHS costs for international students; iCASE project ics27-san-ml1 is about drug action.",
+   "steps": [
+    "Read the Targeted and iCASE project lists and pick two (e.g. ics27-san-ml1, extracellular vesicle assays for drug action)",
+    "Email the project supervisors with a short CV and one paragraph of interest this week",
+    "Write a statement of interest for each project and answer the short questions",
+    "Ask two referees to submit before 8 Dec 2026",
+    "Submit on the Applicant Portal by 8 Dec 2026"
+   ],
+   "research": {
+    "checked": "2026-11-26",
+    "angle": "My MSc in Biotechnology and Pharmaceutics focused on how a carrier controls where and how fast a drug is released; Cambridge Chemical Engineering's nanocarrier and metal-organic framework work asks the same questions at the materials level.",
+    "supervisors": [
+     {
+      "name": "Dr Ljiljana Fruk",
+      "role": "Associate Professor of BioNano Engineering",
+      "dept": "Department of Chemical Engineering and Biotechnology, University of Cambridge",
+      "profile": "https://www.engbio.cam.ac.uk/directory/Lfruk",
+      "focus": "Bio-inspired drug nanocarriers for tumours and senescent cells; only an option if she has an advertised 2027 project (none found by title)."
+     },
+     {
+      "name": "Prof David Fairen-Jimenez",
+      "role": "Reader in Molecular Engineering (as stated on his group page)",
+      "dept": "Department of Chemical Engineering and Biotechnology, University of Cambridge",
+      "profile": "https://aam.ceb.cam.ac.uk/david.html",
+      "focus": "Metal-organic frameworks for nanoscale drug delivery; not found among the 2027 targeted project titles."
+     }
+    ],
+    "publications": [
+     {
+      "title": "Rational Design of Metal-Organic Frameworks for Pancreatic Cancer Therapy: from Machine Learning Screening to In Vivo Efficacy",
+      "by": "Melle, Menon, Conniot et al. & Fairen-Jimenez",
+      "venue": "Advanced Materials",
+      "year": 2025,
+      "link": "https://doi.org/10.1002/adma.202412757"
+     },
+     {
+      "title": "Reimagining drug nanocarriers: clinical realities and smarter strategies for targeted drug delivery",
+      "by": "Baker & Fruk",
+      "venue": "Materials Horizons",
+      "year": 2025,
+      "link": "https://doi.org/10.1039/d5mh00927h"
+     }
+    ],
+    "reading": [
+     {
+      "title": "The uptake of metal–organic frameworks: a journey into the cell",
+      "authors": "Linnane et al.",
+      "year": 2022,
+      "link": "https://doi.org/10.1039/d0cs01414a",
+      "level": "start",
+      "why": "Open-access review from the Fairen-Jimenez group on how MOF carriers enter cells."
+     },
+     {
+      "title": "Reimagining drug nanocarriers: clinical realities and smarter strategies for targeted drug delivery",
+      "authors": "Baker et al.",
+      "year": 2025,
+      "link": "https://doi.org/10.1039/d5mh00927h",
+      "level": "deeper",
+      "why": "Open-access, critical look at why nanocarriers struggle to reach the clinic; good context for an email to Fruk."
+     },
+     {
+      "title": "Rational Design of Metal-Organic Frameworks for Pancreatic Cancer Therapy: from Machine Learning Screening to In Vivo Efficacy",
+      "authors": "Melle et al.",
+      "year": 2025,
+      "link": "https://doi.org/10.1002/adma.202412757",
+      "level": "deeper",
+      "why": "From computational screening to in vivo delivery; free copy on PMC."
+     }
+    ]
+   }
+  },
+  {
+   "id": "scout-manchester-ipp-2027",
+   "title": "International Partnership PhD Studentships (FBMH) – October 2027 start",
+   "org": "University of Manchester – Faculty of Biology, Medicine and Health",
+   "link": "https://www.bmh.manchester.ac.uk/study/research/funding-fees/funded-programmes/international-partnership-phd/",
+   "type": "phd",
+   "summary": "Fully funded four-year PhDs with time at a partner university (Sapienza Rome, Stockholm or Vienna). They cover a UKRI-rate stipend, home or international tuition, research costs and travel. International applicants can apply, but awards for them go to 'exceptional' candidates.",
+   "deadline": "2026-12-11",
+   "location": "Manchester + EU partner",
+   "source": "found by weekly scout",
+   "intl": true,
+   "published": "2026-11-26",
+   "why": "International fees paid in a big pharmacy and pharmacology faculty; check the project list for a pharmacology fit.",
+   "steps": [
+    "Browse the 2027 International Partnership projects and filter for pharmacy/pharmacology",
+    "Email the supervisor of the best-fit project this week",
+    "Submit by Fri 11 Dec 2026 (interviews week of 22 Feb 2027)"
+   ]
+  },
+  {
+   "id": "scout-imperial-vlp-yeast-ra",
+   "title": "Research Associate in Low-Cost Vaccine Manufacturing in Yeast (Research Assistant grade if no PhD)",
+   "org": "Imperial College London, Department of Chemical Engineering",
+   "link": "https://www.jobs.ac.uk/job/DTS526/research-associate-in-low-cost-vaccine-manufacturing-in-yeast",
+   "type": "job",
+   "summary": "A fixed-term post to Feb 2028 in the Future Vaccine Manufacturing Research Hub, engineering yeast to make virus-like particle vaccines and developing small-scale production and purification with a Bangladeshi manufacturer. Applicants without a PhD are appointed at Research Assistant grade (£45,399-£48,876), above the usual Skilled Worker threshold.",
+   "deadline": "2027-01-03",
+   "location": "South Kensington, London (hybrid)",
+   "source": "found by weekly scout",
+   "intl": null,
+   "published": "2026-11-20",
+   "why": "Biotech/bioprocess role at a big sponsor with no PhD needed at RA grade; a stretch because it assumes yeast strain engineering.",
+   "steps": [
+    "Read the job description and check each essential criterion against her MSc lab work",
+    "Email the hiring lead to ask whether an MSc graduate without yeast experience would be considered and whether the post can be sponsored",
+    "Tailor her CV to protein expression, purification and analytical characterisation",
+    "Write a supporting statement answering each criterion",
+    "Apply before 3 Jan 2027"
+   ]
+  },
+  {
+   "id": "scout-bath-amr-simulation",
+   "title": "Combatting antimicrobial resistance using biomolecular simulations and machine learning",
+   "org": "University of Bath",
+   "link": "https://www.postgraduatestudentships.co.uk/opportunity/combatting-antimicrobial-resistance-using-biomolecular-simulations-and-machine-learning/113442",
+   "type": "phd",
+   "summary": "A 3.5-year Bath studentship using molecular dynamics and machine learning to predict how mutations in drug-binding sites cause resistance. Open to home and international students, covering tuition, a £21,805 stipend and training; visa and IHS are not covered.",
+   "deadline": "2027-01-06",
+   "location": "Bath",
+   "source": "found by weekly scout",
+   "intl": true,
+   "published": "2026-11-26",
+   "why": "Antimicrobial drug design with international fees covered, but fully computational, so a stretch for a coding beginner.",
+   "steps": [
+    "Ask Dr Charlotte Lynch informally whether coding beginners are considered",
+    "Do a short Python/molecular dynamics tutorial to show commitment",
+    "Apply by 6 Jan 2027 (it may close early)"
+   ]
+  },
+  {
+   "id": "scout-wessex-one-health-2027",
+   "title": "Wessex One Health BBSRC Doctoral Landscape Award scholarships (infection biosciences, 2027)",
+   "org": "University of Surrey, University of Sussex, University of Exeter and partner institutes",
+   "link": "https://www.sussex.ac.uk/study/fees-funding/phd-funding/view/1995-Wessex-One-Health-BBSRC-Doctoral-Landscape-Award-scholarships",
+   "type": "phd",
+   "summary": "Four-year scholarships in infection biosciences, including microbial evolution and drug resistance. Open to UK and international applicants (up to 30% international, with fees covered). Projects hosted at Dstl, UKHSA, APHA or Pirbright have UK residency rules, so pick university-hosted projects.",
+   "deadline": "2027-01-11",
+   "location": "Guildford / Brighton / Exeter",
+   "source": "found by weekly scout",
+   "intl": true,
+   "published": "2026-11-19",
+   "why": "Antimicrobial/drug-resistance theme fits her biotech and pharmaceutics background, and international fees are covered.",
+   "steps": [
+    "Filter the project list to university-hosted projects (avoid Dstl/UKHSA/APHA/Pirbright residency rules)",
+    "Shortlist projects on drug resistance or antimicrobials",
+    "Apply on the Wessex One Health form (not the Sussex form) by midday 11 Jan 2027"
+   ],
+   "research": {
+    "checked": "2026-11-26",
+    "angle": "This is infection biology rather than formulation; her best route is antimicrobial work such as La Ragione's research on alternatives to antibiotics, including antimicrobial nanostructures, where formulation skills add something.",
+    "supervisors": [
+     {
+      "name": "Prof Roberto La Ragione",
+      "role": "Professor of Veterinary Microbiology and Pathology",
+      "dept": "School of Veterinary Medicine and School of Biosciences, University of Surrey",
+      "profile": "https://www.surrey.ac.uk/vet/people/academic/roberto_la_ragione/",
+      "focus": "AMR between animal and human pathogens and alternatives to antibiotics; programme supervisor at the lead partner, not confirmed on a named 2027 project."
+     }
+    ],
+    "publications": [
+     {
+      "title": "Antimicrobial Proteinoid Nanostructures via Thermal Condensation of L-Glutamic Acid and L-Tyrosine",
+      "by": "Cadeddu et al., La Ragione & Innocenzi",
+      "venue": "Nanomaterials",
+      "year": 2025,
+      "link": "https://doi.org/10.3390/nano15241846"
+     },
+     {
+      "title": "Vaccines and antimicrobial resistance: from science to policy—summary and outcomes",
+      "by": "MacLennan et al., La Ragione, Qamar",
+      "venue": "Philosophical Transactions of the Royal Society B",
+      "year": 2026,
+      "link": "https://doi.org/10.1098/rstb.2025.0012"
+     }
+    ],
+    "reading": [
+     {
+      "title": "Vaccines and antimicrobial resistance: from science to policy—summary and outcomes",
+      "authors": "MacLennan et al.",
+      "year": 2026,
+      "link": "https://doi.org/10.1098/rstb.2025.0012",
+      "level": "start",
+      "why": "Short open-access summary of the AMR policy landscape."
+     },
+     {
+      "title": "Alternatives to antibiotics for sustainable livestock production in the context of the One Health approach: tackling a common foe",
+      "authors": "Ibeagha-Awemu et al.",
+      "year": 2025,
+      "link": "https://doi.org/10.3389/fvets.2025.1605215",
+      "level": "start",
+      "why": "Open-access One Health overview of non-antibiotic interventions."
+     },
+     {
+      "title": "Antimicrobial Proteinoid Nanostructures via Thermal Condensation of L-Glutamic Acid and L-Tyrosine",
+      "authors": "Cadeddu et al.",
+      "year": 2025,
+      "link": "https://doi.org/10.3390/nano15241846",
+      "level": "deeper",
+      "why": "Where nanomaterials meet antimicrobials in La Ragione's collaborations; open access."
+     }
+    ]
+   }
+  }
+ ],
+ "enrich": {}
 }
