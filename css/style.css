@@ -495,7 +495,8 @@ html[data-theme=dark] .sidebar nav a,html[data-theme=dark] .tabbar a{color:#E4EE
 .stall-canvas{position:absolute;inset:0;opacity:0;transition:opacity .45s ease}
 .stall-view.live .stall-canvas{opacity:1}
 .stall-view.live .stall-poster{opacity:0}
-.stall-tags{position:absolute;inset:0;pointer-events:none}
+.stall-tags{position:absolute;inset:0;pointer-events:none;transition:opacity .25s}
+.stall-tags.away{opacity:0}.stall-tags.away .ptag{pointer-events:none}
 /* price tags hung on the crate front, one under each pot */
 .ptag{position:absolute;left:0;top:0;pointer-events:auto;display:flex;flex-direction:column;align-items:center;gap:0;min-width:40px;padding:3px 7px 4px;
   border:1px solid rgba(52,71,74,.18);border-radius:8px;background:#FFFDF8;color:#34474A;cursor:pointer;

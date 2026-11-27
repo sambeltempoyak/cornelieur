@@ -1,11 +1,12 @@
 // stall.js — Ocha's watercolour flower stall as the Today stage.
 // 3D (three.js, loaded lazily) or 2D (a still of the same model), with the same tags, taps and focus in both.
-// The model is the low-poly build of her painting (assets/stall/stall-lite.glb, ~6k triangles, one WebP atlas).
-// Rendering is on demand: frames run only while something moves, and stop when the stall is off-screen.
+// The model is the low-poly build of her v3.1 stall (assets/stall/stall-lite.glb, ~12k triangles, one WebP atlas):
+// front as painted, back = the front mirrored at the ridge, gable sides. A soft wind runs in the vertex shader
+// (flowers bend from the pot rim, the valance flaps) at 30 fps while the stall is on screen; 60 fps while she touches it.
 
 const ASSET = 'assets/stall/';
-const GLB = new URL('../assets/stall/stall-lite.glb?v=1', import.meta.url).href;
-export const POSTER = ASSET + 'stall-poster.webp?v=1';
+const GLB = new URL('../assets/stall/stall-lite.glb?v=2', import.meta.url).href;
+export const POSTER = ASSET + 'stall-poster.webp?v=2';
 const PREF_KEY = 'cornelieur.stall';          // 'auto' | '3d' | '2d'
 const SLOW_KEY = 'cornelieur.stall.slow';     // set when this device struggled with 3D
 
@@ -16,13 +17,16 @@ const toPaint = (x, y, z) => [XC + x * SC, YB - (y * CP - z * SP) * SC];
 
 /* slots: the five pots (pot_k + bouquet_k) and the awning; boxes in model units (from the build) */
 export const SLOTS = [
-  { id: 'opps',  k: 1, flower: 'Orange blossoms', lo: [-0.994, 0.256, -0.439], hi: [-0.484, 0.988, 0.03],  x: -0.696 },
-  { id: 'apply', k: 2, flower: 'Red tulips',      lo: [-0.487, 0.256, -0.531], hi: [-0.16, 1.098, -0.126], x: -0.324 },
-  { id: 'learn', k: 3, flower: 'The succulent',   lo: [-0.188, 0.256, -0.555], hi: [0.279, 0.973, -0.063], x: 0.046 },
-  { id: 'paper', k: 4, flower: 'Pink spray',      lo: [0.117, 0.256, -0.562],  hi: [0.608, 1.216, -0.097], x: 0.388 },
-  { id: 'relief',k: 5, flower: 'Hydrangea',       lo: [0.523, 0.256, -0.503],  hi: [0.891, 0.821, -0.103], x: 0.687 },
-  { id: 'week',  k: 0, flower: 'The awning',      lo: [-0.954, 1.0, -1.064],   hi: [0.941, 1.86, -0.572],  x: 0 },
+  { id: 'opps',  k: 1, flower: 'Orange blossoms', lo: [-0.977, 0.256, -0.443], hi: [-0.484, 0.987, 0.03],  x: -0.693 },
+  { id: 'apply', k: 2, flower: 'Red tulips',      lo: [-0.487, 0.256, -0.53],  hi: [-0.16, 1.109, -0.126], x: -0.323 },
+  { id: 'learn', k: 3, flower: 'The succulent',   lo: [-0.191, 0.256, -0.549], hi: [0.279, 0.963, -0.066], x: 0.046 },
+  { id: 'paper', k: 4, flower: 'Pink spray',      lo: [0.12, 0.256, -0.563],   hi: [0.608, 1.215, -0.097], x: 0.389 },
+  { id: 'relief',k: 5, flower: 'Hydrangea',       lo: [0.52, 0.256, -0.503],   hi: [0.891, 0.821, -0.103], x: 0.687 },
+  { id: 'week',  k: 0, flower: 'The awning',      lo: [-0.954, 1.0, -1.166],   hi: [0.941, 1.898, -0.489], x: 0 },
 ];
+const ZM = -0.827;                                      // ridge: the back half is the front mirrored here
+const mirrorBox = s => ({ ...s, lo: [s.lo[0], s.lo[1], 2 * ZM - s.hi[2]], hi: [s.hi[0], s.hi[1], 2 * ZM - s.lo[2]], back: true });
+const HIT = SLOTS.concat(SLOTS.filter(s => s.k).map(mirrorBox));   // tap targets, front and back
 const slotById = id => SLOTS.find(s => s.id === id);
 const TAG_Y = 0.128;                                   // tags hang on the crate front (y 0…0.256, z 0)
 
@@ -62,7 +66,8 @@ class Stall {
     this.sel = null; this.hover = null; this.tags = {}; this.today = new Set();
     this.onSelect = () => {}; this.onHover = () => {};
     // view state shared by 2D and 3D: focus point (model units), zoom, yaw/pitch (3D only)
-    this.cam = { fx: (FRAME.cx - XC) / SC, fy: 0.95, fz: -0.35, zoom: 1, yaw: 0, pitch: PHI };
+    const fz0 = ZM, fy0 = ((YB - FRAME.cy) / SC + fz0 * SP) / CP;      // centre of the stall, projected onto the frame centre
+    this.cam = { fx: (FRAME.cx - XC) / SC, fy: fy0, fz: fz0, zoom: 1, yaw: 0, pitch: PHI };
     this.camTo = { ...this.cam };
     this.cam0 = { ...this.cam };
     this.raf = 0; this.visible = true; this.last = 0; this.live = false;
@@ -78,7 +83,7 @@ class Stall {
     view.dataset.mode = this.mode;
     this._bind();
     this.ro = new ResizeObserver(() => this._resize()); this.ro.observe(view);
-    this.io = new IntersectionObserver(es => { this.visible = es[0].isIntersecting; if (this.visible) this.kick(400); }, { threshold: 0.05 });
+    this.io = new IntersectionObserver(es => { this.visible = es[0].isIntersecting; if (this.visible) this.kick(400); }, { threshold: 0.02 });
     this.io.observe(view);
     this._vis = () => { if (!document.hidden) this.kick(200); };
     document.addEventListener('visibilitychange', this._vis);
@@ -107,7 +112,7 @@ class Stall {
       const cls = ['ptag', this.today.has(s.id) ? 'today' : '', t.urgent ? 'urgent' : '', this.sel === s.id ? 'on' : ''].join(' ');
       return `<button type="button" class="${cls}" data-slot="${s.id}" aria-label="${s.flower}: ${t.label || t.small}"><b>${t.big}</b><span>${t.small}</span></button>`;
     }).join('');
-    this._placeTags();
+    this._tagSig = null; this._placeTags();
   }
 
   setMode(m) { setStallPref(m); if (this.view) this.attach(this.view, {}); }
@@ -142,6 +147,7 @@ class Stall {
     const r = this.view.getBoundingClientRect(); this.W = Math.max(1, r.width); this.H = Math.max(1, r.height);
     this.s0 = Math.min(this.W / FRAME.w, this.H / FRAME.h);
     if (this.three && this.live) this.three.resize(this.W, this.H);
+    this._tagSig = null;
     this._paint2D();
     this.kick(100);
   }
@@ -161,13 +167,14 @@ class Stall {
   }
   _hit(px, py) {
     let best = null, bd = 1e9;
-    for (const s of SLOTS) {
+    for (const s of HIT) {
+      if (s.back && Math.abs(this.cam.yaw) < 0.5) continue;       // the back pots only count when she has walked round
       const r = this._rect(s);
       const pad = s.k ? 4 : 0;
       if (px < r.x0 - pad || px > r.x1 + pad || py < r.y0 - pad || py > r.y1 + pad) continue;
       // overlapping bouquets: the pot whose centre column is nearest wins; the awning only where no pot is
       const d = s.k ? Math.abs(px - r.cx) : 5e8;
-      if (d < bd) { bd = d; best = s; }
+      if (d < bd) { bd = d; best = slotById(s.id); }
     }
     if (!best) {     // the crate front under a pot counts as that pot (that's where its tag hangs)
       const [, cy0] = this._project(0, 0.256, 0), [, cy1] = this._project(0, 0, 0);
@@ -179,6 +186,9 @@ class Stall {
   }
   _placeTags() {
     if (!this.tagBox || !this.W) return;
+    const sig = [this.W, this.H, this.cam.fx, this.cam.fy, this.cam.fz, this.cam.zoom, this.cam.yaw, this.cam.pitch, this.tagBox.children.length].join();
+    if (sig === this._tagSig) return; this._tagSig = sig;
+    this.tagBox.classList.toggle('away', Math.abs(this.cam.yaw) > 0.8);   // tags hang on the front: hide them when she looks from the side
     for (const b of this.tagBox.children) {
       const s = slotById(b.dataset.slot); const [x, y] = this._project(s.x, TAG_Y, 0.002);
       b.style.transform = `translate(${x.toFixed(1)}px,${y.toFixed(1)}px) translate(-50%,-50%)`;
@@ -206,7 +216,7 @@ class Stall {
         const dx = e.clientX - down.x, dy = e.clientY - down.y;
         if (!drag && this.mode === '3d' && Math.abs(dx) > 7 && Math.abs(dx) > Math.abs(dy)) { drag = true; try { v.setPointerCapture(e.pointerId); } catch (_) { } v.classList.add('dragging'); this._hideHint(); }
         if (drag) {
-          this.camTo.yaw = this.cam.yaw = clamp(down.yaw - dx * 0.0065, -0.66, 0.66);
+          this.camTo.yaw = this.cam.yaw = clamp(down.yaw - dx * 0.0065, -1.3, 1.3);
           if (e.pointerType === 'mouse') this.camTo.pitch = this.cam.pitch = clamp(down.pitch + dy * 0.004, 0.03, 0.5);
           this.kick(300);
           clearTimeout(this._back); this._back = setTimeout(() => { if (!this.sel) this.camTo.yaw = 0; this.camTo.pitch = PHI; this.kick(1500); }, 4500);
@@ -260,8 +270,14 @@ class Stall {
     this.until = Math.max(this.until || 0, now() + ms);
     if (!this.raf && this.view) { this.last = now(); this.raf = requestAnimationFrame(t => this._frame(t)); }
   }
+  get ambient() { return this.mode === '3d' && this.live && this.three && !this.three.reduced; }
   _frame(t) {
     this.raf = 0; if (!this.view) return;
+    const fast = now() < this.until || this.view.classList.contains('dragging');
+    if (!fast && this.ambient && t - this.last < 1000 / (this.three.fps || 30) - 2) {      // ambient: cap the frame rate
+      if (this.visible && !document.hidden) this.raf = requestAnimationFrame(tt => this._frame(tt));
+      return;
+    }
     const dt = Math.min(0.1, (t - this.last) / 1000 || 0.016); this.last = t;
     // camera tween
     const c = this.cam, g = this.camTo; let moving = false;
@@ -270,10 +286,10 @@ class Stall {
       if (Math.abs(nv - g[k]) > 1e-4) moving = true; c[k] = Math.abs(nv - g[k]) < 1e-4 ? g[k] : nv;
     }
     let busy = moving;
-    if (this.mode === '3d' && this.live) { busy = this.three.frame(dt, c) || busy; this.three.gov(dt); }
+    if (this.mode === '3d' && this.live) { busy = this.three.frame(dt, c) || busy; this.three.gov(dt, fast || busy ? 1 / 60 : 1 / (this.three.fps || 30)); }
     else this._paint2D();
     this._placeTags();
-    if ((busy || now() < this.until) && this.visible && !document.hidden) this.raf = requestAnimationFrame(tt => this._frame(tt));
+    if ((busy || fast || this.ambient) && this.visible && !document.hidden) this.raf = requestAnimationFrame(tt => this._frame(tt));
   }
 
   /* ---------------------------------------------------------------- 3D */
@@ -295,13 +311,13 @@ class Stall {
       this.mode = '2d'; if (this.view) { this.view.dataset.mode = '2d'; this._paint2D(); }
     }
   }
-  _breezeLater() {
+  _breezeLater() {             // a stronger gust now and then, on top of the steady wind
     clearTimeout(this._bt);
     if (!this.three || this.three.reduced) return;
     this._bt = setTimeout(() => {
-      if (this.view && this.mode === '3d' && this.visible && !document.hidden && !this.view.classList.contains('dragging')) { this.three.breeze(0.55); this.kick(2200); }
+      if (this.view && this.mode === '3d' && this.visible && !document.hidden && !this.view.classList.contains('dragging')) this.three.breeze(0.5 + Math.random() * 0.5);
       this._breezeLater();
-    }, 16000 + Math.random() * 9000);
+    }, 7000 + Math.random() * 8000);
   }
   _slow() {
     try { localStorage.setItem(SLOW_KEY, '1'); } catch (_) { }
@@ -322,10 +338,25 @@ async function load3D() {
   return { THREE, GLTFLoader, MeshoptDecoder };
 }
 
+/* wind in the vertex shader: each vertex carries aWind = (direction × weight, phase); the material adds
+   direction × gust(t, phase) in world space. Flowers bend from the pot rim, the valance flaps from the eave,
+   the canopy breathes a little. One program for every cut-out part, so it costs nothing extra per pot. */
+const WIND_HEAD = 'attribute vec4 aWind;\nuniform float uTime;\nuniform float uWind;\n';
+const WIND_PROJECT = `
+  vec4 wp = modelMatrix * vec4( transformed, 1.0 );
+  float ph = aWind.w;
+  float g = uWind * ( sin( uTime * 1.3 + ph ) * 0.6 + sin( uTime * 2.2 + ph * 1.7 ) * 0.25 + sin( uTime * 0.53 + ph * 0.45 ) * 0.45 + 0.3 );
+  g += uWind * sin( uTime * 6.5 + wp.x * 23.0 + wp.y * 17.0 ) * 0.12;
+  wp.xyz += aWind.xyz * g;
+  vec4 mvPosition = viewMatrix * wp;
+  gl_Position = projectionMatrix * mvPosition;`;
+const EAVE_Y = 1.19, RIDGE_Y = 1.9;      // awning: the valance hangs below the eave; the canopy rises to the ridge
+
 class Three3D {
   constructor(lib, { reduced, onSlow }) {
     Object.assign(this, lib); this.reduced = reduced; this.onSlow = onSlow; this.ready = false;
-    this.t = 0; this.gust = 0; this.flying = []; this.frames = []; this.pr = 0; this.govDone = false;
+    this.t = 0; this.gust = 0; this.flying = []; this.frames = []; this.pr = 0; this.govDone = false; this.fps = 30;
+    this.U = { uTime: { value: 0 }, uWind: { value: reduced ? 0 : 0.6 } };
   }
   async init() {
     const { THREE } = this;
@@ -341,19 +372,29 @@ class Three3D {
     const root = this.root = gltf.scene; this.scene.add(root);
     root.updateMatrixWorld(true);
     // paper look: unlit, the painting as is, with a soft baked light so pots still read round
-    const L = new THREE.Vector3(-0.35, 0.55, 0.9).normalize(), n = new THREE.Vector3(), nm = new THREE.Matrix3();
-    const mats = {};
+    const L = new THREE.Vector3(-0.35, 0.55, 0.9).normalize(), n = new THREE.Vector3(), v = new THREE.Vector3(), nm = new THREE.Matrix3();
+    const U = this.U, mats = {};
     const matFor = src => {
-      const cut = src.alphaTest > 0 || src.alphaMode === 'MASK' || src.side === THREE.DoubleSide;
+      const cut = src.alphaTest > 0 || src.side === THREE.DoubleSide;
       const key = cut ? 'cut' : 'paint';
-      if (!mats[key]) mats[key] = new THREE.MeshBasicMaterial({ map: src.map, vertexColors: true, toneMapped: false, side: cut ? THREE.DoubleSide : THREE.FrontSide, alphaTest: cut ? 0.5 : 0, alphaToCoverage: cut });
+      if (!mats[key]) {
+        const m = mats[key] = new THREE.MeshBasicMaterial({ map: src.map, vertexColors: true, toneMapped: false, side: cut ? THREE.DoubleSide : THREE.FrontSide, alphaTest: cut ? 0.5 : 0, alphaToCoverage: cut });
+        if (cut) {
+          m.onBeforeCompile = sh => {
+            sh.uniforms.uTime = U.uTime; sh.uniforms.uWind = U.uWind;
+            sh.vertexShader = WIND_HEAD + sh.vertexShader.replace('#include <project_vertex>', WIND_PROJECT);
+          };
+          m.customProgramCacheKey = () => 'stall-wind';
+        }
+      }
       return mats[key];
     };
+    const owner = o => { let p = o; while (p && !/^(bouquet_|awning|hearts_|pot_|crate|frame)/.test(p.name)) p = p.parent; return p ? p.name : ''; };
     root.traverse(o => {
       if (!o.isMesh) return;
       if (o.material.map) { o.material.map.anisotropy = Math.min(4, r.capabilities.getMaxAnisotropy()); }
       o.material = matFor(o.material);
-      const g = o.geometry, N = g.attributes.normal, cnt = g.attributes.position.count, col = new Float32Array(cnt * 3);
+      const g = o.geometry, N = g.attributes.normal, P = g.attributes.position, cnt = P.count, col = new Float32Array(cnt * 3);
       nm.getNormalMatrix(o.matrixWorld);
       for (let i = 0; i < cnt; i++) {
         let c = 0.93;
@@ -361,20 +402,49 @@ class Three3D {
         col[i * 3] = col[i * 3 + 1] = col[i * 3 + 2] = c;
       }
       g.setAttribute('color', new THREE.BufferAttribute(col, 3));
+      if (!o.material.alphaTest) return;
+      // wind weights, from world positions
+      const name = owner(o), w4 = new Float32Array(cnt * 4);
+      if (/^bouquet_/.test(name)) {
+        const piv = new THREE.Vector3(); o.parent.getWorldPosition(piv);
+        let top = piv.y + 0.05; for (let i = 0; i < cnt; i++) top = Math.max(top, v.fromBufferAttribute(P, i).applyMatrix4(o.matrixWorld).y);
+        const H = top - piv.y, back = piv.z < ZM ? -1 : 1;
+        for (let i = 0; i < cnt; i++) {
+          v.fromBufferAttribute(P, i).applyMatrix4(o.matrixWorld);
+          const h = clamp((v.y - piv.y) / H, 0, 1), w = Math.pow(h, 1.6) * (0.035 + 0.03 * H);
+          w4.set([w, 0.08 * w * Math.sin(v.x * 9), 0.3 * w * back, piv.x * 2.4 + v.y * 1.3], i * 4);
+        }
+      } else if (name === 'awning') {
+        for (let i = 0; i < cnt; i++) {
+          v.fromBufferAttribute(P, i).applyMatrix4(o.matrixWorld);
+          if (N) n.fromBufferAttribute(N, i).applyMatrix3(nm).normalize(); else n.set(0, 0, 1);
+          const ph = v.x * 3.1 + Math.abs(v.z - ZM) * 2.4;
+          if (v.y < EAVE_Y) {                     // valance: flaps out and in from the eave, the scallop tips most
+            // the scallop tips swing out and lift a little, and shimmy sideways in the wind
+            const w = Math.pow(clamp((EAVE_Y - v.y) / 0.19, 0, 1), 1.2) * 0.034, hx = n.x, hz = n.z, hl = Math.hypot(hx, hz) || 1;
+            w4.set([hx / hl * w + 0.22 * w, 0.42 * w, hz / hl * w, ph], i * 4);
+          } else {                                // canopy: breathes along its normal, more near the eave
+            const w = 0.008 * (1 - clamp((v.y - EAVE_Y) / (RIDGE_Y - EAVE_Y), 0, 1));
+            w4.set([n.x * w, n.y * w, n.z * w, ph], i * 4);
+          }
+        }
+      }
+      g.setAttribute('aWind', new THREE.BufferAttribute(w4, 4));
     });
     // soft contact shadow under the crate (a tiny canvas texture, no shadow maps)
     const cv = document.createElement('canvas'); cv.width = cv.height = 64; const cx = cv.getContext('2d');
     const gr = cx.createRadialGradient(32, 32, 2, 32, 32, 32); gr.addColorStop(0, 'rgba(52,71,74,.5)'); gr.addColorStop(0.5, 'rgba(52,71,74,.2)'); gr.addColorStop(0.92, 'rgba(52,71,74,0)');
     cx.fillStyle = gr; cx.fillRect(0, 0, 64, 64);
     const st = new THREE.CanvasTexture(cv); st.colorSpace = THREE.SRGBColorSpace;
-    const sh = new THREE.Mesh(new THREE.PlaneGeometry(2.25, 1.15), new THREE.MeshBasicMaterial({ map: st, transparent: true, depthWrite: false, toneMapped: false }));
-    sh.rotation.x = -Math.PI / 2; sh.position.set(0, 0.001, -0.36); sh.renderOrder = -1; this.scene.add(sh);
+    const sh = new THREE.Mesh(new THREE.PlaneGeometry(2.4, 2.25), new THREE.MeshBasicMaterial({ map: st, transparent: true, depthWrite: false, toneMapped: false }));
+    sh.rotation.x = -Math.PI / 2; sh.position.set(0, 0.001, ZM); sh.renderOrder = -1; this.scene.add(sh);
     // nodes the stall moves
     this.nodes = {}; root.traverse(o => { if (o.name) this.nodes[o.name] = o; });
     this.base = {}; Object.values(this.nodes).forEach(o => this.base[o.name] = { y: o.position.y, rz: o.rotation.z, rx: o.rotation.x });
     this.sway = {}; this.lift = {};
     for (let k = 1; k <= 5; k++) { this.sway[k] = new Spring(60, 4); this.lift[k] = new Spring(90, 14); }
     this.heartSrc = ['hearts_a', 'hearts_b', 'hearts_c'].map(n => this.nodes[n]).filter(Boolean);
+    this.bob = Object.keys(this.nodes).filter(n => /^hearts_/.test(n));
     this.ready = true;
   }
   attach(view, W, H) { view.insertBefore(this.canvas, view.querySelector('.stall-tags')); this.resize(W, H); }
@@ -396,9 +466,10 @@ class Three3D {
     const v = this._v || (this._v = new this.THREE.Vector3()); v.set(x, y, z).project(this.camera);
     return [(v.x + 1) / 2 * this.W, (1 - v.y) / 2 * this.H];
   }
-  focus(s) { this.selK = s ? s.k : 0; for (let k = 1; k <= 5; k++) this.lift[k].to = k === this.selK ? 0.03 : (k === this.hovK ? 0.016 : 0); if (s && s.k) { this.sway[s.k].kick(1.3); if (s.k === 2) this.hearts(s, 6); } if (s && !s.k) this.breeze(1); }
-  hoverSlot(s) { this.hovK = s ? s.k : 0; for (let k = 1; k <= 5; k++) this.lift[k].to = k === this.selK ? 0.03 : (k === this.hovK ? 0.016 : 0); if (s && s.k) this.sway[s.k].kick(0.6); }
-  breeze(s = 1) { this.gust = Math.max(this.gust, s); for (let k = 1; k <= 5; k++) this.sway[k].kick((0.4 + Math.random() * 0.7) * 0.35 * s); }
+  _lifts() { for (let k = 1; k <= 5; k++) this.lift[k].to = k === this.selK ? 0.03 : (k === this.hovK ? 0.016 : 0); }
+  focus(s) { this.selK = s ? s.k : 0; this._lifts(); if (s && s.k) { this.sway[s.k].kick(1.3); if (s.k === 2) this.hearts(s, 6); } if (s && !s.k) this.breeze(1); }
+  hoverSlot(s) { this.hovK = s ? s.k : 0; this._lifts(); if (s && s.k) this.sway[s.k].kick(0.6); }
+  breeze(s = 1) { this.gust = Math.max(this.gust, s); for (let k = 1; k <= 5; k++) this.sway[k].kick((0.4 + Math.random() * 0.7) * 0.3 * s); }
   hearts(s, n = 7) {
     const { THREE } = this; if (!this.heartSrc.length || this.reduced) return;
     const meshes = []; this.heartSrc.forEach(g => g.traverse(o => { if (o.isMesh) meshes.push(o); }));
@@ -414,16 +485,19 @@ class Three3D {
     }
   }
   frame(dt, cam) {
-    const t = (this.t += dt), amp = this.reduced ? 0.3 : 1; this.gust *= Math.exp(-dt * 0.9);
-    let busy = this.gust > 0.04 || this.flying.length > 0;
+    const t = (this.t += dt), amp = this.reduced ? 0.3 : 1; this.gust *= Math.exp(-dt * 0.7);
+    // wind: a steady breeze that swells and fades, plus gusts
+    this.U.uTime.value = t;
+    this.U.uWind.value = this.reduced ? 0 : 0.55 + 0.25 * Math.sin(t * 0.21) + 0.15 * Math.sin(t * 0.47 + 1.3) + this.gust * 0.9;
+    let busy = this.flying.length > 0;
     for (let k = 1; k <= 5; k++) {
       const s = this.sway[k].step(dt), l = this.lift[k].step(dt); if (!this.sway[k].calm || !this.lift[k].calm) busy = true;
       const b = this.nodes['bouquet_' + k], p = this.nodes['pot_' + k];
-      if (b) { b.rotation.z = this.base[b.name].rz + (this.gust * Math.sin(t * 2.3 + k) * 0.05 + Math.sin(t * 0.9 + k * 1.3) * 0.01 * this.gust) * amp + s * 0.06; b.rotation.x = this.base[b.name].rx + s * 0.02; b.position.y = this.base[b.name].y + l; }
+      if (b) { b.rotation.z = this.base[b.name].rz + this.gust * Math.sin(t * 2.3 + k) * 0.04 * amp + s * 0.06; b.rotation.x = this.base[b.name].rx + s * 0.02; b.position.y = this.base[b.name].y + l; }
       if (p) p.position.y = this.base[p.name].y + l;
     }
-    ['hearts_a', 'hearts_b', 'hearts_c'].forEach((n, i) => { const o = this.nodes[n]; if (o) { o.position.y = this.base[n].y + Math.sin(t * 1.4 + i * 1.7) * 0.02 * amp; o.rotation.z = Math.sin(t * 1.1 + i) * 0.08 * amp; } });
-    const aw = this.nodes.awning; if (aw) aw.rotation.x = this.base.awning.rx + this.gust * Math.sin(t * 3.1) * 0.012 * amp;
+    this.bob.forEach((n, i) => { const o = this.nodes[n]; o.position.y = this.base[n].y + Math.sin(t * 1.4 + i * 1.7) * 0.02 * amp; o.rotation.z = Math.sin(t * 1.1 + i) * 0.08 * amp; });
+    const aw = this.nodes.awning; if (aw) aw.rotation.x = this.base.awning.rx + (Math.sin(t * 0.8) * 0.002 + this.gust * Math.sin(t * 3.1) * 0.006) * amp;
     for (let i = this.flying.length - 1; i >= 0; i--) {
       const f = this.flying[i]; f.t += dt; if (f.t < 0) continue;
       const u = f.t / f.life, h = f.h;
@@ -436,14 +510,15 @@ class Three3D {
     this.renderer.render(this.scene, this.camera);
     return busy;
   }
-  /** performance governor: if frames are slow, lower the resolution; if still slow, hand over to the painting */
-  gov(dt) {
+  /** performance governor: frames much slower than their target → lower the resolution, then the frame rate, then the painting */
+  gov(dt, target) {
     if (this.govDone) return;
     if ((this.warm = (this.warm || 0) + 1) < 12) return;          // skip shader compile / upload frames
-    this.frames.push(dt); if (this.frames.length < 24) return;
+    this.frames.push(dt / target); if (this.frames.length < 24) return;
     const m = this.frames.sort((a, b) => a - b)[12]; this.frames = [];
-    if (m > 0.042 && this.pr > 1) { this.pr = Math.max(1, this.pr - 0.5); this.renderer.setPixelRatio(this.pr); this.resize(this.W, this.H); }
-    else if (m > 0.07 && this.pr <= 1) { this.govDone = true; this.onSlow(); }
-    else if (m <= 0.042) this.govDone = true;
+    if (m < 1.5) { this.govDone = true; return; }
+    if (this.pr > 1) { this.pr = Math.max(1, this.pr - 0.5); this.renderer.setPixelRatio(this.pr); this.resize(this.W, this.H); }
+    else if (this.fps > 20) this.fps = 20;
+    else if (m > 2.2) { this.govDone = true; this.onSlow(); }
   }
 }
