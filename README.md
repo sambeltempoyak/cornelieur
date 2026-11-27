@@ -24,7 +24,11 @@ index.html            the page shell (menu, title)
 css/style.css         colours (macaron palette, gradients, night mode) and layout
 js/                   the app: app.js (pages, settings), radar.js (adverts), analyze.js (reads an advert),
                       files.js + classify.js + pdf2md.js (My files), reader.js + md.js (phone reader), drive.js (Drive client),
-                      learn.js + lessons.js + coderunner.js (Learn), read.js (Read), jokes.js
+                      learn.js + lessons.js + coderunner.js (Learn), read.js (Read), jokes.js,
+                      stall.js (the flower stall on Today: 3D with three.js, or the flat painting)
+assets/stall/         her watercolour stall: stall-lite.glb (low-poly 3D, ~6k triangles, 200 KB),
+                      stall-poster.webp (the same view as a picture, shown first and on slow phones), stall-pots.webp (pot thumbnails)
+assets/logo/          the stall logo cut from her painting (sidebar, favicon, phone home-screen icon)
 config/sources.json   the feeds the robot reads and its relevance keywords
 config/ocha-profile.md  her situation, for the weekly scout
 data/                 written by the robot / scout (do not upload over it, see 4)
@@ -142,6 +146,13 @@ If a patch changes `apps-script/Code.gs`: open your script, replace everything w
 | Lessons' R/Python will not start | Browser blocked the big download, or weak signal | Try Chrome/Edge on wi-fi; the first start takes a minute |
 
 ---
+
+## 6b. The flower stall on Today
+- Each pot is one part of the day: orange blossoms = fresh picks (radar), red tulips = applications (tracker), the succulent = Learn,
+  pink spray = paper of the day, hydrangea = the joke; the awning = her week (streak, XP). The price tags on the crate say what is inside.
+- 3D loads after the page shows (three.js 0.160 from jsDelivr, via the import map in index.html). Frames run only while something moves.
+  If a phone is slow, or has data saver on, or has no WebGL2, the stall falls back to the painting by itself; the "Painting / 3D" chip switches by hand.
+- The model is rebuilt from her painting outside this repo (Ejak's vault: Little Ocha 3D). Don't hand-edit the GLB; bump `?v=` in js/stall.js when replacing it.
 
 ## 7. Known limits (honest list)
 - The advert reader is rule-based, not an AI. It finds deadlines and common eligibility phrases well, but can miss unusual wording. Every summary says "confirm on the advert".
