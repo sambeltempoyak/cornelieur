@@ -5,8 +5,8 @@
 // (flowers bend from the pot rim, the valance flaps) at 30 fps while the stall is on screen; 60 fps while she touches it.
 
 const ASSET = 'assets/stall/';
-const GLB = new URL('../assets/stall/stall-lite.glb?v=2', import.meta.url).href;
-export const POSTER = ASSET + 'stall-poster.webp?v=2';
+const GLB = new URL('../assets/stall/stall-lite.glb?v=3', import.meta.url).href;
+export const POSTER = ASSET + 'stall-poster.webp?v=3';
 const PREF_KEY = 'cornelieur.stall';          // 'auto' | '3d' | '2d'
 const SLOW_KEY = 'cornelieur.stall.slow';     // set when this device struggled with 3D
 
