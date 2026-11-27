@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-26T07:30:33+00:00",
- "count": 7,
+ "updated": "2026-11-27T07:29:47+00:00",
+ "count": 8,
  "sources": [
   {
    "name": "Univ. of Nottingham — studentships",
@@ -16,6 +16,18 @@
   },
   {
    "name": "Univ. of Bath",
+   "count": 1
+  },
+  {
+   "name": "LSHTM",
+   "count": 1
+  },
+  {
+   "name": "LSHTM",
+   "count": 1
+  },
+  {
+   "name": "LSHTM",
    "count": 1
   }
  ],
@@ -442,7 +454,7 @@
   },
   {
    "name": "LSHTM · Academic",
-   "count": 0,
+   "count": 1,
    "ok": true
   },
   {
@@ -462,7 +474,7 @@
   },
   {
    "name": "LSHTM · Infectious and Tropical Diseases",
-   "count": 0,
+   "count": 1,
    "ok": true
   },
   {
@@ -517,7 +529,7 @@
   },
   {
    "name": "LSHTM · Department of Infection Biology",
-   "count": 0,
+   "count": 1,
    "ok": true
   },
   {
@@ -567,6 +579,21 @@
   }
  ],
  "items": [
+  {
+   "id": "r984408f2fc52",
+   "title": "Research Assistant (ITD-DIB-2026-19-R)",
+   "link": "https://jobs.lshtm.ac.uk/rss/click.aspx?ref=ITD-DIB-2026-19-R",
+   "org": "LSHTM",
+   "source": "LSHTM · Department of Infection Biology",
+   "type": "job",
+   "summary": "The London School of Hygiene & Tropical Medicine (LSHTM) is one of the world’s leading public health universities. Our mission is to improve health and health equity in the UK and worldwide; working in partnership to achieve excellence in public and global health research, education and translation of knowledge into policy and practice. The Department of Infection Biology brings together pathogen molecular biology and immunology and infection research across the School. The Department benefits from state-of-the-art facilities and strong collaborations, many of which are with partners in disease endemic countries. We are seeking to appoint a Research Assistant to work in the laboratories of Prof Brendan Wren to use glycoengineering to develop enteric vaccines and novel glyco-diagnostics. The post-holder will join a research team of ten staff at the LSHTM and will have an opportunity to co",
+   "published": "2026-11-26",
+   "deadline": "2026-12-09",
+   "intl": null,
+   "location": "London",
+   "first_seen": "2026-11-27",
+   "salary": "£40,784 - £46,643 per annum"
+  },
   {
    "id": "r7a2d11435fb1",
    "title": "PhD Studentship: Residency (Senior Clinical Training Scholarship) in Veterinary Anatomic Pathology (MED2056)",
