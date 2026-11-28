@@ -1,6 +1,6 @@
 {
  "_help": "Written by scripts/update_people.py from OpenAlex publication records. People who publish on Ocha's topics at each university; NOT a list of who takes PhD students. The weekly scout verifies.",
- "updated": "2026-11-27",
+ "updated": "2026-11-28",
  "version": 2,
  "source": "OpenAlex (openalex.org)",
  "items": {
@@ -184,7 +184,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   "scout-ucl-amr-cdt-2027": {
    "institutions": [
@@ -199,8 +199,8 @@
      "name": "Magnus Unemo",
      "openalex": "https://openalex.org/A5069892567",
      "orcid": "https://orcid.org/0000-0003-1710-2081",
-     "score": 20.5,
-     "n": 18,
+     "score": 19.8,
+     "n": 17,
      "papers": [
       {
        "title": "Antimicrobial resistance in Neisseria gonorrhoeae and co‐infections (Vienna, Austria; 2015–2024)",
@@ -248,6 +248,35 @@
        "year": 2024,
        "venue": "The Lancet Microbe",
        "link": "https://doi.org/10.1016/s2666-5247(24)00047-8"
+      }
+     ],
+     "senior_hint": true,
+     "institution": "University College London"
+    },
+    {
+     "name": "Laura J. Shallcross",
+     "openalex": "https://openalex.org/A5006128512",
+     "orcid": "https://orcid.org/0000-0003-1713-2555",
+     "score": 6.4,
+     "n": 5,
+     "papers": [
+      {
+       "title": "Antimicrobial resistance: Connecting disciplines, systems, and solutions",
+       "year": 2026,
+       "venue": "Cambridge Prisms Antimicrobial Resistance",
+       "link": "https://doi.org/10.1017/s2977755026100040"
+      },
+      {
+       "title": "Making microbes matter: evidence for the use of digital storytelling in antimicrobial resistance public engagement",
+       "year": 2026,
+       "venue": "npj Antimicrobials and Resistance",
+       "link": "https://doi.org/10.1038/s44259-026-00250-3"
+      },
+      {
+       "title": "System-wide approaches to antimicrobial therapy and antimicrobial resistance in the UK: the AMR-X framework",
+       "year": 2024,
+       "venue": "The Lancet Microbe",
+       "link": "https://doi.org/10.1016/s2666-5247(24)00003-x"
       }
      ],
      "senior_hint": true,
@@ -310,35 +339,6 @@
      ],
      "senior_hint": true,
      "institution": "University College London"
-    },
-    {
-     "name": "Laura J. Shallcross",
-     "openalex": "https://openalex.org/A5006128512",
-     "orcid": "https://orcid.org/0000-0003-1713-2555",
-     "score": 4.6,
-     "n": 4,
-     "papers": [
-      {
-       "title": "Making microbes matter: evidence for the use of digital storytelling in antimicrobial resistance public engagement",
-       "year": 2026,
-       "venue": "npj Antimicrobials and Resistance",
-       "link": "https://doi.org/10.1038/s44259-026-00250-3"
-      },
-      {
-       "title": "System-wide approaches to antimicrobial therapy and antimicrobial resistance in the UK: the AMR-X framework",
-       "year": 2024,
-       "venue": "The Lancet Microbe",
-       "link": "https://doi.org/10.1016/s2666-5247(24)00003-x"
-      },
-      {
-       "title": "Protocol for VIVALDI social care: Pilot study to reduce infections, outbreaks and antimicrobial resistance in care homes for older adults",
-       "year": 2024,
-       "venue": "NIHR Open Research",
-       "link": "https://doi.org/10.3310/nihropenres.13530.1"
-      }
-     ],
-     "senior_hint": true,
-     "institution": "University College London"
     }
    ],
    "reading": [
@@ -362,7 +362,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   "scout-swbio-dtp-2027": {
    "institutions": [],
@@ -373,15 +373,6 @@
    "people": [],
    "reading": [
     {
-     "title": "International Union of Basic and Clinical Pharmacology. CX. Classification of Receptors for 5-hydroxytryptamine; Pharmacology and Function",
-     "authors": "Nicholas M. Barnes et al.",
-     "year": 2020,
-     "link": "https://doi.org/10.1124/pr.118.015552",
-     "venue": "Pharmacological Reviews",
-     "level": "start",
-     "why": "Well-cited open-access review: a readable overview of the topic before you write to anyone."
-    },
-    {
      "title": "Scopoletin: a review of its pharmacology, pharmacokinetics, and toxicity",
      "authors": "Xiaoyan Gao et al.",
      "year": 2024,
@@ -389,10 +380,19 @@
      "venue": "Frontiers in Pharmacology",
      "level": "start",
      "why": "Well-cited open-access review: a readable overview of the topic before you write to anyone."
+    },
+    {
+     "title": "International Union of Basic and Clinical Pharmacology. CX. Classification of Receptors for 5-hydroxytryptamine; Pharmacology and Function",
+     "authors": "Nicholas M. Barnes et al.",
+     "year": 2020,
+     "link": "https://doi.org/10.1124/pr.118.015552",
+     "venue": "Pharmacological Reviews",
+     "level": "start",
+     "why": "Well-cited open-access review: a readable overview of the topic before you write to anyone."
     }
    ],
    "scanned": 0,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   "scout-kcl-mrc-dtp-2027": {
    "institutions": [
@@ -440,7 +440,7 @@
      "name": "Khuloud T. Al‐Jamal",
      "openalex": "https://openalex.org/A5026580896",
      "orcid": "https://orcid.org/0000-0001-5165-2699",
-     "score": 7.3,
+     "score": 7.4,
      "n": 3,
      "papers": [
       {
@@ -460,6 +460,35 @@
        "year": 2021,
        "venue": "Biomaterials Science",
        "link": "https://doi.org/10.1039/d0bm01421d"
+      }
+     ],
+     "senior_hint": true,
+     "institution": "King's College London"
+    },
+    {
+     "name": "Christian D. Lorenz",
+     "openalex": "https://openalex.org/A5009492636",
+     "orcid": "https://orcid.org/0000-0003-1028-4804",
+     "score": 6.2,
+     "n": 3,
+     "papers": [
+      {
+       "title": "Therapeutic Peptides Are Preferentially Solubilized in Specific Microenvironments within PEG–PLGA Polymer Nanoparticles",
+       "year": 2024,
+       "venue": "Nano Letters",
+       "link": "https://doi.org/10.1021/acs.nanolett.3c04558"
+      },
+      {
+       "title": "IN-SILICO AND IN-VITRO INVESTIGATION INTO THE SELECTIVE DELIVERY OF ACTIVE-COMPOUND LOADED NANOPARTICLES INTO GLIOMA CELLS AND THEIR TRANSCYTOSIS ACROSS THE BLOOD-BRAIN BARRIER",
+       "year": 2023,
+       "venue": "IBRO Neuroscience Reports",
+       "link": "https://doi.org/10.1016/j.ibneur.2023.08.1616"
+      },
+      {
+       "title": "Nanocapsule designs for antimicrobial resistance",
+       "year": 2021,
+       "venue": "Nanoscale",
+       "link": "https://doi.org/10.1039/d0nr08146a"
       }
      ],
      "senior_hint": true,
@@ -510,29 +539,6 @@
      ],
      "senior_hint": false,
      "institution": "King's College London"
-    },
-    {
-     "name": "Xinqi Bao",
-     "openalex": "https://openalex.org/A5034037954",
-     "orcid": "https://orcid.org/0000-0002-7117-1267",
-     "score": 6.0,
-     "n": 2,
-     "papers": [
-      {
-       "title": "Advancements in Nanoparticle-Based Precision Drug Delivery: A Review of Development and Optimization for Targeted Therapy in Preclinical Models",
-       "year": 2024,
-       "venue": "European Scientific Journal ESJ",
-       "link": "https://doi.org/10.19044/esj.2024.v20n27p49"
-      },
-      {
-       "title": "Enhancing Drug Delivery Precision: Development and Optimization of Nanoparticle-Based Formulations for Targeted Therapy in Preclinical Models",
-       "year": 2024,
-       "venue": "European Scientific Journal ESJ",
-       "link": "https://doi.org/10.19044/esipreprint.2.2024.p232"
-      }
-     ],
-     "senior_hint": false,
-     "institution": "King's College London"
     }
    ],
    "reading": [
@@ -556,7 +562,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   "scout-nottingham-bbsrc-dtp-2027": {
    "institutions": [
@@ -573,10 +579,39 @@
    ],
    "people": [
     {
+     "name": "Vincenzo Taresco",
+     "openalex": "https://openalex.org/A5056060581",
+     "orcid": "https://orcid.org/0000-0003-4476-8233",
+     "score": 16.6,
+     "n": 7,
+     "papers": [
+      {
+       "title": "Nanoprecipitation and Drug Delivery with PMTC: Toward Biomedical Application of Polyesters from Radical Ring‐Opening Polymerization",
+       "year": 2025,
+       "venue": "Macromolecular Bioscience",
+       "link": "https://doi.org/10.1002/mabi.202500432"
+      },
+      {
+       "title": "Glycerol‐Based Copolyesters as Polymeric Nanocarriers for Drug Delivery",
+       "year": 2024,
+       "venue": "Journal of Polymer Science",
+       "link": "https://doi.org/10.1002/pol.20240762"
+      },
+      {
+       "title": "Poly (diglycerol adipate) variants as enhanced nanocarrier replacements in drug delivery applications",
+       "year": 2023,
+       "venue": "Journal of Colloid and Interface Science",
+       "link": "https://doi.org/10.1016/j.jcis.2023.03.124"
+      }
+     ],
+     "senior_hint": true,
+     "institution": "University of Nottingham"
+    },
+    {
      "name": "Dmitry V. Volodkin",
      "openalex": "https://openalex.org/A5083341771",
      "orcid": "https://orcid.org/0000-0001-7474-5329",
-     "score": 15.6,
+     "score": 15.7,
      "n": 10,
      "papers": [
       {
@@ -629,35 +664,6 @@
      ],
      "senior_hint": true,
      "institution": "Nottingham Trent University"
-    },
-    {
-     "name": "Vincenzo Taresco",
-     "openalex": "https://openalex.org/A5056060581",
-     "orcid": "https://orcid.org/0000-0003-4476-8233",
-     "score": 14.6,
-     "n": 6,
-     "papers": [
-      {
-       "title": "Nanoprecipitation and Drug Delivery with PMTC: Toward Biomedical Application of Polyesters from Radical Ring‐Opening Polymerization",
-       "year": 2025,
-       "venue": "Macromolecular Bioscience",
-       "link": "https://doi.org/10.1002/mabi.202500432"
-      },
-      {
-       "title": "Glycerol‐Based Copolyesters as Polymeric Nanocarriers for Drug Delivery",
-       "year": 2024,
-       "venue": "Journal of Polymer Science",
-       "link": "https://doi.org/10.1002/pol.20240762"
-      },
-      {
-       "title": "Poly (diglycerol adipate) variants as enhanced nanocarrier replacements in drug delivery applications",
-       "year": 2023,
-       "venue": "Journal of Colloid and Interface Science",
-       "link": "https://doi.org/10.1016/j.jcis.2023.03.124"
-      }
-     ],
-     "senior_hint": true,
-     "institution": "University of Nottingham"
     },
     {
      "name": "Farooq Sher",
@@ -739,7 +745,7 @@
     }
    ],
    "scanned": 200,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   "scout-uclbbk-mrc-dtp-2027": {
    "institutions": [
@@ -917,7 +923,7 @@
     }
    ],
    "scanned": 200,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   "scout-bham-oral-biologics-microdevice": {
    "institutions": [
@@ -1087,7 +1093,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   "scout-yorkshire-bioscience-dtp-2027": {
    "institutions": [
@@ -1101,8 +1107,8 @@
      "name": "Kofi Asare‐Addo",
      "openalex": "https://openalex.org/A5065872485",
      "orcid": "https://orcid.org/0000-0001-6824-5336",
-     "score": 64.7,
-     "n": 36,
+     "score": 66.3,
+     "n": 37,
      "papers": [
       {
        "title": "Chitosan nanoparticles for nasal drug delivery",
@@ -1130,8 +1136,8 @@
      "name": "Barbara R. Conway",
      "openalex": "https://openalex.org/A5069035256",
      "orcid": "https://orcid.org/0000-0001-5570-3318",
-     "score": 50.7,
-     "n": 27,
+     "score": 51.7,
+     "n": 28,
      "papers": [
       {
        "title": "Drug delivery and formulation development of hesperidin: a systematic review",
@@ -1188,8 +1194,8 @@
      "name": "Adeola O. Adebisi",
      "openalex": "https://openalex.org/A5077234561",
      "orcid": "https://orcid.org/0000-0003-1658-148X",
-     "score": 22.0,
-     "n": 7,
+     "score": 23.0,
+     "n": 8,
      "papers": [
       {
        "title": "Electrospun core-sheath nanofibers for transdermal drug delivery with combined UV imaging analysis",
@@ -1264,7 +1270,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   "scout-bbsrc-nwdp-2027": {
    "institutions": [
@@ -1435,7 +1441,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   "scout-cambridge-bbsrc-dtp-2027": {
    "institutions": [
@@ -1612,7 +1618,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   "scout-manchester-ipp-2027": {
    "institutions": [
@@ -1789,7 +1795,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   "scout-bath-amr-simulation": {
    "institutions": [],
@@ -1819,7 +1825,7 @@
     }
    ],
    "scanned": 0,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   "scout-wessex-one-health-2027": {
    "institutions": [
@@ -1999,7 +2005,7 @@
     }
    ],
    "scanned": 300,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   "r7a2d11435fb1": {
    "institutions": [
@@ -2018,8 +2024,8 @@
      "name": "Vincenzo Taresco",
      "openalex": "https://openalex.org/A5056060581",
      "orcid": "https://orcid.org/0000-0003-4476-8233",
-     "score": 14.6,
-     "n": 6,
+     "score": 16.6,
+     "n": 7,
      "papers": [
       {
        "title": "Nanoprecipitation and Drug Delivery with PMTC: Toward Biomedical Application of Polyesters from Radical Ring‐Opening Polymerization",
@@ -2105,7 +2111,7 @@
      "name": "Dov  Joseph Stekel",
      "openalex": "https://openalex.org/A5069506221",
      "orcid": "https://orcid.org/0000-0002-2492-8079",
-     "score": 8.4,
+     "score": 8.3,
      "n": 8,
      "papers": [
       {
@@ -2181,7 +2187,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   "r7fc83e53cb75": {
    "institutions": [
@@ -2200,7 +2206,7 @@
      "name": "Barbara Kasprzyk‐Hordern",
      "openalex": "https://openalex.org/A5034486320",
      "orcid": "https://orcid.org/0000-0002-6809-2875",
-     "score": 23.4,
+     "score": 22.5,
      "n": 19,
      "papers": [
       {
@@ -2229,8 +2235,8 @@
      "name": "Edward J. Feil",
      "openalex": "https://openalex.org/A5014816450",
      "orcid": "https://orcid.org/0000-0003-1446-6744",
-     "score": 9.8,
-     "n": 11,
+     "score": 10.4,
+     "n": 12,
      "papers": [
       {
        "title": "Monitoring antimicrobial resistance trends from global genomics data: amr.watch",
@@ -2258,7 +2264,7 @@
      "name": "Paul De Bank",
      "openalex": "https://openalex.org/A5078294887",
      "orcid": "https://orcid.org/0000-0002-5717-7486",
-     "score": 7.6,
+     "score": 7.7,
      "n": 3,
      "papers": [
       {
@@ -2287,7 +2293,7 @@
      "name": "Randall J. Mrsny",
      "openalex": "https://openalex.org/A5002768937",
      "orcid": "https://orcid.org/0000-0001-8505-8516",
-     "score": 5.6,
+     "score": 5.7,
      "n": 4,
      "papers": [
       {
@@ -2363,7 +2369,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   "r9b397dc7918b": {
    "institutions": [
@@ -2382,7 +2388,7 @@
      "name": "Barbara Kasprzyk‐Hordern",
      "openalex": "https://openalex.org/A5034486320",
      "orcid": "https://orcid.org/0000-0002-6809-2875",
-     "score": 23.4,
+     "score": 22.5,
      "n": 19,
      "papers": [
       {
@@ -2411,8 +2417,8 @@
      "name": "Edward J. Feil",
      "openalex": "https://openalex.org/A5014816450",
      "orcid": "https://orcid.org/0000-0003-1446-6744",
-     "score": 9.8,
-     "n": 11,
+     "score": 10.4,
+     "n": 12,
      "papers": [
       {
        "title": "Monitoring antimicrobial resistance trends from global genomics data: amr.watch",
@@ -2440,7 +2446,7 @@
      "name": "Paul De Bank",
      "openalex": "https://openalex.org/A5078294887",
      "orcid": "https://orcid.org/0000-0002-5717-7486",
-     "score": 7.6,
+     "score": 7.7,
      "n": 3,
      "papers": [
       {
@@ -2469,7 +2475,7 @@
      "name": "Randall J. Mrsny",
      "openalex": "https://openalex.org/A5002768937",
      "orcid": "https://orcid.org/0000-0001-8505-8516",
-     "score": 5.6,
+     "score": 5.7,
      "n": 4,
      "papers": [
       {
@@ -2545,7 +2551,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   "r580fc454e725": {
    "institutions": [
@@ -2716,7 +2722,7 @@
     }
    ],
    "scanned": 100,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   }
  },
  "universities": {
